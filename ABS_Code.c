@@ -125,7 +125,7 @@ __interrupt(high_priority) void ISR_Alta(void) {
 
 //////////////////////////
 //    INTERRUPT         //
-//  Gestione TMR0 delay //
+//  Gestione TMR3 delay //
 //////////////////////////
 
 __interrupt(low_priority) void ISR_Bassa(void) {
@@ -145,7 +145,7 @@ int main(void) {
     board_initialization();
     ADC_Read();
     while (1) {
-        if ((remote_frame == HIGH) || (Tx_retry = HIGH)) {
+        if ((remote_frame == HIGH) || (Tx_retry == HIGH)) {
             status_ok();
         }
 
@@ -288,7 +288,7 @@ void board_initialization(void) { //(!!)completare
     ADCON2bits.ADCS2 = 1;
     ADCON2bits.ADCS1 = 0;
     ADCON2bits.ADCS0 = 1;
-    ADCON2bits.ADFM = 0; //Right Justified
+    ADCON2bits.ADFM = 0; //Left Justified
     ADCON0bits.ADON = 1;
 
     T3CON = 0x01; //abilita timer
