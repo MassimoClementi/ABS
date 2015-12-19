@@ -117,7 +117,7 @@ __interrupt(high_priority) void ISR_Alta(void) {
             timer_off = 40000 - timer_on;
             WriteTimer0(timer_on);
         } else {
-            WriteTimer0(timer_off);
+            WriteTimer0(timer_off); //qua come lo fai a sapere il valore se lo si calcola solo nella if precedente???
         }
         INTCONbits.TMR0IF = LOW;
     }
@@ -143,7 +143,8 @@ __interrupt(low_priority) void ISR_Bassa(void) {
 
 int main(void) {
     board_initialization();
-    ADC_Read();
+    ADC_Read(); //mettendo l'adc qua non vai a leggere l'adc solo una volta all'inizio senza poter più modificare il valore?
+                //perchè poi il valore finale che è home_position lo usi dentro il while......però sarà sempre uguale
     while (1) {
         if ((remote_frame == HIGH) || (Tx_retry == HIGH)) {
             status_ok();
