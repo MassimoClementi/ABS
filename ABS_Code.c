@@ -1,8 +1,8 @@
-//PROGRAM: Brake_System
+//PROGRAM: ABS
 //WRITTEN BY: Massimo Clementi
-//DATA: 26/11/2015
-//VERSION: 1.0
-//FILE SAVED AS: Brake_System.c
+//DATA: 27/12/2015
+//VERSION: 2.0
+//FILE SAVED AS: ABS_Code.c
 //FOR PIC: 18F4480
 //CLOCK FREQUENCY: 16 MHz
 //PROGRAM FUNCTION: Centralina che gestisce la frenata del veicolo secondo i
@@ -18,13 +18,19 @@
 //  CANRX/CANTX => CANBus //            //   11 = Livello alto      //
 ////////////////////////////            //////////////////////////////
 
+// Implementazione di un bit del byte [1] del CanBus che permette la gestione
+// analogica della frenata (per il radiocomando che necessita di un comando
+// analogico). Al settaggio di questo bit il valore inviato nel primo byte sarà
+// direttamente quello del valore di frenata.
+//
+// N.B: il bit deve essere presente per ogni pacchetto di dati del CANBus che si
+//      desidera interpretare come analogico.
+//
 // TIMER0 => PWM
 // 800us  => 0°
 // 1500us => 90°
 // 2200us => 180°
 // 500ns ad ogni singolo incremento (prescaler 1:2)
-
-// TIMER3 => delay
 
 #define USE_AND_MASKS
 
@@ -39,10 +45,11 @@
 #define HIGH 1
 #define LOW 0
 
-//////////////////////////////
-//  POSIZIONE HOME => 127   //
-//  POSIZIONE BRAKE => 142  //
-//////////////////////////////
+//////////////////////////////////////
+//  10 GRADI DI AZIONE DEL SERVO    //
+//      POSIZIONE HOME => 127       //
+//      POSIZIONE BRAKE => 142      //
+//////////////////////////////////////
 
 #define brake_signal 0b00000000000000000000000000110 //(!!) impostare
 #define status_id 0b00000000000000000000000000100 //(!!) impostare
@@ -55,6 +62,7 @@ void ADC_Read(void);
 //////////////////
 //Declarations  //
 //////////////////
+
 //CANbus
 CANmessage msg;
 bit remote_frame;
@@ -62,21 +70,14 @@ bit Tx_retry;
 unsigned long remote_frame_id = 0;
 BYTE status_array [8] = {0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0xAA}; //Sequenza di 101010...
 unsigned char brake_signal_CAN;
+unsigned char Analogic_Mode;
 
-//Delay TMR0
+//PWM TMR0
 unsigned long timer_on = 0;
 unsigned long timer_off = 0;
 
-//Delay TMR3
-unsigned long TMR3_counter = 0;
-unsigned long TMR3_stored = 0;
-unsigned char wait_time = 0; //in ms (10-20-30..)
-
 //ADC
-unsigned char i = 0;
-unsigned char number_of_measures = 8;
 unsigned char read = 0;
-unsigned int partial_sum = 0;
 int correction_factor = 0; //con segno
 unsigned char home_position = 0;
 
@@ -84,17 +85,33 @@ unsigned char home_position = 0;
 unsigned char brake_value_inc = 0; //0-256 (fattore 17)
 unsigned char brake_value = 0; //0-15
 unsigned char brake_value_degree = 0; //0-180 gradi
-unsigned char ADC_wait_counter = 0;
-int gap = 0; //con segno
-unsigned char inc = 0;
-unsigned char final_value = 0;
 
-//////////////////////
-//    INTERRUPT     //
-//  Gestione CANbus //
-//////////////////////
+//////////////////////////////////
+//    INTERRUPT High Priority   //
+//     Gestione PWM Virtuale    //
+//////////////////////////////////
 
 __interrupt(high_priority) void ISR_Alta(void) {
+    if (INTCONbits.TMR0IF == HIGH) {
+        PORTCbits.RC0 = ~PORTCbits.RC0;
+        if (PORTCbits.RC0 == 1) {
+            timer_on = (((1400 * brake_value_degree) / 180) + 800)*2; //incrementi TMR0
+            timer_on = 65536 - timer_on; //interrupt per overflow
+            timer_off = 40000 - timer_on;
+            WriteTimer0(timer_on);
+        } else {
+            WriteTimer0(timer_off);
+        }
+        INTCONbits.TMR0IF = LOW;
+    }
+}
+
+//////////////////////////////
+//  INTERRUPT Low Priority  //
+//      Gestione CANBus     //
+/////////////////////////////
+
+__interrupt(low_priority) void ISR_Bassa(void) {
     if ((PIR3bits.RXB0IF == HIGH) || (PIR3bits.RXB1IF == HIGH)) {
         if (CANisRxReady()) {
             CANreceiveMessage(&msg);
@@ -104,36 +121,11 @@ __interrupt(high_priority) void ISR_Alta(void) {
             }
             if (msg.identifier == brake_signal) {
                 brake_signal_CAN = msg.data[0];
+                Analogic_Mode = msg.data[1];
             }
         }
         PIR3bits.RXB0IF = LOW;
         PIR3bits.RXB1IF = LOW;
-    }
-    if (INTCONbits.TMR0IF == HIGH) {
-        PORTCbits.RC0 = ~PORTCbits.RC0;
-        if (PORTCbits.RC0 == 1) {
-            timer_on = (((1400 * brake_value_degree) / 180) + 800)*2; //incrementi TMR0
-            timer_on = 65536 - timer_on; //interrupt per overflow
-            timer_off = 40000 - timer_on;
-            WriteTimer0(timer_on);
-        } else {
-            WriteTimer0(timer_off); //qua come lo fai a sapere il valore se lo si calcola solo nella if precedente???
-        }
-        INTCONbits.TMR0IF = LOW;
-    }
-}
-
-//////////////////////////
-//    INTERRUPT         //
-//  Gestione TMR3 delay //
-//////////////////////////
-
-__interrupt(low_priority) void ISR_Bassa(void) {
-    if (PIR2bits.TMR3IF == HIGH) {
-        TMR3_counter++;
-        TMR3H = 0x63;
-        TMR3L = 0xC0;
-        PIR2bits.TMR3IF = LOW;
     }
 }
 
@@ -143,61 +135,38 @@ __interrupt(low_priority) void ISR_Bassa(void) {
 
 int main(void) {
     board_initialization();
-    ADC_Read(); //mettendo l'adc qua non vai a leggere l'adc solo una volta all'inizio senza poter più modificare il valore?
-                //perchè poi il valore finale che è home_position lo usi dentro il while......però sarà sempre uguale
     while (1) {
-        if ((remote_frame == HIGH) || (Tx_retry == HIGH)) {
-            status_ok();
-        }
+        CANisTXwarningON() = LOW; // Spegnimento led di Warning
+        CANisRXwarningON() = LOW; // del CANBus
+        ADC_Read();
 
         if ((CANisTXwarningON() == HIGH) || (CANisRXwarningON() == HIGH)) {
             PORTBbits.RB0 = HIGH; //accendi led errore
         }
 
-        if (ADC_wait_counter == 50) { //polling trimmer ogni 50 cicli
-            ADC_Read();
-            ADC_wait_counter = 0;
+        if ((remote_frame == HIGH) || (Tx_retry == HIGH)) {
+            status_ok();
         }
 
-        if ((TMR3_counter - TMR3_stored) > (wait_time / 10)) {
-
+        if (Analogic_Mode == 0) {
             if (brake_signal_CAN == 00) {
-                if((brake_value_inc / 2) > 1) {
-                    brake_value_inc = brake_value_inc / 2;
-                } else {
-                    brake_value_inc = 0;
-                }
+                brake_value_inc = 0;
             }
-
-            if (brake_signal_CAN != 00) {
-                if (brake_signal_CAN == 01) { //LOW
-                    final_value = 150; //verificare valore
-                }
-                if (brake_signal_CAN == 10) { //MEDIUM
-                    final_value = 200; //verificare valore
-                }
-                if (brake_signal_CAN == 11) { //HIGH
-                    final_value = 255;
-                }
-                if ((final_value - brake_value_inc) != 0) {
-                    gap = final_value - brake_value_inc;
-                    inc = ((gap / 20)*(gap / 20));
-                    if (inc < 5) {
-                        brake_value_inc = final_value;
-                    } else {
-                        if (gap > 0) {
-                            brake_value_inc = brake_value_inc + inc;
-                        } else {
-                            brake_value_inc = brake_value_inc - inc;
-                        }
-                    }
-                }
+            if (brake_signal_CAN == 01) {
+                brake_value_inc = 150;
             }
-            brake_value = (brake_value_inc / 17) + home_position;
-            brake_value_degree = (255 * brake_value) / 180;
-            TMR3_stored = TMR3_counter;
+            if (brake_signal_CAN == 10) {
+                brake_value_inc = 200;
+            }
+            if (brake_signal_CAN == 11) {
+                brake_value_inc = 255;
+            }
+        } else {
+            brake_value_inc = brake_signal_CAN;
         }
-        ADC_wait_counter++;
+
+        brake_value = (brake_value_inc / 17) + home_position;
+        brake_value_degree = (180 * brake_value) / 255;
     }
 }
 
@@ -218,22 +187,14 @@ void status_ok(void) {
 }
 
 void ADC_Read(void) {
-    for (i = 0; i < number_of_measures; i++) {
-        ADCON0bits.GO = 1;
-        while (ADCON0bits.GO);
-        read = ADRESH;
-        partial_sum = partial_sum + read;
-    }
-    correction_factor = (partial_sum / number_of_measures) - 127;
+    ADCON0bits.GO = 1;
+    while (ADCON0bits.GO);
+    read = ADRESH;
+    correction_factor = read - 127;
     home_position = correction_factor / 4 + 127; //RICONTROLLARE /4
 }
 
-void board_initialization(void) { //(!!)completare
-    //Configurazione registri TMR0 PreI/O
-    TMR0H = 0xFF; //<= FORZIAMO IL PRIMO INTERRUPT
-    TMR0L = 0xFE; //<= DEL TIMER0 PER LE CONFIGURAZIONI
-    T0CONbits.TMR0ON = 1; //<= DEI REGISTRI PER IL PWM
-
+void board_initialization(void) {
     //Configurazione I/O
     LATA = 0x00;
     TRISA = 0xFF; //ALL IN
@@ -250,7 +211,6 @@ void board_initialization(void) { //(!!)completare
 
     //Configurazione CANbus
     CANInitialize(4, 6, 5, 1, 3, CAN_CONFIG_LINE_FILTER_OFF & CAN_CONFIG_SAMPLE_ONCE & CAN_CONFIG_ALL_VALID_MSG & CAN_CONFIG_DBL_BUFFER_ON);
-    RCONbits.IPEN = 1;
 
     //Azzero Flag Interrupts
     PIR3bits.RXB1IF = 0; //azzera flag interrupt can bus buffer1
@@ -259,24 +219,24 @@ void board_initialization(void) { //(!!)completare
     PIR2bits.TMR3IF = 0; //resetta flag interrupt timer 3
 
     //Config. Priorità
-    IPR3bits.RXB1IP = 1; //interrupt alta priorità per can
-    IPR3bits.RXB0IP = 1; //interrupt alta priorità per can
+    RCONbits.IPEN = 1;
+    IPR3bits.RXB1IP = 0; //interrupt bassa priorità per can
+    IPR3bits.RXB0IP = 0; //interrupt bassa priorità per can
     INTCON2bits.TMR0IP = 1; //interrupt alta priorità timer0
-    IPR2bits.TMR3IP = 0; //interrupt bassa priorità timer 3
 
     //Config. Registri
     T0CON = 0x80; //imposta timer0, prescaler 1:2
-    TMR3H = 0x63; //<= VALORI PER AVERE UN
-    TMR3L = 0xC0; //<= INTERRUPT OGNI 10ms
-    INTCON2bits.INTEDG0 = 1; //interrupt su fronte di salita [SERVE?]
 
-    //Enable Interrupts
-    PIE3bits.RXB1IE = 1; //abilita interrupt ricezione can bus buffer1
-    PIE3bits.RXB0IE = 1; //abilita interrupt ricezione can bus buffer0
-    INTCONbits.TMR0IE = 1; //abilita interrupt timer 0
-    PIE2bits.TMR3IE = 1; //abilita interrupt timer 3
-    INTCONbits.GIEH = 1; //abilita interrupt alta priorità
-    INTCONbits.GIEL = 1; //abilita interrupt bassa priorità periferiche
+    //  Valori per forzare un interrupt del TMR0 all'avvio della periferica ed
+    //  inizializarla correttamente. RC0 = 0 in modo che il primo ciclo venga
+    //  eseguito il toggle nella ISR di gestione TMR0 e quindi venga eseguito il 
+    //  calcolo di timer_on e timer_off in base al valore di break_value_degree
+    //  fornito (in questo caso 90 gradi in modo che si metta in posizione centrale)
+    TMR0H = 0xFF;
+    TMR0L = 0xFE;
+    PORTCbits.RC0 = 0;
+    brake_value_degree = 90;
+    INTCON2bits.INTEDG0 = 1; //interrupt su fronte di salita [SERVE?]
 
     //Configurazione ADC
     ADCON1 = 0b01110111;
@@ -292,7 +252,16 @@ void board_initialization(void) { //(!!)completare
     ADCON2bits.ADFM = 0; //Left Justified
     ADCON0bits.ADON = 1;
 
-    T3CON = 0x01; //abilita timer
-    wait_time = 20;
+    //Enable Interrupts
+    PIE3bits.RXB1IE = 1; //abilita interrupt ricezione can bus buffer1
+    PIE3bits.RXB0IE = 1; //abilita interrupt ricezione can bus buffer0
+    INTCONbits.TMR0IE = 1; //abilita interrupt timer 0
+    INTCONbits.GIEH = 1; //abilita interrupt alta priorità
+    INTCONbits.GIEL = 1; //abilita interrupt bassa priorità periferiche
+
+    //Enable Timers
+    T3CON = 0x01;
+    T0CONbits.TMR0ON = 1;
+
     delay_ms(2);
 }
