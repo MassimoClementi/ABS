@@ -19365,7 +19365,7 @@ extern __nonreentrant void _delay3(unsigned char);
 
 #pragma config EBTRB = OFF
 
-# 49 "../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h"
+# 49 "../../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h"
 typedef unsigned char BYTE;
 
 
@@ -20416,7 +20416,7 @@ BYTE CANisRxReady (void)
 return (RXB0CONbits.RXFUL || RXB1CONbits.RXFUL);
 }
 
-# 74 "../LaurTec_PIC_libraries_v_3.3.0/inc\delay.h"
+# 74 "../../LaurTec_PIC_libraries_v_3.3.0/inc\delay.h"
 void delay_ms (unsigned int value_ms);
 
 # 88
@@ -20425,8 +20425,8 @@ void delay_s (unsigned char value_s);
 # 102
 void delay_set_quartz (unsigned char frequency);
 
-# 49 "../LaurTec_PIC_libraries_v_3.3.0/src\delay.c"
-volatile unsigned char delay_quartz_frequency_value = 16;
+# 49 "../../LaurTec_PIC_libraries_v_3.3.0/src\delay.c"
+volatile unsigned char delay_quartz_frequency_value = 20;
 volatile unsigned int clock_counter_reference = 0;
 
 # 61
@@ -20463,33 +20463,26 @@ delay_quartz_frequency_value = frequency;
 
 }
 
-# 51 "ABS_Code.c"
+# 58 "ABS_Code.c"
 void board_initialization(void);
 void status_ok(void);
 void ADC_Read(void);
 
-# 59
+# 67
 CANmessage msg;
 bit remote_frame;
 bit Tx_retry;
 unsigned long remote_frame_id = 0;
 BYTE status_array [8] = {0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0xAA};
 unsigned char brake_signal_CAN;
+unsigned char Analogic_Mode;
 
 
 unsigned long timer_on = 0;
 unsigned long timer_off = 0;
 
 
-unsigned long TMR3_counter = 0;
-unsigned long TMR3_stored = 0;
-unsigned char wait_time = 0;
-
-
-unsigned char i = 0;
-unsigned char number_of_measures = 8;
 unsigned char read = 0;
-unsigned int partial_sum = 0;
 int correction_factor = 0;
 unsigned char home_position = 0;
 
@@ -20497,13 +20490,28 @@ unsigned char home_position = 0;
 unsigned char brake_value_inc = 0;
 unsigned char brake_value = 0;
 unsigned char brake_value_degree = 0;
-unsigned char ADC_wait_counter = 0;
-int gap = 0;
-unsigned char inc = 0;
-unsigned char final_value = 0;
 
-# 97
+# 94
 __attribute__((interrupt("__high_priority"))) void ISR_Alta(void) {
+if (INTCONbits.TMR0IF == 1) {
+PORTCbits.RC0 = ~PORTCbits.RC0;
+T0CONbits.TMR0ON = 0;
+if (PORTCbits.RC0 == 1) {
+timer_on = (((1400 * brake_value_degree) / 180) + 800)*2;
+timer_off = 65536 - (40000 - timer_on);
+timer_on = 65536 - timer_on;
+WriteTimer0(timer_on);
+T0CONbits.TMR0ON = 1;
+} else {
+WriteTimer0(timer_off);
+T0CONbits.TMR0ON = 1;
+}
+INTCONbits.TMR0IF = 0;
+}
+}
+
+# 117
+__attribute__((interrupt("__low_priority"))) void ISR_Bassa(void) {
 if ((PIR3bits.RXB0IF == 1) || (PIR3bits.RXB1IF == 1)) {
 if (CANisRxReady()) {
 CANreceiveMessage(&msg);
@@ -20513,92 +20521,51 @@ remote_frame = 1;
 }
 if (msg.identifier == 0b00000000000000000000000000110) {
 brake_signal_CAN = msg.data[0];
+Analogic_Mode = msg.data[1];
 }
 }
 PIR3bits.RXB0IF = 0;
 PIR3bits.RXB1IF = 0;
 }
-if (INTCONbits.TMR0IF == 1) {
-PORTCbits.RC0 = ~PORTCbits.RC0;
-if (PORTCbits.RC0 == 1) {
-timer_on = (((1400 * brake_value_degree) / 180) + 800)*2;
-timer_on = 65536 - timer_on;
-timer_off = 40000 - timer_on;
-WriteTimer0(timer_on);
-} else {
-WriteTimer0(timer_off);
-}
-INTCONbits.TMR0IF = 0;
-}
 }
 
-# 131
-__attribute__((interrupt("__low_priority"))) void ISR_Bassa(void) {
-if (PIR2bits.TMR3IF == 1) {
-TMR3_counter++;
-TMR3H = 0x63;
-TMR3L = 0xC0;
-PIR2bits.TMR3IF = 0;
-}
-}
-
-# 144
+# 139
 int main(void) {
 board_initialization();
-ADC_Read();
 while (1) {
-if ((remote_frame == 1) || (Tx_retry = 1)) {
-status_ok();
-}
+
+
+ADC_Read();
 
 if ((CANisTXwarningON() == 1) || (CANisRXwarningON() == 1)) {
 PORTBbits.RB0 = 1;
-}
-
-if (ADC_wait_counter == 50) {
-ADC_Read();
-ADC_wait_counter = 0;
-}
-
-if ((TMR3_counter - TMR3_stored) > (wait_time / 10)) {
-
-if (brake_signal_CAN == 00) {
-if((brake_value_inc / 2) > 1) {
-brake_value_inc = brake_value_inc / 2;
 } else {
+PORTBbits.RB0 = 0;
+}
+
+if ((remote_frame == 1) || (Tx_retry == 1)) {
+status_ok();
+}
+
+if (Analogic_Mode == 0) {
+if (brake_signal_CAN == 00) {
 brake_value_inc = 0;
 }
-}
-
-if (brake_signal_CAN != 00) {
 if (brake_signal_CAN == 01) {
-final_value = 150;
+brake_value_inc = 150;
 }
 if (brake_signal_CAN == 10) {
-final_value = 200;
+brake_value_inc = 200;
 }
 if (brake_signal_CAN == 11) {
-final_value = 255;
+brake_value_inc = 255;
 }
-if ((final_value - brake_value_inc) != 0) {
-gap = final_value - brake_value_inc;
-inc = ((gap / 20)*(gap / 20));
-if (inc < 5) {
-brake_value_inc = final_value;
 } else {
-if (gap > 0) {
-brake_value_inc = brake_value_inc + inc;
-} else {
-brake_value_inc = brake_value_inc - inc;
+brake_value_inc = brake_signal_CAN;
 }
-}
-}
-}
+
 brake_value = (brake_value_inc / 17) + home_position;
-brake_value_degree = (255 * brake_value) / 180;
-TMR3_stored = TMR3_counter;
-}
-ADC_wait_counter++;
+brake_value_degree = (180 * brake_value) / 255;
 }
 }
 
@@ -20619,22 +20586,14 @@ remote_frame = 0;
 }
 
 void ADC_Read(void) {
-for (i = 0; i < number_of_measures; i++) {
 ADCON0bits.GO = 1;
 while (ADCON0bits.GO);
 read = ADRESH;
-partial_sum = partial_sum + read;
-}
-correction_factor = (partial_sum / number_of_measures) - 127;
+correction_factor = read - 127;
 home_position = correction_factor / 4 + 127;
 }
 
 void board_initialization(void) {
-
-TMR0H = 0xFF;
-TMR0L = 0xFE;
-T0CONbits.TMR0ON = 1;
-
 
 LATA = 0x00;
 TRISA = 0xFF;
@@ -20651,7 +20610,6 @@ ADCON1 = 0x11111110;
 
 
 CANInitialize(4, 6, 5, 1, 3, CAN_CONFIG_LINE_FILTER_OFF & CAN_CONFIG_SAMPLE_ONCE & CAN_CONFIG_ALL_VALID_MSG & CAN_CONFIG_DBL_BUFFER_ON);
-RCONbits.IPEN = 1;
 
 
 PIR3bits.RXB1IF = 0;
@@ -20660,24 +20618,20 @@ INTCONbits.TMR0IF = 0;
 PIR2bits.TMR3IF = 0;
 
 
-IPR3bits.RXB1IP = 1;
-IPR3bits.RXB0IP = 1;
+RCONbits.IPEN = 1;
+IPR3bits.RXB1IP = 0;
+IPR3bits.RXB0IP = 0;
 INTCON2bits.TMR0IP = 1;
-IPR2bits.TMR3IP = 0;
 
 
 T0CON = 0x80;
-TMR3H = 0x63;
-TMR3L = 0xC0;
+
+# 240
+TMR0H = 0xFF;
+TMR0L = 0xFE;
+PORTCbits.RC0 = 0;
+brake_value_degree = 90;
 INTCON2bits.INTEDG0 = 1;
-
-
-PIE3bits.RXB1IE = 1;
-PIE3bits.RXB0IE = 1;
-INTCONbits.TMR0IE = 1;
-PIE2bits.TMR3IE = 1;
-INTCONbits.GIEH = 1;
-INTCONbits.GIEL = 1;
 
 
 ADCON1 = 0b01110111;
@@ -20693,7 +20647,16 @@ ADCON2bits.ADCS0 = 1;
 ADCON2bits.ADFM = 0;
 ADCON0bits.ADON = 1;
 
+
+PIE3bits.RXB1IE = 1;
+PIE3bits.RXB0IE = 1;
+INTCONbits.TMR0IE = 1;
+INTCONbits.GIEH = 1;
+INTCONbits.GIEL = 1;
+
+
 T3CON = 0x01;
-wait_time = 20;
+T0CONbits.TMR0ON = 1;
+
 delay_ms(2);
 }

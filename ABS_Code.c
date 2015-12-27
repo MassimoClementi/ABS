@@ -94,13 +94,16 @@ unsigned char brake_value_degree = 0; //0-180 gradi
 __interrupt(high_priority) void ISR_Alta(void) {
     if (INTCONbits.TMR0IF == HIGH) {
         PORTCbits.RC0 = ~PORTCbits.RC0;
+        T0CONbits.TMR0ON = 0;
         if (PORTCbits.RC0 == 1) {
             timer_on = (((1400 * brake_value_degree) / 180) + 800)*2; //incrementi TMR0
+            timer_off = 65536 - (40000 - timer_on);
             timer_on = 65536 - timer_on; //interrupt per overflow
-            timer_off = 40000 - timer_on;
             WriteTimer0(timer_on);
+            T0CONbits.TMR0ON = 1;
         } else {
             WriteTimer0(timer_off);
+            T0CONbits.TMR0ON = 1;
         }
         INTCONbits.TMR0IF = LOW;
     }
@@ -136,12 +139,14 @@ __interrupt(low_priority) void ISR_Bassa(void) {
 int main(void) {
     board_initialization();
     while (1) {
-        CANisTXwarningON() = LOW; // Spegnimento led di Warning
-        CANisRXwarningON() = LOW; // del CANBus
+       // CANisTXwarningON() = LOW; // Spegnimento led di Warning
+        // CANisRXwarningON() = LOW; // del CANBus
         ADC_Read();
 
         if ((CANisTXwarningON() == HIGH) || (CANisRXwarningON() == HIGH)) {
             PORTBbits.RB0 = HIGH; //accendi led errore
+        } else {
+            PORTBbits.RB0 = LOW;
         }
 
         if ((remote_frame == HIGH) || (Tx_retry == HIGH)) {
