@@ -1,12 +1,12 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"207 ../../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
+"207 ../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
 [c E16838 0 32 64 96 128 .. ]
 [n E16838 CAN_OP_MODE CAN_OP_MODE_NORMAL CAN_OP_MODE_SLEEP CAN_OP_MODE_LOOP CAN_OP_MODE_LISTEN CAN_OP_MODE_CONFIG  ]
 "27382 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f4480.h
 [v _CANCON `Vuc ~T0 @X0 0 e@3951 ]
 "27274
 [v _CANSTAT `Vuc ~T0 @X0 0 e@3950 ]
-"219 ../../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
+"219 ../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
 [c E16844 255 1 255 254 2 255 253 4 255 251 8 255 247 16 255 239 96 255 223 191 159 .. ]
 [n E16844 CAN_CONFIG_FLAGS CAN_CONFIG_DEFAULT CAN_CONFIG_PHSEG2_PRG_BIT CAN_CONFIG_PHSEG2_PRG_ON CAN_CONFIG_PHSEG2_PRG_OFF CAN_CONFIG_LINE_FILTER_BIT CAN_CONFIG_LINE_FILTER_ON CAN_CONFIG_LINE_FILTER_OFF CAN_CONFIG_SAMPLE_BIT CAN_CONFIG_SAMPLE_ONCE CAN_CONFIG_SAMPLE_THRICE CAN_CONFIG_MSG_TYPE_BIT CAN_CONFIG_STD_MSG CAN_CONFIG_XTD_MSG CAN_CONFIG_DBL_BUFFER_BIT CAN_CONFIG_DBL_BUFFER_ON CAN_CONFIG_DBL_BUFFER_OFF CAN_CONFIG_MSG_BITS CAN_CONFIG_ALL_MSG CAN_CONFIG_VALID_XTD_MSG CAN_CONFIG_VALID_STD_MSG CAN_CONFIG_ALL_VALID_MSG  ]
 "27485 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f4480.h
@@ -85,7 +85,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _RXB0CONbits `VS1638 ~T0 @X0 0 e@3936 ]
 "24434
 [v _RXB1CON `Vuc ~T0 @X0 0 e@3920 ]
-"259 ../../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
+"259 ../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
 [c E16878 1 2 .. ]
 [n E16878 CAN_MASK CAN_MASK_B1 CAN_MASK_B2  ]
 "179
@@ -416,7 +416,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TXB2D6 `Vuc ~T0 @X0 0 e@3884 ]
 "21451
 [v _TXB2D7 `Vuc ~T0 @X0 0 e@3885 ]
-"53 ../../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
+"53 ../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
 [s S2155 `ul 1 `uc -> 8 `i `uc 1 `uc 1 `uc 1 ]
 [n S2155 . identifier data type length RTR ]
 "27692 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f4480.h
@@ -448,7 +448,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S1735 . . . . . . . . . ]
 "27732
 [v _COMSTATbits `VS1735 ~T0 @X0 0 e@3956 ]
-"534 ../../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
+"534 ../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
 [c E16888 1 2 .. ]
 [n E16888 CAN_RX_ERRORS CAN_RX_BUFFER_1_OVFL CAN_RX_BUFFER_2_OVFL  ]
 "24440 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f4480.h
@@ -1026,21 +1026,29 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S1767 . . . . . . . ]
 "28434
 [v _PORTCbits `VS1767 ~T0 @X0 0 e@3970 ]
-"34428
-[s S2096 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2096 . T0PS PSA T0SE T0CS T08BIT TMR0ON ]
-"34436
-[s S2097 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2097 . T0PS0 T0PS1 T0PS2 T0PS3 ]
-"34427
-[u S2095 `S2096 1 `S2097 1 ]
-[n S2095 . . . ]
-"34443
-[v _T0CONbits `VS2095 ~T0 @X0 0 e@4053 ]
 "121 C:\Program Files (x86)\Microchip\xc8\v1.35\include\plib\timers.h
 [v _WriteTimer0 `(v ~T0 @X0 0 ef1`ui ]
+"34755 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f4480.h
+[s S2105 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2105 . INT1IF INT2IF . INT1IE INT2IE . INT1IP INT2IP ]
+"34765
+[s S2106 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2106 . INT1F INT2F . INT1E INT2E . INT1P INT2P ]
+"34754
+[u S2104 `S2105 1 `S2106 1 ]
+[n S2104 . . . ]
+"34776
+[v _INTCON3bits `VS2104 ~T0 @X0 0 e@4080 ]
+"33912
+[v _TMR1H `Vuc ~T0 @X0 0 e@4047 ]
+"33906
+[v _TMR1L `Vuc ~T0 @X0 0 e@4046 ]
+"32214
+[v _TMR3H `Vuc ~T0 @X0 0 e@4019 ]
+"32208
+[v _TMR3L `Vuc ~T0 @X0 0 e@4018 ]
 [t T52 __interrupt__ __low_priority ]
-"31252 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f4480.h
+"31252
 [s S1915 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1915 . RXB0IF RXB1IF TXB0IF TXB1IF TXB2IF ERRIF WAKIF IRXIF ]
 "31262
@@ -1058,9 +1066,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "31277
 [v _PIR3bits `VS1914 ~T0 @X0 0 e@4004 ]
 [p mainexit ]
-"58 ABS_Code.c
+"75 ABS_Code.c
 [v _board_initialization `(v ~T0 @X0 0 ef ]
-"60
+"77
 [v _ADC_Read `(v ~T0 @X0 0 ef ]
 "28219 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f4480.h
 [s S1762 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -1082,8 +1090,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S1761 . . . . . . ]
 "28257
 [v _PORTBbits `VS1761 ~T0 @X0 0 e@3969 ]
-"59 ABS_Code.c
-[v _status_ok `(v ~T0 @X0 0 ef ]
+"76 ABS_Code.c
+[v _remote_frame_handler `(v ~T0 @X0 0 ef ]
 "33060 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f4480.h
 [s S2015 :1 `uc 1 :1 `uc 1 ]
 [n S2015 . . GO_NOT_DONE ]
@@ -1214,6 +1222,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TMR0H `Vuc ~T0 @X0 0 e@4055 ]
 "34503
 [v _TMR0L `Vuc ~T0 @X0 0 e@4054 ]
+"33787
+[v _T1CON `Vuc ~T0 @X0 0 e@4045 ]
+"32074
+[v _T3CON `Vuc ~T0 @X0 0 e@4017 ]
 "32900
 [s S2006 :3 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S2006 . ADCS ACQT . ADFM ]
@@ -1245,8 +1257,66 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S1908 . . . . . . ]
 "31172
 [v _PIE3bits `VS1908 ~T0 @X0 0 e@4003 ]
-"32074
-[v _T3CON `Vuc ~T0 @X0 0 e@4017 ]
+"33793
+[s S2065 :2 `uc 1 :1 `uc 1 ]
+[n S2065 . . NOT_T1SYNC ]
+"33797
+[s S2066 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2066 . TMR1ON TMR1CS nT1SYNC T1OSCEN T1CKPS T1RUN RD16 ]
+"33806
+[s S2067 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2067 . . T1SYNC . T1CKPS0 T1CKPS1 ]
+"33813
+[s S2068 :2 `uc 1 :1 `uc 1 ]
+[n S2068 . . T1INSYNC ]
+"33817
+[s S2069 :3 `uc 1 :1 `uc 1 ]
+[n S2069 . . SOSCEN ]
+"33821
+[s S2070 :7 `uc 1 :1 `uc 1 ]
+[n S2070 . . T1RD16 ]
+"33792
+[u S2064 `S2065 1 `S2066 1 `S2067 1 `S2068 1 `S2069 1 `S2070 1 ]
+[n S2064 . . . . . . . ]
+"33826
+[v _T1CONbits `VS2064 ~T0 @X0 0 e@4045 ]
+"32080
+[s S1966 :2 `uc 1 :1 `uc 1 ]
+[n S1966 . . NOT_T3SYNC ]
+"32084
+[s S1967 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1967 . TMR3ON TMR3CS nT3SYNC T3CCP1 T3CKPS T3ECCP1 RD16 ]
+"32093
+[s S1968 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1968 . . T3SYNC . T3CKPS0 T3CKPS1 T3CCP2 ]
+"32101
+[s S1969 :2 `uc 1 :1 `uc 1 ]
+[n S1969 . . T3NSYNC ]
+"32105
+[s S1970 :7 `uc 1 :1 `uc 1 ]
+[n S1970 . . RD163 ]
+"32109
+[s S1971 :3 `uc 1 :1 `uc 1 ]
+[n S1971 . . SOSCEN3 ]
+"32113
+[s S1972 :7 `uc 1 :1 `uc 1 ]
+[n S1972 . . T3RD16 ]
+"32079
+[u S1965 `S1966 1 `S1967 1 `S1968 1 `S1969 1 `S1970 1 `S1971 1 `S1972 1 ]
+[n S1965 . . . . . . . . ]
+"32118
+[v _T3CONbits `VS1965 ~T0 @X0 0 e@4017 ]
+"34428
+[s S2096 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2096 . T0PS PSA T0SE T0CS T08BIT TMR0ON ]
+"34436
+[s S2097 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2097 . T0PS0 T0PS1 T0PS2 T0PS3 ]
+"34427
+[u S2095 `S2096 1 `S2097 1 ]
+[n S2095 . . . ]
+"34443
+[v _T0CONbits `VS2095 ~T0 @X0 0 e@4053 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -16606,7 +16676,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;inc\CANlib.h: 190: BYTE CANgetRXerrorCount (void);
 [; ;inc\CANlib.h: 192: BYTE CANisBusOFF (void);
 [; ;inc\CANlib.h: 193: void CANAbortMessages (void);
-"206 ../../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
+"206 ../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
 [v _CANOperationMode `(v ~T0 @X0 1 ef1`E16838 ]
 "207
 {
@@ -18981,12 +19051,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;inc\delay.h: 74: void delay_ms (unsigned int value_ms);
 [; ;inc\delay.h: 88: void delay_s (unsigned char value_s);
 [; ;inc\delay.h: 102: void delay_set_quartz (unsigned char frequency);
-"49 ../../LaurTec_PIC_libraries_v_3.3.0/src\delay.c
+"49 ../LaurTec_PIC_libraries_v_3.3.0/src\delay.c
 [v _delay_quartz_frequency_value `Vuc ~T0 @X0 1 e ]
 [i _delay_quartz_frequency_value
--> -> 20 `i `uc
+-> -> 16 `i `uc
 ]
-[; ;src\delay.c: 49: volatile unsigned char delay_quartz_frequency_value = 20;
+[; ;src\delay.c: 49: volatile unsigned char delay_quartz_frequency_value = 16;
 "50
 [v _clock_counter_reference `Vui ~T0 @X0 1 e ]
 [i _clock_counter_reference
@@ -19069,25 +19139,37 @@ Version 3.2 HI-TECH Software Intermediate Code
 "119
 [e :UE 2349 ]
 }
-[; ;ABS_Code.c: 58: void board_initialization(void);
-[; ;ABS_Code.c: 59: void status_ok(void);
-[; ;ABS_Code.c: 60: void ADC_Read(void);
-"67 ABS_Code.c
+[; ;ABS_Code.c: 75: void board_initialization(void);
+[; ;ABS_Code.c: 76: void remote_frame_handler(void);
+[; ;ABS_Code.c: 77: void ADC_Read(void);
+"84 ABS_Code.c
 [v _msg `S2155 ~T0 @X0 1 e ]
-[; ;ABS_Code.c: 67: CANmessage msg;
-"68
+[; ;ABS_Code.c: 84: CANmessage msg;
+"85
 [v _remote_frame `b ~T0 @X0 1 e ]
-[; ;ABS_Code.c: 68: bit remote_frame;
-"69
+[i _remote_frame
+-> 0 `i
+]
+[; ;ABS_Code.c: 85: bit remote_frame = 0;
+"86
 [v _Tx_retry `b ~T0 @X0 1 e ]
-[; ;ABS_Code.c: 69: bit Tx_retry;
-"70
+[i _Tx_retry
+-> 0 `i
+]
+[; ;ABS_Code.c: 86: bit Tx_retry = 0;
+"87
+[v _count_flag `b ~T0 @X0 1 e ]
+[i _count_flag
+-> 0 `i
+]
+[; ;ABS_Code.c: 87: bit count_flag = 0;
+"88
 [v _remote_frame_id `ul ~T0 @X0 1 e ]
 [i _remote_frame_id
 -> -> -> 0 `i `l `ul
 ]
-[; ;ABS_Code.c: 70: unsigned long remote_frame_id = 0;
-"71
+[; ;ABS_Code.c: 88: unsigned long remote_frame_id = 0;
+"89
 [v _status_array `uc ~T0 @X0 -> 8 `i e ]
 [i _status_array
 :U ..
@@ -19101,548 +19183,900 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 170 `i `uc
 ..
 ]
-[; ;ABS_Code.c: 71: BYTE status_array [8] = {0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0xAA};
-"72
+[; ;ABS_Code.c: 89: BYTE status_array [8] = {0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0xAA};
+"90
+[v _speed_array `uc ~T0 @X0 -> 8 `i e ]
+[i _speed_array
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+]
+[; ;ABS_Code.c: 90: BYTE speed_array [8] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+"91
+[v _distance_array `uc ~T0 @X0 -> 8 `i e ]
+[i _distance_array
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+]
+[; ;ABS_Code.c: 91: BYTE distance_array [8] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+"92
 [v _brake_signal_CAN `uc ~T0 @X0 1 e ]
-[; ;ABS_Code.c: 72: unsigned char brake_signal_CAN;
-"73
+[i _brake_signal_CAN
+-> -> 0 `i `uc
+]
+[; ;ABS_Code.c: 92: unsigned char brake_signal_CAN = 0;
+"93
 [v _Analogic_Mode `uc ~T0 @X0 1 e ]
-[; ;ABS_Code.c: 73: unsigned char Analogic_Mode;
-"76
+[i _Analogic_Mode
+-> -> 0 `i `uc
+]
+[; ;ABS_Code.c: 93: unsigned char Analogic_Mode = 0;
+"96
 [v _timer_on `ul ~T0 @X0 1 e ]
 [i _timer_on
 -> -> -> 0 `i `l `ul
 ]
-[; ;ABS_Code.c: 76: unsigned long timer_on = 0;
-"77
+[; ;ABS_Code.c: 96: unsigned long timer_on = 0;
+"97
 [v _timer_off `ul ~T0 @X0 1 e ]
 [i _timer_off
 -> -> -> 0 `i `l `ul
 ]
-[; ;ABS_Code.c: 77: unsigned long timer_off = 0;
-"80
+[; ;ABS_Code.c: 97: unsigned long timer_off = 0;
+"100
+[v _x `b ~T0 @X0 1 e ]
+[i _x
+-> 0 `i
+]
+[; ;ABS_Code.c: 100: bit x = 0;
+"101
+[v _ENC1_measure `b ~T0 @X0 1 e ]
+[i _ENC1_measure
+-> 0 `i
+]
+[; ;ABS_Code.c: 101: bit ENC1_measure = 0;
+"102
+[v _gap_time_1 `ul ~T0 @X0 1 e ]
+[i _gap_time_1
+-> -> -> 0 `i `l `ul
+]
+[; ;ABS_Code.c: 102: unsigned long gap_time_1 = 0;
+"103
+[v _wheel_speed_1 `uc ~T0 @X0 1 e ]
+[i _wheel_speed_1
+-> -> 0 `i `uc
+]
+[; ;ABS_Code.c: 103: unsigned char wheel_speed_1 = 0;
+"104
+[v _int_counter_1 `ul ~T0 @X0 1 e ]
+[i _int_counter_1
+-> -> -> 0 `i `l `ul
+]
+[; ;ABS_Code.c: 104: unsigned long int_counter_1 = 0;
+"105
+[v _distance_1 `ui ~T0 @X0 1 e ]
+[i _distance_1
+-> -> 0 `i `ui
+]
+[; ;ABS_Code.c: 105: unsigned int distance_1 = 0;
+"108
+[v _y `b ~T0 @X0 1 e ]
+[i _y
+-> 0 `i
+]
+[; ;ABS_Code.c: 108: bit y = 0;
+"109
+[v _ENC2_measure `b ~T0 @X0 1 e ]
+[i _ENC2_measure
+-> 0 `i
+]
+[; ;ABS_Code.c: 109: bit ENC2_measure = 0;
+"110
+[v _gap_time_2 `ul ~T0 @X0 1 e ]
+[i _gap_time_2
+-> -> -> 0 `i `l `ul
+]
+[; ;ABS_Code.c: 110: unsigned long gap_time_2 = 0;
+"111
+[v _wheel_speed_2 `uc ~T0 @X0 1 e ]
+[i _wheel_speed_2
+-> -> 0 `i `uc
+]
+[; ;ABS_Code.c: 111: unsigned char wheel_speed_2 = 0;
+"112
+[v _int_counter_2 `ul ~T0 @X0 1 e ]
+[i _int_counter_2
+-> -> -> 0 `i `l `ul
+]
+[; ;ABS_Code.c: 112: unsigned long int_counter_2 = 0;
+"113
+[v _distance_2 `ui ~T0 @X0 1 e ]
+[i _distance_2
+-> -> 0 `i `ui
+]
+[; ;ABS_Code.c: 113: unsigned int distance_2 = 0;
+"116
 [v _read `uc ~T0 @X0 1 e ]
 [i _read
 -> -> 0 `i `uc
 ]
-[; ;ABS_Code.c: 80: unsigned char read = 0;
-"81
+[; ;ABS_Code.c: 116: unsigned char read = 0;
+"117
 [v _correction_factor `i ~T0 @X0 1 e ]
 [i _correction_factor
 -> 0 `i
 ]
-[; ;ABS_Code.c: 81: int correction_factor = 0;
-"82
+[; ;ABS_Code.c: 117: int correction_factor = 0;
+"118
 [v _home_position `uc ~T0 @X0 1 e ]
 [i _home_position
 -> -> 0 `i `uc
 ]
-[; ;ABS_Code.c: 82: unsigned char home_position = 0;
-"85
+[; ;ABS_Code.c: 118: unsigned char home_position = 0;
+"121
 [v _brake_value_inc `uc ~T0 @X0 1 e ]
 [i _brake_value_inc
 -> -> 0 `i `uc
 ]
-[; ;ABS_Code.c: 85: unsigned char brake_value_inc = 0;
-"86
+[; ;ABS_Code.c: 121: unsigned char brake_value_inc = 0;
+"122
 [v _brake_value `uc ~T0 @X0 1 e ]
 [i _brake_value
 -> -> 0 `i `uc
 ]
-[; ;ABS_Code.c: 86: unsigned char brake_value = 0;
-"87
+[; ;ABS_Code.c: 122: unsigned char brake_value = 0;
+"123
 [v _brake_value_degree `uc ~T0 @X0 1 e ]
 [i _brake_value_degree
 -> -> 0 `i `uc
 ]
-[; ;ABS_Code.c: 87: unsigned char brake_value_degree = 0;
-[v F17068 `(v ~T0 @X0 1 tf ]
-"94
-[v _ISR_Alta `IF17068 ~T51 @X0 1 e ]
+[; ;ABS_Code.c: 123: unsigned char brake_value_degree = 0;
+"124
+[v _step `uc ~T0 @X0 1 e ]
+[i _step
+-> -> 0 `i `uc
+]
+[; ;ABS_Code.c: 124: unsigned char step = 0;
+[v F17084 `(v ~T0 @X0 1 tf ]
+"131
+[v _ISR_Alta `IF17084 ~T51 @X0 1 e ]
 {
-[; ;ABS_Code.c: 94: __attribute__((interrupt("__high_priority"))) void ISR_Alta(void) {
+[; ;ABS_Code.c: 131: __attribute__((interrupt("__high_priority"))) void ISR_Alta(void) {
 [e :U _ISR_Alta ]
 [f ]
-[; ;ABS_Code.c: 95: if (INTCONbits.TMR0IF == 1) {
-"95
+[; ;ABS_Code.c: 133: if (INTCONbits.TMR0IF == 1) {
+"133
 [e $ ! == -> . . _INTCONbits 0 2 `i -> 1 `i 2351  ]
 {
-[; ;ABS_Code.c: 96: PORTCbits.RC0 = ~PORTCbits.RC0;
-"96
+[; ;ABS_Code.c: 134: PORTCbits.RC0 = ~PORTCbits.RC0;
+"134
 [e = . . _PORTCbits 0 0 -> ~ -> . . _PORTCbits 0 0 `i `uc ]
-[; ;ABS_Code.c: 97: T0CONbits.TMR0ON = 0;
-"97
-[e = . . _T0CONbits 0 5 -> -> 0 `i `uc ]
-[; ;ABS_Code.c: 98: if (PORTCbits.RC0 == 1) {
-"98
+[; ;ABS_Code.c: 135: if (PORTCbits.RC0 == 1) {
+"135
 [e $ ! == -> . . _PORTCbits 0 0 `i -> 1 `i 2352  ]
 {
-[; ;ABS_Code.c: 99: timer_on = (((1400 * brake_value_degree) / 180) + 800)*2;
-"99
+[; ;ABS_Code.c: 136: timer_on = (((1400 * brake_value_degree) / 180) + 800)*2;
+"136
 [e = _timer_on -> -> * + / * -> 1400 `i -> _brake_value_degree `i -> 180 `i -> 800 `i -> 2 `i `l `ul ]
-[; ;ABS_Code.c: 100: timer_off = 65536 - (40000 - timer_on);
-"100
+[; ;ABS_Code.c: 137: timer_off = 65536 - (40000 - timer_on);
+"137
 [e = _timer_off - -> -> 65536 `l `ul - -> -> 40000 `l `ul _timer_on ]
-[; ;ABS_Code.c: 101: timer_on = 65536 - timer_on;
-"101
+[; ;ABS_Code.c: 138: timer_on = 65536 - timer_on;
+"138
 [e = _timer_on - -> -> 65536 `l `ul _timer_on ]
-[; ;ABS_Code.c: 102: WriteTimer0(timer_on);
-"102
+[; ;ABS_Code.c: 139: WriteTimer0(timer_on);
+"139
 [e ( _WriteTimer0 (1 -> _timer_on `ui ]
-[; ;ABS_Code.c: 103: T0CONbits.TMR0ON = 1;
-"103
-[e = . . _T0CONbits 0 5 -> -> 1 `i `uc ]
-"104
+"140
 }
-[; ;ABS_Code.c: 104: } else {
+[; ;ABS_Code.c: 140: } else {
 [e $U 2353  ]
 [e :U 2352 ]
 {
-[; ;ABS_Code.c: 105: WriteTimer0(timer_off);
-"105
+[; ;ABS_Code.c: 141: WriteTimer0(timer_off);
+"141
 [e ( _WriteTimer0 (1 -> _timer_off `ui ]
-[; ;ABS_Code.c: 106: T0CONbits.TMR0ON = 1;
-"106
-[e = . . _T0CONbits 0 5 -> -> 1 `i `uc ]
-"107
+"142
 }
 [e :U 2353 ]
-[; ;ABS_Code.c: 107: }
-[; ;ABS_Code.c: 108: INTCONbits.TMR0IF = 0;
-"108
+[; ;ABS_Code.c: 142: }
+[; ;ABS_Code.c: 143: INTCONbits.TMR0IF = 0;
+"143
 [e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-"109
+"144
 }
 [e :U 2351 ]
-[; ;ABS_Code.c: 109: }
-[; ;ABS_Code.c: 110: }
-"110
-[e :UE 2350 ]
+[; ;ABS_Code.c: 144: }
+[; ;ABS_Code.c: 147: if (INTCON3bits.INT1IF == 1) {
+"147
+[e $ ! == -> . . _INTCON3bits 0 0 `i -> 1 `i 2354  ]
+{
+[; ;ABS_Code.c: 148: if (x == 0) {
+"148
+[e $ ! == -> _x `i -> 0 `i 2355  ]
+{
+[; ;ABS_Code.c: 149: TMR1H = 0x00;
+"149
+[e = _TMR1H -> -> 0 `i `uc ]
+[; ;ABS_Code.c: 150: TMR1L = 0x00;
+"150
+[e = _TMR1L -> -> 0 `i `uc ]
+[; ;ABS_Code.c: 151: x = 1;
+"151
+[e = _x -> -> 1 `i `b ]
+"152
 }
-[v F17071 `(v ~T0 @X0 1 tf ]
-"117
-[v _ISR_Bassa `IF17071 ~T52 @X0 1 e ]
+[; ;ABS_Code.c: 152: } else {
+[e $U 2356  ]
+[e :U 2355 ]
 {
-[; ;ABS_Code.c: 117: __attribute__((interrupt("__low_priority"))) void ISR_Bassa(void) {
-[e :U _ISR_Bassa ]
-[f ]
-[; ;ABS_Code.c: 118: if ((PIR3bits.RXB0IF == 1) || (PIR3bits.RXB1IF == 1)) {
-"118
-[e $ ! || == -> . . _PIR3bits 0 0 `i -> 1 `i == -> . . _PIR3bits 0 1 `i -> 1 `i 2355  ]
+[; ;ABS_Code.c: 153: gap_time_1 = (TMR1H * 256) + TMR1L;
+"153
+[e = _gap_time_1 -> -> + * -> _TMR1H `i -> 256 `i -> _TMR1L `i `l `ul ]
+[; ;ABS_Code.c: 154: gap_time_1 = gap_time_1 / 500;
+"154
+[e = _gap_time_1 / _gap_time_1 -> -> -> 500 `i `l `ul ]
+[; ;ABS_Code.c: 155: ENC1_measure = 1;
+"155
+[e = _ENC1_measure -> -> 1 `i `b ]
+[; ;ABS_Code.c: 156: TMR1H = 0x00;
+"156
+[e = _TMR1H -> -> 0 `i `uc ]
+[; ;ABS_Code.c: 157: TMR1H = 0x00;
+"157
+[e = _TMR1H -> -> 0 `i `uc ]
+[; ;ABS_Code.c: 158: if (count_flag == 1) {
+"158
+[e $ ! == -> _count_flag `i -> 1 `i 2357  ]
 {
-[; ;ABS_Code.c: 119: if (CANisRxReady()) {
-"119
-[e $ ! != -> ( _CANisRxReady ..  `i -> -> -> 0 `i `uc `i 2356  ]
-{
-[; ;ABS_Code.c: 120: CANreceiveMessage(&msg);
-"120
-[e ( _CANreceiveMessage (1 &U _msg ]
-[; ;ABS_Code.c: 121: if (msg.RTR == 1) {
-"121
-[e $ ! == -> . _msg 4 `i -> 1 `i 2357  ]
-{
-[; ;ABS_Code.c: 122: remote_frame_id = msg.identifier;
-"122
-[e = _remote_frame_id . _msg 0 ]
-[; ;ABS_Code.c: 123: remote_frame = 1;
-"123
-[e = _remote_frame -> -> 1 `i `b ]
-"124
+[; ;ABS_Code.c: 159: int_counter_1++;
+"159
+[e ++ _int_counter_1 -> -> -> 1 `i `l `ul ]
+"160
 }
 [e :U 2357 ]
-[; ;ABS_Code.c: 124: }
-[; ;ABS_Code.c: 125: if (msg.identifier == 0b00000000000000000000000000110) {
-"125
-[e $ ! == . _msg 0 -> -> -> 6 `i `l `ul 2358  ]
-{
-[; ;ABS_Code.c: 126: brake_signal_CAN = msg.data[0];
-"126
-[e = _brake_signal_CAN *U + &U . _msg 1 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _msg 1 `ui `ux ]
-[; ;ABS_Code.c: 127: Analogic_Mode = msg.data[1];
-"127
-[e = _Analogic_Mode *U + &U . _msg 1 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _msg 1 `ui `ux ]
-"128
-}
-[e :U 2358 ]
-"129
+"161
 }
 [e :U 2356 ]
-[; ;ABS_Code.c: 128: }
-[; ;ABS_Code.c: 129: }
-[; ;ABS_Code.c: 130: PIR3bits.RXB0IF = 0;
-"130
-[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
-[; ;ABS_Code.c: 131: PIR3bits.RXB1IF = 0;
-"131
-[e = . . _PIR3bits 0 1 -> -> 0 `i `uc ]
-"132
-}
-[e :U 2355 ]
-[; ;ABS_Code.c: 132: }
-[; ;ABS_Code.c: 133: }
-"133
-[e :UE 2354 ]
-}
-"139
-[v _main `(i ~T0 @X0 1 ef ]
-{
-[; ;ABS_Code.c: 139: int main(void) {
-[e :U _main ]
-[f ]
-[; ;ABS_Code.c: 140: board_initialization();
-"140
-[e ( _board_initialization ..  ]
-[; ;ABS_Code.c: 141: while (1) {
-"141
-[e :U 2361 ]
-{
-[; ;ABS_Code.c: 144: ADC_Read();
-"144
-[e ( _ADC_Read ..  ]
-[; ;ABS_Code.c: 146: if ((CANisTXwarningON() == 1) || (CANisRXwarningON() == 1)) {
-"146
-[e $ ! || == -> ( _CANisTXwarningON ..  `i -> 1 `i == -> ( _CANisRXwarningON ..  `i -> 1 `i 2363  ]
-{
-[; ;ABS_Code.c: 147: PORTBbits.RB0 = 1;
-"147
-[e = . . _PORTBbits 0 0 -> -> 1 `i `uc ]
-"148
-}
-[; ;ABS_Code.c: 148: } else {
-[e $U 2364  ]
-[e :U 2363 ]
-{
-[; ;ABS_Code.c: 149: PORTBbits.RB0 = 0;
-"149
-[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
-"150
-}
-[e :U 2364 ]
-[; ;ABS_Code.c: 150: }
-[; ;ABS_Code.c: 152: if ((remote_frame == 1) || (Tx_retry == 1)) {
-"152
-[e $ ! || == -> _remote_frame `i -> 1 `i == -> _Tx_retry `i -> 1 `i 2365  ]
-{
-[; ;ABS_Code.c: 153: status_ok();
-"153
-[e ( _status_ok ..  ]
-"154
-}
-[e :U 2365 ]
-[; ;ABS_Code.c: 154: }
-[; ;ABS_Code.c: 156: if (Analogic_Mode == 0) {
-"156
-[e $ ! == -> _Analogic_Mode `i -> 0 `i 2366  ]
-{
-[; ;ABS_Code.c: 157: if (brake_signal_CAN == 00) {
-"157
-[e $ ! == -> _brake_signal_CAN `i -> 0 `i 2367  ]
-{
-[; ;ABS_Code.c: 158: brake_value_inc = 0;
-"158
-[e = _brake_value_inc -> -> 0 `i `uc ]
-"159
-}
-[e :U 2367 ]
-[; ;ABS_Code.c: 159: }
-[; ;ABS_Code.c: 160: if (brake_signal_CAN == 01) {
-"160
-[e $ ! == -> _brake_signal_CAN `i -> 1 `i 2368  ]
-{
-[; ;ABS_Code.c: 161: brake_value_inc = 150;
-"161
-[e = _brake_value_inc -> -> 150 `i `uc ]
+[; ;ABS_Code.c: 160: }
+[; ;ABS_Code.c: 161: }
+[; ;ABS_Code.c: 162: INTCON3bits.INT1IF = 0;
 "162
-}
-[e :U 2368 ]
-[; ;ABS_Code.c: 162: }
-[; ;ABS_Code.c: 163: if (brake_signal_CAN == 10) {
+[e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
 "163
-[e $ ! == -> _brake_signal_CAN `i -> 10 `i 2369  ]
-{
-[; ;ABS_Code.c: 164: brake_value_inc = 200;
-"164
-[e = _brake_value_inc -> -> 200 `i `uc ]
-"165
 }
-[e :U 2369 ]
-[; ;ABS_Code.c: 165: }
-[; ;ABS_Code.c: 166: if (brake_signal_CAN == 11) {
+[e :U 2354 ]
+[; ;ABS_Code.c: 163: }
+[; ;ABS_Code.c: 166: if (INTCON3bits.INT2IF == 1) {
 "166
-[e $ ! == -> _brake_signal_CAN `i -> 11 `i 2370  ]
+[e $ ! == -> . . _INTCON3bits 0 1 `i -> 1 `i 2358  ]
 {
-[; ;ABS_Code.c: 167: brake_value_inc = 255;
+[; ;ABS_Code.c: 167: if (y == 0) {
 "167
-[e = _brake_value_inc -> -> 255 `i `uc ]
-"168
-}
-[e :U 2370 ]
-"169
-}
-[; ;ABS_Code.c: 168: }
-[; ;ABS_Code.c: 169: } else {
-[e $U 2371  ]
-[e :U 2366 ]
+[e $ ! == -> _y `i -> 0 `i 2359  ]
 {
-[; ;ABS_Code.c: 170: brake_value_inc = brake_signal_CAN;
+[; ;ABS_Code.c: 168: TMR3H = 0x00;
+"168
+[e = _TMR3H -> -> 0 `i `uc ]
+[; ;ABS_Code.c: 169: TMR3L = 0x00;
+"169
+[e = _TMR3L -> -> 0 `i `uc ]
+[; ;ABS_Code.c: 170: y = 1;
 "170
-[e = _brake_value_inc _brake_signal_CAN ]
+[e = _y -> -> 1 `i `b ]
 "171
 }
-[e :U 2371 ]
-[; ;ABS_Code.c: 171: }
-[; ;ABS_Code.c: 173: brake_value = (brake_value_inc / 17) + home_position;
+[; ;ABS_Code.c: 171: } else {
+[e $U 2360  ]
+[e :U 2359 ]
+{
+[; ;ABS_Code.c: 172: gap_time_2 = (TMR3H * 256) + TMR3L;
+"172
+[e = _gap_time_2 -> -> + * -> _TMR3H `i -> 256 `i -> _TMR3L `i `l `ul ]
+[; ;ABS_Code.c: 173: gap_time_2 = gap_time_2 / 500;
 "173
-[e = _brake_value -> + / -> _brake_value_inc `i -> 17 `i -> _home_position `i `uc ]
-[; ;ABS_Code.c: 174: brake_value_degree = (180 * brake_value) / 255;
+[e = _gap_time_2 / _gap_time_2 -> -> -> 500 `i `l `ul ]
+[; ;ABS_Code.c: 174: ENC2_measure = 1;
 "174
-[e = _brake_value_degree -> / * -> 180 `i -> _brake_value `i -> 255 `i `uc ]
+[e = _ENC2_measure -> -> 1 `i `b ]
+[; ;ABS_Code.c: 175: TMR3H = 0x00;
 "175
+[e = _TMR3H -> -> 0 `i `uc ]
+[; ;ABS_Code.c: 176: TMR3H = 0x00;
+"176
+[e = _TMR3H -> -> 0 `i `uc ]
+[; ;ABS_Code.c: 177: if (count_flag == 1) {
+"177
+[e $ ! == -> _count_flag `i -> 1 `i 2361  ]
+{
+[; ;ABS_Code.c: 178: int_counter_2++;
+"178
+[e ++ _int_counter_2 -> -> -> 1 `i `l `ul ]
+"179
+}
+[e :U 2361 ]
+"180
 }
 [e :U 2360 ]
-"141
-[e $U 2361  ]
-[e :U 2362 ]
-[; ;ABS_Code.c: 175: }
-[; ;ABS_Code.c: 176: }
-"176
-[e :UE 2359 ]
-}
-"178
-[v _status_ok `(v ~T0 @X0 1 ef ]
-{
-[; ;ABS_Code.c: 178: void status_ok(void) {
-[e :U _status_ok ]
-[f ]
-[; ;ABS_Code.c: 179: if (CANisTxReady()) {
-"179
-[e $ ! != -> ( _CANisTxReady ..  `i -> -> -> 0 `i `uc `i 2373  ]
-{
-[; ;ABS_Code.c: 180: if (remote_frame_id == 0b00000000000000000000000000100) {
-"180
-[e $ ! == _remote_frame_id -> -> -> 4 `i `l `ul 2374  ]
-{
-[; ;ABS_Code.c: 181: CANsendMessage(remote_frame_id, status_array, 8, CAN_CONFIG_STD_MSG & CAN_NORMAL_TX_FRAME & CAN_TX_PRIORITY_0);
+[; ;ABS_Code.c: 179: }
+[; ;ABS_Code.c: 180: }
+[; ;ABS_Code.c: 181: INTCON3bits.INT2IF = 0;
 "181
-[e ( _CANsendMessage (4 , , , _remote_frame_id &U _status_array -> -> 8 `i `uc -> & & -> . `E16844 11 `i -> . `E16866 10 `i -> . `E16866 1 `i `E16866 ]
-[; ;ABS_Code.c: 182: if (TXB0CONbits.TXABT || TXB1CONbits.TXABT) {
+[e = . . _INTCON3bits 0 1 -> -> 0 `i `uc ]
 "182
-[e $ ! || != -> . . _TXB0CONbits 0 6 `i -> -> -> 0 `i `Vuc `i != -> . . _TXB1CONbits 0 6 `i -> -> -> 0 `i `Vuc `i 2375  ]
-{
-[; ;ABS_Code.c: 183: Tx_retry = 1;
-"183
-[e = _Tx_retry -> -> 1 `i `b ]
-"184
 }
-[; ;ABS_Code.c: 184: } else {
-[e $U 2376  ]
-[e :U 2375 ]
+[e :U 2358 ]
+[; ;ABS_Code.c: 182: }
+[; ;ABS_Code.c: 183: }
+"183
+[e :UE 2350 ]
+}
+[v F17087 `(v ~T0 @X0 1 tf ]
+"190
+[v _ISR_Bassa `IF17087 ~T52 @X0 1 e ]
 {
-[; ;ABS_Code.c: 185: Tx_retry = 0;
-"185
-[e = _Tx_retry -> -> 0 `i `b ]
-"186
+[; ;ABS_Code.c: 190: __attribute__((interrupt("__low_priority"))) void ISR_Bassa(void) {
+[e :U _ISR_Bassa ]
+[f ]
+[; ;ABS_Code.c: 192: if ((PIR3bits.RXB0IF == 1) || (PIR3bits.RXB1IF == 1)) {
+"192
+[e $ ! || == -> . . _PIR3bits 0 0 `i -> 1 `i == -> . . _PIR3bits 0 1 `i -> 1 `i 2363  ]
+{
+[; ;ABS_Code.c: 193: if (CANisRxReady()) {
+"193
+[e $ ! != -> ( _CANisRxReady ..  `i -> -> -> 0 `i `uc `i 2364  ]
+{
+[; ;ABS_Code.c: 194: CANreceiveMessage(&msg);
+"194
+[e ( _CANreceiveMessage (1 &U _msg ]
+[; ;ABS_Code.c: 195: if (msg.RTR == 1) {
+"195
+[e $ ! == -> . _msg 4 `i -> 1 `i 2365  ]
+{
+[; ;ABS_Code.c: 196: remote_frame_id = msg.identifier;
+"196
+[e = _remote_frame_id . _msg 0 ]
+[; ;ABS_Code.c: 197: remote_frame = 1;
+"197
+[e = _remote_frame -> -> 1 `i `b ]
+"198
+}
+[e :U 2365 ]
+[; ;ABS_Code.c: 198: }
+[; ;ABS_Code.c: 199: if (msg.identifier == 0b00000000000000000000000000110) {
+"199
+[e $ ! == . _msg 0 -> -> -> 6 `i `l `ul 2366  ]
+{
+[; ;ABS_Code.c: 200: brake_signal_CAN = msg.data[0];
+"200
+[e = _brake_signal_CAN *U + &U . _msg 1 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _msg 1 `ui `ux ]
+[; ;ABS_Code.c: 201: Analogic_Mode = msg.data[1];
+"201
+[e = _Analogic_Mode *U + &U . _msg 1 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _msg 1 `ui `ux ]
+"202
+}
+[e :U 2366 ]
+"203
+}
+[e :U 2364 ]
+[; ;ABS_Code.c: 202: }
+[; ;ABS_Code.c: 203: }
+[; ;ABS_Code.c: 204: PIR3bits.RXB0IF = 0;
+"204
+[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
+[; ;ABS_Code.c: 205: PIR3bits.RXB1IF = 0;
+"205
+[e = . . _PIR3bits 0 1 -> -> 0 `i `uc ]
+"206
+}
+[e :U 2363 ]
+[; ;ABS_Code.c: 206: }
+[; ;ABS_Code.c: 207: }
+"207
+[e :UE 2362 ]
+}
+"213
+[v _main `(i ~T0 @X0 1 ef ]
+{
+[; ;ABS_Code.c: 213: int main(void) {
+[e :U _main ]
+[f ]
+[; ;ABS_Code.c: 214: board_initialization();
+"214
+[e ( _board_initialization ..  ]
+[; ;ABS_Code.c: 215: step = (11 * (3,1415)) / 16;
+"215
+[e = _step -> / * -> 11 `i ; -> 3 `i -> 1415 `i -> 16 `i `uc ]
+[; ;ABS_Code.c: 216: while (1) {
+"216
+[e :U 2369 ]
+{
+[; ;ABS_Code.c: 217: ADC_Read();
+"217
+[e ( _ADC_Read ..  ]
+[; ;ABS_Code.c: 219: if ((CANisTXwarningON() == 1) || (CANisRXwarningON() == 1)) {
+"219
+[e $ ! || == -> ( _CANisTXwarningON ..  `i -> 1 `i == -> ( _CANisRXwarningON ..  `i -> 1 `i 2371  ]
+{
+[; ;ABS_Code.c: 220: PORTBbits.RB0 = 1;
+"220
+[e = . . _PORTBbits 0 0 -> -> 1 `i `uc ]
+"221
+}
+[; ;ABS_Code.c: 221: } else {
+[e $U 2372  ]
+[e :U 2371 ]
+{
+[; ;ABS_Code.c: 222: PORTBbits.RB0 = 0;
+"222
+[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
+"223
+}
+[e :U 2372 ]
+[; ;ABS_Code.c: 223: }
+[; ;ABS_Code.c: 225: if ((remote_frame == 1) || (Tx_retry == 1)) {
+"225
+[e $ ! || == -> _remote_frame `i -> 1 `i == -> _Tx_retry `i -> 1 `i 2373  ]
+{
+[; ;ABS_Code.c: 226: remote_frame = 0;
+"226
+[e = _remote_frame -> -> 0 `i `b ]
+[; ;ABS_Code.c: 227: remote_frame_handler();
+"227
+[e ( _remote_frame_handler ..  ]
+"228
+}
+[e :U 2373 ]
+[; ;ABS_Code.c: 228: }
+[; ;ABS_Code.c: 230: if (Analogic_Mode == 0) {
+"230
+[e $ ! == -> _Analogic_Mode `i -> 0 `i 2374  ]
+{
+[; ;ABS_Code.c: 231: if (brake_signal_CAN == 00) {
+"231
+[e $ ! == -> _brake_signal_CAN `i -> 0 `i 2375  ]
+{
+[; ;ABS_Code.c: 232: brake_value_inc = 0;
+"232
+[e = _brake_value_inc -> -> 0 `i `uc ]
+"233
+}
+[e :U 2375 ]
+[; ;ABS_Code.c: 233: }
+[; ;ABS_Code.c: 234: if (brake_signal_CAN == 01) {
+"234
+[e $ ! == -> _brake_signal_CAN `i -> 1 `i 2376  ]
+{
+[; ;ABS_Code.c: 235: brake_value_inc = 150;
+"235
+[e = _brake_value_inc -> -> 150 `i `uc ]
+"236
 }
 [e :U 2376 ]
-"187
-}
-[e :U 2374 ]
-"188
-}
-[; ;ABS_Code.c: 186: }
-[; ;ABS_Code.c: 187: }
-[; ;ABS_Code.c: 188: } else {
-[e $U 2377  ]
-[e :U 2373 ]
+[; ;ABS_Code.c: 236: }
+[; ;ABS_Code.c: 237: if (brake_signal_CAN == 10) {
+"237
+[e $ ! == -> _brake_signal_CAN `i -> 10 `i 2377  ]
 {
-[; ;ABS_Code.c: 189: Tx_retry = 1;
-"189
-[e = _Tx_retry -> -> 1 `i `b ]
-"190
+[; ;ABS_Code.c: 238: brake_value_inc = 200;
+"238
+[e = _brake_value_inc -> -> 200 `i `uc ]
+"239
 }
 [e :U 2377 ]
-[; ;ABS_Code.c: 190: }
-[; ;ABS_Code.c: 191: remote_frame = 0;
-"191
-[e = _remote_frame -> -> 0 `i `b ]
-[; ;ABS_Code.c: 192: }
-"192
-[e :UE 2372 ]
+[; ;ABS_Code.c: 239: }
+[; ;ABS_Code.c: 240: if (brake_signal_CAN == 11) {
+"240
+[e $ ! == -> _brake_signal_CAN `i -> 11 `i 2378  ]
+{
+[; ;ABS_Code.c: 241: brake_value_inc = 255;
+"241
+[e = _brake_value_inc -> -> 255 `i `uc ]
+"242
 }
-"194
+[e :U 2378 ]
+"243
+}
+[; ;ABS_Code.c: 242: }
+[; ;ABS_Code.c: 243: } else {
+[e $U 2379  ]
+[e :U 2374 ]
+{
+[; ;ABS_Code.c: 244: brake_value_inc = brake_signal_CAN;
+"244
+[e = _brake_value_inc _brake_signal_CAN ]
+"245
+}
+[e :U 2379 ]
+[; ;ABS_Code.c: 245: }
+[; ;ABS_Code.c: 247: brake_value = (brake_value_inc / 17) + home_position;
+"247
+[e = _brake_value -> + / -> _brake_value_inc `i -> 17 `i -> _home_position `i `uc ]
+[; ;ABS_Code.c: 248: brake_value_degree = (180 * brake_value) / 255;
+"248
+[e = _brake_value_degree -> / * -> 180 `i -> _brake_value `i -> 255 `i `uc ]
+[; ;ABS_Code.c: 250: if (ENC1_measure == 1) {
+"250
+[e $ ! == -> _ENC1_measure `i -> 1 `i 2380  ]
+{
+[; ;ABS_Code.c: 251: wheel_speed_1 = (step * 36) / gap_time_1;
+"251
+[e = _wheel_speed_1 -> / -> -> * -> _step `i -> 36 `i `l `ul _gap_time_1 `uc ]
+[; ;ABS_Code.c: 252: speed_array[1] = wheel_speed_1;
+"252
+[e = *U + &U _speed_array * -> -> -> 1 `i `ui `ux -> -> # *U &U _speed_array `ui `ux _wheel_speed_1 ]
+[; ;ABS_Code.c: 253: ENC1_measure = 0;
+"253
+[e = _ENC1_measure -> -> 0 `i `b ]
+"254
+}
+[e :U 2380 ]
+[; ;ABS_Code.c: 254: }
+[; ;ABS_Code.c: 256: if (ENC2_measure == 1) {
+"256
+[e $ ! == -> _ENC2_measure `i -> 1 `i 2381  ]
+{
+[; ;ABS_Code.c: 257: wheel_speed_2 = (step * 36) / gap_time_2;
+"257
+[e = _wheel_speed_2 -> / -> -> * -> _step `i -> 36 `i `l `ul _gap_time_2 `uc ]
+[; ;ABS_Code.c: 258: speed_array[0] = wheel_speed_2;
+"258
+[e = *U + &U _speed_array * -> -> -> 0 `i `ui `ux -> -> # *U &U _speed_array `ui `ux _wheel_speed_2 ]
+[; ;ABS_Code.c: 259: ENC2_measure = 0;
+"259
+[e = _ENC2_measure -> -> 0 `i `b ]
+"260
+}
+[e :U 2381 ]
+"261
+}
+[e :U 2368 ]
+"216
+[e $U 2369  ]
+[e :U 2370 ]
+[; ;ABS_Code.c: 260: }
+[; ;ABS_Code.c: 261: }
+[; ;ABS_Code.c: 262: }
+"262
+[e :UE 2367 ]
+}
+"269
+[v _remote_frame_handler `(v ~T0 @X0 1 ef ]
+{
+[; ;ABS_Code.c: 269: void remote_frame_handler(void) {
+[e :U _remote_frame_handler ]
+[f ]
+[; ;ABS_Code.c: 270: if (CANisTxReady()) {
+"270
+[e $ ! != -> ( _CANisTxReady ..  `i -> -> -> 0 `i `uc `i 2383  ]
+{
+[; ;ABS_Code.c: 271: if (remote_frame_id == 0b00000000000000000000000000100) {
+"271
+[e $ ! == _remote_frame_id -> -> -> 4 `i `l `ul 2384  ]
+{
+[; ;ABS_Code.c: 272: CANsendMessage(remote_frame_id, status_array, 8, CAN_CONFIG_STD_MSG & CAN_NORMAL_TX_FRAME & CAN_TX_PRIORITY_0);
+"272
+[e ( _CANsendMessage (4 , , , _remote_frame_id &U _status_array -> -> 8 `i `uc -> & & -> . `E16844 11 `i -> . `E16866 10 `i -> . `E16866 1 `i `E16866 ]
+"273
+}
+[e :U 2384 ]
+[; ;ABS_Code.c: 273: }
+[; ;ABS_Code.c: 274: if (remote_frame_id == 0b00000000000000000000000001000) {
+"274
+[e $ ! == _remote_frame_id -> -> -> 8 `i `l `ul 2385  ]
+{
+[; ;ABS_Code.c: 275: CANsendMessage(remote_frame_id, speed_array, 8, CAN_CONFIG_STD_MSG & CAN_NORMAL_TX_FRAME & CAN_TX_PRIORITY_0);
+"275
+[e ( _CANsendMessage (4 , , , _remote_frame_id &U _speed_array -> -> 8 `i `uc -> & & -> . `E16844 11 `i -> . `E16866 10 `i -> . `E16866 1 `i `E16866 ]
+"276
+}
+[e :U 2385 ]
+[; ;ABS_Code.c: 276: }
+[; ;ABS_Code.c: 277: if (remote_frame_id == 0b00000000000000000000000001010) {
+"277
+[e $ ! == _remote_frame_id -> -> -> 10 `i `l `ul 2386  ]
+{
+[; ;ABS_Code.c: 278: int_counter_1 = 0;
+"278
+[e = _int_counter_1 -> -> -> 0 `i `l `ul ]
+[; ;ABS_Code.c: 279: int_counter_2 = 0;
+"279
+[e = _int_counter_2 -> -> -> 0 `i `l `ul ]
+[; ;ABS_Code.c: 280: count_flag = 1;
+"280
+[e = _count_flag -> -> 1 `i `b ]
+"281
+}
+[e :U 2386 ]
+[; ;ABS_Code.c: 281: }
+[; ;ABS_Code.c: 282: if (remote_frame_id == 0b00000000000000000000000001011) {
+"282
+[e $ ! == _remote_frame_id -> -> -> 11 `i `l `ul 2387  ]
+{
+[; ;ABS_Code.c: 283: distance_1 = step * (int_counter_1);
+"283
+[e = _distance_1 -> * -> _step `ul _int_counter_1 `ui ]
+[; ;ABS_Code.c: 284: distance_2 = step * (int_counter_2);
+"284
+[e = _distance_2 -> * -> _step `ul _int_counter_2 `ui ]
+[; ;ABS_Code.c: 285: count_flag = 0;
+"285
+[e = _count_flag -> -> 0 `i `b ]
+[; ;ABS_Code.c: 286: distance_array[0] = distance_1;
+"286
+[e = *U + &U _distance_array * -> -> -> 0 `i `ui `ux -> -> # *U &U _distance_array `ui `ux -> _distance_1 `uc ]
+[; ;ABS_Code.c: 287: distance_array[1] = distance_1 >> 8;
+"287
+[e = *U + &U _distance_array * -> -> -> 1 `i `ui `ux -> -> # *U &U _distance_array `ui `ux -> >> _distance_1 -> 8 `i `uc ]
+[; ;ABS_Code.c: 288: distance_array[2] = distance_2;
+"288
+[e = *U + &U _distance_array * -> -> -> 2 `i `ui `ux -> -> # *U &U _distance_array `ui `ux -> _distance_2 `uc ]
+[; ;ABS_Code.c: 289: distance_array[3] = distance_2 >> 8;
+"289
+[e = *U + &U _distance_array * -> -> -> 3 `i `ui `ux -> -> # *U &U _distance_array `ui `ux -> >> _distance_2 -> 8 `i `uc ]
+[; ;ABS_Code.c: 290: CANsendMessage(remote_frame_id, distance_array, 8, CAN_CONFIG_STD_MSG & CAN_NORMAL_TX_FRAME & CAN_TX_PRIORITY_0);
+"290
+[e ( _CANsendMessage (4 , , , _remote_frame_id &U _distance_array -> -> 8 `i `uc -> & & -> . `E16844 11 `i -> . `E16866 10 `i -> . `E16866 1 `i `E16866 ]
+"291
+}
+[e :U 2387 ]
+[; ;ABS_Code.c: 291: }
+[; ;ABS_Code.c: 292: if (TXB0CONbits.TXABT || TXB1CONbits.TXABT) {
+"292
+[e $ ! || != -> . . _TXB0CONbits 0 6 `i -> -> -> 0 `i `Vuc `i != -> . . _TXB1CONbits 0 6 `i -> -> -> 0 `i `Vuc `i 2388  ]
+{
+[; ;ABS_Code.c: 293: Tx_retry = 1;
+"293
+[e = _Tx_retry -> -> 1 `i `b ]
+"294
+}
+[; ;ABS_Code.c: 294: } else {
+[e $U 2389  ]
+[e :U 2388 ]
+{
+[; ;ABS_Code.c: 295: Tx_retry = 0;
+"295
+[e = _Tx_retry -> -> 0 `i `b ]
+"296
+}
+[e :U 2389 ]
+"297
+}
+[; ;ABS_Code.c: 296: }
+[; ;ABS_Code.c: 297: } else {
+[e $U 2390  ]
+[e :U 2383 ]
+{
+[; ;ABS_Code.c: 298: Tx_retry = 1;
+"298
+[e = _Tx_retry -> -> 1 `i `b ]
+"299
+}
+[e :U 2390 ]
+[; ;ABS_Code.c: 299: }
+[; ;ABS_Code.c: 300: }
+"300
+[e :UE 2382 ]
+}
+"302
 [v _ADC_Read `(v ~T0 @X0 1 ef ]
 {
-[; ;ABS_Code.c: 194: void ADC_Read(void) {
+[; ;ABS_Code.c: 302: void ADC_Read(void) {
 [e :U _ADC_Read ]
 [f ]
-[; ;ABS_Code.c: 195: ADCON0bits.GO = 1;
-"195
+[; ;ABS_Code.c: 303: ADCON0bits.GO = 1;
+"303
 [e = . . _ADCON0bits 5 1 -> -> 1 `i `uc ]
-[; ;ABS_Code.c: 196: while (ADCON0bits.GO);
-"196
-[e $U 2379  ]
-[e :U 2380 ]
-[e :U 2379 ]
-[e $ != -> . . _ADCON0bits 5 1 `i -> -> -> 0 `i `Vuc `i 2380  ]
-[e :U 2381 ]
-[; ;ABS_Code.c: 197: read = ADRESH;
-"197
+[; ;ABS_Code.c: 304: while (ADCON0bits.GO);
+"304
+[e $U 2392  ]
+[e :U 2393 ]
+[e :U 2392 ]
+[e $ != -> . . _ADCON0bits 5 1 `i -> -> -> 0 `i `Vuc `i 2393  ]
+[e :U 2394 ]
+[; ;ABS_Code.c: 305: read = ADRESH;
+"305
 [e = _read _ADRESH ]
-[; ;ABS_Code.c: 198: correction_factor = read - 127;
-"198
+[; ;ABS_Code.c: 306: correction_factor = read - 127;
+"306
 [e = _correction_factor - -> _read `i -> 127 `i ]
-[; ;ABS_Code.c: 199: home_position = correction_factor / 4 + 127;
-"199
+[; ;ABS_Code.c: 307: home_position = correction_factor / 4 + 127;
+"307
 [e = _home_position -> + / _correction_factor -> 4 `i -> 127 `i `uc ]
-[; ;ABS_Code.c: 200: }
-"200
-[e :UE 2378 ]
+[; ;ABS_Code.c: 308: }
+"308
+[e :UE 2391 ]
 }
-"202
+"310
 [v _board_initialization `(v ~T0 @X0 1 ef ]
 {
-[; ;ABS_Code.c: 202: void board_initialization(void) {
+[; ;ABS_Code.c: 310: void board_initialization(void) {
 [e :U _board_initialization ]
 [f ]
-[; ;ABS_Code.c: 204: LATA = 0x00;
-"204
+[; ;ABS_Code.c: 312: LATA = 0x00;
+"312
 [e = _LATA -> -> 0 `i `uc ]
-[; ;ABS_Code.c: 205: TRISA = 0xFF;
-"205
+[; ;ABS_Code.c: 313: TRISA = 0xFF;
+"313
 [e = _TRISA -> -> 255 `i `uc ]
-[; ;ABS_Code.c: 206: LATB = 0x00;
-"206
+[; ;ABS_Code.c: 314: LATB = 0x00;
+"314
 [e = _LATB -> -> 0 `i `uc ]
-[; ;ABS_Code.c: 207: TRISB = 0b11111110;
-"207
+[; ;ABS_Code.c: 315: TRISB = 0b11111110;
+"315
 [e = _TRISB -> -> 254 `i `uc ]
-[; ;ABS_Code.c: 208: LATC = 0x00;
-"208
+[; ;ABS_Code.c: 316: LATC = 0x00;
+"316
 [e = _LATC -> -> 0 `i `uc ]
-[; ;ABS_Code.c: 209: TRISC = 0b11111110;
-"209
+[; ;ABS_Code.c: 317: TRISC = 0b11111110;
+"317
 [e = _TRISC -> -> 254 `i `uc ]
-[; ;ABS_Code.c: 210: LATD = 0x00;
-"210
+[; ;ABS_Code.c: 318: LATD = 0x00;
+"318
 [e = _LATD -> -> 0 `i `uc ]
-[; ;ABS_Code.c: 211: TRISD = 0xFF;
-"211
+[; ;ABS_Code.c: 319: TRISD = 0xFF;
+"319
 [e = _TRISD -> -> 255 `i `uc ]
-[; ;ABS_Code.c: 212: LATE = 0x00;
-"212
+[; ;ABS_Code.c: 320: LATE = 0x00;
+"320
 [e = _LATE -> -> 0 `i `uc ]
-[; ;ABS_Code.c: 213: TRISE = 0xFF;
-"213
+[; ;ABS_Code.c: 321: TRISE = 0xFF;
+"321
 [e = _TRISE -> -> 255 `i `uc ]
-[; ;ABS_Code.c: 215: ADCON1 = 0x11111110;
-"215
+[; ;ABS_Code.c: 323: ADCON1 = 0x11111110;
+"323
 [e = _ADCON1 -> -> 286331152 `l `uc ]
-[; ;ABS_Code.c: 218: CANInitialize(4, 6, 5, 1, 3, CAN_CONFIG_LINE_FILTER_OFF & CAN_CONFIG_SAMPLE_ONCE & CAN_CONFIG_ALL_VALID_MSG & CAN_CONFIG_DBL_BUFFER_ON);
-"218
+[; ;ABS_Code.c: 326: CANInitialize(4, 6, 5, 1, 3, CAN_CONFIG_LINE_FILTER_OFF & CAN_CONFIG_SAMPLE_ONCE & CAN_CONFIG_ALL_VALID_MSG & CAN_CONFIG_DBL_BUFFER_ON);
+"326
 [e ( _CANInitialize (4 , , , , , -> -> 4 `i `uc -> -> 6 `i `uc -> -> 5 `i `uc -> -> 1 `i `uc -> -> 3 `i `uc -> & & & -> . `E16844 6 `i -> . `E16844 8 `i -> . `E16844 20 `i -> . `E16844 14 `i `E16844 ]
-[; ;ABS_Code.c: 221: PIR3bits.RXB1IF = 0;
-"221
+[; ;ABS_Code.c: 329: PIR3bits.RXB1IF = 0;
+"329
 [e = . . _PIR3bits 0 1 -> -> 0 `i `uc ]
-[; ;ABS_Code.c: 222: PIR3bits.RXB0IF = 0;
-"222
+[; ;ABS_Code.c: 330: PIR3bits.RXB0IF = 0;
+"330
 [e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
-[; ;ABS_Code.c: 223: INTCONbits.TMR0IF = 0;
-"223
+[; ;ABS_Code.c: 331: INTCONbits.TMR0IF = 0;
+"331
 [e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-[; ;ABS_Code.c: 224: PIR2bits.TMR3IF = 0;
-"224
+[; ;ABS_Code.c: 332: INTCON3bits.INT1IF = 0;
+"332
+[e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
+[; ;ABS_Code.c: 333: INTCON3bits.INT2IF = 0;
+"333
+[e = . . _INTCON3bits 0 1 -> -> 0 `i `uc ]
+[; ;ABS_Code.c: 334: PIR2bits.TMR3IF = 0;
+"334
 [e = . . _PIR2bits 0 1 -> -> 0 `i `uc ]
-[; ;ABS_Code.c: 227: RCONbits.IPEN = 1;
-"227
+[; ;ABS_Code.c: 337: RCONbits.IPEN = 1;
+"337
 [e = . . _RCONbits 5 7 -> -> 1 `i `uc ]
-[; ;ABS_Code.c: 228: IPR3bits.RXB1IP = 0;
-"228
+[; ;ABS_Code.c: 338: IPR3bits.RXB1IP = 0;
+"338
 [e = . . _IPR3bits 0 1 -> -> 0 `i `uc ]
-[; ;ABS_Code.c: 229: IPR3bits.RXB0IP = 0;
-"229
+[; ;ABS_Code.c: 339: IPR3bits.RXB0IP = 0;
+"339
 [e = . . _IPR3bits 0 0 -> -> 0 `i `uc ]
-[; ;ABS_Code.c: 230: INTCON2bits.TMR0IP = 1;
-"230
+[; ;ABS_Code.c: 340: INTCON2bits.TMR0IP = 1;
+"340
 [e = . . _INTCON2bits 1 2 -> -> 1 `i `uc ]
-[; ;ABS_Code.c: 233: T0CON = 0x80;
-"233
+[; ;ABS_Code.c: 341: INTCON3bits.INT1IP = 1;
+"341
+[e = . . _INTCON3bits 0 6 -> -> 1 `i `uc ]
+[; ;ABS_Code.c: 342: INTCON3bits.INT2IP = 1;
+"342
+[e = . . _INTCON3bits 0 7 -> -> 1 `i `uc ]
+[; ;ABS_Code.c: 345: T0CON = 0x80;
+"345
 [e = _T0CON -> -> 128 `i `uc ]
-[; ;ABS_Code.c: 240: TMR0H = 0xFF;
-"240
+[; ;ABS_Code.c: 352: TMR0H = 0xFF;
+"352
 [e = _TMR0H -> -> 255 `i `uc ]
-[; ;ABS_Code.c: 241: TMR0L = 0xFE;
-"241
+[; ;ABS_Code.c: 353: TMR0L = 0xFE;
+"353
 [e = _TMR0L -> -> 254 `i `uc ]
-[; ;ABS_Code.c: 242: PORTCbits.RC0 = 0;
-"242
+[; ;ABS_Code.c: 354: PORTCbits.RC0 = 0;
+"354
 [e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
-[; ;ABS_Code.c: 243: brake_value_degree = 90;
-"243
+[; ;ABS_Code.c: 355: brake_value_degree = 90;
+"355
 [e = _brake_value_degree -> -> 90 `i `uc ]
-[; ;ABS_Code.c: 244: INTCON2bits.INTEDG0 = 1;
-"244
-[e = . . _INTCON2bits 1 6 -> -> 1 `i `uc ]
-[; ;ABS_Code.c: 247: ADCON1 = 0b01110111;
-"247
+[; ;ABS_Code.c: 356: T1CON = 10010000;
+"356
+[e = _T1CON -> -> 10010000 `l `uc ]
+[; ;ABS_Code.c: 357: T3CON = 11010000;
+"357
+[e = _T3CON -> -> 11010000 `l `uc ]
+[; ;ABS_Code.c: 358: INTCON2bits.INTEDG1 = 1;
+"358
+[e = . . _INTCON2bits 1 5 -> -> 1 `i `uc ]
+[; ;ABS_Code.c: 359: INTCON2bits.INTEDG2 = 1;
+"359
+[e = . . _INTCON2bits 1 4 -> -> 1 `i `uc ]
+[; ;ABS_Code.c: 362: ADCON1 = 0b01110111;
+"362
 [e = _ADCON1 -> -> 119 `i `uc ]
-[; ;ABS_Code.c: 248: ADCON0bits.CHS2 = 0;
-"248
+[; ;ABS_Code.c: 363: ADCON0bits.CHS2 = 0;
+"363
 [e = . . _ADCON0bits 3 4 -> -> 0 `i `uc ]
-[; ;ABS_Code.c: 249: ADCON0bits.CHS1 = 0;
-"249
+[; ;ABS_Code.c: 364: ADCON0bits.CHS1 = 0;
+"364
 [e = . . _ADCON0bits 3 3 -> -> 0 `i `uc ]
-[; ;ABS_Code.c: 250: ADCON0bits.CHS0 = 0;
-"250
+[; ;ABS_Code.c: 365: ADCON0bits.CHS0 = 0;
+"365
 [e = . . _ADCON0bits 3 2 -> -> 0 `i `uc ]
-[; ;ABS_Code.c: 251: ADCON2bits.ACQT2 = 1;
-"251
+[; ;ABS_Code.c: 366: ADCON2bits.ACQT2 = 1;
+"366
 [e = . . _ADCON2bits 1 5 -> -> 1 `i `uc ]
-[; ;ABS_Code.c: 252: ADCON2bits.ACQT1 = 1;
-"252
+[; ;ABS_Code.c: 367: ADCON2bits.ACQT1 = 1;
+"367
 [e = . . _ADCON2bits 1 4 -> -> 1 `i `uc ]
-[; ;ABS_Code.c: 253: ADCON2bits.ACQT0 = 0;
-"253
+[; ;ABS_Code.c: 368: ADCON2bits.ACQT0 = 0;
+"368
 [e = . . _ADCON2bits 1 3 -> -> 0 `i `uc ]
-[; ;ABS_Code.c: 254: ADCON2bits.ADCS2 = 1;
-"254
+[; ;ABS_Code.c: 369: ADCON2bits.ADCS2 = 1;
+"369
 [e = . . _ADCON2bits 1 2 -> -> 1 `i `uc ]
-[; ;ABS_Code.c: 255: ADCON2bits.ADCS1 = 0;
-"255
+[; ;ABS_Code.c: 370: ADCON2bits.ADCS1 = 0;
+"370
 [e = . . _ADCON2bits 1 1 -> -> 0 `i `uc ]
-[; ;ABS_Code.c: 256: ADCON2bits.ADCS0 = 1;
-"256
+[; ;ABS_Code.c: 371: ADCON2bits.ADCS0 = 1;
+"371
 [e = . . _ADCON2bits 1 0 -> -> 1 `i `uc ]
-[; ;ABS_Code.c: 257: ADCON2bits.ADFM = 0;
-"257
+[; ;ABS_Code.c: 372: ADCON2bits.ADFM = 0;
+"372
 [e = . . _ADCON2bits 0 3 -> -> 0 `i `uc ]
-[; ;ABS_Code.c: 258: ADCON0bits.ADON = 1;
-"258
+[; ;ABS_Code.c: 373: ADCON0bits.ADON = 1;
+"373
 [e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
-[; ;ABS_Code.c: 261: PIE3bits.RXB1IE = 1;
-"261
+[; ;ABS_Code.c: 376: PIE3bits.RXB1IE = 1;
+"376
 [e = . . _PIE3bits 0 1 -> -> 1 `i `uc ]
-[; ;ABS_Code.c: 262: PIE3bits.RXB0IE = 1;
-"262
+[; ;ABS_Code.c: 377: PIE3bits.RXB0IE = 1;
+"377
 [e = . . _PIE3bits 0 0 -> -> 1 `i `uc ]
-[; ;ABS_Code.c: 263: INTCONbits.TMR0IE = 1;
-"263
+[; ;ABS_Code.c: 378: INTCONbits.TMR0IE = 1;
+"378
 [e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
-[; ;ABS_Code.c: 264: INTCONbits.GIEH = 1;
-"264
+[; ;ABS_Code.c: 379: INTCON3bits.INT1IE = 1;
+"379
+[e = . . _INTCON3bits 0 3 -> -> 1 `i `uc ]
+[; ;ABS_Code.c: 380: INTCON3bits.INT2IE = 1;
+"380
+[e = . . _INTCON3bits 0 4 -> -> 1 `i `uc ]
+[; ;ABS_Code.c: 381: INTCONbits.GIEH = 1;
+"381
 [e = . . _INTCONbits 2 7 -> -> 1 `i `uc ]
-[; ;ABS_Code.c: 265: INTCONbits.GIEL = 1;
-"265
+[; ;ABS_Code.c: 382: INTCONbits.GIEL = 1;
+"382
 [e = . . _INTCONbits 2 6 -> -> 1 `i `uc ]
-[; ;ABS_Code.c: 268: T3CON = 0x01;
-"268
-[e = _T3CON -> -> 1 `i `uc ]
-[; ;ABS_Code.c: 269: T0CONbits.TMR0ON = 1;
-"269
+[; ;ABS_Code.c: 385: T1CONbits.TMR1ON = 1;
+"385
+[e = . . _T1CONbits 1 0 -> -> 1 `i `uc ]
+[; ;ABS_Code.c: 386: T3CONbits.TMR3ON = 1;
+"386
+[e = . . _T3CONbits 1 0 -> -> 1 `i `uc ]
+[; ;ABS_Code.c: 387: T0CONbits.TMR0ON = 1;
+"387
 [e = . . _T0CONbits 0 5 -> -> 1 `i `uc ]
-[; ;ABS_Code.c: 271: delay_ms(2);
-"271
+[; ;ABS_Code.c: 388: delay_ms(2);
+"388
 [e ( _delay_ms (1 -> -> 2 `i `ui ]
-[; ;ABS_Code.c: 272: }
-"272
-[e :UE 2382 ]
+[; ;ABS_Code.c: 389: }
+"389
+[e :UE 2395 ]
 }

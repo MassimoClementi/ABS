@@ -1,0 +1,26 @@
+_CANisRXwarningON: CODE, 10876 0 12
+___awdiv: CODE, 9392 0 226
+_ISR_Bassa: CODE, 24 0 228
+_CANSetFilter: CODE, 256 0 3114
+_CANisRxReady: CODE, 10824 0 22
+_send_data: CODE, 10020 0 166
+_main: CODE, 8996 0 396
+i2___awdiv: CODE, 10186 0 164
+i2___wmul: CODE, 10728 0 38
+_CANreceiveMessage: CODE, 5536 0 1236
+_board_initialization: CODE, 9830 0 190
+_ISR_Alta: CODE, 8 0 8480
+_WriteTimer0: CODE, 10846 0 18
+i2___lldiv: CODE, 10350 0 130
+__initialization: CODE, 10480 0 58
+___lldiv: CODE, 9618 0 212
+_CANisTXwarningON: CODE, 10864 0 12
+_CANsendMessage: CODE, 3370 0 2166
+_delay_ms: CODE, 10612 0 62
+_CANInitialize: CODE, 8488 0 508
+_CANOperationMode: CODE, 10802 0 22
+_ADC_Read: CODE, 10548 0 64
+_CANisTxReady: CODE, 10766 0 36
+___wmul: CODE, 10674 0 54
+_CANSetMask: CODE, 6772 0 1026
+Total: 18640
