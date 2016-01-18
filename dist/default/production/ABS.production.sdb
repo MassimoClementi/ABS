@@ -90,17 +90,17 @@ CAN_RX_BUFFER_2_OVFL 2
 [v _CANisRxReady CANisRxReady `(uc  1 e 1 0 ]
 "61 Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/src\delay.c
 [v _delay_ms delay_ms `(v  1 e 0 0 ]
-"131 Z:\Centraline\ABS\ABS_Code.c
+"132 Z:\Centraline\ABS\ABS_Code.c
 [v _ISR_Alta ISR_Alta `IIH(v  1 e 0 0 ]
-"190
+"191
 [v _ISR_Bassa ISR_Bassa `IIL(v  1 e 0 0 ]
-"213
+"214
 [v _main main `(i  1 e 2 0 ]
-"269
+"270
 [v _remote_frame_handler remote_frame_handler `(v  1 e 0 0 ]
-"302
+"303
 [v _ADC_Read ADC_Read `(v  1 e 0 0 ]
-"310
+"311
 [v _board_initialization board_initialization `(v  1 e 0 0 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
@@ -138,67 +138,67 @@ CAN_RX_BUFFER_2_OVFL 2
 "50
 [v _clock_counter_reference clock_counter_reference `VEui  1 e 2 0 ]
 [s S853 . 15 `ul 1 identifier 4 0 `[8]uc 1 data 8 4 `uc 1 type 1 12 `uc 1 length 1 13 `uc 1 RTR 1 14 ]
-"84 Z:\Centraline\ABS\ABS_Code.c
+"85 Z:\Centraline\ABS\ABS_Code.c
 [v _msg msg `S853  1 e 15 0 ]
-"85
-[v _remote_frame remote_frame `b  1 e 0 0 ]
 "86
-[v _Tx_retry Tx_retry `b  1 e 0 0 ]
+[v _remote_frame remote_frame `b  1 e 0 0 ]
 "87
-[v _count_flag count_flag `b  1 e 0 0 ]
+[v _Tx_retry Tx_retry `b  1 e 0 0 ]
 "88
-[v _remote_frame_id remote_frame_id `ul  1 e 4 0 ]
+[v _count_flag count_flag `b  1 e 0 0 ]
 "89
-[v _status_array status_array `[8]uc  1 e 8 0 ]
+[v _remote_frame_id remote_frame_id `ul  1 e 4 0 ]
 "90
-[v _speed_array speed_array `[8]uc  1 e 8 0 ]
+[v _status_array status_array `[8]uc  1 e 8 0 ]
 "91
-[v _distance_array distance_array `[8]uc  1 e 8 0 ]
+[v _speed_array speed_array `[8]uc  1 e 8 0 ]
 "92
-[v _brake_signal_CAN brake_signal_CAN `uc  1 e 1 0 ]
+[v _distance_array distance_array `[8]uc  1 e 8 0 ]
 "93
+[v _brake_signal_CAN brake_signal_CAN `uc  1 e 1 0 ]
+"94
 [v _Analogic_Mode Analogic_Mode `uc  1 e 1 0 ]
-"96
-[v _timer_on timer_on `ul  1 e 4 0 ]
 "97
+[v _timer_on timer_on `ul  1 e 4 0 ]
+"98
 [v _timer_off timer_off `ul  1 e 4 0 ]
-"100
-[v _x x `b  1 e 0 0 ]
 "101
-[v _ENC1_measure ENC1_measure `b  1 e 0 0 ]
+[v _x x `b  1 e 0 0 ]
 "102
-[v _gap_time_1 gap_time_1 `ul  1 e 4 0 ]
+[v _ENC1_measure ENC1_measure `b  1 e 0 0 ]
 "103
-[v _wheel_speed_1 wheel_speed_1 `uc  1 e 1 0 ]
+[v _gap_time_1 gap_time_1 `ul  1 e 4 0 ]
 "104
-[v _int_counter_1 int_counter_1 `ul  1 e 4 0 ]
+[v _wheel_speed_1 wheel_speed_1 `uc  1 e 1 0 ]
 "105
+[v _int_counter_1 int_counter_1 `ul  1 e 4 0 ]
+"106
 [v _distance_1 distance_1 `ui  1 e 2 0 ]
-"108
-[v _y y `b  1 e 0 0 ]
 "109
-[v _ENC2_measure ENC2_measure `b  1 e 0 0 ]
+[v _y y `b  1 e 0 0 ]
 "110
-[v _gap_time_2 gap_time_2 `ul  1 e 4 0 ]
+[v _ENC2_measure ENC2_measure `b  1 e 0 0 ]
 "111
-[v _wheel_speed_2 wheel_speed_2 `uc  1 e 1 0 ]
+[v _gap_time_2 gap_time_2 `ul  1 e 4 0 ]
 "112
-[v _int_counter_2 int_counter_2 `ul  1 e 4 0 ]
+[v _wheel_speed_2 wheel_speed_2 `uc  1 e 1 0 ]
 "113
+[v _int_counter_2 int_counter_2 `ul  1 e 4 0 ]
+"114
 [v _distance_2 distance_2 `ui  1 e 2 0 ]
-"116
-[v _read read `uc  1 e 1 0 ]
 "117
-[v _correction_factor correction_factor `i  1 e 2 0 ]
+[v _read read `uc  1 e 1 0 ]
 "118
+[v _correction_factor correction_factor `i  1 e 2 0 ]
+"119
 [v _home_position home_position `uc  1 e 1 0 ]
-"121
-[v _brake_value_inc brake_value_inc `uc  1 e 1 0 ]
 "122
-[v _brake_value brake_value `uc  1 e 1 0 ]
+[v _brake_value_inc brake_value_inc `uc  1 e 1 0 ]
 "123
-[v _brake_value_degree brake_value_degree `uc  1 e 1 0 ]
+[v _brake_value brake_value `uc  1 e 1 0 ]
 "124
+[v _brake_value_degree brake_value_degree `uc  1 e 1 0 ]
+"125
 [v _step step `uc  1 e 1 0 ]
 "16255 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f4480.h
 [v _RXF0SIDH RXF0SIDH `VEuc  1 e 1 @3840 ]
@@ -1483,7 +1483,7 @@ CAN_RX_BUFFER_2_OVFL 2
 [v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
 "34509
 [v _TMR0H TMR0H `VEuc  1 e 1 @4055 ]
-[s S2140 . 1 `uc 1 INT1IF 1 0 :1:0 
+[s S2142 . 1 `uc 1 INT1IF 1 0 :1:0 
 `uc 1 INT2IF 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 INT1IE 1 0 :1:3 
@@ -1493,7 +1493,7 @@ CAN_RX_BUFFER_2_OVFL 2
 `uc 1 INT2IP 1 0 :1:7 
 ]
 "34776
-[s S2149 . 1 `uc 1 INT1F 1 0 :1:0 
+[s S2151 . 1 `uc 1 INT1F 1 0 :1:0 
 `uc 1 INT2F 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 INT1E 1 0 :1:3 
@@ -1503,10 +1503,10 @@ CAN_RX_BUFFER_2_OVFL 2
 `uc 1 INT2P 1 0 :1:7 
 ]
 "34776
-[u S2158 . 1 `S2140 1 . 1 0 `S2149 1 . 1 0 ]
+[u S2160 . 1 `S2142 1 . 1 0 `S2151 1 . 1 0 ]
 "34776
 "34776
-[v _INTCON3bits INTCON3bits `VES2158  1 e 1 @4080 ]
+[v _INTCON3bits INTCON3bits `VES2160  1 e 1 @4080 ]
 [s S2541 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 NOT_RBPU 1 0 :1:7 
 ]
@@ -1580,15 +1580,15 @@ CAN_RX_BUFFER_2_OVFL 2
 "34968
 "34968
 [v _INTCONbits INTCONbits `VES2010  1 e 1 @4082 ]
-"213 Z:\Centraline\ABS\ABS_Code.c
+"214 Z:\Centraline\ABS\ABS_Code.c
 [v _main main `(i  1 e 2 0 ]
 {
-"262
+"263
 } 0
-"269
+"270
 [v _remote_frame_handler remote_frame_handler `(v  1 e 0 0 ]
 {
-"300
+"301
 } 0
 "294 Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
 [v _CANsendMessage CANsendMessage `(v  1 e 0 0 ]
@@ -1607,7 +1607,7 @@ CAN_RX_BUFFER_2_OVFL 2
 {
 "1157
 } 0
-"310 Z:\Centraline\ABS\ABS_Code.c
+"311 Z:\Centraline\ABS\ABS_Code.c
 [v _board_initialization board_initialization `(v  1 e 0 0 ]
 {
 "389
@@ -1706,10 +1706,10 @@ CAN_RX_BUFFER_2_OVFL 2
 {
 "1130
 } 0
-"302 Z:\Centraline\ABS\ABS_Code.c
+"303 Z:\Centraline\ABS\ABS_Code.c
 [v _ADC_Read ADC_Read `(v  1 e 0 0 ]
 {
-"308
+"309
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
@@ -1724,10 +1724,10 @@ CAN_RX_BUFFER_2_OVFL 2
 [v ___awdiv@divisor divisor `i  1 p 2 24 ]
 "42
 } 0
-"190 Z:\Centraline\ABS\ABS_Code.c
+"191 Z:\Centraline\ABS\ABS_Code.c
 [v _ISR_Bassa ISR_Bassa `IIL(v  1 e 0 0 ]
 {
-"207
+"208
 } 0
 "528 Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
 [v _CANreceiveMessage CANreceiveMessage `(uc  1 e 1 0 ]
@@ -1746,10 +1746,10 @@ CAN_RX_BUFFER_2_OVFL 2
 {
 "1166
 } 0
-"131 Z:\Centraline\ABS\ABS_Code.c
+"132 Z:\Centraline\ABS\ABS_Code.c
 [v _ISR_Alta ISR_Alta `IIH(v  1 e 0 0 ]
 {
-"183
+"184
 } 0
 "15 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
 [v i2___wmul __wmul `(ui  1 e 2 0 ]

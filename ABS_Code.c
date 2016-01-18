@@ -16,11 +16,12 @@
 ////////////////////////////            //////////////////////////////
 //   INPUT AND OUTPUTS    //            //  COMBINAZIONI BIT CANBus //
 //  RA0 => Trimmer (ADC)  //            //   00 = Nessuna frenata   //
-//  RB0 => Warning LED    //            //   01 = Livello basso     //
-//  RB1 => ENCODER 1      //            //   10 = Livello medio     //
-//  RB2 => ENCODER 2      //            //   11 = Livello alto      //
-//  RC0 => PWM TMR0       //            //////////////////////////////
-//  CANRX/CANTX => CANBus //
+//  RA1 => Warning LED    //            //   01 = Livello basso     //
+//  RB0 => ENCODER 1      //            //   10 = Livello medio     //
+//  RB1 => ENCODER 2      //            //   11 = Livello alto      //
+//  RB2/RB3 => CANBus     //            //////////////////////////////
+//  RC0 => PWM TMR0       //
+//  RC1 => Yellow LED     //
 ////////////////////////////
 
 // Implementazione di un bit del byte[1] del CANBus che permette la gestione
@@ -144,13 +145,13 @@ __interrupt(high_priority) void ISR_Alta(void) {
     }
 
     //INTERRUPT ENCODER 1
-    if (INTCON3bits.INT1IF == HIGH) {
+    if (INTCONbits.INT0IF == HIGH) {
         if (x == LOW) {
             TMR1H = 0x00;
             TMR1L = 0x00;
             x = HIGH;
         } else {
-            gap_time_1 = (TMR1H * 256) + TMR1L;
+            gap_time_1 = (TMR1H <<8) + TMR1L;
             gap_time_1 = gap_time_1 / 500; //in ms
             ENC1_measure = HIGH;
             TMR1H = 0x00;
@@ -159,17 +160,17 @@ __interrupt(high_priority) void ISR_Alta(void) {
                 int_counter_1++;
             }
         }
-        INTCON3bits.INT1IF = 0;
+        INTCONbits.INT0IF = LOW;
     }
 
     //INTERRUPT ENCODER 2
-    if (INTCON3bits.INT2IF == HIGH) {
+    if (INTCON3bits.INT1IF == HIGH) {
         if (y == LOW) {
             TMR3H = 0x00;
             TMR3L = 0x00;
             y = HIGH;
         } else {
-            gap_time_2 = (TMR3H * 256) + TMR3L;
+            gap_time_2 = (TMR3H <<8) + TMR3L;
             gap_time_2 = gap_time_2 / 500; //in ms
             ENC2_measure = HIGH;
             TMR3H = 0x00;
@@ -178,7 +179,7 @@ __interrupt(high_priority) void ISR_Alta(void) {
                 int_counter_2++;
             }
         }
-        INTCON3bits.INT2IF = 0;
+        INTCON3bits.INT1IF = LOW;
     }
 }
 
@@ -282,7 +283,7 @@ void remote_frame_handler(void) {
         if (remote_frame_id == count_stop) {
             distance_1 = step * (int_counter_1);
             distance_2 = step * (int_counter_2);
-            count_flag = 0;
+            count_flag = LOW;
             distance_array[0] = distance_1;
             distance_array[1] = distance_1 >> 8;
             distance_array[2] = distance_2;
@@ -326,12 +327,12 @@ void board_initialization(void) {
     CANInitialize(4, 6, 5, 1, 3, CAN_CONFIG_LINE_FILTER_OFF & CAN_CONFIG_SAMPLE_ONCE & CAN_CONFIG_ALL_VALID_MSG & CAN_CONFIG_DBL_BUFFER_ON);
 
     //Azzero Flag Interrupts
-    PIR3bits.RXB1IF = 0; //azzera flag interrupt can bus buffer1
-    PIR3bits.RXB0IF = 0; //azzera flag interrupt can bus buffer0
-    INTCONbits.TMR0IF = 0; //azzera flag TMR0
-    INTCON3bits.INT1IF = 0; //azzera flag INT1
-    INTCON3bits.INT2IF = 0; //azzera flag INT2
-    PIR2bits.TMR3IF = 0; //resetta flag interrupt timer 3
+    PIR3bits.RXB1IF = LOW; //azzera flag interrupt can bus buffer1
+    PIR3bits.RXB0IF = LOW; //azzera flag interrupt can bus buffer0
+    INTCONbits.TMR0IF = LOW; //azzera flag TMR0
+    INTCONbits.INT0IF = LOW; //azzera flag INT0
+    INTCON3bits.INT1IF = LOW; //azzera flag INT1
+    PIR2bits.TMR3IF = LOW; //resetta flag interrupt timer 3
 
     //Config. Priorità
     RCONbits.IPEN = 1;
@@ -339,7 +340,6 @@ void board_initialization(void) {
     IPR3bits.RXB0IP = 0; //interrupt bassa priorità per can
     INTCON2bits.TMR0IP = 1; //interrupt alta priorità timer0
     INTCON3bits.INT1IP = 1; //interrupt alta priorità INT1
-    INTCON3bits.INT2IP = 1; //interrupt alta priorità INT2
 
     //Config. Registri
     T0CON = 0x80; //imposta timer0, prescaler 1:2
@@ -353,10 +353,10 @@ void board_initialization(void) {
     TMR0L = 0xFE;
     PORTCbits.RC0 = 0;
     brake_value_degree = 90;
-    T1CON = 10010000;
-    T3CON = 11010000;
+    T1CON = 00010000;
+    T3CON = 01010000;
+    INTCON2bits.INTEDG0 = 1;
     INTCON2bits.INTEDG1 = 1;
-    INTCON2bits.INTEDG2 = 1;
 
     //Configurazione ADC
     ADCON1 = 0b01110111;
@@ -376,8 +376,8 @@ void board_initialization(void) {
     PIE3bits.RXB1IE = 1; //abilita interrupt ricezione can bus buffer1
     PIE3bits.RXB0IE = 1; //abilita interrupt ricezione can bus buffer0
     INTCONbits.TMR0IE = 1; //abilita interrupt timer 0
+    INTCONbits.INT0IE = 1; //abilita interrupt INT0
     INTCON3bits.INT1IE = 1; //abilita interrupt INT1
-    INTCON3bits.INT2IE = 1; //abilita interrupt INT2
     INTCONbits.GIEH = 1; //abilita interrupt alta priorità
     INTCONbits.GIEL = 1; //abilita interrupt bassa priorità periferiche
 

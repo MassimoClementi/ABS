@@ -20463,12 +20463,12 @@ delay_quartz_frequency_value = frequency;
 
 }
 
-# 75 "ABS_Code.c"
+# 76 "ABS_Code.c"
 void board_initialization(void);
 void remote_frame_handler(void);
 void ADC_Read(void);
 
-# 84
+# 85
 CANmessage msg;
 bit remote_frame = 0;
 bit Tx_retry = 0;
@@ -20511,7 +20511,7 @@ unsigned char brake_value = 0;
 unsigned char brake_value_degree = 0;
 unsigned char step = 0;
 
-# 131
+# 132
 __attribute__((interrupt("__high_priority"))) void ISR_Alta(void) {
 
 if (INTCONbits.TMR0IF == 1) {
@@ -20528,13 +20528,13 @@ INTCONbits.TMR0IF = 0;
 }
 
 
-if (INTCON3bits.INT1IF == 1) {
+if (INTCONbits.INT0IF == 1) {
 if (x == 0) {
 TMR1H = 0x00;
 TMR1L = 0x00;
 x = 1;
 } else {
-gap_time_1 = (TMR1H * 256) + TMR1L;
+gap_time_1 = (TMR1H <<8) + TMR1L;
 gap_time_1 = gap_time_1 / 500;
 ENC1_measure = 1;
 TMR1H = 0x00;
@@ -20543,17 +20543,17 @@ if (count_flag == 1) {
 int_counter_1++;
 }
 }
-INTCON3bits.INT1IF = 0;
+INTCONbits.INT0IF = 0;
 }
 
 
-if (INTCON3bits.INT2IF == 1) {
+if (INTCON3bits.INT1IF == 1) {
 if (y == 0) {
 TMR3H = 0x00;
 TMR3L = 0x00;
 y = 1;
 } else {
-gap_time_2 = (TMR3H * 256) + TMR3L;
+gap_time_2 = (TMR3H <<8) + TMR3L;
 gap_time_2 = gap_time_2 / 500;
 ENC2_measure = 1;
 TMR3H = 0x00;
@@ -20562,11 +20562,11 @@ if (count_flag == 1) {
 int_counter_2++;
 }
 }
-INTCON3bits.INT2IF = 0;
+INTCON3bits.INT1IF = 0;
 }
 }
 
-# 190
+# 191
 __attribute__((interrupt("__low_priority"))) void ISR_Bassa(void) {
 
 if ((PIR3bits.RXB0IF == 1) || (PIR3bits.RXB1IF == 1)) {
@@ -20586,7 +20586,7 @@ PIR3bits.RXB1IF = 0;
 }
 }
 
-# 213
+# 214
 int main(void) {
 board_initialization();
 step = (11 * (3,1415)) / 16;
@@ -20638,7 +20638,7 @@ ENC2_measure = 0;
 }
 }
 
-# 269
+# 270
 void remote_frame_handler(void) {
 if (CANisTxReady()) {
 if (remote_frame_id == 0b00000000000000000000000000100) {
@@ -20702,8 +20702,8 @@ CANInitialize(4, 6, 5, 1, 3, CAN_CONFIG_LINE_FILTER_OFF & CAN_CONFIG_SAMPLE_ONCE
 PIR3bits.RXB1IF = 0;
 PIR3bits.RXB0IF = 0;
 INTCONbits.TMR0IF = 0;
+INTCONbits.INT0IF = 0;
 INTCON3bits.INT1IF = 0;
-INTCON3bits.INT2IF = 0;
 PIR2bits.TMR3IF = 0;
 
 
@@ -20712,7 +20712,6 @@ IPR3bits.RXB1IP = 0;
 IPR3bits.RXB0IP = 0;
 INTCON2bits.TMR0IP = 1;
 INTCON3bits.INT1IP = 1;
-INTCON3bits.INT2IP = 1;
 
 
 T0CON = 0x80;
@@ -20722,10 +20721,10 @@ TMR0H = 0xFF;
 TMR0L = 0xFE;
 PORTCbits.RC0 = 0;
 brake_value_degree = 90;
-T1CON = 10010000;
-T3CON = 11010000;
+T1CON = 00010000;
+T3CON = 01010000;
+INTCON2bits.INTEDG0 = 1;
 INTCON2bits.INTEDG1 = 1;
-INTCON2bits.INTEDG2 = 1;
 
 
 ADCON1 = 0b01110111;
@@ -20745,8 +20744,8 @@ ADCON0bits.ADON = 1;
 PIE3bits.RXB1IE = 1;
 PIE3bits.RXB0IE = 1;
 INTCONbits.TMR0IE = 1;
+INTCONbits.INT0IE = 1;
 INTCON3bits.INT1IE = 1;
-INTCON3bits.INT2IE = 1;
 INTCONbits.GIEH = 1;
 INTCONbits.GIEL = 1;
 
