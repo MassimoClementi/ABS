@@ -55,6 +55,7 @@
 #include "delay.h"
 #include "pwm.h"
 #include "timers.h"
+#include "idCan.h"
 #define _XTAL_FREQ 16000000
 #define HIGH 1
 #define LOW 0

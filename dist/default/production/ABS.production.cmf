@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Massimo\AppData\Local\Temp\s2nk.obj
+$C:\Users\Massimo\AppData\Local\Temp\s89g.obj
 idloc IDLOC 0 200000 200000 8 1
 reset_vec CODE 0 0 0 4 1
 end_init CODE 0 100 100 4 1
@@ -89,23 +89,23 @@ MEDIUMCONST 2883-3FFF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\ABS.production.obj
-18 intcodelo CODE >191:Z:\Centraline\ABS\ABS_Code.c
+18 intcodelo CODE >192:Z:\Centraline\ABS\ABS_Code.c
 18 intcodelo CODE >42:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\awdiv.c
-5E intcodelo CODE >193:Z:\Centraline\ABS\ABS_Code.c
-66 intcodelo CODE >194:Z:\Centraline\ABS\ABS_Code.c
-70 intcodelo CODE >195:Z:\Centraline\ABS\ABS_Code.c
-7C intcodelo CODE >196:Z:\Centraline\ABS\ABS_Code.c
-84 intcodelo CODE >197:Z:\Centraline\ABS\ABS_Code.c
-94 intcodelo CODE >198:Z:\Centraline\ABS\ABS_Code.c
-96 intcodelo CODE >200:Z:\Centraline\ABS\ABS_Code.c
-AC intcodelo CODE >201:Z:\Centraline\ABS\ABS_Code.c
-B0 intcodelo CODE >202:Z:\Centraline\ABS\ABS_Code.c
-B4 intcodelo CODE >204:Z:\Centraline\ABS\ABS_Code.c
+5E intcodelo CODE >194:Z:\Centraline\ABS\ABS_Code.c
+66 intcodelo CODE >195:Z:\Centraline\ABS\ABS_Code.c
+70 intcodelo CODE >196:Z:\Centraline\ABS\ABS_Code.c
+7C intcodelo CODE >197:Z:\Centraline\ABS\ABS_Code.c
+84 intcodelo CODE >198:Z:\Centraline\ABS\ABS_Code.c
+94 intcodelo CODE >199:Z:\Centraline\ABS\ABS_Code.c
+96 intcodelo CODE >201:Z:\Centraline\ABS\ABS_Code.c
+AC intcodelo CODE >202:Z:\Centraline\ABS\ABS_Code.c
+B0 intcodelo CODE >203:Z:\Centraline\ABS\ABS_Code.c
 B4 intcodelo CODE >205:Z:\Centraline\ABS\ABS_Code.c
-B6 intcodelo CODE >206:Z:\Centraline\ABS\ABS_Code.c
-B8 intcodelo CODE >208:Z:\Centraline\ABS\ABS_Code.c
+B4 intcodelo CODE >206:Z:\Centraline\ABS\ABS_Code.c
+B6 intcodelo CODE >207:Z:\Centraline\ABS\ABS_Code.c
+B8 intcodelo CODE >209:Z:\Centraline\ABS\ABS_Code.c
 8 intcode CODE >1166:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-8 intcode CODE >132:Z:\Centraline\ABS\ABS_Code.c
+8 intcode CODE >133:Z:\Centraline\ABS\ABS_Code.c
 2850 text23 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\pic18\plib\Timers\t0write.c
 2850 text23 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\pic18\plib\Timers\t0write.c
 2858 text23 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\pic18\plib\Timers\t0write.c
@@ -157,46 +157,46 @@ B8 intcodelo CODE >208:Z:\Centraline\ABS\ABS_Code.c
 27E6 text20 CODE >38:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
 27EE text20 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
 27F6 text20 CODE >52:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
-1C40 intcode_body CODE >132:Z:\Centraline\ABS\ABS_Code.c
-1C72 intcode_body CODE >134:Z:\Centraline\ABS\ABS_Code.c
-1C76 intcode_body CODE >135:Z:\Centraline\ABS\ABS_Code.c
-1C92 intcode_body CODE >136:Z:\Centraline\ABS\ABS_Code.c
-1C96 intcode_body CODE >137:Z:\Centraline\ABS\ABS_Code.c
-1CEC intcode_body CODE >138:Z:\Centraline\ABS\ABS_Code.c
-1D6C intcode_body CODE >139:Z:\Centraline\ABS\ABS_Code.c
-1DB0 intcode_body CODE >140:Z:\Centraline\ABS\ABS_Code.c
-1DBC intcode_body CODE >141:Z:\Centraline\ABS\ABS_Code.c
-1DBE intcode_body CODE >142:Z:\Centraline\ABS\ABS_Code.c
-1DCA intcode_body CODE >144:Z:\Centraline\ABS\ABS_Code.c
-1DCC intcode_body CODE >148:Z:\Centraline\ABS\ABS_Code.c
-1DD0 intcode_body CODE >149:Z:\Centraline\ABS\ABS_Code.c
-1DD4 intcode_body CODE >150:Z:\Centraline\ABS\ABS_Code.c
-1DD8 intcode_body CODE >151:Z:\Centraline\ABS\ABS_Code.c
-1DDC intcode_body CODE >152:Z:\Centraline\ABS\ABS_Code.c
-1DDE intcode_body CODE >153:Z:\Centraline\ABS\ABS_Code.c
-1DE0 intcode_body CODE >154:Z:\Centraline\ABS\ABS_Code.c
-1E0C intcode_body CODE >155:Z:\Centraline\ABS\ABS_Code.c
-1E40 intcode_body CODE >156:Z:\Centraline\ABS\ABS_Code.c
-1E42 intcode_body CODE >157:Z:\Centraline\ABS\ABS_Code.c
-1E46 intcode_body CODE >158:Z:\Centraline\ABS\ABS_Code.c
-1E4A intcode_body CODE >159:Z:\Centraline\ABS\ABS_Code.c
-1E4E intcode_body CODE >160:Z:\Centraline\ABS\ABS_Code.c
-1E5C intcode_body CODE >163:Z:\Centraline\ABS\ABS_Code.c
-1E5E intcode_body CODE >167:Z:\Centraline\ABS\ABS_Code.c
-1E62 intcode_body CODE >168:Z:\Centraline\ABS\ABS_Code.c
-1E66 intcode_body CODE >169:Z:\Centraline\ABS\ABS_Code.c
-1E6A intcode_body CODE >170:Z:\Centraline\ABS\ABS_Code.c
-1E6E intcode_body CODE >171:Z:\Centraline\ABS\ABS_Code.c
-1E70 intcode_body CODE >172:Z:\Centraline\ABS\ABS_Code.c
-1E72 intcode_body CODE >173:Z:\Centraline\ABS\ABS_Code.c
-1E9E intcode_body CODE >174:Z:\Centraline\ABS\ABS_Code.c
-1ED2 intcode_body CODE >175:Z:\Centraline\ABS\ABS_Code.c
-1ED4 intcode_body CODE >176:Z:\Centraline\ABS\ABS_Code.c
-1ED8 intcode_body CODE >177:Z:\Centraline\ABS\ABS_Code.c
-1EDC intcode_body CODE >178:Z:\Centraline\ABS\ABS_Code.c
-1EE0 intcode_body CODE >179:Z:\Centraline\ABS\ABS_Code.c
-1EEE intcode_body CODE >182:Z:\Centraline\ABS\ABS_Code.c
-1EF0 intcode_body CODE >184:Z:\Centraline\ABS\ABS_Code.c
+1C40 intcode_body CODE >133:Z:\Centraline\ABS\ABS_Code.c
+1C72 intcode_body CODE >135:Z:\Centraline\ABS\ABS_Code.c
+1C76 intcode_body CODE >136:Z:\Centraline\ABS\ABS_Code.c
+1C92 intcode_body CODE >137:Z:\Centraline\ABS\ABS_Code.c
+1C96 intcode_body CODE >138:Z:\Centraline\ABS\ABS_Code.c
+1CEC intcode_body CODE >139:Z:\Centraline\ABS\ABS_Code.c
+1D6C intcode_body CODE >140:Z:\Centraline\ABS\ABS_Code.c
+1DB0 intcode_body CODE >141:Z:\Centraline\ABS\ABS_Code.c
+1DBC intcode_body CODE >142:Z:\Centraline\ABS\ABS_Code.c
+1DBE intcode_body CODE >143:Z:\Centraline\ABS\ABS_Code.c
+1DCA intcode_body CODE >145:Z:\Centraline\ABS\ABS_Code.c
+1DCC intcode_body CODE >149:Z:\Centraline\ABS\ABS_Code.c
+1DD0 intcode_body CODE >150:Z:\Centraline\ABS\ABS_Code.c
+1DD4 intcode_body CODE >151:Z:\Centraline\ABS\ABS_Code.c
+1DD8 intcode_body CODE >152:Z:\Centraline\ABS\ABS_Code.c
+1DDC intcode_body CODE >153:Z:\Centraline\ABS\ABS_Code.c
+1DDE intcode_body CODE >154:Z:\Centraline\ABS\ABS_Code.c
+1DE0 intcode_body CODE >155:Z:\Centraline\ABS\ABS_Code.c
+1E0C intcode_body CODE >156:Z:\Centraline\ABS\ABS_Code.c
+1E40 intcode_body CODE >157:Z:\Centraline\ABS\ABS_Code.c
+1E42 intcode_body CODE >158:Z:\Centraline\ABS\ABS_Code.c
+1E46 intcode_body CODE >159:Z:\Centraline\ABS\ABS_Code.c
+1E4A intcode_body CODE >160:Z:\Centraline\ABS\ABS_Code.c
+1E4E intcode_body CODE >161:Z:\Centraline\ABS\ABS_Code.c
+1E5C intcode_body CODE >164:Z:\Centraline\ABS\ABS_Code.c
+1E5E intcode_body CODE >168:Z:\Centraline\ABS\ABS_Code.c
+1E62 intcode_body CODE >169:Z:\Centraline\ABS\ABS_Code.c
+1E66 intcode_body CODE >170:Z:\Centraline\ABS\ABS_Code.c
+1E6A intcode_body CODE >171:Z:\Centraline\ABS\ABS_Code.c
+1E6E intcode_body CODE >172:Z:\Centraline\ABS\ABS_Code.c
+1E70 intcode_body CODE >173:Z:\Centraline\ABS\ABS_Code.c
+1E72 intcode_body CODE >174:Z:\Centraline\ABS\ABS_Code.c
+1E9E intcode_body CODE >175:Z:\Centraline\ABS\ABS_Code.c
+1ED2 intcode_body CODE >176:Z:\Centraline\ABS\ABS_Code.c
+1ED4 intcode_body CODE >177:Z:\Centraline\ABS\ABS_Code.c
+1ED8 intcode_body CODE >178:Z:\Centraline\ABS\ABS_Code.c
+1EDC intcode_body CODE >179:Z:\Centraline\ABS\ABS_Code.c
+1EE0 intcode_body CODE >180:Z:\Centraline\ABS\ABS_Code.c
+1EEE intcode_body CODE >183:Z:\Centraline\ABS\ABS_Code.c
+1EF0 intcode_body CODE >185:Z:\Centraline\ABS\ABS_Code.c
 283A text18 CODE >1163:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
 283A text18 CODE >1165:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
 1396 text17 CODE >528:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
@@ -296,13 +296,13 @@ B8 intcodelo CODE >208:Z:\Centraline\ABS\ABS_Code.c
 244A text15 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\awdiv.c
 2454 text15 CODE >40:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\awdiv.c
 245E text15 CODE >41:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\awdiv.c
-272C text14 CODE >303:Z:\Centraline\ABS\ABS_Code.c
 272C text14 CODE >304:Z:\Centraline\ABS\ABS_Code.c
-272E text14 CODE >305:Z:\Centraline\ABS\ABS_Code.c
-2732 text14 CODE >306:Z:\Centraline\ABS\ABS_Code.c
-2736 text14 CODE >307:Z:\Centraline\ABS\ABS_Code.c
-2748 text14 CODE >308:Z:\Centraline\ABS\ABS_Code.c
-2768 text14 CODE >309:Z:\Centraline\ABS\ABS_Code.c
+272C text14 CODE >305:Z:\Centraline\ABS\ABS_Code.c
+272E text14 CODE >306:Z:\Centraline\ABS\ABS_Code.c
+2732 text14 CODE >307:Z:\Centraline\ABS\ABS_Code.c
+2736 text14 CODE >308:Z:\Centraline\ABS\ABS_Code.c
+2748 text14 CODE >309:Z:\Centraline\ABS\ABS_Code.c
+2768 text14 CODE >310:Z:\Centraline\ABS\ABS_Code.c
 286E text13 CODE >1127:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
 286E text13 CODE >1129:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
 2862 text12 CODE >1119:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
@@ -684,63 +684,63 @@ C04 text9 CODE >1075:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
 278E text5 CODE >88:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/src\delay.c
 2796 text5 CODE >75:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/src\delay.c
 2796 text5 CODE >89:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/src\delay.c
-2524 text4 CODE >311:Z:\Centraline\ABS\ABS_Code.c
-2524 text4 CODE >313:Z:\Centraline\ABS\ABS_Code.c
-2528 text4 CODE >314:Z:\Centraline\ABS\ABS_Code.c
-252A text4 CODE >315:Z:\Centraline\ABS\ABS_Code.c
-252E text4 CODE >316:Z:\Centraline\ABS\ABS_Code.c
-2532 text4 CODE >317:Z:\Centraline\ABS\ABS_Code.c
-2536 text4 CODE >318:Z:\Centraline\ABS\ABS_Code.c
-253A text4 CODE >319:Z:\Centraline\ABS\ABS_Code.c
-253E text4 CODE >320:Z:\Centraline\ABS\ABS_Code.c
-2540 text4 CODE >321:Z:\Centraline\ABS\ABS_Code.c
-2544 text4 CODE >322:Z:\Centraline\ABS\ABS_Code.c
-2546 text4 CODE >324:Z:\Centraline\ABS\ABS_Code.c
-254A text4 CODE >327:Z:\Centraline\ABS\ABS_Code.c
-256E text4 CODE >330:Z:\Centraline\ABS\ABS_Code.c
-2570 text4 CODE >331:Z:\Centraline\ABS\ABS_Code.c
-2572 text4 CODE >332:Z:\Centraline\ABS\ABS_Code.c
-2574 text4 CODE >333:Z:\Centraline\ABS\ABS_Code.c
-2576 text4 CODE >334:Z:\Centraline\ABS\ABS_Code.c
-2578 text4 CODE >335:Z:\Centraline\ABS\ABS_Code.c
-257A text4 CODE >338:Z:\Centraline\ABS\ABS_Code.c
-257C text4 CODE >339:Z:\Centraline\ABS\ABS_Code.c
-257E text4 CODE >340:Z:\Centraline\ABS\ABS_Code.c
-2580 text4 CODE >341:Z:\Centraline\ABS\ABS_Code.c
-2582 text4 CODE >342:Z:\Centraline\ABS\ABS_Code.c
-2584 text4 CODE >345:Z:\Centraline\ABS\ABS_Code.c
-2588 text4 CODE >352:Z:\Centraline\ABS\ABS_Code.c
-258A text4 CODE >353:Z:\Centraline\ABS\ABS_Code.c
-258E text4 CODE >354:Z:\Centraline\ABS\ABS_Code.c
-2590 text4 CODE >355:Z:\Centraline\ABS\ABS_Code.c
-2594 text4 CODE >356:Z:\Centraline\ABS\ABS_Code.c
-2598 text4 CODE >357:Z:\Centraline\ABS\ABS_Code.c
-259C text4 CODE >358:Z:\Centraline\ABS\ABS_Code.c
-259E text4 CODE >359:Z:\Centraline\ABS\ABS_Code.c
-25A0 text4 CODE >362:Z:\Centraline\ABS\ABS_Code.c
-25A4 text4 CODE >363:Z:\Centraline\ABS\ABS_Code.c
-25A6 text4 CODE >364:Z:\Centraline\ABS\ABS_Code.c
-25A8 text4 CODE >365:Z:\Centraline\ABS\ABS_Code.c
-25AA text4 CODE >366:Z:\Centraline\ABS\ABS_Code.c
-25AC text4 CODE >367:Z:\Centraline\ABS\ABS_Code.c
-25AE text4 CODE >368:Z:\Centraline\ABS\ABS_Code.c
-25B0 text4 CODE >369:Z:\Centraline\ABS\ABS_Code.c
-25B2 text4 CODE >370:Z:\Centraline\ABS\ABS_Code.c
-25B4 text4 CODE >371:Z:\Centraline\ABS\ABS_Code.c
-25B6 text4 CODE >372:Z:\Centraline\ABS\ABS_Code.c
-25B8 text4 CODE >373:Z:\Centraline\ABS\ABS_Code.c
-25BA text4 CODE >376:Z:\Centraline\ABS\ABS_Code.c
-25BC text4 CODE >377:Z:\Centraline\ABS\ABS_Code.c
-25BE text4 CODE >378:Z:\Centraline\ABS\ABS_Code.c
-25C0 text4 CODE >379:Z:\Centraline\ABS\ABS_Code.c
-25C2 text4 CODE >380:Z:\Centraline\ABS\ABS_Code.c
-25C4 text4 CODE >381:Z:\Centraline\ABS\ABS_Code.c
-25C6 text4 CODE >382:Z:\Centraline\ABS\ABS_Code.c
-25C8 text4 CODE >385:Z:\Centraline\ABS\ABS_Code.c
-25CA text4 CODE >386:Z:\Centraline\ABS\ABS_Code.c
-25CC text4 CODE >387:Z:\Centraline\ABS\ABS_Code.c
-25CE text4 CODE >388:Z:\Centraline\ABS\ABS_Code.c
-25DC text4 CODE >389:Z:\Centraline\ABS\ABS_Code.c
+2524 text4 CODE >312:Z:\Centraline\ABS\ABS_Code.c
+2524 text4 CODE >314:Z:\Centraline\ABS\ABS_Code.c
+2528 text4 CODE >315:Z:\Centraline\ABS\ABS_Code.c
+252A text4 CODE >316:Z:\Centraline\ABS\ABS_Code.c
+252E text4 CODE >317:Z:\Centraline\ABS\ABS_Code.c
+2532 text4 CODE >318:Z:\Centraline\ABS\ABS_Code.c
+2536 text4 CODE >319:Z:\Centraline\ABS\ABS_Code.c
+253A text4 CODE >320:Z:\Centraline\ABS\ABS_Code.c
+253E text4 CODE >321:Z:\Centraline\ABS\ABS_Code.c
+2540 text4 CODE >322:Z:\Centraline\ABS\ABS_Code.c
+2544 text4 CODE >323:Z:\Centraline\ABS\ABS_Code.c
+2546 text4 CODE >325:Z:\Centraline\ABS\ABS_Code.c
+254A text4 CODE >328:Z:\Centraline\ABS\ABS_Code.c
+256E text4 CODE >331:Z:\Centraline\ABS\ABS_Code.c
+2570 text4 CODE >332:Z:\Centraline\ABS\ABS_Code.c
+2572 text4 CODE >333:Z:\Centraline\ABS\ABS_Code.c
+2574 text4 CODE >334:Z:\Centraline\ABS\ABS_Code.c
+2576 text4 CODE >335:Z:\Centraline\ABS\ABS_Code.c
+2578 text4 CODE >336:Z:\Centraline\ABS\ABS_Code.c
+257A text4 CODE >339:Z:\Centraline\ABS\ABS_Code.c
+257C text4 CODE >340:Z:\Centraline\ABS\ABS_Code.c
+257E text4 CODE >341:Z:\Centraline\ABS\ABS_Code.c
+2580 text4 CODE >342:Z:\Centraline\ABS\ABS_Code.c
+2582 text4 CODE >343:Z:\Centraline\ABS\ABS_Code.c
+2584 text4 CODE >346:Z:\Centraline\ABS\ABS_Code.c
+2588 text4 CODE >353:Z:\Centraline\ABS\ABS_Code.c
+258A text4 CODE >354:Z:\Centraline\ABS\ABS_Code.c
+258E text4 CODE >355:Z:\Centraline\ABS\ABS_Code.c
+2590 text4 CODE >356:Z:\Centraline\ABS\ABS_Code.c
+2594 text4 CODE >357:Z:\Centraline\ABS\ABS_Code.c
+2598 text4 CODE >358:Z:\Centraline\ABS\ABS_Code.c
+259C text4 CODE >359:Z:\Centraline\ABS\ABS_Code.c
+259E text4 CODE >360:Z:\Centraline\ABS\ABS_Code.c
+25A0 text4 CODE >363:Z:\Centraline\ABS\ABS_Code.c
+25A4 text4 CODE >364:Z:\Centraline\ABS\ABS_Code.c
+25A6 text4 CODE >365:Z:\Centraline\ABS\ABS_Code.c
+25A8 text4 CODE >366:Z:\Centraline\ABS\ABS_Code.c
+25AA text4 CODE >367:Z:\Centraline\ABS\ABS_Code.c
+25AC text4 CODE >368:Z:\Centraline\ABS\ABS_Code.c
+25AE text4 CODE >369:Z:\Centraline\ABS\ABS_Code.c
+25B0 text4 CODE >370:Z:\Centraline\ABS\ABS_Code.c
+25B2 text4 CODE >371:Z:\Centraline\ABS\ABS_Code.c
+25B4 text4 CODE >372:Z:\Centraline\ABS\ABS_Code.c
+25B6 text4 CODE >373:Z:\Centraline\ABS\ABS_Code.c
+25B8 text4 CODE >374:Z:\Centraline\ABS\ABS_Code.c
+25BA text4 CODE >377:Z:\Centraline\ABS\ABS_Code.c
+25BC text4 CODE >378:Z:\Centraline\ABS\ABS_Code.c
+25BE text4 CODE >379:Z:\Centraline\ABS\ABS_Code.c
+25C0 text4 CODE >380:Z:\Centraline\ABS\ABS_Code.c
+25C2 text4 CODE >381:Z:\Centraline\ABS\ABS_Code.c
+25C4 text4 CODE >382:Z:\Centraline\ABS\ABS_Code.c
+25C6 text4 CODE >383:Z:\Centraline\ABS\ABS_Code.c
+25C8 text4 CODE >386:Z:\Centraline\ABS\ABS_Code.c
+25CA text4 CODE >387:Z:\Centraline\ABS\ABS_Code.c
+25CC text4 CODE >388:Z:\Centraline\ABS\ABS_Code.c
+25CE text4 CODE >389:Z:\Centraline\ABS\ABS_Code.c
+25DC text4 CODE >390:Z:\Centraline\ABS\ABS_Code.c
 2800 text3 CODE >1154:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
 2800 text3 CODE >1156:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
 C0A text2 CODE >294:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
@@ -911,102 +911,102 @@ FEA text2 CODE >418:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
 137C text2 CODE >516:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
 1390 text2 CODE >518:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
 1394 text2 CODE >520:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-20F2 text1 CODE >270:Z:\Centraline\ABS\ABS_Code.c
 20F2 text1 CODE >271:Z:\Centraline\ABS\ABS_Code.c
-20FC text1 CODE >272:Z:\Centraline\ABS\ABS_Code.c
-2112 text1 CODE >273:Z:\Centraline\ABS\ABS_Code.c
-213E text1 CODE >275:Z:\Centraline\ABS\ABS_Code.c
-2154 text1 CODE >276:Z:\Centraline\ABS\ABS_Code.c
-2180 text1 CODE >278:Z:\Centraline\ABS\ABS_Code.c
-2196 text1 CODE >279:Z:\Centraline\ABS\ABS_Code.c
-21A8 text1 CODE >280:Z:\Centraline\ABS\ABS_Code.c
-21BA text1 CODE >281:Z:\Centraline\ABS\ABS_Code.c
-21BC text1 CODE >283:Z:\Centraline\ABS\ABS_Code.c
-21D2 text1 CODE >284:Z:\Centraline\ABS\ABS_Code.c
-21EE text1 CODE >285:Z:\Centraline\ABS\ABS_Code.c
-220A text1 CODE >286:Z:\Centraline\ABS\ABS_Code.c
-220C text1 CODE >287:Z:\Centraline\ABS\ABS_Code.c
-2210 text1 CODE >288:Z:\Centraline\ABS\ABS_Code.c
-2218 text1 CODE >289:Z:\Centraline\ABS\ABS_Code.c
-221C text1 CODE >290:Z:\Centraline\ABS\ABS_Code.c
-2224 text1 CODE >291:Z:\Centraline\ABS\ABS_Code.c
-2250 text1 CODE >293:Z:\Centraline\ABS\ABS_Code.c
-225C text1 CODE >294:Z:\Centraline\ABS\ABS_Code.c
-225E text1 CODE >295:Z:\Centraline\ABS\ABS_Code.c
-2260 text1 CODE >296:Z:\Centraline\ABS\ABS_Code.c
-2262 text1 CODE >298:Z:\Centraline\ABS\ABS_Code.c
-2264 text1 CODE >299:Z:\Centraline\ABS\ABS_Code.c
-2268 text0 CODE >214:Z:\Centraline\ABS\ABS_Code.c
+20F2 text1 CODE >272:Z:\Centraline\ABS\ABS_Code.c
+20FC text1 CODE >273:Z:\Centraline\ABS\ABS_Code.c
+2112 text1 CODE >274:Z:\Centraline\ABS\ABS_Code.c
+213E text1 CODE >276:Z:\Centraline\ABS\ABS_Code.c
+2154 text1 CODE >277:Z:\Centraline\ABS\ABS_Code.c
+2180 text1 CODE >279:Z:\Centraline\ABS\ABS_Code.c
+2196 text1 CODE >280:Z:\Centraline\ABS\ABS_Code.c
+21A8 text1 CODE >281:Z:\Centraline\ABS\ABS_Code.c
+21BA text1 CODE >282:Z:\Centraline\ABS\ABS_Code.c
+21BC text1 CODE >284:Z:\Centraline\ABS\ABS_Code.c
+21D2 text1 CODE >285:Z:\Centraline\ABS\ABS_Code.c
+21EE text1 CODE >286:Z:\Centraline\ABS\ABS_Code.c
+220A text1 CODE >287:Z:\Centraline\ABS\ABS_Code.c
+220C text1 CODE >288:Z:\Centraline\ABS\ABS_Code.c
+2210 text1 CODE >289:Z:\Centraline\ABS\ABS_Code.c
+2218 text1 CODE >290:Z:\Centraline\ABS\ABS_Code.c
+221C text1 CODE >291:Z:\Centraline\ABS\ABS_Code.c
+2224 text1 CODE >292:Z:\Centraline\ABS\ABS_Code.c
+2250 text1 CODE >294:Z:\Centraline\ABS\ABS_Code.c
+225C text1 CODE >295:Z:\Centraline\ABS\ABS_Code.c
+225E text1 CODE >296:Z:\Centraline\ABS\ABS_Code.c
+2260 text1 CODE >297:Z:\Centraline\ABS\ABS_Code.c
+2262 text1 CODE >299:Z:\Centraline\ABS\ABS_Code.c
+2264 text1 CODE >300:Z:\Centraline\ABS\ABS_Code.c
 2268 text0 CODE >215:Z:\Centraline\ABS\ABS_Code.c
-226C text0 CODE >216:Z:\Centraline\ABS\ABS_Code.c
-2272 text0 CODE >218:Z:\Centraline\ABS\ABS_Code.c
-2276 text0 CODE >220:Z:\Centraline\ABS\ABS_Code.c
-228A text0 CODE >221:Z:\Centraline\ABS\ABS_Code.c
-228C text0 CODE >222:Z:\Centraline\ABS\ABS_Code.c
-228E text0 CODE >223:Z:\Centraline\ABS\ABS_Code.c
-2290 text0 CODE >224:Z:\Centraline\ABS\ABS_Code.c
-2290 text0 CODE >226:Z:\Centraline\ABS\ABS_Code.c
-2298 text0 CODE >227:Z:\Centraline\ABS\ABS_Code.c
-229A text0 CODE >228:Z:\Centraline\ABS\ABS_Code.c
-229E text0 CODE >231:Z:\Centraline\ABS\ABS_Code.c
-22A6 text0 CODE >232:Z:\Centraline\ABS\ABS_Code.c
-22AE text0 CODE >233:Z:\Centraline\ABS\ABS_Code.c
-22B4 text0 CODE >235:Z:\Centraline\ABS\ABS_Code.c
-22BC text0 CODE >236:Z:\Centraline\ABS\ABS_Code.c
-22C2 text0 CODE >238:Z:\Centraline\ABS\ABS_Code.c
-22CC text0 CODE >239:Z:\Centraline\ABS\ABS_Code.c
-22D2 text0 CODE >241:Z:\Centraline\ABS\ABS_Code.c
-22DC text0 CODE >242:Z:\Centraline\ABS\ABS_Code.c
-22E0 text0 CODE >244:Z:\Centraline\ABS\ABS_Code.c
-22E2 text0 CODE >245:Z:\Centraline\ABS\ABS_Code.c
-22E6 text0 CODE >248:Z:\Centraline\ABS\ABS_Code.c
-2308 text0 CODE >249:Z:\Centraline\ABS\ABS_Code.c
-2328 text0 CODE >251:Z:\Centraline\ABS\ABS_Code.c
-232C text0 CODE >252:Z:\Centraline\ABS\ABS_Code.c
-2362 text0 CODE >253:Z:\Centraline\ABS\ABS_Code.c
-2366 text0 CODE >254:Z:\Centraline\ABS\ABS_Code.c
-2368 text0 CODE >257:Z:\Centraline\ABS\ABS_Code.c
-236C text0 CODE >258:Z:\Centraline\ABS\ABS_Code.c
-23A2 text0 CODE >259:Z:\Centraline\ABS\ABS_Code.c
-23A6 text0 CODE >260:Z:\Centraline\ABS\ABS_Code.c
-23A8 text0 CODE >217:Z:\Centraline\ABS\ABS_Code.c
-26E4 cinit CODE >1453:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-26E4 cinit CODE >1455:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-26E4 cinit CODE >1458:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-26E4 cinit CODE >1580:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-26E8 cinit CODE >1581:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-26EA cinit CODE >1582:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-26EA cinit CODE >1583:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-26EC cinit CODE >1584:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-26EE cinit CODE >1585:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-26F0 cinit CODE >1588:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-26F2 cinit CODE >1591:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-26F6 cinit CODE >1592:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-26F8 cinit CODE >1593:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-26F8 cinit CODE >1594:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-26FA cinit CODE >1595:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-26FC cinit CODE >1596:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-26FE cinit CODE >1601:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-2700 cinit CODE >1602:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-2702 cinit CODE >1603:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-2704 cinit CODE >1604:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-2706 cinit CODE >1605:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-2708 cinit CODE >1606:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-270A cinit CODE >1607:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-270E cinit CODE >1608:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-2712 cinit CODE >1609:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-2712 cinit CODE >1610:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-2714 cinit CODE >1611:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-2718 cinit CODE >1612:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-271A cinit CODE >1613:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-271C cinit CODE >1614:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-271E cinit CODE >1620:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-271E cinit CODE >1622:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-2720 cinit CODE >1623:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-2722 cinit CODE >1625:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-2724 cinit CODE >1626:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-2726 cinit CODE >1627:C:\Users\Massimo\AppData\Local\Temp\s2nk.
-2728 cinit CODE >1628:C:\Users\Massimo\AppData\Local\Temp\s2nk.
+2268 text0 CODE >216:Z:\Centraline\ABS\ABS_Code.c
+226C text0 CODE >217:Z:\Centraline\ABS\ABS_Code.c
+2272 text0 CODE >219:Z:\Centraline\ABS\ABS_Code.c
+2276 text0 CODE >221:Z:\Centraline\ABS\ABS_Code.c
+228A text0 CODE >222:Z:\Centraline\ABS\ABS_Code.c
+228C text0 CODE >223:Z:\Centraline\ABS\ABS_Code.c
+228E text0 CODE >224:Z:\Centraline\ABS\ABS_Code.c
+2290 text0 CODE >225:Z:\Centraline\ABS\ABS_Code.c
+2290 text0 CODE >227:Z:\Centraline\ABS\ABS_Code.c
+2298 text0 CODE >228:Z:\Centraline\ABS\ABS_Code.c
+229A text0 CODE >229:Z:\Centraline\ABS\ABS_Code.c
+229E text0 CODE >232:Z:\Centraline\ABS\ABS_Code.c
+22A6 text0 CODE >233:Z:\Centraline\ABS\ABS_Code.c
+22AE text0 CODE >234:Z:\Centraline\ABS\ABS_Code.c
+22B4 text0 CODE >236:Z:\Centraline\ABS\ABS_Code.c
+22BC text0 CODE >237:Z:\Centraline\ABS\ABS_Code.c
+22C2 text0 CODE >239:Z:\Centraline\ABS\ABS_Code.c
+22CC text0 CODE >240:Z:\Centraline\ABS\ABS_Code.c
+22D2 text0 CODE >242:Z:\Centraline\ABS\ABS_Code.c
+22DC text0 CODE >243:Z:\Centraline\ABS\ABS_Code.c
+22E0 text0 CODE >245:Z:\Centraline\ABS\ABS_Code.c
+22E2 text0 CODE >246:Z:\Centraline\ABS\ABS_Code.c
+22E6 text0 CODE >249:Z:\Centraline\ABS\ABS_Code.c
+2308 text0 CODE >250:Z:\Centraline\ABS\ABS_Code.c
+2328 text0 CODE >252:Z:\Centraline\ABS\ABS_Code.c
+232C text0 CODE >253:Z:\Centraline\ABS\ABS_Code.c
+2362 text0 CODE >254:Z:\Centraline\ABS\ABS_Code.c
+2366 text0 CODE >255:Z:\Centraline\ABS\ABS_Code.c
+2368 text0 CODE >258:Z:\Centraline\ABS\ABS_Code.c
+236C text0 CODE >259:Z:\Centraline\ABS\ABS_Code.c
+23A2 text0 CODE >260:Z:\Centraline\ABS\ABS_Code.c
+23A6 text0 CODE >261:Z:\Centraline\ABS\ABS_Code.c
+23A8 text0 CODE >218:Z:\Centraline\ABS\ABS_Code.c
+26E4 cinit CODE >1453:C:\Users\Massimo\AppData\Local\Temp\s89g.
+26E4 cinit CODE >1455:C:\Users\Massimo\AppData\Local\Temp\s89g.
+26E4 cinit CODE >1458:C:\Users\Massimo\AppData\Local\Temp\s89g.
+26E4 cinit CODE >1580:C:\Users\Massimo\AppData\Local\Temp\s89g.
+26E8 cinit CODE >1581:C:\Users\Massimo\AppData\Local\Temp\s89g.
+26EA cinit CODE >1582:C:\Users\Massimo\AppData\Local\Temp\s89g.
+26EA cinit CODE >1583:C:\Users\Massimo\AppData\Local\Temp\s89g.
+26EC cinit CODE >1584:C:\Users\Massimo\AppData\Local\Temp\s89g.
+26EE cinit CODE >1585:C:\Users\Massimo\AppData\Local\Temp\s89g.
+26F0 cinit CODE >1588:C:\Users\Massimo\AppData\Local\Temp\s89g.
+26F2 cinit CODE >1591:C:\Users\Massimo\AppData\Local\Temp\s89g.
+26F6 cinit CODE >1592:C:\Users\Massimo\AppData\Local\Temp\s89g.
+26F8 cinit CODE >1593:C:\Users\Massimo\AppData\Local\Temp\s89g.
+26F8 cinit CODE >1594:C:\Users\Massimo\AppData\Local\Temp\s89g.
+26FA cinit CODE >1595:C:\Users\Massimo\AppData\Local\Temp\s89g.
+26FC cinit CODE >1596:C:\Users\Massimo\AppData\Local\Temp\s89g.
+26FE cinit CODE >1601:C:\Users\Massimo\AppData\Local\Temp\s89g.
+2700 cinit CODE >1602:C:\Users\Massimo\AppData\Local\Temp\s89g.
+2702 cinit CODE >1603:C:\Users\Massimo\AppData\Local\Temp\s89g.
+2704 cinit CODE >1604:C:\Users\Massimo\AppData\Local\Temp\s89g.
+2706 cinit CODE >1605:C:\Users\Massimo\AppData\Local\Temp\s89g.
+2708 cinit CODE >1606:C:\Users\Massimo\AppData\Local\Temp\s89g.
+270A cinit CODE >1607:C:\Users\Massimo\AppData\Local\Temp\s89g.
+270E cinit CODE >1608:C:\Users\Massimo\AppData\Local\Temp\s89g.
+2712 cinit CODE >1609:C:\Users\Massimo\AppData\Local\Temp\s89g.
+2712 cinit CODE >1610:C:\Users\Massimo\AppData\Local\Temp\s89g.
+2714 cinit CODE >1611:C:\Users\Massimo\AppData\Local\Temp\s89g.
+2718 cinit CODE >1612:C:\Users\Massimo\AppData\Local\Temp\s89g.
+271A cinit CODE >1613:C:\Users\Massimo\AppData\Local\Temp\s89g.
+271C cinit CODE >1614:C:\Users\Massimo\AppData\Local\Temp\s89g.
+271E cinit CODE >1620:C:\Users\Massimo\AppData\Local\Temp\s89g.
+271E cinit CODE >1622:C:\Users\Massimo\AppData\Local\Temp\s89g.
+2720 cinit CODE >1623:C:\Users\Massimo\AppData\Local\Temp\s89g.
+2722 cinit CODE >1625:C:\Users\Massimo\AppData\Local\Temp\s89g.
+2724 cinit CODE >1626:C:\Users\Massimo\AppData\Local\Temp\s89g.
+2726 cinit CODE >1627:C:\Users\Massimo\AppData\Local\Temp\s89g.
+2728 cinit CODE >1628:C:\Users\Massimo\AppData\Local\Temp\s89g.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1046,7 +1046,7 @@ _RXM1SIDL F1D 0 ABS 0 - dist/default/production\ABS.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\ABS.production.obj
 __end_of_WriteTimer0 2862 0 CODE 0 text23 dist/default/production\ABS.production.obj
 _RXB1DLCbits F55 0 ABS 0 - dist/default/production\ABS.production.obj
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Massimo\AppData\Local\Temp\s2nk.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Massimo\AppData\Local\Temp\s89g.obj
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\ABS.production.obj
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\ABS.production.obj
 _T1CONbits FCD 0 ABS 0 - dist/default/production\ABS.production.obj
@@ -1058,13 +1058,13 @@ _LATB F8A 0 ABS 0 - dist/default/production\ABS.production.obj
 _LATC F8B 0 ABS 0 - dist/default/production\ABS.production.obj
 _LATD F8C 0 ABS 0 - dist/default/production\ABS.production.obj
 _LATE F8D 0 ABS 0 - dist/default/production\ABS.production.obj
-___sp 0 0 STACK 2 stack C:\Users\Massimo\AppData\Local\Temp\s2nk.obj
+___sp 0 0 STACK 2 stack C:\Users\Massimo\AppData\Local\Temp\s89g.obj
 _main 2268 0 CODE 0 text0 dist/default/production\ABS.production.obj
 _read 78 0 BANK0 1 bssBANK0 dist/default/production\ABS.production.obj
 _step 79 0 BANK0 1 bssBANK0 dist/default/production\ABS.production.obj
 btemp 3E 0 COMRAM 1 temp dist/default/production\ABS.production.obj
 _status_array CD 0 BANK0 1 dataBANK0 dist/default/production\ABS.production.obj
-start 100 0 CODE 0 init C:\Users\Massimo\AppData\Local\Temp\s2nk.obj
+start 100 0 CODE 0 init C:\Users\Massimo\AppData\Local\Temp\s89g.obj
 _ISR_Bassa 18 0 CODE 0 intcodelo dist/default/production\ABS.production.obj
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\ABS.production.obj
 _CANisTxReady 2800 0 CODE 0 text3 dist/default/production\ABS.production.obj
@@ -1086,11 +1086,11 @@ _T0CONbits FD5 0 ABS 0 - dist/default/production\ABS.production.obj
 __end_of_CANInitialize 20F2 0 CODE 0 text7 dist/default/production\ABS.production.obj
 __size_of_ADC_Read 0 0 ABS 0 - dist/default/production\ABS.production.obj
 _timer_off 34 0 COMRAM 1 bssCOMRAM dist/default/production\ABS.production.obj
-__accesstop 60 0 ABS 0 - C:\Users\Massimo\AppData\Local\Temp\s2nk.obj
-intlevel0 0 0 CODE 0 text C:\Users\Massimo\AppData\Local\Temp\s2nk.obj
-intlevel1 0 0 CODE 0 text C:\Users\Massimo\AppData\Local\Temp\s2nk.obj
-intlevel2 0 0 CODE 0 text C:\Users\Massimo\AppData\Local\Temp\s2nk.obj
-intlevel3 0 0 CODE 0 text C:\Users\Massimo\AppData\Local\Temp\s2nk.obj
+__accesstop 60 0 ABS 0 - C:\Users\Massimo\AppData\Local\Temp\s89g.obj
+intlevel0 0 0 CODE 0 text C:\Users\Massimo\AppData\Local\Temp\s89g.obj
+intlevel1 0 0 CODE 0 text C:\Users\Massimo\AppData\Local\Temp\s89g.obj
+intlevel2 0 0 CODE 0 text C:\Users\Massimo\AppData\Local\Temp\s89g.obj
+intlevel3 0 0 CODE 0 text C:\Users\Massimo\AppData\Local\Temp\s89g.obj
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\ABS.production.obj
 __size_of_remote_frame_handler 0 0 ABS 0 - dist/default/production\ABS.production.obj
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\ABS.production.obj
@@ -1115,8 +1115,8 @@ i2___wmul@multiplier 1E 0 COMRAM 1 cstackCOMRAM dist/default/production\ABS.prod
 ___awdiv@dividend B2 0 BANK0 1 cstackBANK0 dist/default/production\ABS.production.obj
 CANSetFilter@tamp BC 0 BANK0 1 cstackBANK0 dist/default/production\ABS.production.obj
 CANSetFilter@type B6 0 BANK0 1 cstackBANK0 dist/default/production\ABS.production.obj
-___inthi_sp 0 0 STACK 2 stack C:\Users\Massimo\AppData\Local\Temp\s2nk.obj
-___intlo_sp 0 0 STACK 2 stack C:\Users\Massimo\AppData\Local\Temp\s2nk.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\Massimo\AppData\Local\Temp\s89g.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\Massimo\AppData\Local\Temp\s89g.obj
 __size_ofi2___wmul 0 0 ABS 0 - dist/default/production\ABS.production.obj
 _CANCON F6F 0 ABS 0 - dist/default/production\ABS.production.obj
 i2___awdiv@divisor 26 0 COMRAM 1 cstackCOMRAM dist/default/production\ABS.production.obj
@@ -1239,7 +1239,7 @@ __Htext9 0 0 ABS 0 text9 dist/default/production\ABS.production.obj
 _brake_signal_CAN 75 0 BANK0 1 bssBANK0 dist/default/production\ABS.production.obj
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\ABS.production.obj
 __Hbigram 0 0 ABS 0 bigram dist/default/production\ABS.production.obj
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\Massimo\AppData\Local\Temp\s2nk.obj
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\Massimo\AppData\Local\Temp\s89g.obj
 __Hcomram 0 0 ABS 0 comram dist/default/production\ABS.production.obj
 __Hconfig 30000E 0 CONFIG 0 config dist/default/production\ABS.production.obj
 __CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/default/production\ABS.production.obj
@@ -1382,8 +1382,8 @@ i2___lldiv@quotient 26 0 COMRAM 1 cstackCOMRAM dist/default/production\ABS.produ
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\ABS.production.obj
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\ABS.production.obj
 _Tx_retry 1EA -1AB COMRAM 1 bitbssCOMRAM dist/default/production\ABS.production.obj
-stackhi 2FF 0 ABS 0 - C:\Users\Massimo\AppData\Local\Temp\s2nk.obj
-stacklo D5 0 ABS 0 - C:\Users\Massimo\AppData\Local\Temp\s2nk.obj
+stackhi 2FF 0 ABS 0 - C:\Users\Massimo\AppData\Local\Temp\s89g.obj
+stacklo D5 0 ABS 0 - C:\Users\Massimo\AppData\Local\Temp\s89g.obj
 __Lintcode 8 0 CODE 0 intcode dist/default/production\ABS.production.obj
 __Lintret 0 0 ABS 0 intret dist/default/production\ABS.production.obj
 __Lirdata 0 0 CODE 0 irdata dist/default/production\ABS.production.obj
@@ -1472,7 +1472,7 @@ __Ltext20 0 0 ABS 0 text20 dist/default/production\ABS.production.obj
 __Ltext21 0 0 ABS 0 text21 dist/default/production\ABS.production.obj
 __Ltext22 0 0 ABS 0 text22 dist/default/production\ABS.production.obj
 __Ltext23 0 0 ABS 0 text23 dist/default/production\ABS.production.obj
-__ramtop 300 0 RAM 0 ramtop C:\Users\Massimo\AppData\Local\Temp\s2nk.obj
+__ramtop 300 0 RAM 0 ramtop C:\Users\Massimo\AppData\Local\Temp\s89g.obj
 _CANOperationMode 2824 0 CODE 0 text10 dist/default/production\ABS.production.obj
 __Lpowerup 100 0 CODE 0 powerup dist/default/production\ABS.production.obj
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\ABS.production.obj

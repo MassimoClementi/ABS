@@ -20463,18 +20463,18 @@ delay_quartz_frequency_value = frequency;
 
 }
 
-# 76 "ABS_Code.c"
+# 77 "ABS_Code.c"
 void board_initialization(void);
 void remote_frame_handler(void);
 void ADC_Read(void);
 
-# 85
+# 86
 CANmessage msg;
 bit remote_frame = 0;
 bit Tx_retry = 0;
 bit count_flag = 0;
 unsigned long remote_frame_id = 0;
-BYTE status_array [8] = {0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0xAA};
+BYTE status_array [8] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01};
 BYTE speed_array [8] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 BYTE distance_array [8] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 unsigned char brake_signal_CAN = 0;
@@ -20511,7 +20511,7 @@ unsigned char brake_value = 0;
 unsigned char brake_value_degree = 0;
 unsigned char step = 0;
 
-# 132
+# 133
 __attribute__((interrupt("__high_priority"))) void ISR_Alta(void) {
 
 if (INTCONbits.TMR0IF == 1) {
@@ -20566,7 +20566,7 @@ INTCON3bits.INT1IF = 0;
 }
 }
 
-# 191
+# 192
 __attribute__((interrupt("__low_priority"))) void ISR_Bassa(void) {
 
 if ((PIR3bits.RXB0IF == 1) || (PIR3bits.RXB1IF == 1)) {
@@ -20586,7 +20586,7 @@ PIR3bits.RXB1IF = 0;
 }
 }
 
-# 214
+# 215
 int main(void) {
 board_initialization();
 step = (11 * (3,1415)) / 16;
@@ -20638,7 +20638,7 @@ ENC2_measure = 0;
 }
 }
 
-# 270
+# 271
 void remote_frame_handler(void) {
 if (CANisTxReady()) {
 if (remote_frame_id == 0b00000000000000000000000000100) {
@@ -20716,7 +20716,7 @@ INTCON3bits.INT1IP = 1;
 
 T0CON = 0x80;
 
-# 352
+# 353
 TMR0H = 0xFF;
 TMR0L = 0xFE;
 PORTCbits.RC0 = 0;

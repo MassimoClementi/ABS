@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC18 LITE Macro Assembler V1.35 build -356382666 
-                                                                                               Mon Jan 18 16:15:51 2016
+                                                                                               Wed Jan 27 19:00:14 2016
 
 Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080246
      1                           	processor	18F4480
@@ -53,14 +53,14 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
     47  00287A  10                 	db	16
     48                           
     49                           ;initializer for _status_array
-    50  00287B  AA                 	db	170
-    51  00287C  AA                 	db	170
-    52  00287D  AA                 	db	170
-    53  00287E  AA                 	db	170
-    54  00287F  AA                 	db	170
-    55  002880  AA                 	db	170
-    56  002881  AA                 	db	170
-    57  002882  AA                 	db	170
+    50  00287B  00                 	db	0
+    51  00287C  00                 	db	0
+    52  00287D  00                 	db	0
+    53  00287E  00                 	db	0
+    54  00287F  00                 	db	0
+    55  002880  00                 	db	0
+    56  002881  00                 	db	0
+    57  002882  01                 	db	1
     58  0000                     _RXB1CON	set	3920
     59  0000                     _RXB1CONbits	set	3920
     60  0000                     _RXB1D0	set	3926
@@ -699,7 +699,7 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
    693 ;;
    694 ;; *************** function _main *****************
    695 ;; Defined at:
-   696 ;;		line 214 in file "ABS_Code.c"
+   696 ;;		line 215 in file "ABS_Code.c"
    697 ;; Parameters:    Size  Location     Type
    698 ;;		None
    699 ;; Auto vars:     Size  Location     Type
@@ -738,22 +738,22 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
    732  002268                     _main:
    733                           	opt stack 24
    734                           
-   735                           ;ABS_Code.c: 215: board_initialization();
+   735                           ;ABS_Code.c: 216: board_initialization();
    736                           
    737                           ;incstack = 0
    738  002268  EC92  F012         	call	_board_initialization	;wreg free
    739                           
-   740                           ;ABS_Code.c: 216: step = (11 * (3,1415)) / 16;
+   740                           ;ABS_Code.c: 217: step = (11 * (3,1415)) / 16;
    741  00226C  0ECC               	movlw	204
    742  00226E  0100               	movlb	0	; () banked
    743  002270  6F79               	movwf	_step& (0+255),b
    744  002272                     l3922:
    745                           
    746                           ; BSR set to: 0
-   747                           ;ABS_Code.c: 218: ADC_Read();
+   747                           ;ABS_Code.c: 219: ADC_Read();
    748  002272  EC96  F013         	call	_ADC_Read	;wreg free
    749                           
-   750                           ;ABS_Code.c: 220: if ((CANisTXwarningON() == 1) || (CANisRXwarningON() == 1)) {
+   750                           ;ABS_Code.c: 221: if ((CANisTXwarningON() == 1) || (CANisRXwarningON() == 1)) {
    751  002276  EC31  F014         	call	_CANisTXwarningON	;wreg free
    752  00227A  06E8               	decf	wreg,f,c
    753  00227C  B4D8               	btfsc	status,2,c
@@ -764,71 +764,71 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
    758  002288  D002               	goto	l680
    759  00228A                     l682:
    760                           
-   761                           ;ABS_Code.c: 221: PORTBbits.RB0 = 1;
+   761                           ;ABS_Code.c: 222: PORTBbits.RB0 = 1;
    762  00228A  8081               	bsf	3969,0,c	;volatile
    763                           
-   764                           ;ABS_Code.c: 222: } else {
+   764                           ;ABS_Code.c: 223: } else {
    765  00228C  D001               	goto	l683
    766  00228E                     l680:
    767                           
-   768                           ;ABS_Code.c: 223: PORTBbits.RB0 = 0;
+   768                           ;ABS_Code.c: 224: PORTBbits.RB0 = 0;
    769  00228E  9081               	bcf	3969,0,c	;volatile
    770  002290                     l683:
    771                           
-   772                           ;ABS_Code.c: 224: }
-   773                           ;ABS_Code.c: 226: if ((remote_frame == 1) || (Tx_retry == 1)) {
+   772                           ;ABS_Code.c: 225: }
+   773                           ;ABS_Code.c: 227: if ((remote_frame == 1) || (Tx_retry == 1)) {
    774  002290  B83D               	btfsc	_remote_frame/(0+8),_remote_frame& (0+7),c
    775  002292  D002               	goto	l686
    776  002294  A43D               	btfss	_Tx_retry/(0+8),_Tx_retry& (0+7),c
    777  002296  D003               	goto	l3932
    778  002298                     l686:
    779                           
-   780                           ;ABS_Code.c: 227: remote_frame = 0;
+   780                           ;ABS_Code.c: 228: remote_frame = 0;
    781  002298  983D               	bcf	_remote_frame/(0+8),_remote_frame& (0+7),c
    782                           
-   783                           ;ABS_Code.c: 228: remote_frame_handler();
+   783                           ;ABS_Code.c: 229: remote_frame_handler();
    784  00229A  EC79  F010         	call	_remote_frame_handler	;wreg free
    785  00229E                     l3932:
    786                           
-   787                           ;ABS_Code.c: 229: }
-   788                           ;ABS_Code.c: 231: if (Analogic_Mode == 0) {
+   787                           ;ABS_Code.c: 230: }
+   788                           ;ABS_Code.c: 232: if (Analogic_Mode == 0) {
    789  00229E  0100               	movlb	0	; () banked
    790  0022A0  5174               	movf	_Analogic_Mode& (0+255),w,b
    791  0022A2  A4D8               	btfss	status,2,c
    792  0022A4  D01E               	goto	l687
    793                           
    794                           ; BSR set to: 0
-   795                           ;ABS_Code.c: 232: if (brake_signal_CAN == 00) {
+   795                           ;ABS_Code.c: 233: if (brake_signal_CAN == 00) {
    796  0022A6  0100               	movlb	0	; () banked
    797  0022A8  5175               	movf	_brake_signal_CAN& (0+255),w,b
    798  0022AA  A4D8               	btfss	status,2,c
    799  0022AC  D003               	goto	l3938
    800                           
    801                           ; BSR set to: 0
-   802                           ;ABS_Code.c: 233: brake_value_inc = 0;
+   802                           ;ABS_Code.c: 234: brake_value_inc = 0;
    803  0022AE  0E00               	movlw	0
    804  0022B0  0100               	movlb	0	; () banked
    805  0022B2  6F76               	movwf	_brake_value_inc& (0+255),b
    806  0022B4                     l3938:
    807                           
    808                           ; BSR set to: 0
-   809                           ;ABS_Code.c: 234: }
-   810                           ;ABS_Code.c: 235: if (brake_signal_CAN == 01) {
+   809                           ;ABS_Code.c: 235: }
+   810                           ;ABS_Code.c: 236: if (brake_signal_CAN == 01) {
    811  0022B4  0100               	movlb	0	; () banked
    812  0022B6  0575               	decf	_brake_signal_CAN& (0+255),w,b
    813  0022B8  A4D8               	btfss	status,2,c
    814  0022BA  D003               	goto	l3942
    815                           
    816                           ; BSR set to: 0
-   817                           ;ABS_Code.c: 236: brake_value_inc = 150;
+   817                           ;ABS_Code.c: 237: brake_value_inc = 150;
    818  0022BC  0E96               	movlw	150
    819  0022BE  0100               	movlb	0	; () banked
    820  0022C0  6F76               	movwf	_brake_value_inc& (0+255),b
    821  0022C2                     l3942:
    822                           
    823                           ; BSR set to: 0
-   824                           ;ABS_Code.c: 237: }
-   825                           ;ABS_Code.c: 238: if (brake_signal_CAN == 10) {
+   824                           ;ABS_Code.c: 238: }
+   825                           ;ABS_Code.c: 239: if (brake_signal_CAN == 10) {
    826  0022C2  0E0A               	movlw	10
    827  0022C4  0100               	movlb	0	; () banked
    828  0022C6  1975               	xorwf	_brake_signal_CAN& (0+255),w,b
@@ -836,15 +836,15 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
    830  0022CA  D003               	goto	l3946
    831                           
    832                           ; BSR set to: 0
-   833                           ;ABS_Code.c: 239: brake_value_inc = 200;
+   833                           ;ABS_Code.c: 240: brake_value_inc = 200;
    834  0022CC  0EC8               	movlw	200
    835  0022CE  0100               	movlb	0	; () banked
    836  0022D0  6F76               	movwf	_brake_value_inc& (0+255),b
    837  0022D2                     l3946:
    838                           
    839                           ; BSR set to: 0
-   840                           ;ABS_Code.c: 240: }
-   841                           ;ABS_Code.c: 241: if (brake_signal_CAN == 11) {
+   840                           ;ABS_Code.c: 241: }
+   841                           ;ABS_Code.c: 242: if (brake_signal_CAN == 11) {
    842  0022D2  0E0B               	movlw	11
    843  0022D4  0100               	movlb	0	; () banked
    844  0022D6  1975               	xorwf	_brake_signal_CAN& (0+255),w,b
@@ -852,24 +852,24 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
    846  0022DA  D005               	goto	l3950
    847                           
    848                           ; BSR set to: 0
-   849                           ;ABS_Code.c: 242: brake_value_inc = 255;
+   849                           ;ABS_Code.c: 243: brake_value_inc = 255;
    850  0022DC  0100               	movlb	0	; () banked
    851  0022DE  6976               	setf	_brake_value_inc& (0+255),b
    852                           
    853                           ; BSR set to: 0
-   854                           ;ABS_Code.c: 243: }
-   855                           ;ABS_Code.c: 244: } else {
+   854                           ;ABS_Code.c: 244: }
+   855                           ;ABS_Code.c: 245: } else {
    856  0022E0  D002               	goto	l3950
    857  0022E2                     l687:
    858                           
    859                           ; BSR set to: 0
-   860                           ;ABS_Code.c: 245: brake_value_inc = brake_signal_CAN;
+   860                           ;ABS_Code.c: 246: brake_value_inc = brake_signal_CAN;
    861  0022E2  C075  F076         	movff	_brake_signal_CAN,_brake_value_inc
    862  0022E6                     l3950:
    863                           
    864                           ; BSR set to: 0
-   865                           ;ABS_Code.c: 246: }
-   866                           ;ABS_Code.c: 248: brake_value = (brake_value_inc / 17) + home_position;
+   865                           ;ABS_Code.c: 247: }
+   866                           ;ABS_Code.c: 249: brake_value = (brake_value_inc / 17) + home_position;
    867  0022E6  C076  F0B2         	movff	_brake_value_inc,___awdiv@dividend
    868  0022EA  0100               	movlb	0	; () banked
    869  0022EC  6BB3               	clrf	(___awdiv@dividend+1)& (0+255),b
@@ -887,7 +887,7 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
    881  002306  6F9B               	movwf	_brake_value& (0+255),b
    882                           
    883                           ; BSR set to: 0
-   884                           ;ABS_Code.c: 249: brake_value_degree = (180 * brake_value) / 255;
+   884                           ;ABS_Code.c: 250: brake_value_degree = (180 * brake_value) / 255;
    885  002308  0100               	movlb	0	; () banked
    886  00230A  519B               	movf	_brake_value& (0+255),w,b
    887  00230C  0DB4               	mullw	180
@@ -903,12 +903,12 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
    897  002326  6E3C               	movwf	_brake_value_degree,c
    898                           
    899                           ; BSR set to: 0
-   900                           ;ABS_Code.c: 251: if (ENC1_measure == 1) {
+   900                           ;ABS_Code.c: 252: if (ENC1_measure == 1) {
    901  002328  A03D               	btfss	_ENC1_measure/(0+8),_ENC1_measure& (0+7),c
    902  00232A  D01E               	goto	l3962
    903                           
    904                           ; BSR set to: 0
-   905                           ;ABS_Code.c: 252: wheel_speed_1 = (step * 36) / gap_time_1;
+   905                           ;ABS_Code.c: 253: wheel_speed_1 = (step * 36) / gap_time_1;
    906  00232C  0100               	movlb	0	; () banked
    907  00232E  5179               	movf	_step& (0+255),w,b
    908  002330  0D24               	mullw	36
@@ -931,22 +931,22 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
    925  002360  6F7A               	movwf	_wheel_speed_1& (0+255),b
    926                           
    927                           ; BSR set to: 0
-   928                           ;ABS_Code.c: 253: speed_array[1] = wheel_speed_1;
+   928                           ;ABS_Code.c: 254: speed_array[1] = wheel_speed_1;
    929  002362  C07A  F094         	movff	_wheel_speed_1,_speed_array+1
    930                           
    931                           ; BSR set to: 0
-   932                           ;ABS_Code.c: 254: ENC1_measure = 0;
+   932                           ;ABS_Code.c: 255: ENC1_measure = 0;
    933  002366  903D               	bcf	_ENC1_measure/(0+8),_ENC1_measure& (0+7),c
    934  002368                     l3962:
    935                           
    936                           ; BSR set to: 0
-   937                           ;ABS_Code.c: 255: }
-   938                           ;ABS_Code.c: 257: if (ENC2_measure == 1) {
+   937                           ;ABS_Code.c: 256: }
+   938                           ;ABS_Code.c: 258: if (ENC2_measure == 1) {
    939  002368  A23D               	btfss	_ENC2_measure/(0+8),_ENC2_measure& (0+7),c
    940  00236A  D783               	goto	l3922
    941                           
    942                           ; BSR set to: 0
-   943                           ;ABS_Code.c: 258: wheel_speed_2 = (step * 36) / gap_time_2;
+   943                           ;ABS_Code.c: 259: wheel_speed_2 = (step * 36) / gap_time_2;
    944  00236C  0100               	movlb	0	; () banked
    945  00236E  5179               	movf	_step& (0+255),w,b
    946  002370  0D24               	mullw	36
@@ -969,11 +969,11 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
    963  0023A0  6F7B               	movwf	_wheel_speed_2& (0+255),b
    964                           
    965                           ; BSR set to: 0
-   966                           ;ABS_Code.c: 259: speed_array[0] = wheel_speed_2;
+   966                           ;ABS_Code.c: 260: speed_array[0] = wheel_speed_2;
    967  0023A2  C07B  F093         	movff	_wheel_speed_2,_speed_array
    968                           
    969                           ; BSR set to: 0
-   970                           ;ABS_Code.c: 260: ENC2_measure = 0;
+   970                           ;ABS_Code.c: 261: ENC2_measure = 0;
    971  0023A6  923D               	bcf	_ENC2_measure/(0+8),_ENC2_measure& (0+7),c
    972                           
    973                           ; BSR set to: 0
@@ -996,7 +996,7 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
    990                           
    991 ;; *************** function _remote_frame_handler *****************
    992 ;; Defined at:
-   993 ;;		line 270 in file "ABS_Code.c"
+   993 ;;		line 271 in file "ABS_Code.c"
    994 ;; Parameters:    Size  Location     Type
    995 ;;		None
    996 ;; Auto vars:     Size  Location     Type
@@ -1032,7 +1032,7 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   1026  0020F2                     _remote_frame_handler:
   1027                           	opt stack 25
   1028                           
-  1029                           ;ABS_Code.c: 271: if (CANisTxReady()) {
+  1029                           ;ABS_Code.c: 272: if (CANisTxReady()) {
   1030                           
   1031                           ; BSR set to: 0
   1032                           ;incstack = 0
@@ -1041,7 +1041,7 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   1035  0020F8  B4D8               	btfsc	status,2,c
   1036  0020FA  D0B4               	goto	l700
   1037                           
-  1038                           ;ABS_Code.c: 272: if (remote_frame_id == 0b00000000000000000000000000100) {
+  1038                           ;ABS_Code.c: 273: if (remote_frame_id == 0b00000000000000000000000000100) {
   1039  0020FC  0E04               	movlw	4
   1040  0020FE  0100               	movlb	0	; () banked
   1041  002100  1968               	xorwf	_remote_frame_id& (0+255),w,b
@@ -1055,7 +1055,7 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   1049  002110  D016               	goto	l3702
   1050                           
   1051                           ; BSR set to: 0
-  1052                           ;ABS_Code.c: 273: CANsendMessage(remote_frame_id, status_array, 8, CAN_CONFIG_STD_MSG & 
+  1052                           ;ABS_Code.c: 274: CANsendMessage(remote_frame_id, status_array, 8, CAN_CONFIG_STD_MSG & 
       +                          CAN_NORMAL_TX_FRAME & CAN_TX_PRIORITY_0);
   1053  002112  C068  F0B2         	movff	_remote_frame_id,CANsendMessage@identifier
   1054  002116  C069  F0B3         	movff	_remote_frame_id+1,CANsendMessage@identifier+1
@@ -1076,8 +1076,8 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   1069  00213A  EC05  F006         	call	_CANsendMessage	;wreg free
   1070  00213E                     l3702:
   1071                           
-  1072                           ;ABS_Code.c: 274: }
-  1073                           ;ABS_Code.c: 275: if (remote_frame_id == 0b00000000000000000000000001000) {
+  1072                           ;ABS_Code.c: 275: }
+  1073                           ;ABS_Code.c: 276: if (remote_frame_id == 0b00000000000000000000000001000) {
   1074  00213E  0E08               	movlw	8
   1075  002140  0100               	movlb	0	; () banked
   1076  002142  1968               	xorwf	_remote_frame_id& (0+255),w,b
@@ -1091,7 +1091,7 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   1084  002152  D016               	goto	l3706
   1085                           
   1086                           ; BSR set to: 0
-  1087                           ;ABS_Code.c: 276: CANsendMessage(remote_frame_id, speed_array, 8, CAN_CONFIG_STD_MSG & C
+  1087                           ;ABS_Code.c: 277: CANsendMessage(remote_frame_id, speed_array, 8, CAN_CONFIG_STD_MSG & C
       +                          AN_NORMAL_TX_FRAME & CAN_TX_PRIORITY_0);
   1088  002154  C068  F0B2         	movff	_remote_frame_id,CANsendMessage@identifier
   1089  002158  C069  F0B3         	movff	_remote_frame_id+1,CANsendMessage@identifier+1
@@ -1112,8 +1112,8 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   1104  00217C  EC05  F006         	call	_CANsendMessage	;wreg free
   1105  002180                     l3706:
   1106                           
-  1107                           ;ABS_Code.c: 277: }
-  1108                           ;ABS_Code.c: 278: if (remote_frame_id == 0b00000000000000000000000001010) {
+  1107                           ;ABS_Code.c: 278: }
+  1108                           ;ABS_Code.c: 279: if (remote_frame_id == 0b00000000000000000000000001010) {
   1109  002180  0E0A               	movlw	10
   1110  002182  0100               	movlb	0	; () banked
   1111  002184  1968               	xorwf	_remote_frame_id& (0+255),w,b
@@ -1127,7 +1127,7 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   1119  002194  D013               	goto	l3712
   1120                           
   1121                           ; BSR set to: 0
-  1122                           ;ABS_Code.c: 279: int_counter_1 = 0;
+  1122                           ;ABS_Code.c: 280: int_counter_1 = 0;
   1123  002196  0E00               	movlw	0
   1124  002198  0100               	movlb	0	; () banked
   1125  00219A  6F60               	movwf	_int_counter_1& (0+255),b
@@ -1138,7 +1138,7 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   1130  0021A4  0E00               	movlw	0
   1131  0021A6  6F63               	movwf	(_int_counter_1+3)& (0+255),b
   1132                           
-  1133                           ;ABS_Code.c: 280: int_counter_2 = 0;
+  1133                           ;ABS_Code.c: 281: int_counter_2 = 0;
   1134  0021A8  0E00               	movlw	0
   1135  0021AA  0100               	movlb	0	; () banked
   1136  0021AC  6F64               	movwf	_int_counter_2& (0+255),b
@@ -1150,13 +1150,13 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   1142  0021B8  6F67               	movwf	(_int_counter_2+3)& (0+255),b
   1143                           
   1144                           ; BSR set to: 0
-  1145                           ;ABS_Code.c: 281: count_flag = 1;
+  1145                           ;ABS_Code.c: 282: count_flag = 1;
   1146  0021BA  863D               	bsf	_count_flag/(0+8),_count_flag& (0+7),c
   1147  0021BC                     l3712:
   1148                           
   1149                           ; BSR set to: 0
-  1150                           ;ABS_Code.c: 282: }
-  1151                           ;ABS_Code.c: 283: if (remote_frame_id == 0b00000000000000000000000001011) {
+  1150                           ;ABS_Code.c: 283: }
+  1151                           ;ABS_Code.c: 284: if (remote_frame_id == 0b00000000000000000000000001011) {
   1152  0021BC  0E0B               	movlw	11
   1153  0021BE  0100               	movlb	0	; () banked
   1154  0021C0  1968               	xorwf	_remote_frame_id& (0+255),w,b
@@ -1170,7 +1170,7 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   1162  0021D0  D03F               	goto	l3728
   1163                           
   1164                           ; BSR set to: 0
-  1165                           ;ABS_Code.c: 284: distance_1 = step * (int_counter_1);
+  1165                           ;ABS_Code.c: 285: distance_1 = step * (int_counter_1);
   1166  0021D2  C079  F0B2         	movff	_step,___wmul@multiplier
   1167  0021D6  0100               	movlb	0	; () banked
   1168  0021D8  6BB3               	clrf	(___wmul@multiplier+1)& (0+255),b
@@ -1180,7 +1180,7 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   1172  0021E6  C0B2  F070         	movff	?___wmul,_distance_1
   1173  0021EA  C0B3  F071         	movff	?___wmul+1,_distance_1+1
   1174                           
-  1175                           ;ABS_Code.c: 285: distance_2 = step * (int_counter_2);
+  1175                           ;ABS_Code.c: 286: distance_2 = step * (int_counter_2);
   1176  0021EE  C079  F0B2         	movff	_step,___wmul@multiplier
   1177  0021F2  0100               	movlb	0	; () banked
   1178  0021F4  6BB3               	clrf	(___wmul@multiplier+1)& (0+255),b
@@ -1190,31 +1190,31 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   1182  002202  C0B2  F072         	movff	?___wmul,_distance_2
   1183  002206  C0B3  F073         	movff	?___wmul+1,_distance_2+1
   1184                           
-  1185                           ;ABS_Code.c: 286: count_flag = 0;
+  1185                           ;ABS_Code.c: 287: count_flag = 0;
   1186  00220A  963D               	bcf	_count_flag/(0+8),_count_flag& (0+7),c
   1187                           
-  1188                           ;ABS_Code.c: 287: distance_array[0] = distance_1;
+  1188                           ;ABS_Code.c: 288: distance_array[0] = distance_1;
   1189  00220C  C070  F08B         	movff	_distance_1,_distance_array
   1190                           
-  1191                           ;ABS_Code.c: 288: distance_array[1] = distance_1 >> 8;
+  1191                           ;ABS_Code.c: 289: distance_array[1] = distance_1 >> 8;
   1192  002210  0100               	movlb	0	; () banked
   1193  002212  5171               	movf	(_distance_1+1)& (0+255),w,b
   1194  002214  0100               	movlb	0	; () banked
   1195  002216  6F8C               	movwf	(_distance_array+1)& (0+255),b
   1196                           
   1197                           ; BSR set to: 0
-  1198                           ;ABS_Code.c: 289: distance_array[2] = distance_2;
+  1198                           ;ABS_Code.c: 290: distance_array[2] = distance_2;
   1199  002218  C072  F08D         	movff	_distance_2,_distance_array+2
   1200                           
   1201                           ; BSR set to: 0
-  1202                           ;ABS_Code.c: 290: distance_array[3] = distance_2 >> 8;
+  1202                           ;ABS_Code.c: 291: distance_array[3] = distance_2 >> 8;
   1203  00221C  0100               	movlb	0	; () banked
   1204  00221E  5173               	movf	(_distance_2+1)& (0+255),w,b
   1205  002220  0100               	movlb	0	; () banked
   1206  002222  6F8E               	movwf	(_distance_array+3)& (0+255),b
   1207                           
   1208                           ; BSR set to: 0
-  1209                           ;ABS_Code.c: 291: CANsendMessage(remote_frame_id, distance_array, 8, CAN_CONFIG_STD_MSG 
+  1209                           ;ABS_Code.c: 292: CANsendMessage(remote_frame_id, distance_array, 8, CAN_CONFIG_STD_MSG 
       +                          & CAN_NORMAL_TX_FRAME & CAN_TX_PRIORITY_0);
   1210  002224  C068  F0B2         	movff	_remote_frame_id,CANsendMessage@identifier
   1211  002228  C069  F0B3         	movff	_remote_frame_id+1,CANsendMessage@identifier+1
@@ -1235,8 +1235,8 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   1226  00224C  EC05  F006         	call	_CANsendMessage	;wreg free
   1227  002250                     l3728:
   1228                           
-  1229                           ;ABS_Code.c: 292: }
-  1230                           ;ABS_Code.c: 293: if (TXB0CONbits.TXABT || TXB1CONbits.TXABT) {
+  1229                           ;ABS_Code.c: 293: }
+  1230                           ;ABS_Code.c: 294: if (TXB0CONbits.TXABT || TXB1CONbits.TXABT) {
   1231  002250  010F               	movlb	15	; () banked
   1232  002252  BD40               	btfsc	64,6,b	;volatile
   1233  002254  D003               	goto	l707
@@ -1248,24 +1248,24 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   1239  00225C                     l707:
   1240                           
   1241                           ; BSR set to: 15
-  1242                           ;ABS_Code.c: 294: Tx_retry = 1;
+  1242                           ;ABS_Code.c: 295: Tx_retry = 1;
   1243  00225C  843D               	bsf	_Tx_retry/(0+8),_Tx_retry& (0+7),c
   1244                           
-  1245                           ;ABS_Code.c: 295: } else {
+  1245                           ;ABS_Code.c: 296: } else {
   1246  00225E  0012               	return	
   1247  002260                     l705:
   1248                           
   1249                           ; BSR set to: 15
-  1250                           ;ABS_Code.c: 296: Tx_retry = 0;
+  1250                           ;ABS_Code.c: 297: Tx_retry = 0;
   1251  002260  943D               	bcf	_Tx_retry/(0+8),_Tx_retry& (0+7),c
   1252                           
   1253                           ; BSR set to: 15
-  1254                           ;ABS_Code.c: 297: }
-  1255                           ;ABS_Code.c: 298: } else {
+  1254                           ;ABS_Code.c: 298: }
+  1255                           ;ABS_Code.c: 299: } else {
   1256  002262  0012               	return	
   1257  002264                     l700:
   1258                           
-  1259                           ;ABS_Code.c: 299: Tx_retry = 1;
+  1259                           ;ABS_Code.c: 300: Tx_retry = 1;
   1260  002264  843D               	bsf	_Tx_retry/(0+8),_Tx_retry& (0+7),c
   1261  002266  0012               	return	
   1262  002268                     __end_of_remote_frame_handler:
@@ -2757,7 +2757,7 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   2747                           
   2748 ;; *************** function _board_initialization *****************
   2749 ;; Defined at:
-  2750 ;;		line 311 in file "ABS_Code.c"
+  2750 ;;		line 312 in file "ABS_Code.c"
   2751 ;; Parameters:    Size  Location     Type
   2752 ;;		None
   2753 ;; Auto vars:     Size  Location     Type
@@ -2792,51 +2792,51 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   2782  002524                     _board_initialization:
   2783                           	opt stack 24
   2784                           
-  2785                           ;ABS_Code.c: 313: LATA = 0x00;
+  2785                           ;ABS_Code.c: 314: LATA = 0x00;
   2786                           
   2787                           ; BSR set to: 0
   2788                           ;incstack = 0
   2789  002524  0E00               	movlw	0
   2790  002526  6E89               	movwf	3977,c	;volatile
   2791                           
-  2792                           ;ABS_Code.c: 314: TRISA = 0xFF;
+  2792                           ;ABS_Code.c: 315: TRISA = 0xFF;
   2793  002528  6892               	setf	3986,c	;volatile
   2794                           
-  2795                           ;ABS_Code.c: 315: LATB = 0x00;
+  2795                           ;ABS_Code.c: 316: LATB = 0x00;
   2796  00252A  0E00               	movlw	0
   2797  00252C  6E8A               	movwf	3978,c	;volatile
   2798                           
-  2799                           ;ABS_Code.c: 316: TRISB = 0b11111110;
+  2799                           ;ABS_Code.c: 317: TRISB = 0b11111110;
   2800  00252E  0EFE               	movlw	254
   2801  002530  6E93               	movwf	3987,c	;volatile
   2802                           
-  2803                           ;ABS_Code.c: 317: LATC = 0x00;
+  2803                           ;ABS_Code.c: 318: LATC = 0x00;
   2804  002532  0E00               	movlw	0
   2805  002534  6E8B               	movwf	3979,c	;volatile
   2806                           
-  2807                           ;ABS_Code.c: 318: TRISC = 0b11111110;
+  2807                           ;ABS_Code.c: 319: TRISC = 0b11111110;
   2808  002536  0EFE               	movlw	254
   2809  002538  6E94               	movwf	3988,c	;volatile
   2810                           
-  2811                           ;ABS_Code.c: 319: LATD = 0x00;
+  2811                           ;ABS_Code.c: 320: LATD = 0x00;
   2812  00253A  0E00               	movlw	0
   2813  00253C  6E8C               	movwf	3980,c	;volatile
   2814                           
-  2815                           ;ABS_Code.c: 320: TRISD = 0xFF;
+  2815                           ;ABS_Code.c: 321: TRISD = 0xFF;
   2816  00253E  6895               	setf	3989,c	;volatile
   2817                           
-  2818                           ;ABS_Code.c: 321: LATE = 0x00;
+  2818                           ;ABS_Code.c: 322: LATE = 0x00;
   2819  002540  0E00               	movlw	0
   2820  002542  6E8D               	movwf	3981,c	;volatile
   2821                           
-  2822                           ;ABS_Code.c: 322: TRISE = 0xFF;
+  2822                           ;ABS_Code.c: 323: TRISE = 0xFF;
   2823  002544  6896               	setf	3990,c	;volatile
   2824                           
-  2825                           ;ABS_Code.c: 324: ADCON1 = 0x11111110;
+  2825                           ;ABS_Code.c: 325: ADCON1 = 0x11111110;
   2826  002546  0E10               	movlw	16
   2827  002548  6EC1               	movwf	4033,c	;volatile
   2828                           
-  2829                           ;ABS_Code.c: 327: CANInitialize(4, 6, 5, 1, 3, CAN_CONFIG_LINE_FILTER_OFF & CAN_CONFIG_S
+  2829                           ;ABS_Code.c: 328: CANInitialize(4, 6, 5, 1, 3, CAN_CONFIG_LINE_FILTER_OFF & CAN_CONFIG_S
       +                          AMPLE_ONCE & CAN_CONFIG_ALL_VALID_MSG & CAN_CONFIG_DBL_BUFFER_ON);
   2830  00254A  0E06               	movlw	6
   2831  00254C  0100               	movlb	0	; () banked
@@ -2856,139 +2856,139 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   2845  002568  0E04               	movlw	4
   2846  00256A  EC96  F00F         	call	_CANInitialize
   2847                           
-  2848                           ;ABS_Code.c: 330: PIR3bits.RXB1IF = 0;
+  2848                           ;ABS_Code.c: 331: PIR3bits.RXB1IF = 0;
   2849  00256E  92A4               	bcf	4004,1,c	;volatile
   2850                           
-  2851                           ;ABS_Code.c: 331: PIR3bits.RXB0IF = 0;
+  2851                           ;ABS_Code.c: 332: PIR3bits.RXB0IF = 0;
   2852  002570  90A4               	bcf	4004,0,c	;volatile
   2853                           
-  2854                           ;ABS_Code.c: 332: INTCONbits.TMR0IF = 0;
+  2854                           ;ABS_Code.c: 333: INTCONbits.TMR0IF = 0;
   2855  002572  94F2               	bcf	intcon,2,c	;volatile
   2856                           
-  2857                           ;ABS_Code.c: 333: INTCONbits.INT0IF = 0;
+  2857                           ;ABS_Code.c: 334: INTCONbits.INT0IF = 0;
   2858  002574  92F2               	bcf	intcon,1,c	;volatile
   2859                           
-  2860                           ;ABS_Code.c: 334: INTCON3bits.INT1IF = 0;
+  2860                           ;ABS_Code.c: 335: INTCON3bits.INT1IF = 0;
   2861  002576  90F0               	bcf	intcon3,0,c	;volatile
   2862                           
-  2863                           ;ABS_Code.c: 335: PIR2bits.TMR3IF = 0;
+  2863                           ;ABS_Code.c: 336: PIR2bits.TMR3IF = 0;
   2864  002578  92A1               	bcf	4001,1,c	;volatile
   2865                           
-  2866                           ;ABS_Code.c: 338: RCONbits.IPEN = 1;
+  2866                           ;ABS_Code.c: 339: RCONbits.IPEN = 1;
   2867  00257A  8ED0               	bsf	4048,7,c	;volatile
   2868                           
-  2869                           ;ABS_Code.c: 339: IPR3bits.RXB1IP = 0;
+  2869                           ;ABS_Code.c: 340: IPR3bits.RXB1IP = 0;
   2870  00257C  92A5               	bcf	4005,1,c	;volatile
   2871                           
-  2872                           ;ABS_Code.c: 340: IPR3bits.RXB0IP = 0;
+  2872                           ;ABS_Code.c: 341: IPR3bits.RXB0IP = 0;
   2873  00257E  90A5               	bcf	4005,0,c	;volatile
   2874                           
-  2875                           ;ABS_Code.c: 341: INTCON2bits.TMR0IP = 1;
+  2875                           ;ABS_Code.c: 342: INTCON2bits.TMR0IP = 1;
   2876  002580  84F1               	bsf	intcon2,2,c	;volatile
   2877                           
-  2878                           ;ABS_Code.c: 342: INTCON3bits.INT1IP = 1;
+  2878                           ;ABS_Code.c: 343: INTCON3bits.INT1IP = 1;
   2879  002582  8CF0               	bsf	intcon3,6,c	;volatile
   2880                           
-  2881                           ;ABS_Code.c: 345: T0CON = 0x80;
+  2881                           ;ABS_Code.c: 346: T0CON = 0x80;
   2882  002584  0E80               	movlw	128
   2883  002586  6ED5               	movwf	4053,c	;volatile
   2884                           
-  2885                           ;ABS_Code.c: 352: TMR0H = 0xFF;
+  2885                           ;ABS_Code.c: 353: TMR0H = 0xFF;
   2886  002588  68D7               	setf	4055,c	;volatile
   2887                           
-  2888                           ;ABS_Code.c: 353: TMR0L = 0xFE;
+  2888                           ;ABS_Code.c: 354: TMR0L = 0xFE;
   2889  00258A  0EFE               	movlw	254
   2890  00258C  6ED6               	movwf	4054,c	;volatile
   2891                           
-  2892                           ;ABS_Code.c: 354: PORTCbits.RC0 = 0;
+  2892                           ;ABS_Code.c: 355: PORTCbits.RC0 = 0;
   2893  00258E  9082               	bcf	3970,0,c	;volatile
   2894                           
-  2895                           ;ABS_Code.c: 355: brake_value_degree = 90;
+  2895                           ;ABS_Code.c: 356: brake_value_degree = 90;
   2896  002590  0E5A               	movlw	90
   2897  002592  6E3C               	movwf	_brake_value_degree,c
   2898                           
-  2899                           ;ABS_Code.c: 356: T1CON = 00010000;
+  2899                           ;ABS_Code.c: 357: T1CON = 00010000;
   2900  002594  0E00               	movlw	0
   2901  002596  6ECD               	movwf	4045,c	;volatile
   2902                           
-  2903                           ;ABS_Code.c: 357: T3CON = 01010000;
+  2903                           ;ABS_Code.c: 358: T3CON = 01010000;
   2904  002598  0E00               	movlw	0
   2905  00259A  6EB1               	movwf	4017,c	;volatile
   2906                           
-  2907                           ;ABS_Code.c: 358: INTCON2bits.INTEDG0 = 1;
+  2907                           ;ABS_Code.c: 359: INTCON2bits.INTEDG0 = 1;
   2908  00259C  8CF1               	bsf	intcon2,6,c	;volatile
   2909                           
-  2910                           ;ABS_Code.c: 359: INTCON2bits.INTEDG1 = 1;
+  2910                           ;ABS_Code.c: 360: INTCON2bits.INTEDG1 = 1;
   2911  00259E  8AF1               	bsf	intcon2,5,c	;volatile
   2912                           
-  2913                           ;ABS_Code.c: 362: ADCON1 = 0b01110111;
+  2913                           ;ABS_Code.c: 363: ADCON1 = 0b01110111;
   2914  0025A0  0E77               	movlw	119
   2915  0025A2  6EC1               	movwf	4033,c	;volatile
   2916                           
-  2917                           ;ABS_Code.c: 363: ADCON0bits.CHS2 = 0;
+  2917                           ;ABS_Code.c: 364: ADCON0bits.CHS2 = 0;
   2918  0025A4  98C2               	bcf	4034,4,c	;volatile
   2919                           
-  2920                           ;ABS_Code.c: 364: ADCON0bits.CHS1 = 0;
+  2920                           ;ABS_Code.c: 365: ADCON0bits.CHS1 = 0;
   2921  0025A6  96C2               	bcf	4034,3,c	;volatile
   2922                           
-  2923                           ;ABS_Code.c: 365: ADCON0bits.CHS0 = 0;
+  2923                           ;ABS_Code.c: 366: ADCON0bits.CHS0 = 0;
   2924  0025A8  94C2               	bcf	4034,2,c	;volatile
   2925                           
-  2926                           ;ABS_Code.c: 366: ADCON2bits.ACQT2 = 1;
+  2926                           ;ABS_Code.c: 367: ADCON2bits.ACQT2 = 1;
   2927  0025AA  8AC0               	bsf	4032,5,c	;volatile
   2928                           
-  2929                           ;ABS_Code.c: 367: ADCON2bits.ACQT1 = 1;
+  2929                           ;ABS_Code.c: 368: ADCON2bits.ACQT1 = 1;
   2930  0025AC  88C0               	bsf	4032,4,c	;volatile
   2931                           
-  2932                           ;ABS_Code.c: 368: ADCON2bits.ACQT0 = 0;
+  2932                           ;ABS_Code.c: 369: ADCON2bits.ACQT0 = 0;
   2933  0025AE  96C0               	bcf	4032,3,c	;volatile
   2934                           
-  2935                           ;ABS_Code.c: 369: ADCON2bits.ADCS2 = 1;
+  2935                           ;ABS_Code.c: 370: ADCON2bits.ADCS2 = 1;
   2936  0025B0  84C0               	bsf	4032,2,c	;volatile
   2937                           
-  2938                           ;ABS_Code.c: 370: ADCON2bits.ADCS1 = 0;
+  2938                           ;ABS_Code.c: 371: ADCON2bits.ADCS1 = 0;
   2939  0025B2  92C0               	bcf	4032,1,c	;volatile
   2940                           
-  2941                           ;ABS_Code.c: 371: ADCON2bits.ADCS0 = 1;
+  2941                           ;ABS_Code.c: 372: ADCON2bits.ADCS0 = 1;
   2942  0025B4  80C0               	bsf	4032,0,c	;volatile
   2943                           
-  2944                           ;ABS_Code.c: 372: ADCON2bits.ADFM = 0;
+  2944                           ;ABS_Code.c: 373: ADCON2bits.ADFM = 0;
   2945  0025B6  9EC0               	bcf	4032,7,c	;volatile
   2946                           
-  2947                           ;ABS_Code.c: 373: ADCON0bits.ADON = 1;
+  2947                           ;ABS_Code.c: 374: ADCON0bits.ADON = 1;
   2948  0025B8  80C2               	bsf	4034,0,c	;volatile
   2949                           
-  2950                           ;ABS_Code.c: 376: PIE3bits.RXB1IE = 1;
+  2950                           ;ABS_Code.c: 377: PIE3bits.RXB1IE = 1;
   2951  0025BA  82A3               	bsf	4003,1,c	;volatile
   2952                           
-  2953                           ;ABS_Code.c: 377: PIE3bits.RXB0IE = 1;
+  2953                           ;ABS_Code.c: 378: PIE3bits.RXB0IE = 1;
   2954  0025BC  80A3               	bsf	4003,0,c	;volatile
   2955                           
-  2956                           ;ABS_Code.c: 378: INTCONbits.TMR0IE = 1;
+  2956                           ;ABS_Code.c: 379: INTCONbits.TMR0IE = 1;
   2957  0025BE  8AF2               	bsf	intcon,5,c	;volatile
   2958                           
-  2959                           ;ABS_Code.c: 379: INTCONbits.INT0IE = 1;
+  2959                           ;ABS_Code.c: 380: INTCONbits.INT0IE = 1;
   2960  0025C0  88F2               	bsf	intcon,4,c	;volatile
   2961                           
-  2962                           ;ABS_Code.c: 380: INTCON3bits.INT1IE = 1;
+  2962                           ;ABS_Code.c: 381: INTCON3bits.INT1IE = 1;
   2963  0025C2  86F0               	bsf	intcon3,3,c	;volatile
   2964                           
-  2965                           ;ABS_Code.c: 381: INTCONbits.GIEH = 1;
+  2965                           ;ABS_Code.c: 382: INTCONbits.GIEH = 1;
   2966  0025C4  8EF2               	bsf	intcon,7,c	;volatile
   2967                           
-  2968                           ;ABS_Code.c: 382: INTCONbits.GIEL = 1;
+  2968                           ;ABS_Code.c: 383: INTCONbits.GIEL = 1;
   2969  0025C6  8CF2               	bsf	intcon,6,c	;volatile
   2970                           
-  2971                           ;ABS_Code.c: 385: T1CONbits.TMR1ON = 1;
+  2971                           ;ABS_Code.c: 386: T1CONbits.TMR1ON = 1;
   2972  0025C8  80CD               	bsf	4045,0,c	;volatile
   2973                           
-  2974                           ;ABS_Code.c: 386: T3CONbits.TMR3ON = 1;
+  2974                           ;ABS_Code.c: 387: T3CONbits.TMR3ON = 1;
   2975  0025CA  80B1               	bsf	4017,0,c	;volatile
   2976                           
-  2977                           ;ABS_Code.c: 387: T0CONbits.TMR0ON = 1;
+  2977                           ;ABS_Code.c: 388: T0CONbits.TMR0ON = 1;
   2978  0025CC  8ED5               	bsf	4053,7,c	;volatile
   2979                           
-  2980                           ;ABS_Code.c: 388: delay_ms(2);
+  2980                           ;ABS_Code.c: 389: delay_ms(2);
   2981  0025CE  0E00               	movlw	0
   2982  0025D0  0100               	movlb	0	; () banked
   2983  0025D2  6FB9               	movwf	(delay_ms@value_ms+1)& (0+255),b
@@ -6678,7 +6678,7 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   6665                           
   6666 ;; *************** function _ADC_Read *****************
   6667 ;; Defined at:
-  6668 ;;		line 303 in file "ABS_Code.c"
+  6668 ;;		line 304 in file "ABS_Code.c"
   6669 ;; Parameters:    Size  Location     Type
   6670 ;;		None
   6671 ;; Auto vars:     Size  Location     Type
@@ -6712,7 +6712,7 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   6699  00272C                     _ADC_Read:
   6700                           	opt stack 25
   6701                           
-  6702                           ;ABS_Code.c: 304: ADCON0bits.GO = 1;
+  6702                           ;ABS_Code.c: 305: ADCON0bits.GO = 1;
   6703                           
   6704                           ;incstack = 0
   6705  00272C  82C2               	bsf	4034,1,c	;volatile
@@ -6720,10 +6720,10 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   6707  00272E  B2C2               	btfsc	4034,1,c	;volatile
   6708  002730  D7FE               	goto	l713
   6709                           
-  6710                           ;ABS_Code.c: 306: read = ADRESH;
+  6710                           ;ABS_Code.c: 307: read = ADRESH;
   6711  002732  CFC4 F078          	movff	4036,_read	;volatile
   6712                           
-  6713                           ;ABS_Code.c: 307: correction_factor = read - 127;
+  6713                           ;ABS_Code.c: 308: correction_factor = read - 127;
   6714  002736  0E81               	movlw	129
   6715  002738  0100               	movlb	0	; () banked
   6716  00273A  2578               	addwf	_read& (0+255),w,b
@@ -6735,7 +6735,7 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   6722  002746  236F               	addwfc	(_correction_factor+1)& (0+255),f,b
   6723                           
   6724                           ; BSR set to: 0
-  6725                           ;ABS_Code.c: 308: home_position = correction_factor / 4 + 127;
+  6725                           ;ABS_Code.c: 309: home_position = correction_factor / 4 + 127;
   6726  002748  C06E  F0B2         	movff	_correction_factor,___awdiv@dividend
   6727  00274C  C06F  F0B3         	movff	_correction_factor+1,___awdiv@dividend+1
   6728  002750  0E00               	movlw	0
@@ -6977,7 +6977,7 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   6964                           
   6965 ;; *************** function _ISR_Bassa *****************
   6966 ;; Defined at:
-  6967 ;;		line 191 in file "ABS_Code.c"
+  6967 ;;		line 192 in file "ABS_Code.c"
   6968 ;; Parameters:    Size  Location     Type
   6969 ;;		None
   6970 ;; Auto vars:     Size  Location     Type
@@ -7033,46 +7033,46 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   7020  000056  CFF8 F01C          	movff	tblptru,??_ISR_Bassa+15
   7021  00005A  CFF5 F01D          	movff	tablat,??_ISR_Bassa+16
   7022                           
-  7023                           ;ABS_Code.c: 193: if ((PIR3bits.RXB0IF == 1) || (PIR3bits.RXB1IF == 1)) {
+  7023                           ;ABS_Code.c: 194: if ((PIR3bits.RXB0IF == 1) || (PIR3bits.RXB1IF == 1)) {
   7024  00005E  A0A4               	btfss	4004,0,c	;volatile
   7025  000060  B2A4               	btfsc	4004,1,c	;volatile
   7026  000062  D001               	goto	i1l3906
   7027  000064  D029               	goto	i1l676
   7028  000066                     i1l3906:
   7029                           
-  7030                           ;ABS_Code.c: 194: if (CANisRxReady()) {
+  7030                           ;ABS_Code.c: 195: if (CANisRxReady()) {
   7031  000066  EC1D  F014         	call	_CANisRxReady	;wreg free
   7032  00006A  0900               	iorlw	0
   7033  00006C  B4D8               	btfsc	status,2,c
   7034  00006E  D022               	goto	i1l673
   7035                           
-  7036                           ;ABS_Code.c: 195: CANreceiveMessage(&msg);
+  7036                           ;ABS_Code.c: 196: CANreceiveMessage(&msg);
   7037  000070  0E7C               	movlw	low _msg
   7038  000072  6E01               	movwf	CANreceiveMessage@msg,c
   7039  000074  0E00               	movlw	high _msg
   7040  000076  6E02               	movwf	CANreceiveMessage@msg+1,c
   7041  000078  ECCB  F009         	call	_CANreceiveMessage	;wreg free
   7042                           
-  7043                           ;ABS_Code.c: 196: if (msg.RTR == 1) {
+  7043                           ;ABS_Code.c: 197: if (msg.RTR == 1) {
   7044  00007C  0100               	movlb	0	; () banked
   7045  00007E  058A               	decf	(_msg+14)& (0+255),w,b
   7046  000080  A4D8               	btfss	status,2,c
   7047  000082  D009               	goto	i1l3914
   7048                           
   7049                           ; BSR set to: 0
-  7050                           ;ABS_Code.c: 197: remote_frame_id = msg.identifier;
+  7050                           ;ABS_Code.c: 198: remote_frame_id = msg.identifier;
   7051  000084  C07C  F068         	movff	_msg,_remote_frame_id
   7052  000088  C07D  F069         	movff	_msg+1,_remote_frame_id+1
   7053  00008C  C07E  F06A         	movff	_msg+2,_remote_frame_id+2
   7054  000090  C07F  F06B         	movff	_msg+3,_remote_frame_id+3
   7055                           
-  7056                           ;ABS_Code.c: 198: remote_frame = 1;
+  7056                           ;ABS_Code.c: 199: remote_frame = 1;
   7057  000094  883D               	bsf	_remote_frame/(0+8),_remote_frame& (0+7),c
   7058  000096                     i1l3914:
   7059                           
   7060                           ; BSR set to: 0
-  7061                           ;ABS_Code.c: 199: }
-  7062                           ;ABS_Code.c: 200: if (msg.identifier == 0b00000000000000000000000000110) {
+  7061                           ;ABS_Code.c: 200: }
+  7062                           ;ABS_Code.c: 201: if (msg.identifier == 0b00000000000000000000000000110) {
   7063  000096  0E06               	movlw	6
   7064  000098  0100               	movlb	0	; () banked
   7065  00009A  197C               	xorwf	_msg& (0+255),w,b
@@ -7086,19 +7086,19 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   7073  0000AA  D004               	goto	i1l673
   7074                           
   7075                           ; BSR set to: 0
-  7076                           ;ABS_Code.c: 201: brake_signal_CAN = msg.data[0];
+  7076                           ;ABS_Code.c: 202: brake_signal_CAN = msg.data[0];
   7077  0000AC  C080  F075         	movff	_msg+4,_brake_signal_CAN
   7078                           
-  7079                           ;ABS_Code.c: 202: Analogic_Mode = msg.data[1];
+  7079                           ;ABS_Code.c: 203: Analogic_Mode = msg.data[1];
   7080  0000B0  C081  F074         	movff	_msg+5,_Analogic_Mode
   7081  0000B4                     i1l673:
   7082                           
-  7083                           ;ABS_Code.c: 203: }
-  7084                           ;ABS_Code.c: 204: }
-  7085                           ;ABS_Code.c: 205: PIR3bits.RXB0IF = 0;
+  7083                           ;ABS_Code.c: 204: }
+  7084                           ;ABS_Code.c: 205: }
+  7085                           ;ABS_Code.c: 206: PIR3bits.RXB0IF = 0;
   7086  0000B4  90A4               	bcf	4004,0,c	;volatile
   7087                           
-  7088                           ;ABS_Code.c: 206: PIR3bits.RXB1IF = 0;
+  7088                           ;ABS_Code.c: 207: PIR3bits.RXB1IF = 0;
   7089  0000B6  92A4               	bcf	4004,1,c	;volatile
   7090  0000B8                     i1l676:
   7091  0000B8  C01D  FFF5         	movff	??_ISR_Bassa+16,tablat
@@ -8057,7 +8057,7 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   8044                           
   8045 ;; *************** function _ISR_Alta *****************
   8046 ;; Defined at:
-  8047 ;;		line 132 in file "ABS_Code.c"
+  8047 ;;		line 133 in file "ABS_Code.c"
   8048 ;; Parameters:    Size  Location     Type
   8049 ;;		None
   8050 ;; Auto vars:     Size  Location     Type
@@ -8144,11 +8144,11 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   8131  001C6A  CFF8 F0B0          	movff	tblptru,??_ISR_Alta+20
   8132  001C6E  CFF5 F0B1          	movff	tablat,??_ISR_Alta+21
   8133                           
-  8134                           ;ABS_Code.c: 134: if (INTCONbits.TMR0IF == 1) {
+  8134                           ;ABS_Code.c: 135: if (INTCONbits.TMR0IF == 1) {
   8135  001C72  A4F2               	btfss	intcon,2,c	;volatile
   8136  001C74  D0AB               	goto	i2l4008
   8137                           
-  8138                           ;ABS_Code.c: 135: PORTCbits.RC0 = ~PORTCbits.RC0;
+  8138                           ;ABS_Code.c: 136: PORTCbits.RC0 = ~PORTCbits.RC0;
   8139  001C76  A082               	btfss	3970,0,c	;volatile
   8140  001C78  D002               	goto	i2u450_40
   8141  001C7A  0E01               	movlw	1
@@ -8167,12 +8167,12 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   8154  001C90  6E82               	movwf	3970,c	;volatile
   8155                           
   8156                           ; BSR set to: 0
-  8157                           ;ABS_Code.c: 136: if (PORTCbits.RC0 == 1) {
+  8157                           ;ABS_Code.c: 137: if (PORTCbits.RC0 == 1) {
   8158  001C92  A082               	btfss	3970,0,c	;volatile
   8159  001C94  D094               	goto	i2l4004
   8160                           
   8161                           ; BSR set to: 0
-  8162                           ;ABS_Code.c: 137: timer_on = (((1400 * brake_value_degree) / 180) + 800)*2;
+  8162                           ;ABS_Code.c: 138: timer_on = (((1400 * brake_value_degree) / 180) + 800)*2;
   8163  001C96  0E40               	movlw	64
   8164  001C98  0100               	movlb	0	; () banked
   8165  001C9A  6F9C               	movwf	??_ISR_Alta& (0+255),b
@@ -8211,7 +8211,7 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   8198  001CEA  6E3B               	movwf	_timer_on+3,c
   8199                           
   8200                           ; BSR set to: 0
-  8201                           ;ABS_Code.c: 138: timer_off = 65536 - (40000 - timer_on);
+  8201                           ;ABS_Code.c: 139: timer_off = 65536 - (40000 - timer_on);
   8202  001CEC  C038  F09C         	movff	_timer_on,??_ISR_Alta
   8203  001CF0  C039  F09D         	movff	_timer_on+1,??_ISR_Alta+1
   8204  001CF4  C03A  F09E         	movff	_timer_on+2,??_ISR_Alta+2
@@ -8274,7 +8274,7 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   8261  001D6A  6E37               	movwf	_timer_off+3,c
   8262                           
   8263                           ; BSR set to: 0
-  8264                           ;ABS_Code.c: 139: timer_on = 65536 - timer_on;
+  8264                           ;ABS_Code.c: 140: timer_on = 65536 - timer_on;
   8265  001D6C  C038  F09C         	movff	_timer_on,??_ISR_Alta
   8266  001D70  C039  F09D         	movff	_timer_on+1,??_ISR_Alta+1
   8267  001D74  C03A  F09E         	movff	_timer_on+2,??_ISR_Alta+2
@@ -8307,51 +8307,51 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   8294  001DAE  6E3B               	movwf	_timer_on+3,c
   8295                           
   8296                           ; BSR set to: 0
-  8297                           ;ABS_Code.c: 140: WriteTimer0(timer_on);
+  8297                           ;ABS_Code.c: 141: WriteTimer0(timer_on);
   8298  001DB0  C038  F01E         	movff	_timer_on,WriteTimer0@timer0
   8299  001DB4  C039  F01F         	movff	_timer_on+1,WriteTimer0@timer0+1
   8300  001DB8  EC28  F014         	call	_WriteTimer0	;wreg free
   8301                           
-  8302                           ;ABS_Code.c: 141: } else {
+  8302                           ;ABS_Code.c: 142: } else {
   8303  001DBC  D006               	goto	i2l4006
   8304  001DBE                     i2l4004:
   8305                           
-  8306                           ;ABS_Code.c: 142: WriteTimer0(timer_off);
+  8306                           ;ABS_Code.c: 143: WriteTimer0(timer_off);
   8307  001DBE  C034  F01E         	movff	_timer_off,WriteTimer0@timer0
   8308  001DC2  C035  F01F         	movff	_timer_off+1,WriteTimer0@timer0+1
   8309  001DC6  EC28  F014         	call	_WriteTimer0	;wreg free
   8310  001DCA                     i2l4006:
   8311                           
-  8312                           ;ABS_Code.c: 143: }
-  8313                           ;ABS_Code.c: 144: INTCONbits.TMR0IF = 0;
+  8312                           ;ABS_Code.c: 144: }
+  8313                           ;ABS_Code.c: 145: INTCONbits.TMR0IF = 0;
   8314  001DCA  94F2               	bcf	intcon,2,c	;volatile
   8315  001DCC                     i2l4008:
   8316                           
-  8317                           ;ABS_Code.c: 145: }
-  8318                           ;ABS_Code.c: 148: if (INTCONbits.INT0IF == 1) {
+  8317                           ;ABS_Code.c: 146: }
+  8318                           ;ABS_Code.c: 149: if (INTCONbits.INT0IF == 1) {
   8319  001DCC  A2F2               	btfss	intcon,1,c	;volatile
   8320  001DCE  D047               	goto	i2l4032
   8321                           
-  8322                           ;ABS_Code.c: 149: if (x == 0) {
+  8322                           ;ABS_Code.c: 150: if (x == 0) {
   8323  001DD0  BA3D               	btfsc	_x/(0+8),_x& (0+7),c
   8324  001DD2  D006               	goto	i2l4016
   8325                           
-  8326                           ;ABS_Code.c: 150: TMR1H = 0x00;
+  8326                           ;ABS_Code.c: 151: TMR1H = 0x00;
   8327  001DD4  0E00               	movlw	0
   8328  001DD6  6ECF               	movwf	4047,c	;volatile
   8329                           
-  8330                           ;ABS_Code.c: 151: TMR1L = 0x00;
+  8330                           ;ABS_Code.c: 152: TMR1L = 0x00;
   8331  001DD8  0E00               	movlw	0
   8332  001DDA  6ECE               	movwf	4046,c	;volatile
   8333                           
-  8334                           ;ABS_Code.c: 152: x = 1;
+  8334                           ;ABS_Code.c: 153: x = 1;
   8335  001DDC  8A3D               	bsf	_x/(0+8),_x& (0+7),c
   8336                           
-  8337                           ;ABS_Code.c: 153: } else {
+  8337                           ;ABS_Code.c: 154: } else {
   8338  001DDE  D03E               	goto	i2l4030
   8339  001DE0                     i2l4016:
   8340                           
-  8341                           ;ABS_Code.c: 154: gap_time_1 = (TMR1H <<8) + TMR1L;
+  8341                           ;ABS_Code.c: 155: gap_time_1 = (TMR1H <<8) + TMR1L;
   8342  001DE0  50CE               	movf	4046,w,c	;volatile
   8343  001DE2  CFCF F09C          	movff	4047,??_ISR_Alta	;volatile
   8344  001DE6  0100               	movlb	0	; () banked
@@ -8372,7 +8372,7 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   8359  001E0A  6E2F               	movwf	_gap_time_1+3,c
   8360                           
   8361                           ; BSR set to: 0
-  8362                           ;ABS_Code.c: 155: gap_time_1 = gap_time_1 / 500;
+  8362                           ;ABS_Code.c: 156: gap_time_1 = gap_time_1 / 500;
   8363  001E0C  C02C  F01E         	movff	_gap_time_1,i2___lldiv@dividend
   8364  001E10  C02D  F01F         	movff	_gap_time_1+1,i2___lldiv@dividend+1
   8365  001E14  C02E  F020         	movff	_gap_time_1+2,i2___lldiv@dividend+2
@@ -8391,22 +8391,22 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   8378  001E38  C020  F02E         	movff	?i2___lldiv+2,_gap_time_1+2
   8379  001E3C  C021  F02F         	movff	?i2___lldiv+3,_gap_time_1+3
   8380                           
-  8381                           ;ABS_Code.c: 156: ENC1_measure = 1;
+  8381                           ;ABS_Code.c: 157: ENC1_measure = 1;
   8382  001E40  803D               	bsf	_ENC1_measure/(0+8),_ENC1_measure& (0+7),c
   8383                           
-  8384                           ;ABS_Code.c: 157: TMR1H = 0x00;
+  8384                           ;ABS_Code.c: 158: TMR1H = 0x00;
   8385  001E42  0E00               	movlw	0
   8386  001E44  6ECF               	movwf	4047,c	;volatile
   8387                           
-  8388                           ;ABS_Code.c: 158: TMR1H = 0x00;
+  8388                           ;ABS_Code.c: 159: TMR1H = 0x00;
   8389  001E46  0E00               	movlw	0
   8390  001E48  6ECF               	movwf	4047,c	;volatile
   8391                           
-  8392                           ;ABS_Code.c: 159: if (count_flag == 1) {
+  8392                           ;ABS_Code.c: 160: if (count_flag == 1) {
   8393  001E4A  A63D               	btfss	_count_flag/(0+8),_count_flag& (0+7),c
   8394  001E4C  D007               	goto	i2l4030
   8395                           
-  8396                           ;ABS_Code.c: 160: int_counter_1++;
+  8396                           ;ABS_Code.c: 161: int_counter_1++;
   8397  001E4E  0E01               	movlw	1
   8398  001E50  0100               	movlb	0	; () banked
   8399  001E52  2760               	addwf	_int_counter_1& (0+255),f,b
@@ -8416,37 +8416,37 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   8403  001E5A  2363               	addwfc	(_int_counter_1+3)& (0+255),f,b
   8404  001E5C                     i2l4030:
   8405                           
-  8406                           ;ABS_Code.c: 161: }
-  8407                           ;ABS_Code.c: 162: }
-  8408                           ;ABS_Code.c: 163: INTCONbits.INT0IF = 0;
+  8406                           ;ABS_Code.c: 162: }
+  8407                           ;ABS_Code.c: 163: }
+  8408                           ;ABS_Code.c: 164: INTCONbits.INT0IF = 0;
   8409  001E5C  92F2               	bcf	intcon,1,c	;volatile
   8410  001E5E                     i2l4032:
   8411                           
-  8412                           ;ABS_Code.c: 164: }
-  8413                           ;ABS_Code.c: 167: if (INTCON3bits.INT1IF == 1) {
+  8412                           ;ABS_Code.c: 165: }
+  8413                           ;ABS_Code.c: 168: if (INTCON3bits.INT1IF == 1) {
   8414  001E5E  A0F0               	btfss	intcon3,0,c	;volatile
   8415  001E60  D047               	goto	i2l667
   8416                           
-  8417                           ;ABS_Code.c: 168: if (y == 0) {
+  8417                           ;ABS_Code.c: 169: if (y == 0) {
   8418  001E62  BC3D               	btfsc	_y/(0+8),_y& (0+7),c
   8419  001E64  D006               	goto	i2l4040
   8420                           
-  8421                           ;ABS_Code.c: 169: TMR3H = 0x00;
+  8421                           ;ABS_Code.c: 170: TMR3H = 0x00;
   8422  001E66  0E00               	movlw	0
   8423  001E68  6EB3               	movwf	4019,c	;volatile
   8424                           
-  8425                           ;ABS_Code.c: 170: TMR3L = 0x00;
+  8425                           ;ABS_Code.c: 171: TMR3L = 0x00;
   8426  001E6A  0E00               	movlw	0
   8427  001E6C  6EB2               	movwf	4018,c	;volatile
   8428                           
-  8429                           ;ABS_Code.c: 171: y = 1;
+  8429                           ;ABS_Code.c: 172: y = 1;
   8430  001E6E  8C3D               	bsf	_y/(0+8),_y& (0+7),c
   8431                           
-  8432                           ;ABS_Code.c: 172: } else {
+  8432                           ;ABS_Code.c: 173: } else {
   8433  001E70  D03E               	goto	i2l4054
   8434  001E72                     i2l4040:
   8435                           
-  8436                           ;ABS_Code.c: 173: gap_time_2 = (TMR3H <<8) + TMR3L;
+  8436                           ;ABS_Code.c: 174: gap_time_2 = (TMR3H <<8) + TMR3L;
   8437  001E72  50B2               	movf	4018,w,c	;volatile
   8438  001E74  CFB3 F09C          	movff	4019,??_ISR_Alta	;volatile
   8439  001E78  0100               	movlb	0	; () banked
@@ -8467,7 +8467,7 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   8454  001E9C  6E33               	movwf	_gap_time_2+3,c
   8455                           
   8456                           ; BSR set to: 0
-  8457                           ;ABS_Code.c: 174: gap_time_2 = gap_time_2 / 500;
+  8457                           ;ABS_Code.c: 175: gap_time_2 = gap_time_2 / 500;
   8458  001E9E  C030  F01E         	movff	_gap_time_2,i2___lldiv@dividend
   8459  001EA2  C031  F01F         	movff	_gap_time_2+1,i2___lldiv@dividend+1
   8460  001EA6  C032  F020         	movff	_gap_time_2+2,i2___lldiv@dividend+2
@@ -8486,22 +8486,22 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   8473  001ECA  C020  F032         	movff	?i2___lldiv+2,_gap_time_2+2
   8474  001ECE  C021  F033         	movff	?i2___lldiv+3,_gap_time_2+3
   8475                           
-  8476                           ;ABS_Code.c: 175: ENC2_measure = 1;
+  8476                           ;ABS_Code.c: 176: ENC2_measure = 1;
   8477  001ED2  823D               	bsf	_ENC2_measure/(0+8),_ENC2_measure& (0+7),c
   8478                           
-  8479                           ;ABS_Code.c: 176: TMR3H = 0x00;
+  8479                           ;ABS_Code.c: 177: TMR3H = 0x00;
   8480  001ED4  0E00               	movlw	0
   8481  001ED6  6EB3               	movwf	4019,c	;volatile
   8482                           
-  8483                           ;ABS_Code.c: 177: TMR3H = 0x00;
+  8483                           ;ABS_Code.c: 178: TMR3H = 0x00;
   8484  001ED8  0E00               	movlw	0
   8485  001EDA  6EB3               	movwf	4019,c	;volatile
   8486                           
-  8487                           ;ABS_Code.c: 178: if (count_flag == 1) {
+  8487                           ;ABS_Code.c: 179: if (count_flag == 1) {
   8488  001EDC  A63D               	btfss	_count_flag/(0+8),_count_flag& (0+7),c
   8489  001EDE  D007               	goto	i2l4054
   8490                           
-  8491                           ;ABS_Code.c: 179: int_counter_2++;
+  8491                           ;ABS_Code.c: 180: int_counter_2++;
   8492  001EE0  0E01               	movlw	1
   8493  001EE2  0100               	movlb	0	; () banked
   8494  001EE4  2764               	addwf	_int_counter_2& (0+255),f,b
@@ -8511,9 +8511,9 @@ Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080
   8498  001EEC  2367               	addwfc	(_int_counter_2+3)& (0+255),f,b
   8499  001EEE                     i2l4054:
   8500                           
-  8501                           ;ABS_Code.c: 180: }
-  8502                           ;ABS_Code.c: 181: }
-  8503                           ;ABS_Code.c: 182: INTCON3bits.INT1IF = 0;
+  8501                           ;ABS_Code.c: 181: }
+  8502                           ;ABS_Code.c: 182: }
+  8503                           ;ABS_Code.c: 183: INTCON3bits.INT1IF = 0;
   8504  001EEE  90F0               	bcf	intcon3,0,c	;volatile
   8505  001EF0                     i2l667:
   8506  001EF0  C0B1  FFF5         	movff	??_ISR_Alta+21,tablat
@@ -9308,7 +9308,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V1.35 build -356382666 
-Symbol Table                                                                                   Mon Jan 18 16:15:51 2016
+Symbol Table                                                                                   Wed Jan 27 19:00:14 2016
 
            ??_CANisTXwarningON 00B2                              _x 01ED                              _y 01EE  
          __end_of_CANSetFilter 0C0A                   ___awdiv@sign 00B7                             bsr 000FE0  
