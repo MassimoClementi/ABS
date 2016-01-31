@@ -46,7 +46,7 @@
 //            TMR3
 //            2us ad incremento
 
-#define USE_AND_MASKS
+#define USE_OR_MASKS
 
 #include <xc.h>
 #include "PIC18F4480_config.h"
@@ -59,18 +59,13 @@
 #define _XTAL_FREQ 16000000
 #define HIGH 1
 #define LOW 0
-
+BYTE data_array_1 [8] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x05};
 //////////////////////////////////////
 //  10 GRADI DI AZIONE DEL SERVO    //
 //      POSIZIONE HOME => 127       //
 //      POSIZIONE BRAKE => 142      //
 //////////////////////////////////////
 
-#define brake_signal 0b00000000000000000000000000110 //(!!) impostare
-#define status_id 0b00000000000000000000000000100 //(!!) impostare
-#define speed 0b00000000000000000000000001000 //(!!) impostare
-#define count_start 0b00000000000000000000000001010 //(!!) impostare
-#define count_stop 0b00000000000000000000000001011 //(!!) impostare
 #define wheel_diameter 11 //in cm
 
 //Prototitpi delle funzioni
@@ -133,7 +128,7 @@ unsigned char step = 0; //passo della ruota in cm
 __interrupt(high_priority) void ISR_Alta(void) {
     //INTERRUPT PWM
     if (INTCONbits.TMR0IF == HIGH) {
-        PORTCbits.RC0 = ~PORTCbits.RC0;
+        
         if (PORTCbits.RC0 == 1) {
             timer_on = (((1400 * brake_value_degree) / 180) + 800)*2;
             timer_off = 65536 - (40000 - timer_on);
@@ -162,6 +157,7 @@ __interrupt(high_priority) void ISR_Alta(void) {
             }
         }
         INTCONbits.INT0IF = LOW;
+        PORTCbits.RC1 = ~PORTCbits.RC1;
     }
 
     //INTERRUPT ENCODER 2
@@ -181,7 +177,9 @@ __interrupt(high_priority) void ISR_Alta(void) {
             }
         }
         INTCON3bits.INT1IF = LOW;
+        //PORTCbits.RC1 = ~PORTCbits.RC1;
     }
+    
 }
 
 
@@ -198,7 +196,7 @@ __interrupt(low_priority) void ISR_Bassa(void) {
                 remote_frame_id = msg.identifier;
                 remote_frame = HIGH;
             }
-            if (msg.identifier == brake_signal) {
+            if (msg.identifier == BRAKE_SIGNAL) {
                 brake_signal_CAN = msg.data[0];
                 Analogic_Mode = msg.data[1];
             }
@@ -215,13 +213,18 @@ __interrupt(low_priority) void ISR_Bassa(void) {
 int main(void) {
     board_initialization();
     step = (wheel_diameter * (3,1415)) / 16;
+    PORTAbits.RA1 = 1;
+    PORTCbits.RC1 = 1;
+    delay_ms(500);
+    PORTAbits.RA1 = 0;
+    PORTCbits.RC1 = 0;
+    delay_ms(100);
     while (1) {
         ADC_Read();
-
         if ((CANisTXwarningON() == HIGH) || (CANisRXwarningON() == HIGH)) {
-            PORTBbits.RB0 = HIGH; //accendi led errore
+            PORTAbits.RA1 = HIGH; //accendi led errore
         } else {
-            PORTBbits.RB0 = LOW;
+            PORTAbits.RA1 = LOW;
         }
 
         if ((remote_frame == HIGH) || (Tx_retry == HIGH)) {
@@ -270,18 +273,19 @@ int main(void) {
 
 void remote_frame_handler(void) {
     if (CANisTxReady()) {
-        if (remote_frame_id == status_id) {
+        if (remote_frame_id == ECU_STATE) {
             CANsendMessage(remote_frame_id, status_array, 8, CAN_CONFIG_STD_MSG & CAN_NORMAL_TX_FRAME & CAN_TX_PRIORITY_0);
         }
-        if (remote_frame_id == speed) {
+        if (remote_frame_id == ACTUAL_SPEED) {
+            PORTCbits.RC0 = ~PORTCbits.RC0; //debug
             CANsendMessage(remote_frame_id, speed_array, 8, CAN_CONFIG_STD_MSG & CAN_NORMAL_TX_FRAME & CAN_TX_PRIORITY_0);
         }
-        if (remote_frame_id == count_start) {
+        if (remote_frame_id == COUNT_START) {
             int_counter_1 = 0;
             int_counter_2 = 0;
             count_flag = HIGH;
         }
-        if (remote_frame_id == count_stop) {
+        if (remote_frame_id == COUNT_STOP) {
             distance_1 = step * (int_counter_1);
             distance_2 = step * (int_counter_2);
             count_flag = LOW;
@@ -312,11 +316,11 @@ void ADC_Read(void) {
 void board_initialization(void) {
     //Configurazione I/O
     LATA = 0x00;
-    TRISA = 0xFF; //ALL IN
+    TRISA = 0b11111101; //ALL IN
     LATB = 0x00;
-    TRISB = 0b11111110; //RBO OUTPUT, RB1 e RB2 INPUT
+    TRISB = 0b11111111; //RB1 e RB2 INPUT
     LATC = 0x00;
-    TRISC = 0b11111110; //RC0 OUTPUT
+    TRISC = 0b11111100; //RC0 OUTPUT
     LATD = 0x00;
     TRISD = 0xFF;
     LATE = 0x00;

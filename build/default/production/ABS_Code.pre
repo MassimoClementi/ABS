@@ -19365,7 +19365,7 @@ extern __nonreentrant void _delay3(unsigned char);
 
 #pragma config EBTRB = OFF
 
-# 49 "../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h"
+# 49 "../../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h"
 typedef unsigned char BYTE;
 
 
@@ -20416,7 +20416,7 @@ BYTE CANisRxReady (void)
 return (RXB0CONbits.RXFUL || RXB1CONbits.RXFUL);
 }
 
-# 74 "../LaurTec_PIC_libraries_v_3.3.0/inc\delay.h"
+# 74 "../../LaurTec_PIC_libraries_v_3.3.0/inc\delay.h"
 void delay_ms (unsigned int value_ms);
 
 # 88
@@ -20425,8 +20425,8 @@ void delay_s (unsigned char value_s);
 # 102
 void delay_set_quartz (unsigned char frequency);
 
-# 49 "../LaurTec_PIC_libraries_v_3.3.0/src\delay.c"
-volatile unsigned char delay_quartz_frequency_value = 16;
+# 49 "../../LaurTec_PIC_libraries_v_3.3.0/src\delay.c"
+volatile unsigned char delay_quartz_frequency_value = 20;
 volatile unsigned int clock_counter_reference = 0;
 
 # 61
@@ -20463,12 +20463,15 @@ delay_quartz_frequency_value = frequency;
 
 }
 
-# 77 "ABS_Code.c"
+# 62 "ABS_Code.c"
+BYTE data_array_1 [8] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x05};
+
+# 72
 void board_initialization(void);
 void remote_frame_handler(void);
 void ADC_Read(void);
 
-# 86
+# 81
 CANmessage msg;
 bit remote_frame = 0;
 bit Tx_retry = 0;
@@ -20511,11 +20514,11 @@ unsigned char brake_value = 0;
 unsigned char brake_value_degree = 0;
 unsigned char step = 0;
 
-# 133
+# 128
 __attribute__((interrupt("__high_priority"))) void ISR_Alta(void) {
 
 if (INTCONbits.TMR0IF == 1) {
-PORTCbits.RC0 = ~PORTCbits.RC0;
+
 if (PORTCbits.RC0 == 1) {
 timer_on = (((1400 * brake_value_degree) / 180) + 800)*2;
 timer_off = 65536 - (40000 - timer_on);
@@ -20544,6 +20547,7 @@ int_counter_1++;
 }
 }
 INTCONbits.INT0IF = 0;
+PORTCbits.RC1 = ~PORTCbits.RC1;
 }
 
 
@@ -20563,10 +20567,12 @@ int_counter_2++;
 }
 }
 INTCON3bits.INT1IF = 0;
-}
+
 }
 
-# 192
+}
+
+# 190
 __attribute__((interrupt("__low_priority"))) void ISR_Bassa(void) {
 
 if ((PIR3bits.RXB0IF == 1) || (PIR3bits.RXB1IF == 1)) {
@@ -20576,7 +20582,7 @@ if (msg.RTR == 1) {
 remote_frame_id = msg.identifier;
 remote_frame = 1;
 }
-if (msg.identifier == 0b00000000000000000000000000110) {
+if (msg.identifier == 0b00000000000000000000000000100) {
 brake_signal_CAN = msg.data[0];
 Analogic_Mode = msg.data[1];
 }
@@ -20586,17 +20592,22 @@ PIR3bits.RXB1IF = 0;
 }
 }
 
-# 215
+# 213
 int main(void) {
 board_initialization();
 step = (11 * (3,1415)) / 16;
+PORTAbits.RA1 = 1;
+PORTCbits.RC1 = 1;
+delay_ms(500);
+PORTAbits.RA1 = 0;
+PORTCbits.RC1 = 0;
+delay_ms(100);
 while (1) {
 ADC_Read();
-
 if ((CANisTXwarningON() == 1) || (CANisRXwarningON() == 1)) {
-PORTBbits.RB0 = 1;
+PORTAbits.RA1 = 1;
 } else {
-PORTBbits.RB0 = 0;
+PORTAbits.RA1 = 0;
 }
 
 if ((remote_frame == 1) || (Tx_retry == 1)) {
@@ -20638,21 +20649,22 @@ ENC2_measure = 0;
 }
 }
 
-# 271
+# 274
 void remote_frame_handler(void) {
 if (CANisTxReady()) {
-if (remote_frame_id == 0b00000000000000000000000000100) {
+if (remote_frame_id == 0b00000000000000000000000000010) {
 CANsendMessage(remote_frame_id, status_array, 8, CAN_CONFIG_STD_MSG & CAN_NORMAL_TX_FRAME & CAN_TX_PRIORITY_0);
 }
-if (remote_frame_id == 0b00000000000000000000000001000) {
+if (remote_frame_id == 0b00000000000000000000000000110) {
+PORTCbits.RC0 = ~PORTCbits.RC0;
 CANsendMessage(remote_frame_id, speed_array, 8, CAN_CONFIG_STD_MSG & CAN_NORMAL_TX_FRAME & CAN_TX_PRIORITY_0);
 }
-if (remote_frame_id == 0b00000000000000000000000001010) {
+if (remote_frame_id == 0b00000000000000000000000001000) {
 int_counter_1 = 0;
 int_counter_2 = 0;
 count_flag = 1;
 }
-if (remote_frame_id == 0b00000000000000000000000001011) {
+if (remote_frame_id == 0b00000000000000000000000000111) {
 distance_1 = step * (int_counter_1);
 distance_2 = step * (int_counter_2);
 count_flag = 0;
@@ -20683,11 +20695,11 @@ home_position = correction_factor / 4 + 127;
 void board_initialization(void) {
 
 LATA = 0x00;
-TRISA = 0xFF;
+TRISA = 0b11111101;
 LATB = 0x00;
-TRISB = 0b11111110;
+TRISB = 0b11111111;
 LATC = 0x00;
-TRISC = 0b11111110;
+TRISC = 0b11111100;
 LATD = 0x00;
 TRISD = 0xFF;
 LATE = 0x00;
@@ -20716,7 +20728,7 @@ INTCON3bits.INT1IP = 1;
 
 T0CON = 0x80;
 
-# 353
+# 357
 TMR0H = 0xFF;
 TMR0L = 0xFE;
 PORTCbits.RC0 = 0;
