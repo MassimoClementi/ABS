@@ -59,7 +59,6 @@
 #define _XTAL_FREQ 16000000
 #define HIGH 1
 #define LOW 0
-BYTE data_array_1 [8] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x05};
 //////////////////////////////////////
 //  10 GRADI DI AZIONE DEL SERVO    //
 //      POSIZIONE HOME => 127       //
@@ -96,18 +95,20 @@ unsigned long timer_off = 0;
 //ENCODER 1
 bit x = LOW;
 bit ENC1_measure = LOW;
-unsigned long gap_time_1 = 0;
-unsigned char wheel_speed_1 = 0;
+bit TMR1_overflow = LOW;
+unsigned int gap_time_1 = 0;
+unsigned long wheel_speed_1 = 0;
 unsigned long int_counter_1 = 0;
 unsigned int distance_1 = 0;
 
 //ENCODER 2
 bit y = LOW;
 bit ENC2_measure = LOW;
-unsigned long gap_time_2 = 0;
-unsigned char wheel_speed_2 = 0;
+bit TMR3_overflow = LOW;
+unsigned int gap_time_2 = 0; //valore in ms
+unsigned long wheel_speed_2 = 0; //valore in m/s
 unsigned long int_counter_2 = 0;
-unsigned int distance_2 = 0;
+unsigned int distance_2 = 0; //valore in cm
 
 //ADC
 unsigned char read = 0;
@@ -204,6 +205,18 @@ __interrupt(low_priority) void ISR_Bassa(void) {
         PIR3bits.RXB0IF = LOW;
         PIR3bits.RXB1IF = LOW;
     }
+
+    //INTERRUPT TMR1
+    if(PIR1bits.TMR1IF == HIGH) {
+        TMR1_overflow = HIGH;
+        PIR1bits.TMR1IF = LOW;
+    }
+
+    //INTERRUPT TMR3
+    if(PIR2bits.TMR3IF == HIGH){
+        TMR3_overflow = HIGH;
+        PIR2bits.TMR3IF = LOW;
+    }
 }
 
 //////////////
@@ -212,7 +225,7 @@ __interrupt(low_priority) void ISR_Bassa(void) {
 
 int main(void) {
     board_initialization();
-    step = (wheel_diameter * (3,1415)) / 16;
+    step = (wheel_diameter * (3.1415)) / 16;
     PORTAbits.RA1 = 1;
     PORTCbits.RC1 = 1;
     delay_ms(500);
@@ -252,14 +265,24 @@ int main(void) {
         brake_value = (brake_value_inc / 17) + home_position;
         brake_value_degree = (180 * brake_value) / 255;
 
-        if (ENC1_measure == HIGH) {
-            wheel_speed_1 = (step * 36) / gap_time_1;
+        if ((ENC1_measure == HIGH)||(TMR1_overflow == HIGH)) {
+            if (TMR1_overflow == HIGH){
+                wheel_speed_1 = 0;
+                TMR1_overflow = LOW;
+            } else {
+            wheel_speed_1 = (step * 10) / gap_time_1;
+            }
             speed_array[1] = wheel_speed_1;
             ENC1_measure = LOW;
         }
 
-        if (ENC2_measure == HIGH) {
-            wheel_speed_2 = (step * 36) / gap_time_2;
+        if ((ENC2_measure == HIGH)||(TMR3_overflow == HIGH)) {
+            if (TMR3_overflow == HIGH){
+                wheel_speed_2 = 0;
+                TMR3_overflow = LOW;
+            } else {
+            wheel_speed_2 = (step * 10) / gap_time_2;
+            }
             speed_array[0] = wheel_speed_2;
             ENC2_measure = LOW;
         }
@@ -335,9 +358,11 @@ void board_initialization(void) {
     PIR3bits.RXB1IF = LOW; //azzera flag interrupt can bus buffer1
     PIR3bits.RXB0IF = LOW; //azzera flag interrupt can bus buffer0
     INTCONbits.TMR0IF = LOW; //azzera flag TMR0
+    PIR1bits.TMR1IF = LOW; //azzera flag TMR1
+    PIR2bits.TMR3IF = LOW; //azzera flag TMR3
     INTCONbits.INT0IF = LOW; //azzera flag INT0
     INTCON3bits.INT1IF = LOW; //azzera flag INT1
-    PIR2bits.TMR3IF = LOW; //resetta flag interrupt timer 3
+    
 
     //Config. Priorità
     RCONbits.IPEN = 1;
@@ -345,6 +370,8 @@ void board_initialization(void) {
     IPR3bits.RXB0IP = 0; //interrupt bassa priorità per can
     INTCON2bits.TMR0IP = 1; //interrupt alta priorità timer0
     INTCON3bits.INT1IP = 1; //interrupt alta priorità INT1
+    IPR1bits.TMR1IP = 0; //interrupt alta priorità timer1
+    IPR2bits.TMR3IP = 0; //interrupt alta priorità timer3
 
     //Config. Registri
     T0CON = 0x80; //imposta timer0, prescaler 1:2
@@ -380,7 +407,9 @@ void board_initialization(void) {
     //Enable Interrupts
     PIE3bits.RXB1IE = 1; //abilita interrupt ricezione can bus buffer1
     PIE3bits.RXB0IE = 1; //abilita interrupt ricezione can bus buffer0
-    INTCONbits.TMR0IE = 1; //abilita interrupt timer 0
+    INTCONbits.TMR0IE = 1; //abilita interrupt TMR0
+    PIE1bits.TMR1IE = 1; //abilita interrupt TMR1
+    PIE2bits.TMR3IE = 1; //abilita interrupt TMR3
     INTCONbits.INT0IE = 1; //abilita interrupt INT0
     INTCON3bits.INT1IE = 1; //abilita interrupt INT1
     INTCONbits.GIEH = 1; //abilita interrupt alta priorità
