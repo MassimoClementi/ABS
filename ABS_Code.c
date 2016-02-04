@@ -96,19 +96,19 @@ unsigned long timer_off = 0;
 bit x = LOW;
 bit ENC1_measure = LOW;
 bit TMR1_overflow = LOW;
-unsigned int gap_time_1 = 0;
-unsigned long wheel_speed_1 = 0;
+unsigned int gap_time_1 = 0; //[ms]
+unsigned long wheel_speed_1 = 0; //[mm/s] MIN=26 MAX=3455
 unsigned long int_counter_1 = 0;
-unsigned int distance_1 = 0;
+unsigned int distance_1 = 0; //[cm]
 
 //ENCODER 2
 bit y = LOW;
 bit ENC2_measure = LOW;
 bit TMR3_overflow = LOW;
-unsigned int gap_time_2 = 0; //valore in ms
-unsigned long wheel_speed_2 = 0; //valore in m/s
+unsigned int gap_time_2 = 0; //[ms]
+unsigned long wheel_speed_2 = 0; //[mm/s] vedi sopra
 unsigned long int_counter_2 = 0;
-unsigned int distance_2 = 0; //valore in cm
+unsigned int distance_2 = 0; //[cm]
 
 //ADC
 unsigned char read = 0;
@@ -117,9 +117,9 @@ unsigned char home_position = 0;
 
 //Program variables
 unsigned char brake_value_inc = 0; //0-256 (fattore 17)
-unsigned char brake_value = 0; //0-15
-unsigned char brake_value_degree = 0; //0-180 gradi
-unsigned char step = 0; //passo della ruota in cm
+unsigned char brake_value = 0; //0-15 [gradi]
+unsigned char brake_value_degree = 0; //0-180 [gradi]
+unsigned char step = 0; //passo della ruota [cm]
 
 
 //////////////////////////////////
@@ -128,9 +128,8 @@ unsigned char step = 0; //passo della ruota in cm
 
 __interrupt(high_priority) void ISR_Alta(void) {
     //INTERRUPT PWM
-    if (INTCONbits.TMR0IF == HIGH) {
-        
-        if (PORTCbits.RC0 == 1) {
+    if (INTCONbits.TMR0IF == HIGH) {      
+        if (PORTCbits.RC0 == HIGH) {
             timer_on = (((1400 * brake_value_degree) / 180) + 800)*2;
             timer_off = 65536 - (40000 - timer_on);
             timer_on = 65536 - timer_on;
@@ -225,17 +224,22 @@ __interrupt(low_priority) void ISR_Bassa(void) {
 
 int main(void) {
     board_initialization();
-    step = (wheel_diameter * (3.1415)) / 16;
-    PORTAbits.RA1 = 1;
-    PORTCbits.RC1 = 1;
+    step = (wheel_diameter * (3.1415)) / 16; //in cm
+    
+    //LED DEBUG SCHEDA
+    PORTAbits.RA1 = HIGH;
+    PORTCbits.RC1 = HIGH;
     delay_ms(500);
-    PORTAbits.RA1 = 0;
-    PORTCbits.RC1 = 0;
+    PORTAbits.RA1 = LOW;
+    PORTCbits.RC1 = LOW;
     delay_ms(100);
+    
     while (1) {
         ADC_Read();
         if ((CANisTXwarningON() == HIGH) || (CANisRXwarningON() == HIGH)) {
             PORTAbits.RA1 = HIGH; //accendi led errore
+            COMSTATbits.TXWARN = LOW;
+            COMSTATbits.RXWARN = LOW;
         } else {
             PORTAbits.RA1 = LOW;
         }
@@ -270,9 +274,10 @@ int main(void) {
                 wheel_speed_1 = 0;
                 TMR1_overflow = LOW;
             } else {
-            wheel_speed_1 = (step * 10) / gap_time_1;
+            wheel_speed_1 = (step * 100) / gap_time_1;
             }
-            speed_array[1] = wheel_speed_1;
+            speed_array[3] = wheel_speed_1 >> 8;
+            speed_array[2] = wheel_speed_1;
             ENC1_measure = LOW;
         }
 
@@ -281,8 +286,9 @@ int main(void) {
                 wheel_speed_2 = 0;
                 TMR3_overflow = LOW;
             } else {
-            wheel_speed_2 = (step * 10) / gap_time_2;
+            wheel_speed_2 = (step * 100) / gap_time_2;
             }
+            speed_array[1] = wheel_speed_2 >> 8;
             speed_array[0] = wheel_speed_2;
             ENC2_measure = LOW;
         }
@@ -329,7 +335,7 @@ void remote_frame_handler(void) {
 }
 
 void ADC_Read(void) {
-    ADCON0bits.GO = 1;
+    ADCON0bits.GO = HIGH;
     while (ADCON0bits.GO);
     read = ADRESH;
     correction_factor = read - 127;
@@ -365,13 +371,13 @@ void board_initialization(void) {
     
 
     //Config. Priorità
-    RCONbits.IPEN = 1;
-    IPR3bits.RXB1IP = 0; //interrupt bassa priorità per can
-    IPR3bits.RXB0IP = 0; //interrupt bassa priorità per can
-    INTCON2bits.TMR0IP = 1; //interrupt alta priorità timer0
-    INTCON3bits.INT1IP = 1; //interrupt alta priorità INT1
-    IPR1bits.TMR1IP = 0; //interrupt alta priorità timer1
-    IPR2bits.TMR3IP = 0; //interrupt alta priorità timer3
+    RCONbits.IPEN = HIGH;
+    IPR3bits.RXB1IP = LOW; //interrupt bassa priorità per can
+    IPR3bits.RXB0IP = LOW; //interrupt bassa priorità per can
+    INTCON2bits.TMR0IP = HIGH; //interrupt alta priorità timer0
+    INTCON3bits.INT1IP = HIGH; //interrupt alta priorità INT1
+    IPR1bits.TMR1IP = LOW; //interrupt bassa priorità timer1
+    IPR2bits.TMR3IP = LOW; //interrupt bassa priorità timer3
 
     //Config. Registri
     T0CON = 0x80; //imposta timer0, prescaler 1:2
@@ -383,12 +389,12 @@ void board_initialization(void) {
     //  fornito (in questo caso 90 gradi in modo che si metta in posizione centrale)
     TMR0H = 0xFF;
     TMR0L = 0xFE;
-    PORTCbits.RC0 = 0;
+    PORTCbits.RC0 = LOW;
     brake_value_degree = 90;
     T1CON = 00010000;
     T3CON = 01010000;
-    INTCON2bits.INTEDG0 = 1;
-    INTCON2bits.INTEDG1 = 1;
+    INTCON2bits.INTEDG0 = HIGH;
+    INTCON2bits.INTEDG1 = HIGH;
 
     //Configurazione ADC
     ADCON1 = 0b01110111;
@@ -402,22 +408,22 @@ void board_initialization(void) {
     ADCON2bits.ADCS1 = 0;
     ADCON2bits.ADCS0 = 1;
     ADCON2bits.ADFM = 0; //Left Justified
-    ADCON0bits.ADON = 1;
+    ADCON0bits.ADON = HIGH;
 
     //Enable Interrupts
-    PIE3bits.RXB1IE = 1; //abilita interrupt ricezione can bus buffer1
-    PIE3bits.RXB0IE = 1; //abilita interrupt ricezione can bus buffer0
-    INTCONbits.TMR0IE = 1; //abilita interrupt TMR0
-    PIE1bits.TMR1IE = 1; //abilita interrupt TMR1
-    PIE2bits.TMR3IE = 1; //abilita interrupt TMR3
-    INTCONbits.INT0IE = 1; //abilita interrupt INT0
-    INTCON3bits.INT1IE = 1; //abilita interrupt INT1
-    INTCONbits.GIEH = 1; //abilita interrupt alta priorità
-    INTCONbits.GIEL = 1; //abilita interrupt bassa priorità periferiche
+    PIE3bits.RXB1IE = HIGH; //abilita interrupt ricezione can bus buffer1
+    PIE3bits.RXB0IE = HIGH; //abilita interrupt ricezione can bus buffer0
+    INTCONbits.TMR0IE = HIGH; //abilita interrupt TMR0
+    PIE1bits.TMR1IE = HIGH; //abilita interrupt TMR1
+    PIE2bits.TMR3IE = HIGH; //abilita interrupt TMR3
+    INTCONbits.INT0IE = HIGH; //abilita interrupt INT0
+    INTCON3bits.INT1IE = HIGH; //abilita interrupt INT1
+    INTCONbits.GIEH = HIGH; //abilita interrupt alta priorità
+    INTCONbits.GIEL = HIGH; //abilita interrupt bassa priorità periferiche
 
     //Enable Timers
-    T1CONbits.TMR1ON = 1; //atttivazione TMR1
-    T3CONbits.TMR3ON = 1; //attivazione TMR3
-    T0CONbits.TMR0ON = 1; //attivazione TMR0
+    T1CONbits.TMR1ON = HIGH; //atttivazione TMR1
+    T3CONbits.TMR3ON = HIGH; //attivazione TMR3
+    T0CONbits.TMR0ON = HIGH; //attivazione TMR0
     delay_ms(2);
 }
