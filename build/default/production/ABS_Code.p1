@@ -19873,9 +19873,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 2384  ]
 [e :U 2383 ]
 {
-[; ;ABS_Code.c: 277: wheel_speed_1 = (step * 100) / gap_time_1;
+[; ;ABS_Code.c: 277: wheel_speed_1 = (step * 10000) / gap_time_1;
 "277
-[e = _wheel_speed_1 -> / -> * -> _step `i -> 100 `i `ui _gap_time_1 `ul ]
+[e = _wheel_speed_1 -> / -> * -> _step `i -> 10000 `i `ui _gap_time_1 `ul ]
 "278
 }
 [e :U 2384 ]
@@ -19913,9 +19913,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 2387  ]
 [e :U 2386 ]
 {
-[; ;ABS_Code.c: 289: wheel_speed_2 = (step * 100) / gap_time_2;
+[; ;ABS_Code.c: 289: wheel_speed_2 = (step * 10000) / gap_time_2;
 "289
-[e = _wheel_speed_2 -> / -> * -> _step `i -> 100 `i `ui _gap_time_2 `ul ]
+[e = _wheel_speed_2 -> / -> * -> _step `i -> 10000 `i `ui _gap_time_2 `ul ]
 "290
 }
 [e :U 2387 ]

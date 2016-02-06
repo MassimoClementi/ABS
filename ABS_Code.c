@@ -97,7 +97,7 @@ bit x = LOW;
 bit ENC1_measure = LOW;
 bit TMR1_overflow = LOW;
 unsigned int gap_time_1 = 0; //[ms]
-unsigned long wheel_speed_1 = 0; //[mm/s] MIN=26 MAX=3455
+unsigned long wheel_speed_1 = 0; //[mm/s] MIN=164 MAX=21598
 unsigned long int_counter_1 = 0;
 unsigned int distance_1 = 0; //[cm]
 
@@ -274,7 +274,7 @@ int main(void) {
                 wheel_speed_1 = 0;
                 TMR1_overflow = LOW;
             } else {
-            wheel_speed_1 = (step * 100) / gap_time_1;
+            wheel_speed_1 = (step * 10000) / gap_time_1;
             }
             speed_array[3] = wheel_speed_1 >> 8;
             speed_array[2] = wheel_speed_1;
@@ -286,7 +286,7 @@ int main(void) {
                 wheel_speed_2 = 0;
                 TMR3_overflow = LOW;
             } else {
-            wheel_speed_2 = (step * 100) / gap_time_2;
+            wheel_speed_2 = (step * 10000) / gap_time_2;
             }
             speed_array[1] = wheel_speed_2 >> 8;
             speed_array[0] = wheel_speed_2;
