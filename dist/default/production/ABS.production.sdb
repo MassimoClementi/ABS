@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 18F4480 ]
 [d frameptr 4065 ]
-"207 Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
+"208 D:\Documenti/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
 [e E16838 CAN_OP_MODE `uc
 CAN_OP_MODE_NORMAL 0
 CAN_OP_MODE_SLEEP 32
@@ -11,7 +11,7 @@ CAN_OP_MODE_LOOP 64
 CAN_OP_MODE_LISTEN 96
 CAN_OP_MODE_CONFIG 128
 ]
-"219
+"220
 [e E16844 CAN_CONFIG_FLAGS `uc
 CAN_CONFIG_DEFAULT 255
 CAN_CONFIG_PHSEG2_PRG_BIT 1
@@ -35,12 +35,12 @@ CAN_CONFIG_VALID_XTD_MSG 223
 CAN_CONFIG_VALID_STD_MSG 191
 CAN_CONFIG_ALL_VALID_MSG 159
 ]
-"259
+"260
 [e E16878 CAN_MASK `uc
 CAN_MASK_B1 1
 CAN_MASK_B2 2
 ]
-"280
+"281
 [e E16881 CAN_FILTER `uc
 CAN_FILTER_B1_F1 0
 CAN_FILTER_B1_F2 1
@@ -49,7 +49,7 @@ CAN_FILTER_B2_F2 3
 CAN_FILTER_B2_F3 4
 CAN_FILTER_B2_F4 5
 ]
-"295
+"296
 [e E16866 CAN_TX_MSG_FLAGS `uc
 CAN_TX_PRIORITY_MASK 3
 CAN_TX_PRIORITY_0 252
@@ -63,34 +63,34 @@ CAN_TX_RTR_MASK 64
 CAN_REMOTE_TX_FRAME 255
 CAN_NORMAL_TX_FRAME 191
 ]
-"534
+"535
 [e E16888 CAN_RX_ERRORS `uc
 CAN_RX_BUFFER_1_OVFL 1
 CAN_RX_BUFFER_2_OVFL 2
 ]
-"206
+"207
 [v _CANOperationMode CANOperationMode `(v  1 e 0 0 ]
-"218
+"219
 [v _CANInitialize CANInitialize `(v  1 e 0 0 ]
-"294
+"295
 [v _CANsendMessage CANsendMessage `(v  1 e 0 0 ]
-"528
+"529
 [v _CANreceiveMessage CANreceiveMessage `(uc  1 e 1 0 ]
-"640
+"641
 [v _CANSetMask CANSetMask `(v  1 e 0 0 ]
-"748
+"749
 [v _CANSetFilter CANSetFilter `(v  1 e 0 0 ]
-"1119
+"1120
 [v _CANisTXwarningON CANisTXwarningON `(uc  1 e 1 0 ]
-"1127
+"1128
 [v _CANisRXwarningON CANisRXwarningON `(uc  1 e 1 0 ]
-"1154
+"1155
 [v _CANisTxReady CANisTxReady `(uc  1 e 1 0 ]
-"1163
+"1164
 [v _CANisRxReady CANisRxReady `(uc  1 e 1 0 ]
-"61 Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/src\delay.c
+"61 D:\Documenti/LaurTec_PIC_libraries_v_3.3.0/src\delay.c
 [v _delay_ms delay_ms `(v  1 e 0 0 ]
-"129 Z:\Centraline\ABS\ABS_Code.c
+"129 D:\Documenti\GitHub\ABS\ABS_Code.c
 [v _ISR_Alta ISR_Alta `IIH(v  1 e 0 0 ]
 "190
 [v _ISR_Bassa ISR_Bassa `IIL(v  1 e 0 0 ]
@@ -98,9 +98,9 @@ CAN_RX_BUFFER_2_OVFL 2
 [v _main main `(i  1 e 2 0 ]
 "303
 [v _remote_frame_handler remote_frame_handler `(v  1 e 0 0 ]
-"337
+"339
 [v _ADC_Read ADC_Read `(v  1 e 0 0 ]
-"345
+"347
 [v _board_initialization board_initialization `(v  1 e 0 0 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
@@ -133,21 +133,21 @@ CAN_RX_BUFFER_2_OVFL 2
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "16 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\pic18\plib\Timers\t0write.c
 [v _WriteTimer0 WriteTimer0 `(v  1 e 0 0 ]
-"49 Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/src\delay.c
+"49 D:\Documenti/LaurTec_PIC_libraries_v_3.3.0/src\delay.c
 [v _delay_quartz_frequency_value delay_quartz_frequency_value `VEuc  1 e 1 0 ]
 "50
 [v _clock_counter_reference clock_counter_reference `VEui  1 e 2 0 ]
 [s S853 . 15 `ul 1 identifier 4 0 `[8]uc 1 data 8 4 `uc 1 type 1 12 `uc 1 length 1 13 `uc 1 RTR 1 14 ]
-"80 Z:\Centraline\ABS\ABS_Code.c
+"80 D:\Documenti\GitHub\ABS\ABS_Code.c
 [v _msg msg `S853  1 e 15 0 ]
 "81
-[v _remote_frame remote_frame `b  1 e 0 0 ]
+[v _remote_frame remote_frame `VEb  1 e 0 0 ]
 "82
-[v _Tx_retry Tx_retry `b  1 e 0 0 ]
+[v _Tx_retry Tx_retry `VEb  1 e 0 0 ]
 "83
-[v _count_flag count_flag `b  1 e 0 0 ]
+[v _count_flag count_flag `VEb  1 e 0 0 ]
 "84
-[v _remote_frame_id remote_frame_id `ul  1 e 4 0 ]
+[v _remote_frame_id remote_frame_id `VEul  1 e 4 0 ]
 "85
 [v _status_array status_array `[8]uc  1 e 8 0 ]
 "86
@@ -155,41 +155,41 @@ CAN_RX_BUFFER_2_OVFL 2
 "87
 [v _distance_array distance_array `[8]uc  1 e 8 0 ]
 "88
-[v _brake_signal_CAN brake_signal_CAN `uc  1 e 1 0 ]
+[v _brake_signal_CAN brake_signal_CAN `VEuc  1 e 1 0 ]
 "89
-[v _Analogic_Mode Analogic_Mode `uc  1 e 1 0 ]
+[v _Analogic_Mode Analogic_Mode `VEuc  1 e 1 0 ]
 "92
-[v _timer_on timer_on `ul  1 e 4 0 ]
+[v _timer_on timer_on `VEul  1 e 4 0 ]
 "93
-[v _timer_off timer_off `ul  1 e 4 0 ]
+[v _timer_off timer_off `VEul  1 e 4 0 ]
 "96
-[v _x x `b  1 e 0 0 ]
+[v _x x `VEb  1 e 0 0 ]
 "97
-[v _ENC1_measure ENC1_measure `b  1 e 0 0 ]
+[v _ENC1_measure ENC1_measure `VEb  1 e 0 0 ]
 "98
-[v _TMR1_overflow TMR1_overflow `b  1 e 0 0 ]
+[v _TMR1_overflow TMR1_overflow `VEb  1 e 0 0 ]
 "99
-[v _gap_time_1 gap_time_1 `ui  1 e 2 0 ]
+[v _gap_time_1 gap_time_1 `VEui  1 e 2 0 ]
 "100
-[v _wheel_speed_1 wheel_speed_1 `ul  1 e 4 0 ]
+[v _wheel_speed_1 wheel_speed_1 `VEul  1 e 4 0 ]
 "101
-[v _int_counter_1 int_counter_1 `ul  1 e 4 0 ]
+[v _int_counter_1 int_counter_1 `VEul  1 e 4 0 ]
 "102
-[v _distance_1 distance_1 `ui  1 e 2 0 ]
+[v _distance_1 distance_1 `VEui  1 e 2 0 ]
 "105
-[v _y y `b  1 e 0 0 ]
+[v _y y `VEb  1 e 0 0 ]
 "106
-[v _ENC2_measure ENC2_measure `b  1 e 0 0 ]
+[v _ENC2_measure ENC2_measure `VEb  1 e 0 0 ]
 "107
-[v _TMR3_overflow TMR3_overflow `b  1 e 0 0 ]
+[v _TMR3_overflow TMR3_overflow `VEb  1 e 0 0 ]
 "108
-[v _gap_time_2 gap_time_2 `ui  1 e 2 0 ]
+[v _gap_time_2 gap_time_2 `VEui  1 e 2 0 ]
 "109
-[v _wheel_speed_2 wheel_speed_2 `ul  1 e 4 0 ]
+[v _wheel_speed_2 wheel_speed_2 `VEul  1 e 4 0 ]
 "110
-[v _int_counter_2 int_counter_2 `ul  1 e 4 0 ]
+[v _int_counter_2 int_counter_2 `VEul  1 e 4 0 ]
 "111
-[v _distance_2 distance_2 `ui  1 e 2 0 ]
+[v _distance_2 distance_2 `VEui  1 e 2 0 ]
 "114
 [v _read read `uc  1 e 1 0 ]
 "115
@@ -1684,7 +1684,7 @@ CAN_RX_BUFFER_2_OVFL 2
 "34968
 "34968
 [v _INTCONbits INTCONbits `VES2010  1 e 1 @4082 ]
-"225 Z:\Centraline\ABS\ABS_Code.c
+"225 D:\Documenti\GitHub\ABS\ABS_Code.c
 [v _main main `(i  1 e 2 0 ]
 {
 "296
@@ -1692,165 +1692,165 @@ CAN_RX_BUFFER_2_OVFL 2
 "303
 [v _remote_frame_handler remote_frame_handler `(v  1 e 0 0 ]
 {
-"335
+"337
 } 0
-"294 Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
+"295 D:\Documenti/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
 [v _CANsendMessage CANsendMessage `(v  1 e 0 0 ]
 {
-"296
-[v CANsendMessage@tamp tamp `ul  1 a 4 34 ]
-"294
-[v CANsendMessage@identifier identifier `ul  1 p 4 22 ]
-[v CANsendMessage@data data `*.39uc  1 p 2 26 ]
-[v CANsendMessage@dataLength dataLength `uc  1 p 1 28 ]
-[v CANsendMessage@flags flags `E16866  1 p 1 29 ]
-"522
+"297
+[v CANsendMessage@tamp tamp `ul  1 a 4 38 ]
+"295
+[v CANsendMessage@identifier identifier `ul  1 p 4 26 ]
+[v CANsendMessage@data data `*.39uc  1 p 2 30 ]
+[v CANsendMessage@dataLength dataLength `uc  1 p 1 32 ]
+[v CANsendMessage@flags flags `E16866  1 p 1 33 ]
+"523
 } 0
-"1154
+"1155
 [v _CANisTxReady CANisTxReady `(uc  1 e 1 0 ]
 {
-"1157
+"1158
 } 0
-"345 Z:\Centraline\ABS\ABS_Code.c
+"347 D:\Documenti\GitHub\ABS\ABS_Code.c
 [v _board_initialization board_initialization `(v  1 e 0 0 ]
 {
-"429
+"431
 } 0
-"61 Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/src\delay.c
+"61 D:\Documenti/LaurTec_PIC_libraries_v_3.3.0/src\delay.c
 [v _delay_ms delay_ms `(v  1 e 0 0 ]
 {
-[v delay_ms@value_ms value_ms `ui  1 p 2 28 ]
+[v delay_ms@value_ms value_ms `ui  1 p 2 39 ]
 "96
 } 0
 "15 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
 {
 "17
-[v ___wmul@product product `ui  1 a 2 26 ]
+[v ___wmul@product product `ui  1 a 2 37 ]
 "15
-[v ___wmul@multiplier multiplier `ui  1 p 2 22 ]
-[v ___wmul@multiplicand multiplicand `ui  1 p 2 24 ]
+[v ___wmul@multiplier multiplier `ui  1 p 2 33 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 35 ]
 "53
 } 0
-"218 Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
+"219 D:\Documenti/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
 [v _CANInitialize CANInitialize `(v  1 e 0 0 ]
 {
 [v CANInitialize@propSeg propSeg `uc  1 a 1 wreg ]
+"222
+[v CANInitialize@FilterConfig2 FilterConfig2 `uc  1 a 1 51 ]
 "221
-[v CANInitialize@FilterConfig2 FilterConfig2 `uc  1 a 1 47 ]
-"220
-[v CANInitialize@FilterConfig1 FilterConfig1 `uc  1 a 1 46 ]
-"218
+[v CANInitialize@FilterConfig1 FilterConfig1 `uc  1 a 1 50 ]
+"219
 [v CANInitialize@propSeg propSeg `uc  1 a 1 wreg ]
-[v CANInitialize@phaseSeg1 phaseSeg1 `uc  1 p 1 36 ]
-[v CANInitialize@phaseSeg2 phaseSeg2 `uc  1 p 1 37 ]
-[v CANInitialize@SJW SJW `uc  1 p 1 38 ]
-[v CANInitialize@BRP BRP `uc  1 p 1 39 ]
-[v CANInitialize@flags flags `E16844  1 p 1 40 ]
-"223
-[v CANInitialize@propSeg propSeg `uc  1 a 1 45 ]
-"289
+[v CANInitialize@phaseSeg1 phaseSeg1 `uc  1 p 1 40 ]
+[v CANInitialize@phaseSeg2 phaseSeg2 `uc  1 p 1 41 ]
+[v CANInitialize@SJW SJW `uc  1 p 1 42 ]
+[v CANInitialize@BRP BRP `uc  1 p 1 43 ]
+[v CANInitialize@flags flags `E16844  1 p 1 44 ]
+"224
+[v CANInitialize@propSeg propSeg `uc  1 a 1 49 ]
+"290
 } 0
-"640
+"641
 [v _CANSetMask CANSetMask `(v  1 e 0 0 ]
 {
 [v CANSetMask@numBuffer numBuffer `E16878  1 a 1 wreg ]
+"642
+[v CANSetMask@tamp tamp `ul  1 a 4 36 ]
 "641
-[v CANSetMask@tamp tamp `ul  1 a 4 32 ]
-"640
 [v CANSetMask@numBuffer numBuffer `E16878  1 a 1 wreg ]
-[v CANSetMask@mask mask `ul  1 p 4 22 ]
-[v CANSetMask@type type `E16844  1 p 1 26 ]
-"643
-[v CANSetMask@numBuffer numBuffer `E16878  1 a 1 31 ]
-"742
+[v CANSetMask@mask mask `ul  1 p 4 26 ]
+[v CANSetMask@type type `E16844  1 p 1 30 ]
+"644
+[v CANSetMask@numBuffer numBuffer `E16878  1 a 1 35 ]
+"743
 } 0
-"748
+"749
 [v _CANSetFilter CANSetFilter `(v  1 e 0 0 ]
 {
 [v CANSetFilter@numBuffer numBuffer `E16881  1 a 1 wreg ]
-"750
-[v CANSetFilter@tamp tamp `ul  1 a 4 32 ]
-"748
+"751
+[v CANSetFilter@tamp tamp `ul  1 a 4 36 ]
+"749
 [v CANSetFilter@numBuffer numBuffer `E16881  1 a 1 wreg ]
-[v CANSetFilter@filter filter `ul  1 p 4 22 ]
-[v CANSetFilter@type type `E16844  1 p 1 26 ]
-"752
-[v CANSetFilter@numBuffer numBuffer `E16881  1 a 1 31 ]
-"1078
+[v CANSetFilter@filter filter `ul  1 p 4 26 ]
+[v CANSetFilter@type type `E16844  1 p 1 30 ]
+"753
+[v CANSetFilter@numBuffer numBuffer `E16881  1 a 1 35 ]
+"1079
 } 0
-"206
+"207
 [v _CANOperationMode CANOperationMode `(v  1 e 0 0 ]
 {
 [v CANOperationMode@mode mode `E16838  1 a 1 wreg ]
 [v CANOperationMode@mode mode `E16838  1 a 1 wreg ]
-"208
-[v CANOperationMode@mode mode `E16838  1 a 1 22 ]
-"211
+"209
+[v CANOperationMode@mode mode `E16838  1 a 1 26 ]
+"212
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwdiv.c
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
 {
 "11
-[v ___lwdiv@quotient quotient `ui  1 a 2 26 ]
+[v ___lwdiv@quotient quotient `ui  1 a 2 30 ]
 "12
-[v ___lwdiv@counter counter `uc  1 a 1 28 ]
+[v ___lwdiv@counter counter `uc  1 a 1 32 ]
 "8
-[v ___lwdiv@dividend dividend `ui  1 p 2 22 ]
-[v ___lwdiv@divisor divisor `ui  1 p 2 24 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 26 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 28 ]
 "31
 } 0
-"1119 Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
+"1120 D:\Documenti/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
 [v _CANisTXwarningON CANisTXwarningON `(uc  1 e 1 0 ]
 {
-"1122
+"1123
 } 0
-"1127
+"1128
 [v _CANisRXwarningON CANisRXwarningON `(uc  1 e 1 0 ]
 {
-"1130
+"1131
 } 0
-"337 Z:\Centraline\ABS\ABS_Code.c
+"339 D:\Documenti\GitHub\ABS\ABS_Code.c
 [v _ADC_Read ADC_Read `(v  1 e 0 0 ]
 {
-"343
+"345
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 {
 "11
-[v ___awdiv@quotient quotient `i  1 a 2 28 ]
+[v ___awdiv@quotient quotient `i  1 a 2 32 ]
 "12
-[v ___awdiv@sign sign `uc  1 a 1 27 ]
-[v ___awdiv@counter counter `uc  1 a 1 26 ]
+[v ___awdiv@sign sign `uc  1 a 1 31 ]
+[v ___awdiv@counter counter `uc  1 a 1 30 ]
 "8
-[v ___awdiv@dividend dividend `i  1 p 2 22 ]
-[v ___awdiv@divisor divisor `i  1 p 2 24 ]
+[v ___awdiv@dividend dividend `i  1 p 2 26 ]
+[v ___awdiv@divisor divisor `i  1 p 2 28 ]
 "42
 } 0
-"190 Z:\Centraline\ABS\ABS_Code.c
+"190 D:\Documenti\GitHub\ABS\ABS_Code.c
 [v _ISR_Bassa ISR_Bassa `IIL(v  1 e 0 0 ]
 {
 "219
 } 0
-"528 Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
+"529 D:\Documenti/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
 [v _CANreceiveMessage CANreceiveMessage `(uc  1 e 1 0 ]
 {
-"530
-[v CANreceiveMessage@tamp tamp `uc  1 a 1 11 ]
 "531
+[v CANreceiveMessage@tamp tamp `uc  1 a 1 11 ]
+"532
 [v CANreceiveMessage@error error `uc  1 a 1 10 ]
 [s S853 . 15 `ul 1 identifier 4 0 `[8]uc 1 data 8 4 `uc 1 type 1 12 `uc 1 length 1 13 `uc 1 RTR 1 14 ]
-"528
+"529
 [v CANreceiveMessage@msg msg `*.39S853  1 p 2 0 ]
-"634
+"635
 } 0
-"1163
+"1164
 [v _CANisRxReady CANisRxReady `(uc  1 e 1 0 ]
 {
-"1166
+"1167
 } 0
-"129 Z:\Centraline\ABS\ABS_Code.c
+"129 D:\Documenti\GitHub\ABS\ABS_Code.c
 [v _ISR_Alta ISR_Alta `IIH(v  1 e 0 0 ]
 {
 "183
@@ -1875,9 +1875,9 @@ CAN_RX_BUFFER_2_OVFL 2
 "8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\awdiv.c
 [v i2___awdiv __awdiv `(i  1 e 2 0 ]
 {
-[v i2___awdiv@quotient __awdiv `i  1 a 2 41 ]
-[v i2___awdiv@sign __awdiv `uc  1 a 1 40 ]
-[v i2___awdiv@counter __awdiv `uc  1 a 1 39 ]
+[v i2___awdiv@quotient __awdiv `i  1 a 2 2 ]
+[v i2___awdiv@sign __awdiv `uc  1 a 1 1 ]
+[v i2___awdiv@counter __awdiv `uc  1 a 1 0 ]
 [v i2___awdiv@dividend dividend `i  1 p 2 35 ]
 [v i2___awdiv@divisor divisor `i  1 p 2 37 ]
 "42
@@ -1885,9 +1885,9 @@ CAN_RX_BUFFER_2_OVFL 2
 "16 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\pic18\plib\Timers\t0write.c
 [v _WriteTimer0 WriteTimer0 `(v  1 e 0 0 ]
 {
-[u S3517 Timers 2 `ui 1 lt 2 0 `[2]uc 1 bt 2 0 ]
+[u S3518 Timers 2 `ui 1 lt 2 0 `[2]uc 1 bt 2 0 ]
 "18
-[v WriteTimer0@timer timer `S3517  1 a 2 31 ]
+[v WriteTimer0@timer timer `S3518  1 a 2 31 ]
 "16
 [v WriteTimer0@timer0 timer0 `ui  1 p 2 29 ]
 "24

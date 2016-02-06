@@ -46,7 +46,7 @@
 //            TMR3
 //            2us ad incremento
 
-#define USE_OR_MASKS
+#define USE_AND_MASKS
 
 #include <xc.h>
 #include "PIC18F4480_config.h"
@@ -78,37 +78,37 @@ void ADC_Read(void);
 
 //CANbus
 CANmessage msg;
-bit remote_frame = LOW;
-bit Tx_retry = LOW;
-bit count_flag = LOW;
-unsigned long remote_frame_id = 0;
-BYTE status_array [8] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01}; //Codice 1 => ABS
-BYTE speed_array [8] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
-BYTE distance_array [8] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
-unsigned char brake_signal_CAN = 0;
-unsigned char Analogic_Mode = 0;
+volatile bit remote_frame = LOW;
+volatile bit Tx_retry = LOW;
+volatile bit count_flag = LOW;
+volatile unsigned long remote_frame_id = 0;
+BYTE status_array [8] = 0; //Codice 1 => ABS
+BYTE speed_array [8] = 0;
+BYTE distance_array [8] = 0;
+volatile unsigned char brake_signal_CAN = 0;
+volatile unsigned char Analogic_Mode = 0;
 
 //PWM TMR0
-unsigned long timer_on = 0;
-unsigned long timer_off = 0;
+volatile unsigned long timer_on = 0;
+volatile unsigned long timer_off = 0;
 
 //ENCODER 1
-bit x = LOW;
-bit ENC1_measure = LOW;
-bit TMR1_overflow = LOW;
-unsigned int gap_time_1 = 0; //[ms]
-unsigned long wheel_speed_1 = 0; //[mm/s] MIN=26 MAX=3455
-unsigned long int_counter_1 = 0;
-unsigned int distance_1 = 0; //[cm]
+volatile bit x = LOW;
+volatile bit ENC1_measure = LOW;
+volatile bit TMR1_overflow = LOW;
+volatile unsigned int gap_time_1 = 0; //[ms]
+volatile unsigned long wheel_speed_1 = 0; //[mm/s] MIN=26 MAX=3455
+volatile unsigned long int_counter_1 = 0;
+volatile unsigned int distance_1 = 0; //[cm]
 
 //ENCODER 2
-bit y = LOW;
-bit ENC2_measure = LOW;
-bit TMR3_overflow = LOW;
-unsigned int gap_time_2 = 0; //[ms]
-unsigned long wheel_speed_2 = 0; //[mm/s] vedi sopra
-unsigned long int_counter_2 = 0;
-unsigned int distance_2 = 0; //[cm]
+volatile bit y = LOW;
+volatile bit ENC2_measure = LOW;
+volatile bit TMR3_overflow = LOW;
+volatile unsigned int gap_time_2 = 0; //[ms]
+volatile unsigned long wheel_speed_2 = 0; //[mm/s] vedi sopra
+volatile unsigned long int_counter_2 = 0;
+volatile unsigned int distance_2 = 0; //[cm]
 
 //ADC
 unsigned char read = 0;
@@ -121,14 +121,14 @@ unsigned char brake_value = 0; //0-15 [gradi]
 unsigned char brake_value_degree = 0; //0-180 [gradi]
 unsigned char step = 0; //passo della ruota [cm]
 
-
+BYTE data_debug1[8]; //DEBUG
 //////////////////////////////////
 //    INTERRUPT High Priority   //
 //////////////////////////////////
 
 __interrupt(high_priority) void ISR_Alta(void) {
     //INTERRUPT PWM
-    if (INTCONbits.TMR0IF == HIGH) {      
+    if (INTCONbits.TMR0IF == HIGH) {
         if (PORTCbits.RC0 == HIGH) {
             timer_on = (((1400 * brake_value_degree) / 180) + 800)*2;
             timer_off = 65536 - (40000 - timer_on);
@@ -147,7 +147,7 @@ __interrupt(high_priority) void ISR_Alta(void) {
             TMR1L = 0x00;
             x = HIGH;
         } else {
-            gap_time_1 = (TMR1H <<8) + TMR1L;
+            gap_time_1 = (TMR1H << 8) + TMR1L;
             gap_time_1 = gap_time_1 / 500; //in ms
             ENC1_measure = HIGH;
             TMR1H = 0x00;
@@ -157,7 +157,7 @@ __interrupt(high_priority) void ISR_Alta(void) {
             }
         }
         INTCONbits.INT0IF = LOW;
-        PORTCbits.RC1 = ~PORTCbits.RC1;
+
     }
 
     //INTERRUPT ENCODER 2
@@ -167,7 +167,7 @@ __interrupt(high_priority) void ISR_Alta(void) {
             TMR3L = 0x00;
             y = HIGH;
         } else {
-            gap_time_2 = (TMR3H <<8) + TMR3L;
+            gap_time_2 = (TMR3H << 8) + TMR3L;
             gap_time_2 = gap_time_2 / 500; //in ms
             ENC2_measure = HIGH;
             TMR3H = 0x00;
@@ -179,7 +179,7 @@ __interrupt(high_priority) void ISR_Alta(void) {
         INTCON3bits.INT1IF = LOW;
         //PORTCbits.RC1 = ~PORTCbits.RC1;
     }
-    
+
 }
 
 
@@ -206,13 +206,13 @@ __interrupt(low_priority) void ISR_Bassa(void) {
     }
 
     //INTERRUPT TMR1
-    if(PIR1bits.TMR1IF == HIGH) {
+    if (PIR1bits.TMR1IF == HIGH) {
         TMR1_overflow = HIGH;
         PIR1bits.TMR1IF = LOW;
     }
 
     //INTERRUPT TMR3
-    if(PIR2bits.TMR3IF == HIGH){
+    if (PIR2bits.TMR3IF == HIGH) {
         TMR3_overflow = HIGH;
         PIR2bits.TMR3IF = LOW;
     }
@@ -225,7 +225,7 @@ __interrupt(low_priority) void ISR_Bassa(void) {
 int main(void) {
     board_initialization();
     step = (wheel_diameter * (3.1415)) / 16; //in cm
-    
+
     //LED DEBUG SCHEDA
     PORTAbits.RA1 = HIGH;
     PORTCbits.RC1 = HIGH;
@@ -233,7 +233,7 @@ int main(void) {
     PORTAbits.RA1 = LOW;
     PORTCbits.RC1 = LOW;
     delay_ms(100);
-    
+
     while (1) {
         ADC_Read();
         if ((CANisTXwarningON() == HIGH) || (CANisRXwarningON() == HIGH)) {
@@ -249,17 +249,17 @@ int main(void) {
             remote_frame_handler();
         }
 
-        if (Analogic_Mode == 0) {
-            if (brake_signal_CAN == 00) {
+        if (Analogic_Mode == 0b00000000) {
+            if (brake_signal_CAN == 0b00000000) {
                 brake_value_inc = 0;
             }
-            if (brake_signal_CAN == 01) {
+            if (brake_signal_CAN == 0b00000001) {
                 brake_value_inc = 150;
             }
-            if (brake_signal_CAN == 10) {
+            if (brake_signal_CAN == 0b00000010) {
                 brake_value_inc = 200;
             }
-            if (brake_signal_CAN == 11) {
+            if (brake_signal_CAN == 0b00000011) {
                 brake_value_inc = 255;
             }
         } else {
@@ -269,24 +269,24 @@ int main(void) {
         brake_value = (brake_value_inc / 17) + home_position;
         brake_value_degree = (180 * brake_value) / 255;
 
-        if ((ENC1_measure == HIGH)||(TMR1_overflow == HIGH)) {
-            if (TMR1_overflow == HIGH){
+        if ((ENC1_measure == HIGH) || (TMR1_overflow == HIGH)) {
+            if (TMR1_overflow == HIGH) {
                 wheel_speed_1 = 0;
                 TMR1_overflow = LOW;
             } else {
-            wheel_speed_1 = (step * 100) / gap_time_1;
+                wheel_speed_1 = ((step * 100) / gap_time_1)*1000;
             }
             speed_array[3] = wheel_speed_1 >> 8;
             speed_array[2] = wheel_speed_1;
             ENC1_measure = LOW;
         }
 
-        if ((ENC2_measure == HIGH)||(TMR3_overflow == HIGH)) {
-            if (TMR3_overflow == HIGH){
+        if ((ENC2_measure == HIGH) || (TMR3_overflow == HIGH)) {
+            if (TMR3_overflow == HIGH) {
                 wheel_speed_2 = 0;
                 TMR3_overflow = LOW;
             } else {
-            wheel_speed_2 = (step * 100) / gap_time_2;
+                wheel_speed_2 = ((step * 100) / gap_time_2)*1000;
             }
             speed_array[1] = wheel_speed_2 >> 8;
             speed_array[0] = wheel_speed_2;
@@ -303,10 +303,12 @@ int main(void) {
 void remote_frame_handler(void) {
     if (CANisTxReady()) {
         if (remote_frame_id == ECU_STATE) {
-            CANsendMessage(remote_frame_id, status_array, 8, CAN_CONFIG_STD_MSG & CAN_NORMAL_TX_FRAME & CAN_TX_PRIORITY_0);
+            status_array[0] = 0x01;
+            CANsendMessage(ECU_STATE, status_array, 8, CAN_CONFIG_STD_MSG & CAN_NORMAL_TX_FRAME & CAN_TX_PRIORITY_0);
+            PORTCbits.RC1 = ~PORTCbits.RC1;
         }
         if (remote_frame_id == ACTUAL_SPEED) {
-            PORTCbits.RC0 = ~PORTCbits.RC0; //debug
+
             CANsendMessage(remote_frame_id, speed_array, 8, CAN_CONFIG_STD_MSG & CAN_NORMAL_TX_FRAME & CAN_TX_PRIORITY_0);
         }
         if (remote_frame_id == COUNT_START) {
@@ -368,7 +370,7 @@ void board_initialization(void) {
     PIR2bits.TMR3IF = LOW; //azzera flag TMR3
     INTCONbits.INT0IF = LOW; //azzera flag INT0
     INTCON3bits.INT1IF = LOW; //azzera flag INT1
-    
+
 
     //Config. Priorità
     RCONbits.IPEN = HIGH;
