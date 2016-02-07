@@ -19852,17 +19852,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 2384  ]
 [e :U 2383 ]
 {
-<<<<<<< HEAD
-[; ;ABS_Code.c: 277: wheel_speed_1 = ((step * 100) / gap_time_1)*1000;
-=======
-[; ;ABS_Code.c: 277: wheel_speed_1 = (step * 10000) / gap_time_1;
->>>>>>> origin/master
+[; ;ABS_Code.c: 277: wheel_speed_1 = (step * 100000) / gap_time_1;
 "277
-<<<<<<< HEAD
-[e = _wheel_speed_1 -> * / -> * -> _step `i -> 100 `i `ui _gap_time_1 -> -> 1000 `i `ui `ul ]
-=======
-[e = _wheel_speed_1 -> / -> * -> _step `i -> 10000 `i `ui _gap_time_1 `ul ]
->>>>>>> origin/master
+[e = _wheel_speed_1 -> / * -> _step `l -> 100000 `l -> _gap_time_1 `l `ul ]
 "278
 }
 [e :U 2384 ]
@@ -19900,17 +19892,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 2387  ]
 [e :U 2386 ]
 {
-<<<<<<< HEAD
-[; ;ABS_Code.c: 289: wheel_speed_2 = ((step * 100) / gap_time_2)*1000;
-=======
-[; ;ABS_Code.c: 289: wheel_speed_2 = (step * 10000) / gap_time_2;
->>>>>>> origin/master
+[; ;ABS_Code.c: 289: wheel_speed_2 = (step * 100000) / gap_time_2;
 "289
-<<<<<<< HEAD
-[e = _wheel_speed_2 -> * / -> * -> _step `i -> 100 `i `ui _gap_time_2 -> -> 1000 `i `ui `ul ]
-=======
-[e = _wheel_speed_2 -> / -> * -> _step `i -> 10000 `i `ui _gap_time_2 `ul ]
->>>>>>> origin/master
+[e = _wheel_speed_2 -> / * -> _step `l -> 100000 `l -> _gap_time_2 `l `ul ]
 "290
 }
 [e :U 2387 ]

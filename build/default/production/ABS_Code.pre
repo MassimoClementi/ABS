@@ -20659,11 +20659,7 @@ if (TMR1_overflow == 1) {
 wheel_speed_1 = 0;
 TMR1_overflow = 0;
 } else {
-<<<<<<< HEAD
-wheel_speed_1 = ((step * 100) / gap_time_1)*1000;
-=======
-wheel_speed_1 = (step * 10000) / gap_time_1;
->>>>>>> origin/master
+wheel_speed_1 = (step * 100000) / gap_time_1;
 }
 speed_array[3] = wheel_speed_1 >> 8;
 speed_array[2] = wheel_speed_1;
@@ -20675,11 +20671,7 @@ if (TMR3_overflow == 1) {
 wheel_speed_2 = 0;
 TMR3_overflow = 0;
 } else {
-<<<<<<< HEAD
-wheel_speed_2 = ((step * 100) / gap_time_2)*1000;
-=======
-wheel_speed_2 = (step * 10000) / gap_time_2;
->>>>>>> origin/master
+wheel_speed_2 = (step * 100000) / gap_time_2;
 }
 speed_array[1] = wheel_speed_2 >> 8;
 speed_array[0] = wheel_speed_2;
