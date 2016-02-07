@@ -4,8 +4,13 @@
     <memory name="program">
       <units>bytes</units>
       <length>16384</length>
+<<<<<<< HEAD
       <used>10335</used>
       <free>6049</free>
+=======
+      <used>10341</used>
+      <free>6043</free>
+>>>>>>> origin/master
     </memory>
     <memory name="data">
       <units>bytes</units>
