@@ -7,11 +7,19 @@
 //CLOCK FREQUENCY: 16 MHz
 //PROGRAM FUNCTION: Centralina che gestisce la frenata del veicolo secondo i
 // valori che vengono forniti dalle altre centraline attraverso il protocollo 
-// CANbus. Predisposizione di led di malfunzionamento del CANbus, arresto e
-// trimmer su scheda per il controllo della correzione della frenata.
-// [AGGIUNGERE DESCRIZIONE ENCODER]
-// [AGGIUNGERE CONDIZIONE OVERFLOW TIMERS]
-// [AGGIUNGERE PROGRAMMA COUNT]
+// CANbus. La centralina inoltre gestisce in modo separato i due encoder sulle
+// ruote posteriori del veicolo calcolando la velocità di ciascuna ruota per poi
+// impacchettarla ed inviarla sul CANBus come dato per le altre centraline.
+// Il programma prevede anche una funzione a comando di misura di distanza
+// che è in grado di fornire al sistema lo spazio percorso dal veicolo (in cm)
+// in un intervallo di tempo definito.
+// Un ulteriore funzione permette di fornire un valore di distanza alla
+// centralina al cui raggiungimento verrà inviato un remote frame.
+// Il sistema è dotato anche di un led che segnala l'eventuale malfunzionamento
+// del CANbus ed un led di servizio per segnalazioni varie personalizzabili
+// dall'utente. La scheda predispone inoltre di un reset fisico e di un trimmer
+// per la gestione della correzione di frenata.
+// [AGGIUNGERE ULTERIORI INFORMAZIONI]
 
 ////////////////////////////            //////////////////////////////
 //   INPUT AND OUTPUTS    //            //  COMBINAZIONI BIT CANBus //
@@ -85,6 +93,7 @@ volatile unsigned long remote_frame_id = 0;
 BYTE status_array [8] = 0; //Codice 1 => ABS
 BYTE speed_array [8] = 0;
 BYTE distance_array [8] = 0;
+BYTE remote_frame_array [8] = 0x01; // verificare!
 volatile unsigned char brake_signal_CAN = 0;
 volatile unsigned char Analogic_Mode = 0;
 
@@ -115,6 +124,14 @@ unsigned char read = 0;
 int correction_factor = 0; //con segno
 unsigned char home_position = 0;
 
+//Distance set function
+bit distance_set_flag = LOW;
+bit distance_reached_flag = LOW;
+volatile unsigned int distance_set_value = 0; //[cm]
+volatile unsigned int distance_set_counter_1 = 0;
+volatile unsigned int distance_set_counter_2 = 0;
+volatile unsigned int distance_actual_value = 0; //[cm]
+
 //Program variables
 unsigned char brake_value_inc = 0; //0-256 (fattore 17)
 unsigned char brake_value = 0; //0-15 [gradi]
@@ -122,6 +139,7 @@ unsigned char brake_value_degree = 0; //0-180 [gradi]
 unsigned char step = 0; //passo della ruota [cm]
 
 BYTE data_debug1[8]; //DEBUG
+
 //////////////////////////////////
 //    INTERRUPT High Priority   //
 //////////////////////////////////
@@ -155,6 +173,9 @@ __interrupt(high_priority) void ISR_Alta(void) {
             if (count_flag == HIGH) {
                 int_counter_1++;
             }
+            if (distance_set_flag = HIGH) {
+                distance_set_counter_1++;
+            }
         }
         INTCONbits.INT0IF = LOW;
 
@@ -174,6 +195,9 @@ __interrupt(high_priority) void ISR_Alta(void) {
             TMR3H = 0x00;
             if (count_flag == HIGH) {
                 int_counter_2++;
+            }
+            if (distance_set_flag = HIGH) {
+                distance_set_counter_2++;
             }
         }
         INTCON3bits.INT1IF = LOW;
@@ -199,6 +223,12 @@ __interrupt(low_priority) void ISR_Bassa(void) {
             if (msg.identifier == BRAKE_SIGNAL) {
                 brake_signal_CAN = msg.data[0];
                 Analogic_Mode = msg.data[1];
+            }
+            if (msg.identifier == DISTANCE_SET) {
+                distance_set_value = msg.data[0];
+                distance_set_counter_1 = 0;
+                distance_set_counter_2 = 0;
+                distance_set_flag = HIGH;
             }
         }
         PIR3bits.RXB0IF = LOW;
@@ -243,7 +273,16 @@ int main(void) {
         } else {
             PORTAbits.RA1 = LOW;
         }
-
+        
+        if (distance_set_flag == HIGH) {
+            distance_actual_value = (step*(distance_set_counter_1 + distance_set_counter_2)) / 2;
+            if (distance_actual_value > distance_set_value) {
+                distance_set_flag = LOW;
+                distance_reached_flag = HIGH;
+                Tx_retry = HIGH; //forzo l'invio del dato
+            }
+        }
+        
         if ((remote_frame == HIGH) || (Tx_retry == HIGH)) {
             remote_frame = LOW;
             remote_frame_handler();
@@ -274,7 +313,7 @@ int main(void) {
                 wheel_speed_1 = 0;
                 TMR1_overflow = LOW;
             } else {
-            wheel_speed_1 = (step * 100000) / gap_time_1;
+                wheel_speed_1 = (step * 100000) / gap_time_1;
             }
             speed_array[3] = wheel_speed_1 >> 8;
             speed_array[2] = wheel_speed_1;
@@ -286,7 +325,7 @@ int main(void) {
                 wheel_speed_2 = 0;
                 TMR3_overflow = LOW;
             } else {
-            wheel_speed_2 = (step * 100000) / gap_time_2;
+                wheel_speed_2 = (step * 100000) / gap_time_2;
             }
             speed_array[1] = wheel_speed_2 >> 8;
             speed_array[0] = wheel_speed_2;
@@ -308,7 +347,6 @@ void remote_frame_handler(void) {
             PORTCbits.RC1 = ~PORTCbits.RC1;
         }
         if (remote_frame_id == ACTUAL_SPEED) {
-
             CANsendMessage(remote_frame_id, speed_array, 8, CAN_CONFIG_STD_MSG & CAN_NORMAL_TX_FRAME & CAN_TX_PRIORITY_0);
         }
         if (remote_frame_id == COUNT_START) {
@@ -326,10 +364,14 @@ void remote_frame_handler(void) {
             distance_array[3] = distance_2 >> 8;
             CANsendMessage(remote_frame_id, distance_array, 8, CAN_CONFIG_STD_MSG & CAN_NORMAL_TX_FRAME & CAN_TX_PRIORITY_0);
         }
+        if (distance_reached_flag == HIGH) {
+            CANsendMessage(DISTANCE_SET, remote_frame_array, 8, CAN_CONFIG_STD_MSG & CAN_REMOTE_TX_FRAME & CAN_TX_PRIORITY_0); //(?))
+        }
         if (TXB0CONbits.TXABT || TXB1CONbits.TXABT) {
             Tx_retry = HIGH;
         } else {
             Tx_retry = LOW;
+            distance_reached_flag = LOW;
         }
     } else {
         Tx_retry = HIGH;
@@ -399,7 +441,7 @@ void board_initialization(void) {
     INTCON2bits.INTEDG1 = HIGH;
 
     //Configurazione ADC
-    ADCON1 = 0b01110111;
+    ADCON1 = 0b00001110;// [verificare]
     ADCON0bits.CHS2 = 0; //<--|
     ADCON0bits.CHS1 = 0; //<--|- CANALE 0 => RB0
     ADCON0bits.CHS0 = 0; //<--|
