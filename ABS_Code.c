@@ -273,16 +273,16 @@ int main(void) {
         } else {
             PORTAbits.RA1 = LOW;
         }
-        
+
         if (distance_set_flag == HIGH) {
-            distance_actual_value = (step*(distance_set_counter_1 + distance_set_counter_2)) / 2;
+            distance_actual_value = (step * (distance_set_counter_1 + distance_set_counter_2)) / 2;
             if (distance_actual_value > distance_set_value) {
                 distance_set_flag = LOW;
                 distance_reached_flag = HIGH;
                 Tx_retry = HIGH; //forzo l'invio del dato
             }
         }
-        
+
         if ((remote_frame == HIGH) || (Tx_retry == HIGH)) {
             remote_frame = LOW;
             remote_frame_handler();
@@ -399,7 +399,7 @@ void board_initialization(void) {
     LATE = 0x00;
     TRISE = 0xFF;
 
-    ADCON1 = 0x11111110;
+    ADCON1 = 0b11111110;
 
     //Configurazione CANbus
     CANInitialize(4, 6, 5, 1, 3, CAN_CONFIG_LINE_FILTER_OFF & CAN_CONFIG_SAMPLE_ONCE & CAN_CONFIG_ALL_VALID_MSG & CAN_CONFIG_DBL_BUFFER_ON);
@@ -435,15 +435,16 @@ void board_initialization(void) {
     TMR0L = 0xFE;
     PORTCbits.RC0 = LOW;
     brake_value_degree = 90;
-    T1CON = 00010000;
-    T3CON = 01010000;
+    T1CON = 00110000;
+    T3CON = 01110000;
     INTCON2bits.INTEDG0 = HIGH;
     INTCON2bits.INTEDG1 = HIGH;
 
     //Configurazione ADC
-    ADCON1 = 0b00001110;// [verificare]
+    ADCON1 = 0b00001110; // [verificare]
+    ADCON0bits.CHS3 = 0; //<--|
     ADCON0bits.CHS2 = 0; //<--|
-    ADCON0bits.CHS1 = 0; //<--|- CANALE 0 => RB0
+    ADCON0bits.CHS1 = 0; //<--|- CANALE 0 => RA0
     ADCON0bits.CHS0 = 0; //<--|
     ADCON2bits.ACQT2 = 1;
     ADCON2bits.ACQT1 = 1;
@@ -469,5 +470,4 @@ void board_initialization(void) {
     T1CONbits.TMR1ON = HIGH; //atttivazione TMR1
     T3CONbits.TMR3ON = HIGH; //attivazione TMR3
     T0CONbits.TMR0ON = HIGH; //attivazione TMR0
-    delay_ms(2);
 }
