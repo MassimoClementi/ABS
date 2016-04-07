@@ -20569,14 +20569,7 @@ TMR3H = 0x00;
 TMR3L = 0x00;
 y = 1;
 } else {
-unsigned char A = 0;
-unsigned char B = 0;
-A = TMR3H;
-B = TMR3L;
-
-gap_time_2 = TMR3H;
-gap_time_2 = (gap_time_2<<8)+TMR3L;
-
+gap_time_2 = (TMR3H << 8) + TMR3L;
 gap_time_2 = gap_time_2 / 500;
 ENC2_measure = 1;
 TMR3H = 0x00;
@@ -20594,7 +20587,7 @@ INTCON3bits.INT1IF = 0;
 
 }
 
-# 221
+# 214
 __attribute__((interrupt("__low_priority"))) void ISR_Bassa(void) {
 
 if ((PIR3bits.RXB0IF == 1) || (PIR3bits.RXB1IF == 1)) {
@@ -20632,7 +20625,7 @@ PIR2bits.TMR3IF = 0;
 }
 }
 
-# 262
+# 255
 int main(void) {
 board_initialization();
 step = (11 * (3.1415)) / 16;
@@ -20656,7 +20649,7 @@ PORTAbits.RA1 = 0;
 }
 
 if (distance_set_flag == 1) {
-distance_actual_value = (step*(distance_set_counter_1 + distance_set_counter_2)) / 2;
+distance_actual_value = (step * (distance_set_counter_1 + distance_set_counter_2)) / 2;
 if (distance_actual_value > distance_set_value) {
 distance_set_flag = 0;
 distance_reached_flag = 1;
@@ -20715,7 +20708,7 @@ ENC2_measure = 0;
 }
 }
 
-# 349
+# 342
 void remote_frame_handler(void) {
 if (CANisTxReady()) {
 if (remote_frame_id == 0b00000000000000000000000000010) {
@@ -20803,7 +20796,7 @@ IPR2bits.TMR3IP = 0;
 
 T0CON = 0x80;
 
-# 441
+# 434
 TMR0H = 0xFF;
 TMR0L = 0xFE;
 PORTCbits.RC0 = 0;
@@ -20815,6 +20808,7 @@ INTCON2bits.INTEDG1 = 1;
 
 
 ADCON1 = 0b00001110;
+ADCON0bits.CHS3 = 0;
 ADCON0bits.CHS2 = 0;
 ADCON0bits.CHS1 = 0;
 ADCON0bits.CHS0 = 0;

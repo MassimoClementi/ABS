@@ -147,6 +147,7 @@ BYTE data_debug1[8]; //DEBUG
 __interrupt(high_priority) void ISR_Alta(void) {
     //INTERRUPT PWM
     if (INTCONbits.TMR0IF == HIGH) {
+        PORTCbits.RC0 = ~PORTCbits.RC0;
         if (PORTCbits.RC0 == HIGH) {
             timer_on = (((1400 * brake_value_degree) / 180) + 800)*2;
             timer_off = 65536 - (40000 - timer_on);
