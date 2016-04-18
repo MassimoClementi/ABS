@@ -130,7 +130,7 @@ bit distance_reached_flag = LOW;
 volatile unsigned int distance_set_value = 0; //[cm]
 volatile unsigned int distance_set_counter_1 = 0;
 volatile unsigned int distance_set_counter_2 = 0;
-volatile unsigned int distance_actual_value = 0; //[cm]
+volatile unsigned long distance_actual_value = 0; //[cm]
 
 //Program variables
 unsigned char brake_value_inc = 0; //0-256 (fattore 17)
@@ -174,7 +174,7 @@ __interrupt(high_priority) void ISR_Alta(void) {
             if (count_flag == HIGH) {
                 int_counter_1++;
             }
-            if (distance_set_flag = HIGH) {
+            if (distance_set_flag == HIGH) {
                 distance_set_counter_1++;
             }
         }
@@ -197,7 +197,7 @@ __interrupt(high_priority) void ISR_Alta(void) {
             if (count_flag == HIGH) {
                 int_counter_2++;
             }
-            if (distance_set_flag = HIGH) {
+            if (distance_set_flag == HIGH) {
                 distance_set_counter_2++;
             }
         }
@@ -277,7 +277,7 @@ int main(void) {
 
         if (distance_set_flag == HIGH) {
             distance_actual_value = (step * (distance_set_counter_1 + distance_set_counter_2)) / 2;
-            if (distance_actual_value > distance_set_value) {
+            if (distance_actual_value >= distance_set_value) {
                 distance_set_flag = LOW;
                 distance_reached_flag = HIGH;
                 Tx_retry = HIGH; //forzo l'invio del dato
