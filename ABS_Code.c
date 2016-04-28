@@ -54,6 +54,8 @@
 //            TMR3
 //            2us ad incremento
 
+#define BRAKE_ANGLE_RATIO 17 //Default value: 17
+
 #define USE_AND_MASKS
 
 #include <xc.h>
@@ -120,8 +122,6 @@ volatile unsigned long int_counter_2 = 0;
 volatile unsigned int distance_2 = 0; //[cm]
 
 //ADC
-unsigned char read = 0;
-int correction_factor = 0; //con segno
 unsigned char home_position = 0;
 
 //Distance set function
@@ -179,7 +179,6 @@ __interrupt(high_priority) void ISR_Alta(void) {
             }
         }
         INTCONbits.INT0IF = LOW;
-
     }
 
     //INTERRUPT ENCODER 2
@@ -202,7 +201,6 @@ __interrupt(high_priority) void ISR_Alta(void) {
             }
         }
         INTCON3bits.INT1IF = LOW;
-        //PORTCbits.RC1 = ~PORTCbits.RC1;
     }
 
 }
@@ -266,7 +264,7 @@ int main(void) {
     delay_ms(100);
 
     while (1) {
-        ADC_Read();
+        //Gestione dei led di errore CANbus
         if ((CANisTXwarningON() == HIGH) || (CANisRXwarningON() == HIGH)) {
             PORTAbits.RA1 = HIGH; //accendi led errore
             COMSTATbits.TXWARN = LOW;
@@ -275,6 +273,7 @@ int main(void) {
             PORTAbits.RA1 = LOW;
         }
 
+        //Funzione DISTANCE_SET
         if (distance_set_flag == HIGH) {
             distance_actual_value = (step * (distance_set_counter_1 + distance_set_counter_2)) / 2;
             if (distance_actual_value >= distance_set_value) {
@@ -289,6 +288,7 @@ int main(void) {
             remote_frame_handler();
         }
 
+        //Frenata analogica/digitale
         if (Analogic_Mode == 0b00000000) {
             if (brake_signal_CAN == 0b00000000) {
                 brake_value_inc = 0;
@@ -306,9 +306,16 @@ int main(void) {
             brake_value_inc = brake_signal_CAN;
         }
 
-        brake_value = (brake_value_inc / 17) + home_position;
-        brake_value_degree = (180 * brake_value) / 255;
+        //Calcolo dell'angolo da impostare
+        if (((brake_value_inc / BRAKE_ANGLE_RATIO) + home_position) > 255) {
+            brake_value = 255;
+            brake_value_degree = 180;
+        } else {
+            brake_value = (brake_value_inc / BRAKE_ANGLE_RATIO) + home_position;
+            brake_value_degree = (180 * brake_value) / 255;
+        }
 
+        //Calcolo ed impacchettamento velocità ruota 1
         if ((ENC1_measure == HIGH) || (TMR1_overflow == HIGH)) {
             if (TMR1_overflow == HIGH) {
                 wheel_speed_1 = 0;
@@ -321,6 +328,7 @@ int main(void) {
             ENC1_measure = LOW;
         }
 
+        //Calcolo ed impacchettamento velocità ruota 2
         if ((ENC2_measure == HIGH) || (TMR3_overflow == HIGH)) {
             if (TMR3_overflow == HIGH) {
                 wheel_speed_2 = 0;
@@ -382,9 +390,7 @@ void remote_frame_handler(void) {
 void ADC_Read(void) {
     ADCON0bits.GO = HIGH;
     while (ADCON0bits.GO);
-    read = ADRESH;
-    correction_factor = read - 127;
-    home_position = correction_factor / 4 + 127; //RICONTROLLARE /4
+    home_position = ADRESH;
 }
 
 void board_initialization(void) {
