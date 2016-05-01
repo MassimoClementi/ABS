@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Massimo\AppData\Local\Temp\s5v8.obj
+$C:\Users\Simone\AppData\Local\Temp\s62k.obj
 idloc IDLOC 0 200000 200000 8 1
 reset_vec CODE 0 0 0 4 1
 end_init CODE 0 144 144 4 1
@@ -92,34 +92,34 @@ MEDIUMCONST 2AC9-3FFF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\ABS.production.obj
-18 intcodelo CODE >1130:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-18 intcodelo CODE >213:Z:\Centraline\ABS\ABS_Code.c
-5E intcodelo CODE >215:Z:\Centraline\ABS\ABS_Code.c
-66 intcodelo CODE >216:Z:\Centraline\ABS\ABS_Code.c
-70 intcodelo CODE >217:Z:\Centraline\ABS\ABS_Code.c
-7C intcodelo CODE >218:Z:\Centraline\ABS\ABS_Code.c
-84 intcodelo CODE >219:Z:\Centraline\ABS\ABS_Code.c
-94 intcodelo CODE >220:Z:\Centraline\ABS\ABS_Code.c
-96 intcodelo CODE >222:Z:\Centraline\ABS\ABS_Code.c
-AC intcodelo CODE >223:Z:\Centraline\ABS\ABS_Code.c
-B0 intcodelo CODE >224:Z:\Centraline\ABS\ABS_Code.c
-B4 intcodelo CODE >226:Z:\Centraline\ABS\ABS_Code.c
-CA intcodelo CODE >227:Z:\Centraline\ABS\ABS_Code.c
-D2 intcodelo CODE >228:Z:\Centraline\ABS\ABS_Code.c
-DC intcodelo CODE >229:Z:\Centraline\ABS\ABS_Code.c
-E6 intcodelo CODE >230:Z:\Centraline\ABS\ABS_Code.c
-E8 intcodelo CODE >233:Z:\Centraline\ABS\ABS_Code.c
-EA intcodelo CODE >234:Z:\Centraline\ABS\ABS_Code.c
-EC intcodelo CODE >238:Z:\Centraline\ABS\ABS_Code.c
-F0 intcodelo CODE >239:Z:\Centraline\ABS\ABS_Code.c
-F2 intcodelo CODE >240:Z:\Centraline\ABS\ABS_Code.c
-F4 intcodelo CODE >241:Z:\Centraline\ABS\ABS_Code.c
-F4 intcodelo CODE >244:Z:\Centraline\ABS\ABS_Code.c
-F8 intcodelo CODE >245:Z:\Centraline\ABS\ABS_Code.c
-FA intcodelo CODE >246:Z:\Centraline\ABS\ABS_Code.c
-FC intcodelo CODE >248:Z:\Centraline\ABS\ABS_Code.c
-8 intcode CODE >1166:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-8 intcode CODE >147:Z:\Centraline\ABS\ABS_Code.c
+18 intcodelo CODE >1131:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+18 intcodelo CODE >213:D:\Documenti\GitHub\ABS\ABS_Code.c
+5E intcodelo CODE >215:D:\Documenti\GitHub\ABS\ABS_Code.c
+66 intcodelo CODE >216:D:\Documenti\GitHub\ABS\ABS_Code.c
+70 intcodelo CODE >217:D:\Documenti\GitHub\ABS\ABS_Code.c
+7C intcodelo CODE >218:D:\Documenti\GitHub\ABS\ABS_Code.c
+84 intcodelo CODE >219:D:\Documenti\GitHub\ABS\ABS_Code.c
+94 intcodelo CODE >220:D:\Documenti\GitHub\ABS\ABS_Code.c
+96 intcodelo CODE >222:D:\Documenti\GitHub\ABS\ABS_Code.c
+AC intcodelo CODE >223:D:\Documenti\GitHub\ABS\ABS_Code.c
+B0 intcodelo CODE >224:D:\Documenti\GitHub\ABS\ABS_Code.c
+B4 intcodelo CODE >226:D:\Documenti\GitHub\ABS\ABS_Code.c
+CA intcodelo CODE >227:D:\Documenti\GitHub\ABS\ABS_Code.c
+D2 intcodelo CODE >228:D:\Documenti\GitHub\ABS\ABS_Code.c
+DC intcodelo CODE >229:D:\Documenti\GitHub\ABS\ABS_Code.c
+E6 intcodelo CODE >230:D:\Documenti\GitHub\ABS\ABS_Code.c
+E8 intcodelo CODE >233:D:\Documenti\GitHub\ABS\ABS_Code.c
+EA intcodelo CODE >234:D:\Documenti\GitHub\ABS\ABS_Code.c
+EC intcodelo CODE >238:D:\Documenti\GitHub\ABS\ABS_Code.c
+F0 intcodelo CODE >239:D:\Documenti\GitHub\ABS\ABS_Code.c
+F2 intcodelo CODE >240:D:\Documenti\GitHub\ABS\ABS_Code.c
+F4 intcodelo CODE >241:D:\Documenti\GitHub\ABS\ABS_Code.c
+F4 intcodelo CODE >244:D:\Documenti\GitHub\ABS\ABS_Code.c
+F8 intcodelo CODE >245:D:\Documenti\GitHub\ABS\ABS_Code.c
+FA intcodelo CODE >246:D:\Documenti\GitHub\ABS\ABS_Code.c
+FC intcodelo CODE >248:D:\Documenti\GitHub\ABS\ABS_Code.c
+8 intcode CODE >1167:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+8 intcode CODE >147:D:\Documenti\GitHub\ABS\ABS_Code.c
 2A96 text23 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\pic18\plib\Timers\t0write.c
 2A96 text23 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\pic18\plib\Timers\t0write.c
 2A9E text23 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\pic18\plib\Timers\t0write.c
@@ -171,129 +171,129 @@ FC intcodelo CODE >248:Z:\Centraline\ABS\ABS_Code.c
 2A2C text20 CODE >38:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
 2A34 text20 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
 2A3C text20 CODE >52:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
-1F32 intcode_body CODE >147:Z:\Centraline\ABS\ABS_Code.c
-1F64 intcode_body CODE >149:Z:\Centraline\ABS\ABS_Code.c
-1F68 intcode_body CODE >150:Z:\Centraline\ABS\ABS_Code.c
-1F84 intcode_body CODE >151:Z:\Centraline\ABS\ABS_Code.c
-1F88 intcode_body CODE >152:Z:\Centraline\ABS\ABS_Code.c
-1FDE intcode_body CODE >153:Z:\Centraline\ABS\ABS_Code.c
-205E intcode_body CODE >154:Z:\Centraline\ABS\ABS_Code.c
-20A2 intcode_body CODE >155:Z:\Centraline\ABS\ABS_Code.c
-20AE intcode_body CODE >156:Z:\Centraline\ABS\ABS_Code.c
-20B0 intcode_body CODE >157:Z:\Centraline\ABS\ABS_Code.c
-20BC intcode_body CODE >159:Z:\Centraline\ABS\ABS_Code.c
-20BE intcode_body CODE >163:Z:\Centraline\ABS\ABS_Code.c
-20C2 intcode_body CODE >164:Z:\Centraline\ABS\ABS_Code.c
-20C6 intcode_body CODE >165:Z:\Centraline\ABS\ABS_Code.c
-20CA intcode_body CODE >166:Z:\Centraline\ABS\ABS_Code.c
-20CE intcode_body CODE >167:Z:\Centraline\ABS\ABS_Code.c
-20D0 intcode_body CODE >168:Z:\Centraline\ABS\ABS_Code.c
-20D2 intcode_body CODE >169:Z:\Centraline\ABS\ABS_Code.c
-20EA intcode_body CODE >170:Z:\Centraline\ABS\ABS_Code.c
-2106 intcode_body CODE >171:Z:\Centraline\ABS\ABS_Code.c
-2108 intcode_body CODE >172:Z:\Centraline\ABS\ABS_Code.c
-210C intcode_body CODE >173:Z:\Centraline\ABS\ABS_Code.c
-2110 intcode_body CODE >174:Z:\Centraline\ABS\ABS_Code.c
-2114 intcode_body CODE >175:Z:\Centraline\ABS\ABS_Code.c
-2122 intcode_body CODE >177:Z:\Centraline\ABS\ABS_Code.c
-2126 intcode_body CODE >178:Z:\Centraline\ABS\ABS_Code.c
-212C intcode_body CODE >181:Z:\Centraline\ABS\ABS_Code.c
-212E intcode_body CODE >185:Z:\Centraline\ABS\ABS_Code.c
-2132 intcode_body CODE >186:Z:\Centraline\ABS\ABS_Code.c
-2136 intcode_body CODE >187:Z:\Centraline\ABS\ABS_Code.c
-213A intcode_body CODE >188:Z:\Centraline\ABS\ABS_Code.c
-213E intcode_body CODE >189:Z:\Centraline\ABS\ABS_Code.c
-2140 intcode_body CODE >190:Z:\Centraline\ABS\ABS_Code.c
-2142 intcode_body CODE >191:Z:\Centraline\ABS\ABS_Code.c
-215A intcode_body CODE >192:Z:\Centraline\ABS\ABS_Code.c
-2176 intcode_body CODE >193:Z:\Centraline\ABS\ABS_Code.c
-2178 intcode_body CODE >194:Z:\Centraline\ABS\ABS_Code.c
-217C intcode_body CODE >195:Z:\Centraline\ABS\ABS_Code.c
-2180 intcode_body CODE >196:Z:\Centraline\ABS\ABS_Code.c
-2184 intcode_body CODE >197:Z:\Centraline\ABS\ABS_Code.c
-2192 intcode_body CODE >199:Z:\Centraline\ABS\ABS_Code.c
-2196 intcode_body CODE >200:Z:\Centraline\ABS\ABS_Code.c
-219C intcode_body CODE >203:Z:\Centraline\ABS\ABS_Code.c
-219E intcode_body CODE >206:Z:\Centraline\ABS\ABS_Code.c
-2A80 text18 CODE >1163:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2A80 text18 CODE >1165:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-13DA text17 CODE >528:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-13DA text17 CODE >531:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-13DE text17 CODE >533:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-13E0 text17 CODE >534:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-13E2 text17 CODE >536:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-13E4 text17 CODE >537:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-13E6 text17 CODE >540:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-13EC text17 CODE >542:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-13FC text17 CODE >543:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-140C text17 CODE >544:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-141C text17 CODE >545:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-142C text17 CODE >546:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-143C text17 CODE >547:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-144C text17 CODE >548:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-145C text17 CODE >549:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-146C text17 CODE >550:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-147C text17 CODE >552:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1496 text17 CODE >554:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-14AA text17 CODE >556:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-14C4 text17 CODE >558:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-14CA text17 CODE >560:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-14FC text17 CODE >561:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1508 text17 CODE >562:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1550 text17 CODE >563:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1552 text17 CODE >566:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1574 text17 CODE >567:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-15A4 text17 CODE >569:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-15AA text17 CODE >570:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-15C2 text17 CODE >571:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-15C8 text17 CODE >572:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-15E0 text17 CODE >573:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-15E6 text17 CODE >574:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-15FE text17 CODE >575:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1604 text17 CODE >576:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-161C text17 CODE >577:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1622 text17 CODE >578:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-163A text17 CODE >580:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-166C text17 CODE >583:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1670 text17 CODE >584:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1672 text17 CODE >585:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1672 text17 CODE >587:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1676 text17 CODE >589:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1686 text17 CODE >590:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1696 text17 CODE >591:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-16A6 text17 CODE >592:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-16B6 text17 CODE >593:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-16C6 text17 CODE >594:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-16D6 text17 CODE >595:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-16E6 text17 CODE >596:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-16F6 text17 CODE >597:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1706 text17 CODE >599:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-171E text17 CODE >601:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1730 text17 CODE >603:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1748 text17 CODE >605:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-174C text17 CODE >607:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-177E text17 CODE >608:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1788 text17 CODE >609:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-17D0 text17 CODE >610:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-17D2 text17 CODE >613:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-17F4 text17 CODE >614:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1824 text17 CODE >616:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1828 text17 CODE >617:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1840 text17 CODE >618:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1844 text17 CODE >619:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-185C text17 CODE >620:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1860 text17 CODE >621:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1878 text17 CODE >622:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-187C text17 CODE >623:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1894 text17 CODE >624:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1898 text17 CODE >625:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-18B0 text17 CODE >627:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-18E2 text17 CODE >630:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-18E4 text17 CODE >632:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2AB4 text15 CODE >1127:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2AB4 text15 CODE >1129:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2AA8 text14 CODE >1119:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2AA8 text14 CODE >1121:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
+1F32 intcode_body CODE >147:D:\Documenti\GitHub\ABS\ABS_Code.c
+1F64 intcode_body CODE >149:D:\Documenti\GitHub\ABS\ABS_Code.c
+1F68 intcode_body CODE >150:D:\Documenti\GitHub\ABS\ABS_Code.c
+1F84 intcode_body CODE >151:D:\Documenti\GitHub\ABS\ABS_Code.c
+1F88 intcode_body CODE >152:D:\Documenti\GitHub\ABS\ABS_Code.c
+1FDE intcode_body CODE >153:D:\Documenti\GitHub\ABS\ABS_Code.c
+205E intcode_body CODE >154:D:\Documenti\GitHub\ABS\ABS_Code.c
+20A2 intcode_body CODE >155:D:\Documenti\GitHub\ABS\ABS_Code.c
+20AE intcode_body CODE >156:D:\Documenti\GitHub\ABS\ABS_Code.c
+20B0 intcode_body CODE >157:D:\Documenti\GitHub\ABS\ABS_Code.c
+20BC intcode_body CODE >159:D:\Documenti\GitHub\ABS\ABS_Code.c
+20BE intcode_body CODE >163:D:\Documenti\GitHub\ABS\ABS_Code.c
+20C2 intcode_body CODE >164:D:\Documenti\GitHub\ABS\ABS_Code.c
+20C6 intcode_body CODE >165:D:\Documenti\GitHub\ABS\ABS_Code.c
+20CA intcode_body CODE >166:D:\Documenti\GitHub\ABS\ABS_Code.c
+20CE intcode_body CODE >167:D:\Documenti\GitHub\ABS\ABS_Code.c
+20D0 intcode_body CODE >168:D:\Documenti\GitHub\ABS\ABS_Code.c
+20D2 intcode_body CODE >169:D:\Documenti\GitHub\ABS\ABS_Code.c
+20EA intcode_body CODE >170:D:\Documenti\GitHub\ABS\ABS_Code.c
+2106 intcode_body CODE >171:D:\Documenti\GitHub\ABS\ABS_Code.c
+2108 intcode_body CODE >172:D:\Documenti\GitHub\ABS\ABS_Code.c
+210C intcode_body CODE >173:D:\Documenti\GitHub\ABS\ABS_Code.c
+2110 intcode_body CODE >174:D:\Documenti\GitHub\ABS\ABS_Code.c
+2114 intcode_body CODE >175:D:\Documenti\GitHub\ABS\ABS_Code.c
+2122 intcode_body CODE >177:D:\Documenti\GitHub\ABS\ABS_Code.c
+2126 intcode_body CODE >178:D:\Documenti\GitHub\ABS\ABS_Code.c
+212C intcode_body CODE >181:D:\Documenti\GitHub\ABS\ABS_Code.c
+212E intcode_body CODE >185:D:\Documenti\GitHub\ABS\ABS_Code.c
+2132 intcode_body CODE >186:D:\Documenti\GitHub\ABS\ABS_Code.c
+2136 intcode_body CODE >187:D:\Documenti\GitHub\ABS\ABS_Code.c
+213A intcode_body CODE >188:D:\Documenti\GitHub\ABS\ABS_Code.c
+213E intcode_body CODE >189:D:\Documenti\GitHub\ABS\ABS_Code.c
+2140 intcode_body CODE >190:D:\Documenti\GitHub\ABS\ABS_Code.c
+2142 intcode_body CODE >191:D:\Documenti\GitHub\ABS\ABS_Code.c
+215A intcode_body CODE >192:D:\Documenti\GitHub\ABS\ABS_Code.c
+2176 intcode_body CODE >193:D:\Documenti\GitHub\ABS\ABS_Code.c
+2178 intcode_body CODE >194:D:\Documenti\GitHub\ABS\ABS_Code.c
+217C intcode_body CODE >195:D:\Documenti\GitHub\ABS\ABS_Code.c
+2180 intcode_body CODE >196:D:\Documenti\GitHub\ABS\ABS_Code.c
+2184 intcode_body CODE >197:D:\Documenti\GitHub\ABS\ABS_Code.c
+2192 intcode_body CODE >199:D:\Documenti\GitHub\ABS\ABS_Code.c
+2196 intcode_body CODE >200:D:\Documenti\GitHub\ABS\ABS_Code.c
+219C intcode_body CODE >203:D:\Documenti\GitHub\ABS\ABS_Code.c
+219E intcode_body CODE >206:D:\Documenti\GitHub\ABS\ABS_Code.c
+2A80 text18 CODE >1164:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2A80 text18 CODE >1166:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+13DA text17 CODE >529:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+13DA text17 CODE >532:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+13DE text17 CODE >534:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+13E0 text17 CODE >535:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+13E2 text17 CODE >537:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+13E4 text17 CODE >538:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+13E6 text17 CODE >541:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+13EC text17 CODE >543:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+13FC text17 CODE >544:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+140C text17 CODE >545:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+141C text17 CODE >546:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+142C text17 CODE >547:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+143C text17 CODE >548:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+144C text17 CODE >549:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+145C text17 CODE >550:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+146C text17 CODE >551:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+147C text17 CODE >553:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1496 text17 CODE >555:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+14AA text17 CODE >557:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+14C4 text17 CODE >559:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+14CA text17 CODE >561:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+14FC text17 CODE >562:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1508 text17 CODE >563:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1550 text17 CODE >564:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1552 text17 CODE >567:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1574 text17 CODE >568:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+15A4 text17 CODE >570:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+15AA text17 CODE >571:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+15C2 text17 CODE >572:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+15C8 text17 CODE >573:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+15E0 text17 CODE >574:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+15E6 text17 CODE >575:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+15FE text17 CODE >576:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1604 text17 CODE >577:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+161C text17 CODE >578:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1622 text17 CODE >579:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+163A text17 CODE >581:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+166C text17 CODE >584:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1670 text17 CODE >585:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1672 text17 CODE >586:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1672 text17 CODE >588:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1676 text17 CODE >590:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1686 text17 CODE >591:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1696 text17 CODE >592:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+16A6 text17 CODE >593:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+16B6 text17 CODE >594:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+16C6 text17 CODE >595:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+16D6 text17 CODE >596:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+16E6 text17 CODE >597:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+16F6 text17 CODE >598:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1706 text17 CODE >600:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+171E text17 CODE >602:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1730 text17 CODE >604:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1748 text17 CODE >606:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+174C text17 CODE >608:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+177E text17 CODE >609:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1788 text17 CODE >610:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+17D0 text17 CODE >611:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+17D2 text17 CODE >614:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+17F4 text17 CODE >615:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1824 text17 CODE >617:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1828 text17 CODE >618:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1840 text17 CODE >619:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1844 text17 CODE >620:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+185C text17 CODE >621:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1860 text17 CODE >622:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1878 text17 CODE >623:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+187C text17 CODE >624:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1894 text17 CODE >625:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1898 text17 CODE >626:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+18B0 text17 CODE >628:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+18E2 text17 CODE >631:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+18E4 text17 CODE >633:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2AB4 text15 CODE >1128:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2AB4 text15 CODE >1130:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2AA8 text14 CODE >1120:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2AA8 text14 CODE >1122:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
 2572 text13 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
 2572 text13 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
 2578 text13 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
@@ -351,727 +351,728 @@ FC intcodelo CODE >248:Z:\Centraline\ABS\ABS_Code.c
 28EE text11 CODE >125:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul32.c
 2902 text11 CODE >128:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul32.c
 2912 text11 CODE >129:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul32.c
-2A6A text10 CODE >206:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2A6E text10 CODE >208:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2A72 text10 CODE >210:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-148 text9 CODE >748:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-14C text9 CODE >752:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-15E text9 CODE >754:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-162 text9 CODE >756:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-196 text9 CODE >757:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1A4 text9 CODE >758:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1A8 text9 CODE >760:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1D0 text9 CODE >761:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-202 text9 CODE >762:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-206 text9 CODE >765:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-216 text9 CODE >767:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-21A text9 CODE >769:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-24E text9 CODE >770:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-25C text9 CODE >771:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-260 text9 CODE >773:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-288 text9 CODE >774:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2BA text9 CODE >775:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2BE text9 CODE >778:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2D0 text9 CODE >780:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2D4 text9 CODE >782:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-308 text9 CODE >783:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-316 text9 CODE >784:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-31A text9 CODE >786:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-342 text9 CODE >787:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-374 text9 CODE >788:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-378 text9 CODE >791:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-38A text9 CODE >793:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-38E text9 CODE >795:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-3C2 text9 CODE >796:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-3D0 text9 CODE >797:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-3D4 text9 CODE >799:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-3FC text9 CODE >800:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-42E text9 CODE >801:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-432 text9 CODE >804:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-444 text9 CODE >806:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-448 text9 CODE >808:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-47C text9 CODE >809:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-48A text9 CODE >810:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-48E text9 CODE >812:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-4B6 text9 CODE >813:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-4E8 text9 CODE >814:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-4EC text9 CODE >817:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-4FE text9 CODE >819:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-502 text9 CODE >821:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-536 text9 CODE >822:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-544 text9 CODE >823:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-548 text9 CODE >825:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-570 text9 CODE >826:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-5A2 text9 CODE >827:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-5A6 text9 CODE >831:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-5BA text9 CODE >833:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-5BE text9 CODE >835:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-5CC text9 CODE >836:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-5D0 text9 CODE >838:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-5F8 text9 CODE >839:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-628 text9 CODE >840:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-62C text9 CODE >842:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-632 text9 CODE >843:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-638 text9 CODE >844:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-638 text9 CODE >845:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-63C text9 CODE >847:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-642 text9 CODE >848:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-648 text9 CODE >849:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-648 text9 CODE >850:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-64C text9 CODE >852:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-652 text9 CODE >853:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-658 text9 CODE >854:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-658 text9 CODE >855:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-65C text9 CODE >857:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-662 text9 CODE >858:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-668 text9 CODE >859:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-668 text9 CODE >860:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-66C text9 CODE >862:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-672 text9 CODE >863:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-678 text9 CODE >864:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-678 text9 CODE >865:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-67C text9 CODE >867:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-6B0 text9 CODE >868:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-6BE text9 CODE >869:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-6C2 text9 CODE >872:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-6D4 text9 CODE >874:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-6D8 text9 CODE >876:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-6E6 text9 CODE >877:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-6EA text9 CODE >879:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-712 text9 CODE >880:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-742 text9 CODE >881:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-746 text9 CODE >883:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-74C text9 CODE >884:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-752 text9 CODE >885:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-752 text9 CODE >886:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-756 text9 CODE >888:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-75C text9 CODE >889:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-762 text9 CODE >890:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-762 text9 CODE >891:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-766 text9 CODE >893:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-76C text9 CODE >894:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-772 text9 CODE >895:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-772 text9 CODE >896:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-776 text9 CODE >898:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-77C text9 CODE >899:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-782 text9 CODE >900:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-782 text9 CODE >901:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-786 text9 CODE >903:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-78C text9 CODE >904:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-792 text9 CODE >905:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-792 text9 CODE >906:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-796 text9 CODE >908:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-7CA text9 CODE >909:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-7D8 text9 CODE >910:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-7DC text9 CODE >914:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-7F0 text9 CODE >916:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-7F4 text9 CODE >918:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-802 text9 CODE >919:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-806 text9 CODE >921:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-82E text9 CODE >922:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-85E text9 CODE >923:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-862 text9 CODE >925:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-868 text9 CODE >926:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-86E text9 CODE >927:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-86E text9 CODE >928:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-872 text9 CODE >930:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-878 text9 CODE >931:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-87E text9 CODE >932:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-87E text9 CODE >933:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-882 text9 CODE >935:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-888 text9 CODE >936:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-88E text9 CODE >937:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-88E text9 CODE >938:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-892 text9 CODE >940:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-898 text9 CODE >941:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-89E text9 CODE >942:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-89E text9 CODE >943:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-8A2 text9 CODE >945:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-8A8 text9 CODE >946:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-8AE text9 CODE >947:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-8AE text9 CODE >948:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-8B2 text9 CODE >950:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-8E6 text9 CODE >951:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-8F4 text9 CODE >952:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-8F8 text9 CODE >955:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-90C text9 CODE >957:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-910 text9 CODE >959:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-91E text9 CODE >960:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-922 text9 CODE >962:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-94A text9 CODE >963:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-97A text9 CODE >964:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-97E text9 CODE >966:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-984 text9 CODE >967:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-98A text9 CODE >968:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-98A text9 CODE >969:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-98E text9 CODE >971:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-994 text9 CODE >972:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-99A text9 CODE >973:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-99A text9 CODE >974:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-99E text9 CODE >976:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-9A4 text9 CODE >977:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-9AA text9 CODE >978:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-9AA text9 CODE >979:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-9AE text9 CODE >981:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-9B4 text9 CODE >982:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-9BA text9 CODE >983:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-9BA text9 CODE >984:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-9BE text9 CODE >986:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-9C4 text9 CODE >987:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-9CA text9 CODE >988:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-9CA text9 CODE >989:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-9CE text9 CODE >991:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-A02 text9 CODE >992:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-A10 text9 CODE >993:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-A14 text9 CODE >996:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-A28 text9 CODE >998:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-A2C text9 CODE >1000:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-A3A text9 CODE >1001:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-A3E text9 CODE >1003:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-A66 text9 CODE >1004:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-A96 text9 CODE >1005:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-A9A text9 CODE >1007:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-AA0 text9 CODE >1008:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-AA6 text9 CODE >1009:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-AA6 text9 CODE >1010:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-AAA text9 CODE >1012:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-AB0 text9 CODE >1013:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-AB6 text9 CODE >1014:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-AB6 text9 CODE >1015:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-ABA text9 CODE >1017:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-AC0 text9 CODE >1018:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-AC6 text9 CODE >1019:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-AC6 text9 CODE >1020:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-ACA text9 CODE >1022:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-AD0 text9 CODE >1023:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-AD6 text9 CODE >1024:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-AD6 text9 CODE >1025:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-ADA text9 CODE >1027:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-AE0 text9 CODE >1028:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-AE6 text9 CODE >1029:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-AE6 text9 CODE >1030:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-AEA text9 CODE >1032:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-B1E text9 CODE >1033:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-B2C text9 CODE >1034:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-B30 text9 CODE >1037:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-B44 text9 CODE >1039:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-B48 text9 CODE >1041:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-B56 text9 CODE >1042:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-B5A text9 CODE >1044:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-B82 text9 CODE >1045:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-BB2 text9 CODE >1046:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-BB6 text9 CODE >1048:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-BBC text9 CODE >1049:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-BC2 text9 CODE >1050:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-BC2 text9 CODE >1051:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-BC6 text9 CODE >1053:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-BCC text9 CODE >1054:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-BD2 text9 CODE >1055:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-BD2 text9 CODE >1056:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-BD6 text9 CODE >1058:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-BDC text9 CODE >1059:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-BE2 text9 CODE >1060:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-BE2 text9 CODE >1061:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-BE6 text9 CODE >1063:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-BEC text9 CODE >1064:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-BF2 text9 CODE >1065:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-BF2 text9 CODE >1066:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-BF6 text9 CODE >1068:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-BFC text9 CODE >1069:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-C02 text9 CODE >1070:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-C02 text9 CODE >1071:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-C06 text9 CODE >1073:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-C3A text9 CODE >1074:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-C48 text9 CODE >1075:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-18E6 text8 CODE >640:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-18EA text8 CODE >643:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-18FA text8 CODE >645:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-192E text8 CODE >646:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-193C text8 CODE >647:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1940 text8 CODE >649:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1968 text8 CODE >650:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-199A text8 CODE >651:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-199E text8 CODE >654:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-19B0 text8 CODE >656:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-19E4 text8 CODE >657:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-19F2 text8 CODE >658:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-19F6 text8 CODE >660:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1A1E text8 CODE >661:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1A50 text8 CODE >662:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1A54 text8 CODE >665:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1A66 text8 CODE >667:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1A74 text8 CODE >668:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1A78 text8 CODE >670:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1AA0 text8 CODE >671:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1AD0 text8 CODE >672:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1AD4 text8 CODE >674:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1ADA text8 CODE >675:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1AE0 text8 CODE >676:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1AE0 text8 CODE >677:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1AE4 text8 CODE >679:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1AEA text8 CODE >680:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1AF0 text8 CODE >681:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1AF0 text8 CODE >682:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1AF4 text8 CODE >684:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1AFA text8 CODE >685:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1B00 text8 CODE >686:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1B00 text8 CODE >687:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1B04 text8 CODE >689:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1B0A text8 CODE >690:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1B10 text8 CODE >691:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1B10 text8 CODE >692:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1B14 text8 CODE >694:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1B1A text8 CODE >695:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1B20 text8 CODE >696:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1B20 text8 CODE >697:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1B24 text8 CODE >699:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1B58 text8 CODE >700:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1B66 text8 CODE >701:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1B6A text8 CODE >704:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1B7E text8 CODE >706:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1B8C text8 CODE >707:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1B90 text8 CODE >709:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1BB8 text8 CODE >710:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1BE8 text8 CODE >711:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1BEC text8 CODE >713:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1BF2 text8 CODE >714:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1BF8 text8 CODE >715:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1BF8 text8 CODE >716:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1BFC text8 CODE >718:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1C02 text8 CODE >719:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1C08 text8 CODE >720:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1C08 text8 CODE >721:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1C0C text8 CODE >723:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1C12 text8 CODE >724:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1C18 text8 CODE >725:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1C18 text8 CODE >726:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1C1C text8 CODE >728:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1C22 text8 CODE >729:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1C28 text8 CODE >730:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1C28 text8 CODE >731:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1C2C text8 CODE >733:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1C32 text8 CODE >734:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1C38 text8 CODE >735:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1C38 text8 CODE >736:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1C3C text8 CODE >738:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1C70 text8 CODE >739:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1C7E text8 CODE >740:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-23AC text7 CODE >218:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-23B0 text7 CODE >223:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-23B6 text7 CODE >225:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-23BA text7 CODE >226:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-23BE text7 CODE >227:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-23C2 text7 CODE >229:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-23CE text7 CODE >230:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-23D4 text7 CODE >231:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-23DA text7 CODE >233:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-23E0 text7 CODE >234:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-23EC text7 CODE >235:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-23F2 text7 CODE >237:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-23F6 text7 CODE >238:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-23F8 text7 CODE >240:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-23FC text7 CODE >241:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-23FE text7 CODE >243:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2404 text7 CODE >245:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2408 text7 CODE >246:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-240A text7 CODE >251:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2412 text7 CODE >252:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-241C text7 CODE >253:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-241E text7 CODE >255:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2422 text7 CODE >259:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2440 text7 CODE >260:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-245E text7 CODE >263:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2460 text7 CODE >266:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2468 text7 CODE >270:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2468 text7 CODE >271:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-246C text7 CODE >272:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2470 text7 CODE >273:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2472 text7 CODE >274:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2472 text7 CODE >275:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2476 text7 CODE >276:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-247C text7 CODE >278:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-247E text7 CODE >263:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-24C2 text7 CODE >280:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-24DE text7 CODE >281:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-24FA text7 CODE >282:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2516 text7 CODE >283:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2532 text7 CODE >284:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-254E text7 CODE >285:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-256A text7 CODE >287:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2570 text7 CODE >289:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-274A text6 CODE >396:Z:\Centraline\ABS\ABS_Code.c
-274A text6 CODE >398:Z:\Centraline\ABS\ABS_Code.c
-274E text6 CODE >399:Z:\Centraline\ABS\ABS_Code.c
-2752 text6 CODE >400:Z:\Centraline\ABS\ABS_Code.c
-2756 text6 CODE >401:Z:\Centraline\ABS\ABS_Code.c
-2758 text6 CODE >402:Z:\Centraline\ABS\ABS_Code.c
-275C text6 CODE >403:Z:\Centraline\ABS\ABS_Code.c
-2760 text6 CODE >404:Z:\Centraline\ABS\ABS_Code.c
-2764 text6 CODE >405:Z:\Centraline\ABS\ABS_Code.c
-2766 text6 CODE >406:Z:\Centraline\ABS\ABS_Code.c
-276A text6 CODE >407:Z:\Centraline\ABS\ABS_Code.c
-276C text6 CODE >409:Z:\Centraline\ABS\ABS_Code.c
-2770 text6 CODE >412:Z:\Centraline\ABS\ABS_Code.c
-2794 text6 CODE >415:Z:\Centraline\ABS\ABS_Code.c
-2796 text6 CODE >416:Z:\Centraline\ABS\ABS_Code.c
-2798 text6 CODE >417:Z:\Centraline\ABS\ABS_Code.c
-279A text6 CODE >418:Z:\Centraline\ABS\ABS_Code.c
-279C text6 CODE >419:Z:\Centraline\ABS\ABS_Code.c
-279E text6 CODE >420:Z:\Centraline\ABS\ABS_Code.c
-27A0 text6 CODE >421:Z:\Centraline\ABS\ABS_Code.c
-27A2 text6 CODE >425:Z:\Centraline\ABS\ABS_Code.c
-27A4 text6 CODE >426:Z:\Centraline\ABS\ABS_Code.c
-27A6 text6 CODE >427:Z:\Centraline\ABS\ABS_Code.c
-27A8 text6 CODE >428:Z:\Centraline\ABS\ABS_Code.c
-27AA text6 CODE >429:Z:\Centraline\ABS\ABS_Code.c
-27AC text6 CODE >430:Z:\Centraline\ABS\ABS_Code.c
-27AE text6 CODE >431:Z:\Centraline\ABS\ABS_Code.c
-27B0 text6 CODE >434:Z:\Centraline\ABS\ABS_Code.c
-27B4 text6 CODE >441:Z:\Centraline\ABS\ABS_Code.c
-27B6 text6 CODE >442:Z:\Centraline\ABS\ABS_Code.c
-27BA text6 CODE >443:Z:\Centraline\ABS\ABS_Code.c
-27BC text6 CODE >444:Z:\Centraline\ABS\ABS_Code.c
-27C0 text6 CODE >445:Z:\Centraline\ABS\ABS_Code.c
-27C4 text6 CODE >446:Z:\Centraline\ABS\ABS_Code.c
-27C8 text6 CODE >447:Z:\Centraline\ABS\ABS_Code.c
-27CA text6 CODE >448:Z:\Centraline\ABS\ABS_Code.c
-27CC text6 CODE >451:Z:\Centraline\ABS\ABS_Code.c
-27D0 text6 CODE >452:Z:\Centraline\ABS\ABS_Code.c
-27D2 text6 CODE >453:Z:\Centraline\ABS\ABS_Code.c
-27D4 text6 CODE >454:Z:\Centraline\ABS\ABS_Code.c
-27D6 text6 CODE >455:Z:\Centraline\ABS\ABS_Code.c
-27D8 text6 CODE >456:Z:\Centraline\ABS\ABS_Code.c
-27DA text6 CODE >457:Z:\Centraline\ABS\ABS_Code.c
-27DC text6 CODE >458:Z:\Centraline\ABS\ABS_Code.c
-27DE text6 CODE >459:Z:\Centraline\ABS\ABS_Code.c
-27E0 text6 CODE >460:Z:\Centraline\ABS\ABS_Code.c
-27E2 text6 CODE >461:Z:\Centraline\ABS\ABS_Code.c
-27E4 text6 CODE >462:Z:\Centraline\ABS\ABS_Code.c
-27E6 text6 CODE >463:Z:\Centraline\ABS\ABS_Code.c
-27E8 text6 CODE >466:Z:\Centraline\ABS\ABS_Code.c
-27EA text6 CODE >467:Z:\Centraline\ABS\ABS_Code.c
-27EC text6 CODE >468:Z:\Centraline\ABS\ABS_Code.c
-27EE text6 CODE >469:Z:\Centraline\ABS\ABS_Code.c
-27F0 text6 CODE >470:Z:\Centraline\ABS\ABS_Code.c
-27F2 text6 CODE >471:Z:\Centraline\ABS\ABS_Code.c
-27F4 text6 CODE >472:Z:\Centraline\ABS\ABS_Code.c
-27F6 text6 CODE >473:Z:\Centraline\ABS\ABS_Code.c
-27F8 text6 CODE >474:Z:\Centraline\ABS\ABS_Code.c
-27FA text6 CODE >477:Z:\Centraline\ABS\ABS_Code.c
-27FC text6 CODE >478:Z:\Centraline\ABS\ABS_Code.c
-27FE text6 CODE >479:Z:\Centraline\ABS\ABS_Code.c
-2800 text6 CODE >480:Z:\Centraline\ABS\ABS_Code.c
+2A6A text10 CODE >207:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2A6E text10 CODE >209:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2A72 text10 CODE >211:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+148 text9 CODE >749:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+14C text9 CODE >753:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+15E text9 CODE >755:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+162 text9 CODE >757:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+196 text9 CODE >758:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1A4 text9 CODE >759:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1A8 text9 CODE >761:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1D0 text9 CODE >762:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+202 text9 CODE >763:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+206 text9 CODE >766:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+216 text9 CODE >768:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+21A text9 CODE >770:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+24E text9 CODE >771:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+25C text9 CODE >772:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+260 text9 CODE >774:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+288 text9 CODE >775:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2BA text9 CODE >776:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2BE text9 CODE >779:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2D0 text9 CODE >781:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2D4 text9 CODE >783:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+308 text9 CODE >784:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+316 text9 CODE >785:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+31A text9 CODE >787:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+342 text9 CODE >788:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+374 text9 CODE >789:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+378 text9 CODE >792:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+38A text9 CODE >794:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+38E text9 CODE >796:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+3C2 text9 CODE >797:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+3D0 text9 CODE >798:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+3D4 text9 CODE >800:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+3FC text9 CODE >801:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+42E text9 CODE >802:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+432 text9 CODE >805:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+444 text9 CODE >807:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+448 text9 CODE >809:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+47C text9 CODE >810:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+48A text9 CODE >811:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+48E text9 CODE >813:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+4B6 text9 CODE >814:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+4E8 text9 CODE >815:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+4EC text9 CODE >818:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+4FE text9 CODE >820:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+502 text9 CODE >822:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+536 text9 CODE >823:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+544 text9 CODE >824:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+548 text9 CODE >826:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+570 text9 CODE >827:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+5A2 text9 CODE >828:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+5A6 text9 CODE >832:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+5BA text9 CODE >834:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+5BE text9 CODE >836:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+5CC text9 CODE >837:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+5D0 text9 CODE >839:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+5F8 text9 CODE >840:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+628 text9 CODE >841:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+62C text9 CODE >843:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+632 text9 CODE >844:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+638 text9 CODE >845:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+638 text9 CODE >846:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+63C text9 CODE >848:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+642 text9 CODE >849:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+648 text9 CODE >850:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+648 text9 CODE >851:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+64C text9 CODE >853:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+652 text9 CODE >854:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+658 text9 CODE >855:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+658 text9 CODE >856:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+65C text9 CODE >858:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+662 text9 CODE >859:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+668 text9 CODE >860:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+668 text9 CODE >861:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+66C text9 CODE >863:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+672 text9 CODE >864:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+678 text9 CODE >865:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+678 text9 CODE >866:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+67C text9 CODE >868:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+6B0 text9 CODE >869:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+6BE text9 CODE >870:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+6C2 text9 CODE >873:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+6D4 text9 CODE >875:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+6D8 text9 CODE >877:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+6E6 text9 CODE >878:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+6EA text9 CODE >880:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+712 text9 CODE >881:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+742 text9 CODE >882:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+746 text9 CODE >884:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+74C text9 CODE >885:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+752 text9 CODE >886:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+752 text9 CODE >887:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+756 text9 CODE >889:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+75C text9 CODE >890:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+762 text9 CODE >891:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+762 text9 CODE >892:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+766 text9 CODE >894:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+76C text9 CODE >895:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+772 text9 CODE >896:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+772 text9 CODE >897:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+776 text9 CODE >899:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+77C text9 CODE >900:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+782 text9 CODE >901:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+782 text9 CODE >902:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+786 text9 CODE >904:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+78C text9 CODE >905:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+792 text9 CODE >906:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+792 text9 CODE >907:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+796 text9 CODE >909:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+7CA text9 CODE >910:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+7D8 text9 CODE >911:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+7DC text9 CODE >915:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+7F0 text9 CODE >917:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+7F4 text9 CODE >919:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+802 text9 CODE >920:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+806 text9 CODE >922:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+82E text9 CODE >923:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+85E text9 CODE >924:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+862 text9 CODE >926:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+868 text9 CODE >927:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+86E text9 CODE >928:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+86E text9 CODE >929:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+872 text9 CODE >931:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+878 text9 CODE >932:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+87E text9 CODE >933:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+87E text9 CODE >934:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+882 text9 CODE >936:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+888 text9 CODE >937:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+88E text9 CODE >938:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+88E text9 CODE >939:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+892 text9 CODE >941:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+898 text9 CODE >942:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+89E text9 CODE >943:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+89E text9 CODE >944:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+8A2 text9 CODE >946:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+8A8 text9 CODE >947:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+8AE text9 CODE >948:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+8AE text9 CODE >949:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+8B2 text9 CODE >951:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+8E6 text9 CODE >952:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+8F4 text9 CODE >953:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+8F8 text9 CODE >956:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+90C text9 CODE >958:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+910 text9 CODE >960:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+91E text9 CODE >961:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+922 text9 CODE >963:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+94A text9 CODE >964:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+97A text9 CODE >965:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+97E text9 CODE >967:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+984 text9 CODE >968:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+98A text9 CODE >969:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+98A text9 CODE >970:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+98E text9 CODE >972:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+994 text9 CODE >973:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+99A text9 CODE >974:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+99A text9 CODE >975:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+99E text9 CODE >977:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+9A4 text9 CODE >978:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+9AA text9 CODE >979:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+9AA text9 CODE >980:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+9AE text9 CODE >982:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+9B4 text9 CODE >983:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+9BA text9 CODE >984:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+9BA text9 CODE >985:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+9BE text9 CODE >987:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+9C4 text9 CODE >988:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+9CA text9 CODE >989:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+9CA text9 CODE >990:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+9CE text9 CODE >992:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+A02 text9 CODE >993:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+A10 text9 CODE >994:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+A14 text9 CODE >997:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+A28 text9 CODE >999:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+A2C text9 CODE >1001:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+A3A text9 CODE >1002:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+A3E text9 CODE >1004:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+A66 text9 CODE >1005:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+A96 text9 CODE >1006:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+A9A text9 CODE >1008:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+AA0 text9 CODE >1009:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+AA6 text9 CODE >1010:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+AA6 text9 CODE >1011:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+AAA text9 CODE >1013:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+AB0 text9 CODE >1014:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+AB6 text9 CODE >1015:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+AB6 text9 CODE >1016:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+ABA text9 CODE >1018:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+AC0 text9 CODE >1019:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+AC6 text9 CODE >1020:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+AC6 text9 CODE >1021:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+ACA text9 CODE >1023:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+AD0 text9 CODE >1024:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+AD6 text9 CODE >1025:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+AD6 text9 CODE >1026:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+ADA text9 CODE >1028:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+AE0 text9 CODE >1029:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+AE6 text9 CODE >1030:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+AE6 text9 CODE >1031:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+AEA text9 CODE >1033:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+B1E text9 CODE >1034:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+B2C text9 CODE >1035:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+B30 text9 CODE >1038:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+B44 text9 CODE >1040:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+B48 text9 CODE >1042:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+B56 text9 CODE >1043:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+B5A text9 CODE >1045:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+B82 text9 CODE >1046:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+BB2 text9 CODE >1047:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+BB6 text9 CODE >1049:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+BBC text9 CODE >1050:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+BC2 text9 CODE >1051:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+BC2 text9 CODE >1052:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+BC6 text9 CODE >1054:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+BCC text9 CODE >1055:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+BD2 text9 CODE >1056:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+BD2 text9 CODE >1057:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+BD6 text9 CODE >1059:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+BDC text9 CODE >1060:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+BE2 text9 CODE >1061:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+BE2 text9 CODE >1062:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+BE6 text9 CODE >1064:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+BEC text9 CODE >1065:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+BF2 text9 CODE >1066:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+BF2 text9 CODE >1067:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+BF6 text9 CODE >1069:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+BFC text9 CODE >1070:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+C02 text9 CODE >1071:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+C02 text9 CODE >1072:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+C06 text9 CODE >1074:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+C3A text9 CODE >1075:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+C48 text9 CODE >1076:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+18E6 text8 CODE >641:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+18EA text8 CODE >644:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+18FA text8 CODE >646:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+192E text8 CODE >647:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+193C text8 CODE >648:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1940 text8 CODE >650:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1968 text8 CODE >651:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+199A text8 CODE >652:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+199E text8 CODE >655:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+19B0 text8 CODE >657:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+19E4 text8 CODE >658:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+19F2 text8 CODE >659:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+19F6 text8 CODE >661:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1A1E text8 CODE >662:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1A50 text8 CODE >663:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1A54 text8 CODE >666:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1A66 text8 CODE >668:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1A74 text8 CODE >669:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1A78 text8 CODE >671:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1AA0 text8 CODE >672:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1AD0 text8 CODE >673:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1AD4 text8 CODE >675:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1ADA text8 CODE >676:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1AE0 text8 CODE >677:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1AE0 text8 CODE >678:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1AE4 text8 CODE >680:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1AEA text8 CODE >681:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1AF0 text8 CODE >682:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1AF0 text8 CODE >683:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1AF4 text8 CODE >685:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1AFA text8 CODE >686:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1B00 text8 CODE >687:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1B00 text8 CODE >688:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1B04 text8 CODE >690:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1B0A text8 CODE >691:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1B10 text8 CODE >692:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1B10 text8 CODE >693:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1B14 text8 CODE >695:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1B1A text8 CODE >696:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1B20 text8 CODE >697:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1B20 text8 CODE >698:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1B24 text8 CODE >700:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1B58 text8 CODE >701:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1B66 text8 CODE >702:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1B6A text8 CODE >705:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1B7E text8 CODE >707:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1B8C text8 CODE >708:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1B90 text8 CODE >710:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1BB8 text8 CODE >711:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1BE8 text8 CODE >712:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1BEC text8 CODE >714:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1BF2 text8 CODE >715:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1BF8 text8 CODE >716:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1BF8 text8 CODE >717:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1BFC text8 CODE >719:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1C02 text8 CODE >720:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1C08 text8 CODE >721:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1C08 text8 CODE >722:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1C0C text8 CODE >724:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1C12 text8 CODE >725:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1C18 text8 CODE >726:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1C18 text8 CODE >727:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1C1C text8 CODE >729:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1C22 text8 CODE >730:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1C28 text8 CODE >731:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1C28 text8 CODE >732:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1C2C text8 CODE >734:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1C32 text8 CODE >735:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1C38 text8 CODE >736:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1C38 text8 CODE >737:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1C3C text8 CODE >739:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1C70 text8 CODE >740:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1C7E text8 CODE >741:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+23AC text7 CODE >219:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+23B0 text7 CODE >224:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+23B6 text7 CODE >226:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+23BA text7 CODE >227:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+23BE text7 CODE >228:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+23C2 text7 CODE >230:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+23CE text7 CODE >231:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+23D4 text7 CODE >232:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+23DA text7 CODE >234:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+23E0 text7 CODE >235:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+23EC text7 CODE >236:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+23F2 text7 CODE >238:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+23F6 text7 CODE >239:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+23F8 text7 CODE >241:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+23FC text7 CODE >242:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+23FE text7 CODE >244:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2404 text7 CODE >246:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2408 text7 CODE >247:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+240A text7 CODE >252:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2412 text7 CODE >253:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+241C text7 CODE >254:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+241E text7 CODE >256:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2422 text7 CODE >260:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2440 text7 CODE >261:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+245E text7 CODE >264:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2460 text7 CODE >267:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2468 text7 CODE >271:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2468 text7 CODE >272:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+246C text7 CODE >273:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2470 text7 CODE >274:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2472 text7 CODE >275:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2472 text7 CODE >276:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2476 text7 CODE >277:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+247C text7 CODE >279:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+247E text7 CODE >264:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+24C2 text7 CODE >281:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+24DE text7 CODE >282:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+24FA text7 CODE >283:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2516 text7 CODE >284:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2532 text7 CODE >285:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+254E text7 CODE >286:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+256A text7 CODE >288:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2570 text7 CODE >290:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+274A text6 CODE >396:D:\Documenti\GitHub\ABS\ABS_Code.c
+274A text6 CODE >398:D:\Documenti\GitHub\ABS\ABS_Code.c
+274E text6 CODE >399:D:\Documenti\GitHub\ABS\ABS_Code.c
+2752 text6 CODE >400:D:\Documenti\GitHub\ABS\ABS_Code.c
+2756 text6 CODE >401:D:\Documenti\GitHub\ABS\ABS_Code.c
+2758 text6 CODE >402:D:\Documenti\GitHub\ABS\ABS_Code.c
+275C text6 CODE >403:D:\Documenti\GitHub\ABS\ABS_Code.c
+2760 text6 CODE >404:D:\Documenti\GitHub\ABS\ABS_Code.c
+2764 text6 CODE >405:D:\Documenti\GitHub\ABS\ABS_Code.c
+2766 text6 CODE >406:D:\Documenti\GitHub\ABS\ABS_Code.c
+276A text6 CODE >407:D:\Documenti\GitHub\ABS\ABS_Code.c
+276C text6 CODE >409:D:\Documenti\GitHub\ABS\ABS_Code.c
+2770 text6 CODE >412:D:\Documenti\GitHub\ABS\ABS_Code.c
+2794 text6 CODE >415:D:\Documenti\GitHub\ABS\ABS_Code.c
+2796 text6 CODE >416:D:\Documenti\GitHub\ABS\ABS_Code.c
+2798 text6 CODE >417:D:\Documenti\GitHub\ABS\ABS_Code.c
+279A text6 CODE >418:D:\Documenti\GitHub\ABS\ABS_Code.c
+279C text6 CODE >419:D:\Documenti\GitHub\ABS\ABS_Code.c
+279E text6 CODE >420:D:\Documenti\GitHub\ABS\ABS_Code.c
+27A0 text6 CODE >421:D:\Documenti\GitHub\ABS\ABS_Code.c
+27A2 text6 CODE >425:D:\Documenti\GitHub\ABS\ABS_Code.c
+27A4 text6 CODE >426:D:\Documenti\GitHub\ABS\ABS_Code.c
+27A6 text6 CODE >427:D:\Documenti\GitHub\ABS\ABS_Code.c
+27A8 text6 CODE >428:D:\Documenti\GitHub\ABS\ABS_Code.c
+27AA text6 CODE >429:D:\Documenti\GitHub\ABS\ABS_Code.c
+27AC text6 CODE >430:D:\Documenti\GitHub\ABS\ABS_Code.c
+27AE text6 CODE >431:D:\Documenti\GitHub\ABS\ABS_Code.c
+27B0 text6 CODE >434:D:\Documenti\GitHub\ABS\ABS_Code.c
+27B4 text6 CODE >441:D:\Documenti\GitHub\ABS\ABS_Code.c
+27B6 text6 CODE >442:D:\Documenti\GitHub\ABS\ABS_Code.c
+27BA text6 CODE >443:D:\Documenti\GitHub\ABS\ABS_Code.c
+27BC text6 CODE >444:D:\Documenti\GitHub\ABS\ABS_Code.c
+27C0 text6 CODE >445:D:\Documenti\GitHub\ABS\ABS_Code.c
+27C4 text6 CODE >446:D:\Documenti\GitHub\ABS\ABS_Code.c
+27C8 text6 CODE >447:D:\Documenti\GitHub\ABS\ABS_Code.c
+27CA text6 CODE >448:D:\Documenti\GitHub\ABS\ABS_Code.c
+27CC text6 CODE >451:D:\Documenti\GitHub\ABS\ABS_Code.c
+27D0 text6 CODE >452:D:\Documenti\GitHub\ABS\ABS_Code.c
+27D2 text6 CODE >453:D:\Documenti\GitHub\ABS\ABS_Code.c
+27D4 text6 CODE >454:D:\Documenti\GitHub\ABS\ABS_Code.c
+27D6 text6 CODE >455:D:\Documenti\GitHub\ABS\ABS_Code.c
+27D8 text6 CODE >456:D:\Documenti\GitHub\ABS\ABS_Code.c
+27DA text6 CODE >457:D:\Documenti\GitHub\ABS\ABS_Code.c
+27DC text6 CODE >458:D:\Documenti\GitHub\ABS\ABS_Code.c
+27DE text6 CODE >459:D:\Documenti\GitHub\ABS\ABS_Code.c
+27E0 text6 CODE >460:D:\Documenti\GitHub\ABS\ABS_Code.c
+27E2 text6 CODE >461:D:\Documenti\GitHub\ABS\ABS_Code.c
+27E4 text6 CODE >462:D:\Documenti\GitHub\ABS\ABS_Code.c
+27E6 text6 CODE >463:D:\Documenti\GitHub\ABS\ABS_Code.c
+27E8 text6 CODE >466:D:\Documenti\GitHub\ABS\ABS_Code.c
+27EA text6 CODE >467:D:\Documenti\GitHub\ABS\ABS_Code.c
+27EC text6 CODE >468:D:\Documenti\GitHub\ABS\ABS_Code.c
+27EE text6 CODE >469:D:\Documenti\GitHub\ABS\ABS_Code.c
+27F0 text6 CODE >470:D:\Documenti\GitHub\ABS\ABS_Code.c
+27F2 text6 CODE >471:D:\Documenti\GitHub\ABS\ABS_Code.c
+27F4 text6 CODE >472:D:\Documenti\GitHub\ABS\ABS_Code.c
+27F6 text6 CODE >473:D:\Documenti\GitHub\ABS\ABS_Code.c
+27F8 text6 CODE >474:D:\Documenti\GitHub\ABS\ABS_Code.c
+27FA text6 CODE >477:D:\Documenti\GitHub\ABS\ABS_Code.c
+27FC text6 CODE >478:D:\Documenti\GitHub\ABS\ABS_Code.c
+27FE text6 CODE >479:D:\Documenti\GitHub\ABS\ABS_Code.c
+2800 text6 CODE >480:D:\Documenti\GitHub\ABS\ABS_Code.c
 29EA text5 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
 29EA text5 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
 29FA text5 CODE >38:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
 2A08 text5 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
 2A16 text5 CODE >52:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
-29B0 text4 CODE >61:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/src\delay.c
-29B0 text4 CODE >73:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/src\delay.c
-29CC text4 CODE >75:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/src\delay.c
-29CE text4 CODE >85:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/src\delay.c
-29D4 text4 CODE >88:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/src\delay.c
-29DC text4 CODE >75:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/src\delay.c
-29DC text4 CODE >89:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/src\delay.c
-2A46 text3 CODE >1154:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-2A46 text3 CODE >1156:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-C4E text2 CODE >294:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-C4E text2 CODE >298:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-C54 text2 CODE >299:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-C58 text2 CODE >300:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-C5E text2 CODE >301:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-C64 text2 CODE >302:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-C64 text2 CODE >303:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-C68 text2 CODE >305:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-C6E text2 CODE >308:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-C7C text2 CODE >309:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-C80 text2 CODE >311:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-CA8 text2 CODE >312:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-CD8 text2 CODE >313:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-CDC text2 CODE >315:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-CE2 text2 CODE >316:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-CE6 text2 CODE >318:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-CEC text2 CODE >319:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-CF0 text2 CODE >320:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-CF6 text2 CODE >321:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-CFA text2 CODE >322:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-D00 text2 CODE >323:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-D04 text2 CODE >324:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-D0A text2 CODE >325:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-D0E text2 CODE >326:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-D14 text2 CODE >327:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-D18 text2 CODE >329:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-D4C text2 CODE >330:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-D5A text2 CODE >331:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-D5E text2 CODE >332:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-D60 text2 CODE >334:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-D60 text2 CODE >337:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-D64 text2 CODE >339:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-D98 text2 CODE >340:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-DA6 text2 CODE >341:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-DAA text2 CODE >343:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-DD2 text2 CODE >344:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-E04 text2 CODE >345:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-E0E text2 CODE >346:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-E12 text2 CODE >349:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-E18 text2 CODE >350:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-E1E text2 CODE >351:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-E1E text2 CODE >352:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-E22 text2 CODE >353:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-E28 text2 CODE >354:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-E2E text2 CODE >355:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-E2E text2 CODE >356:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-E32 text2 CODE >358:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-E40 text2 CODE >359:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-E54 text2 CODE >360:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-E68 text2 CODE >361:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-E7C text2 CODE >362:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-E90 text2 CODE >363:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-EA4 text2 CODE >364:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-EB8 text2 CODE >365:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-ECC text2 CODE >367:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-ED0 text2 CODE >368:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-ED2 text2 CODE >369:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-ED2 text2 CODE >373:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-ED8 text2 CODE >374:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-EDC text2 CODE >376:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-EE2 text2 CODE >377:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-EE8 text2 CODE >378:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-EE8 text2 CODE >379:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-EEC text2 CODE >381:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-EF2 text2 CODE >383:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-F00 text2 CODE >384:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-F04 text2 CODE >386:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-F2C text2 CODE >387:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-F5C text2 CODE >388:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-F60 text2 CODE >390:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-F66 text2 CODE >391:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-F6A text2 CODE >393:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-F70 text2 CODE >394:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-F74 text2 CODE >395:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-F7A text2 CODE >396:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-F7E text2 CODE >397:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-F84 text2 CODE >398:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-F88 text2 CODE >399:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-F8E text2 CODE >400:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-F92 text2 CODE >401:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-F98 text2 CODE >402:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-F9C text2 CODE >404:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-FD0 text2 CODE >405:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-FDE text2 CODE >406:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-FE2 text2 CODE >407:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-FE4 text2 CODE >409:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-FE4 text2 CODE >412:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-FE8 text2 CODE >414:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-101C text2 CODE >415:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-102A text2 CODE >416:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-102E text2 CODE >418:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1056 text2 CODE >419:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1088 text2 CODE >420:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1092 text2 CODE >421:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1096 text2 CODE >424:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-109C text2 CODE >425:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-10A2 text2 CODE >426:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-10A2 text2 CODE >427:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-10A6 text2 CODE >428:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-10AC text2 CODE >429:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-10B2 text2 CODE >430:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-10B2 text2 CODE >431:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-10B6 text2 CODE >433:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-10C4 text2 CODE >434:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-10D8 text2 CODE >435:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-10EC text2 CODE >436:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1100 text2 CODE >437:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1114 text2 CODE >438:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1128 text2 CODE >439:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-113C text2 CODE >440:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1150 text2 CODE >442:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1154 text2 CODE >444:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1156 text2 CODE >445:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1156 text2 CODE >449:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-115C text2 CODE >450:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1160 text2 CODE >452:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1166 text2 CODE >453:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-116C text2 CODE >454:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-116C text2 CODE >455:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1170 text2 CODE >457:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1176 text2 CODE >459:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1184 text2 CODE >460:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1188 text2 CODE >462:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-11B0 text2 CODE >463:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-11E0 text2 CODE >464:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-11E4 text2 CODE >466:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-11EA text2 CODE >467:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-11EE text2 CODE >469:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-11F4 text2 CODE >470:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-11F8 text2 CODE >471:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-11FE text2 CODE >472:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1202 text2 CODE >473:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1208 text2 CODE >474:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-120C text2 CODE >475:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1212 text2 CODE >476:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1216 text2 CODE >477:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-121C text2 CODE >478:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1220 text2 CODE >480:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1254 text2 CODE >481:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1262 text2 CODE >482:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1266 text2 CODE >483:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1268 text2 CODE >485:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1268 text2 CODE >488:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-126C text2 CODE >490:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-12A0 text2 CODE >491:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-12AE text2 CODE >492:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-12B2 text2 CODE >494:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-12DA text2 CODE >495:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-130C text2 CODE >496:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1316 text2 CODE >497:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-131A text2 CODE >500:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1320 text2 CODE >501:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1326 text2 CODE >502:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1326 text2 CODE >503:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-132A text2 CODE >504:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1330 text2 CODE >505:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1336 text2 CODE >506:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1336 text2 CODE >507:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-133A text2 CODE >509:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1348 text2 CODE >510:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-135C text2 CODE >511:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1370 text2 CODE >512:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1384 text2 CODE >513:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-1398 text2 CODE >514:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-13AC text2 CODE >515:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-13C0 text2 CODE >516:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-13D4 text2 CODE >518:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-13D8 text2 CODE >520:Z:\Centraline/LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
-21DA text1 CODE >351:Z:\Centraline\ABS\ABS_Code.c
-21DA text1 CODE >352:Z:\Centraline\ABS\ABS_Code.c
-21E4 text1 CODE >353:Z:\Centraline\ABS\ABS_Code.c
-21FA text1 CODE >354:Z:\Centraline\ABS\ABS_Code.c
-2200 text1 CODE >355:Z:\Centraline\ABS\ABS_Code.c
-222E text1 CODE >356:Z:\Centraline\ABS\ABS_Code.c
-224E text1 CODE >358:Z:\Centraline\ABS\ABS_Code.c
-2264 text1 CODE >359:Z:\Centraline\ABS\ABS_Code.c
-2290 text1 CODE >361:Z:\Centraline\ABS\ABS_Code.c
-22A6 text1 CODE >362:Z:\Centraline\ABS\ABS_Code.c
-22B8 text1 CODE >363:Z:\Centraline\ABS\ABS_Code.c
-22CA text1 CODE >364:Z:\Centraline\ABS\ABS_Code.c
-22CC text1 CODE >366:Z:\Centraline\ABS\ABS_Code.c
-22E2 text1 CODE >367:Z:\Centraline\ABS\ABS_Code.c
-22FE text1 CODE >368:Z:\Centraline\ABS\ABS_Code.c
-231A text1 CODE >369:Z:\Centraline\ABS\ABS_Code.c
-231C text1 CODE >370:Z:\Centraline\ABS\ABS_Code.c
-2320 text1 CODE >371:Z:\Centraline\ABS\ABS_Code.c
-2328 text1 CODE >372:Z:\Centraline\ABS\ABS_Code.c
-232C text1 CODE >373:Z:\Centraline\ABS\ABS_Code.c
-2334 text1 CODE >374:Z:\Centraline\ABS\ABS_Code.c
-2360 text1 CODE >376:Z:\Centraline\ABS\ABS_Code.c
-2364 text1 CODE >377:Z:\Centraline\ABS\ABS_Code.c
-2392 text1 CODE >379:Z:\Centraline\ABS\ABS_Code.c
-239E text1 CODE >380:Z:\Centraline\ABS\ABS_Code.c
-23A0 text1 CODE >381:Z:\Centraline\ABS\ABS_Code.c
-23A2 text1 CODE >382:Z:\Centraline\ABS\ABS_Code.c
-23A4 text1 CODE >383:Z:\Centraline\ABS\ABS_Code.c
-23A6 text1 CODE >385:Z:\Centraline\ABS\ABS_Code.c
-23A8 text1 CODE >386:Z:\Centraline\ABS\ABS_Code.c
-1C84 text0 CODE >254:Z:\Centraline\ABS\ABS_Code.c
-1C84 text0 CODE >255:Z:\Centraline\ABS\ABS_Code.c
-1C88 text0 CODE >256:Z:\Centraline\ABS\ABS_Code.c
-1C8E text0 CODE >259:Z:\Centraline\ABS\ABS_Code.c
-1C90 text0 CODE >260:Z:\Centraline\ABS\ABS_Code.c
-1C92 text0 CODE >261:Z:\Centraline\ABS\ABS_Code.c
-1CA0 text0 CODE >262:Z:\Centraline\ABS\ABS_Code.c
-1CA2 text0 CODE >263:Z:\Centraline\ABS\ABS_Code.c
-1CA4 text0 CODE >264:Z:\Centraline\ABS\ABS_Code.c
-1CB2 text0 CODE >268:Z:\Centraline\ABS\ABS_Code.c
-1CC6 text0 CODE >269:Z:\Centraline\ABS\ABS_Code.c
-1CC8 text0 CODE >270:Z:\Centraline\ABS\ABS_Code.c
-1CCA text0 CODE >271:Z:\Centraline\ABS\ABS_Code.c
-1CCC text0 CODE >272:Z:\Centraline\ABS\ABS_Code.c
-1CCE text0 CODE >273:Z:\Centraline\ABS\ABS_Code.c
-1CD0 text0 CODE >274:Z:\Centraline\ABS\ABS_Code.c
-1CD0 text0 CODE >277:Z:\Centraline\ABS\ABS_Code.c
-1CD4 text0 CODE >278:Z:\Centraline\ABS\ABS_Code.c
-1D18 text0 CODE >279:Z:\Centraline\ABS\ABS_Code.c
-1D54 text0 CODE >280:Z:\Centraline\ABS\ABS_Code.c
-1D56 text0 CODE >281:Z:\Centraline\ABS\ABS_Code.c
-1D58 text0 CODE >282:Z:\Centraline\ABS\ABS_Code.c
-1D5A text0 CODE >284:Z:\Centraline\ABS\ABS_Code.c
-1D5A text0 CODE >286:Z:\Centraline\ABS\ABS_Code.c
-1D62 text0 CODE >287:Z:\Centraline\ABS\ABS_Code.c
-1D64 text0 CODE >288:Z:\Centraline\ABS\ABS_Code.c
-1D68 text0 CODE >292:Z:\Centraline\ABS\ABS_Code.c
-1D70 text0 CODE >293:Z:\Centraline\ABS\ABS_Code.c
-1D78 text0 CODE >294:Z:\Centraline\ABS\ABS_Code.c
-1D7E text0 CODE >296:Z:\Centraline\ABS\ABS_Code.c
-1D86 text0 CODE >297:Z:\Centraline\ABS\ABS_Code.c
-1D8C text0 CODE >299:Z:\Centraline\ABS\ABS_Code.c
-1D96 text0 CODE >300:Z:\Centraline\ABS\ABS_Code.c
-1D9C text0 CODE >302:Z:\Centraline\ABS\ABS_Code.c
-1DA6 text0 CODE >303:Z:\Centraline\ABS\ABS_Code.c
-1DAA text0 CODE >305:Z:\Centraline\ABS\ABS_Code.c
-1DAC text0 CODE >306:Z:\Centraline\ABS\ABS_Code.c
-1DB0 text0 CODE >310:Z:\Centraline\ABS\ABS_Code.c
-1DE2 text0 CODE >311:Z:\Centraline\ABS\ABS_Code.c
-1DE6 text0 CODE >312:Z:\Centraline\ABS\ABS_Code.c
-1DEA text0 CODE >314:Z:\Centraline\ABS\ABS_Code.c
-1E0C text0 CODE >315:Z:\Centraline\ABS\ABS_Code.c
-1E2C text0 CODE >319:Z:\Centraline\ABS\ABS_Code.c
-1E34 text0 CODE >320:Z:\Centraline\ABS\ABS_Code.c
-1E38 text0 CODE >321:Z:\Centraline\ABS\ABS_Code.c
-1E4A text0 CODE >322:Z:\Centraline\ABS\ABS_Code.c
-1E4C text0 CODE >323:Z:\Centraline\ABS\ABS_Code.c
-1E4E text0 CODE >324:Z:\Centraline\ABS\ABS_Code.c
-1EA4 text0 CODE >326:Z:\Centraline\ABS\ABS_Code.c
-1EA8 text0 CODE >327:Z:\Centraline\ABS\ABS_Code.c
-1EAC text0 CODE >328:Z:\Centraline\ABS\ABS_Code.c
-1EAE text0 CODE >332:Z:\Centraline\ABS\ABS_Code.c
-1EB6 text0 CODE >333:Z:\Centraline\ABS\ABS_Code.c
-1EBA text0 CODE >334:Z:\Centraline\ABS\ABS_Code.c
-1ECC text0 CODE >335:Z:\Centraline\ABS\ABS_Code.c
-1ECE text0 CODE >336:Z:\Centraline\ABS\ABS_Code.c
-1ED0 text0 CODE >337:Z:\Centraline\ABS\ABS_Code.c
-1F26 text0 CODE >339:Z:\Centraline\ABS\ABS_Code.c
-1F2A text0 CODE >340:Z:\Centraline\ABS\ABS_Code.c
-1F2E text0 CODE >341:Z:\Centraline\ABS\ABS_Code.c
-1F30 text0 CODE >266:Z:\Centraline\ABS\ABS_Code.c
-2966 cinit CODE >1470:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-2966 cinit CODE >1472:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-2966 cinit CODE >1475:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-2966 cinit CODE >1622:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-296A cinit CODE >1623:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-296C cinit CODE >1624:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-296C cinit CODE >1625:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-296E cinit CODE >1626:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-2970 cinit CODE >1627:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-2972 cinit CODE >1630:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-2974 cinit CODE >1631:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-2976 cinit CODE >1634:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-297A cinit CODE >1635:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-297C cinit CODE >1636:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-297C cinit CODE >1637:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-297E cinit CODE >1638:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-2980 cinit CODE >1639:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-2982 cinit CODE >1644:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-2984 cinit CODE >1645:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-2986 cinit CODE >1646:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-2988 cinit CODE >1647:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-298A cinit CODE >1648:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-298C cinit CODE >1649:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-298E cinit CODE >1650:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-2992 cinit CODE >1651:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-2996 cinit CODE >1652:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-2996 cinit CODE >1653:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-2998 cinit CODE >1654:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-299C cinit CODE >1655:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-299E cinit CODE >1656:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-29A0 cinit CODE >1657:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-29A2 cinit CODE >1663:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-29A2 cinit CODE >1665:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-29A4 cinit CODE >1666:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-29A6 cinit CODE >1668:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-29A8 cinit CODE >1669:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-29AA cinit CODE >1670:C:\Users\Massimo\AppData\Local\Temp\s5v8.
-29AC cinit CODE >1671:C:\Users\Massimo\AppData\Local\Temp\s5v8.
+29B0 text4 CODE >61:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/src\delay.c
+29B0 text4 CODE >73:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/src\delay.c
+29CC text4 CODE >75:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/src\delay.c
+29CE text4 CODE >85:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/src\delay.c
+29D4 text4 CODE >88:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/src\delay.c
+29DC text4 CODE >75:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/src\delay.c
+29DC text4 CODE >89:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/src\delay.c
+2A46 text3 CODE >1155:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+2A46 text3 CODE >1157:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+C4E text2 CODE >295:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+C4E text2 CODE >299:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+C54 text2 CODE >300:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+C58 text2 CODE >301:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+C5E text2 CODE >302:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+C64 text2 CODE >303:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+C64 text2 CODE >304:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+C68 text2 CODE >306:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+C6E text2 CODE >309:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+C7C text2 CODE >310:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+C80 text2 CODE >312:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+CA8 text2 CODE >313:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+CD8 text2 CODE >314:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+CDC text2 CODE >316:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+CE2 text2 CODE >317:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+CE6 text2 CODE >319:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+CEC text2 CODE >320:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+CF0 text2 CODE >321:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+CF6 text2 CODE >322:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+CFA text2 CODE >323:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+D00 text2 CODE >324:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+D04 text2 CODE >325:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+D0A text2 CODE >326:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+D0E text2 CODE >327:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+D14 text2 CODE >328:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+D18 text2 CODE >330:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+D4C text2 CODE >331:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+D5A text2 CODE >332:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+D5E text2 CODE >333:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+D60 text2 CODE >335:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+D60 text2 CODE >338:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+D64 text2 CODE >340:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+D98 text2 CODE >341:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+DA6 text2 CODE >342:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+DAA text2 CODE >344:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+DD2 text2 CODE >345:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+E04 text2 CODE >346:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+E0E text2 CODE >347:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+E12 text2 CODE >350:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+E18 text2 CODE >351:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+E1E text2 CODE >352:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+E1E text2 CODE >353:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+E22 text2 CODE >354:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+E28 text2 CODE >355:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+E2E text2 CODE >356:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+E2E text2 CODE >357:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+E32 text2 CODE >359:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+E40 text2 CODE >360:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+E54 text2 CODE >361:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+E68 text2 CODE >362:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+E7C text2 CODE >363:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+E90 text2 CODE >364:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+EA4 text2 CODE >365:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+EB8 text2 CODE >366:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+ECC text2 CODE >368:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+ED0 text2 CODE >369:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+ED2 text2 CODE >370:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+ED2 text2 CODE >374:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+ED8 text2 CODE >375:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+EDC text2 CODE >377:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+EE2 text2 CODE >378:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+EE8 text2 CODE >379:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+EE8 text2 CODE >380:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+EEC text2 CODE >382:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+EF2 text2 CODE >384:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+F00 text2 CODE >385:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+F04 text2 CODE >387:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+F2C text2 CODE >388:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+F5C text2 CODE >389:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+F60 text2 CODE >391:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+F66 text2 CODE >392:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+F6A text2 CODE >394:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+F70 text2 CODE >395:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+F74 text2 CODE >396:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+F7A text2 CODE >397:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+F7E text2 CODE >398:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+F84 text2 CODE >399:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+F88 text2 CODE >400:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+F8E text2 CODE >401:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+F92 text2 CODE >402:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+F98 text2 CODE >403:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+F9C text2 CODE >405:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+FD0 text2 CODE >406:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+FDE text2 CODE >407:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+FE2 text2 CODE >408:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+FE4 text2 CODE >410:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+FE4 text2 CODE >413:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+FE8 text2 CODE >415:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+101C text2 CODE >416:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+102A text2 CODE >417:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+102E text2 CODE >419:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1056 text2 CODE >420:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1088 text2 CODE >421:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1092 text2 CODE >422:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1096 text2 CODE >425:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+109C text2 CODE >426:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+10A2 text2 CODE >427:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+10A2 text2 CODE >428:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+10A6 text2 CODE >429:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+10AC text2 CODE >430:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+10B2 text2 CODE >431:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+10B2 text2 CODE >432:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+10B6 text2 CODE >434:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+10C4 text2 CODE >435:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+10D8 text2 CODE >436:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+10EC text2 CODE >437:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1100 text2 CODE >438:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1114 text2 CODE >439:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1128 text2 CODE >440:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+113C text2 CODE >441:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1150 text2 CODE >443:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1154 text2 CODE >445:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1156 text2 CODE >446:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1156 text2 CODE >450:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+115C text2 CODE >451:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1160 text2 CODE >453:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1166 text2 CODE >454:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+116C text2 CODE >455:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+116C text2 CODE >456:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1170 text2 CODE >458:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1176 text2 CODE >460:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1184 text2 CODE >461:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1188 text2 CODE >463:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+11B0 text2 CODE >464:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+11E0 text2 CODE >465:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+11E4 text2 CODE >467:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+11EA text2 CODE >468:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+11EE text2 CODE >470:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+11F4 text2 CODE >471:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+11F8 text2 CODE >472:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+11FE text2 CODE >473:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1202 text2 CODE >474:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1208 text2 CODE >475:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+120C text2 CODE >476:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1212 text2 CODE >477:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1216 text2 CODE >478:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+121C text2 CODE >479:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1220 text2 CODE >481:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1254 text2 CODE >482:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1262 text2 CODE >483:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1266 text2 CODE >484:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1268 text2 CODE >486:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1268 text2 CODE >489:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+126C text2 CODE >491:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+12A0 text2 CODE >492:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+12AE text2 CODE >493:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+12B2 text2 CODE >495:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+12DA text2 CODE >496:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+130C text2 CODE >497:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1316 text2 CODE >498:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+131A text2 CODE >501:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1320 text2 CODE >502:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1326 text2 CODE >503:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1326 text2 CODE >504:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+132A text2 CODE >505:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1330 text2 CODE >506:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1336 text2 CODE >507:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1336 text2 CODE >508:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+133A text2 CODE >510:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1348 text2 CODE >511:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+135C text2 CODE >512:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1370 text2 CODE >513:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1384 text2 CODE >514:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+1398 text2 CODE >515:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+13AC text2 CODE >516:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+13C0 text2 CODE >517:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+13D4 text2 CODE >519:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+13D8 text2 CODE >521:D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+21DA text1 CODE >351:D:\Documenti\GitHub\ABS\ABS_Code.c
+21DA text1 CODE >352:D:\Documenti\GitHub\ABS\ABS_Code.c
+21E4 text1 CODE >353:D:\Documenti\GitHub\ABS\ABS_Code.c
+21FA text1 CODE >354:D:\Documenti\GitHub\ABS\ABS_Code.c
+2200 text1 CODE >355:D:\Documenti\GitHub\ABS\ABS_Code.c
+222E text1 CODE >356:D:\Documenti\GitHub\ABS\ABS_Code.c
+224E text1 CODE >358:D:\Documenti\GitHub\ABS\ABS_Code.c
+2264 text1 CODE >359:D:\Documenti\GitHub\ABS\ABS_Code.c
+2290 text1 CODE >361:D:\Documenti\GitHub\ABS\ABS_Code.c
+22A6 text1 CODE >362:D:\Documenti\GitHub\ABS\ABS_Code.c
+22B8 text1 CODE >363:D:\Documenti\GitHub\ABS\ABS_Code.c
+22CA text1 CODE >364:D:\Documenti\GitHub\ABS\ABS_Code.c
+22CC text1 CODE >366:D:\Documenti\GitHub\ABS\ABS_Code.c
+22E2 text1 CODE >367:D:\Documenti\GitHub\ABS\ABS_Code.c
+22FE text1 CODE >368:D:\Documenti\GitHub\ABS\ABS_Code.c
+231A text1 CODE >369:D:\Documenti\GitHub\ABS\ABS_Code.c
+231C text1 CODE >370:D:\Documenti\GitHub\ABS\ABS_Code.c
+2320 text1 CODE >371:D:\Documenti\GitHub\ABS\ABS_Code.c
+2328 text1 CODE >372:D:\Documenti\GitHub\ABS\ABS_Code.c
+232C text1 CODE >373:D:\Documenti\GitHub\ABS\ABS_Code.c
+2334 text1 CODE >374:D:\Documenti\GitHub\ABS\ABS_Code.c
+2360 text1 CODE >376:D:\Documenti\GitHub\ABS\ABS_Code.c
+2364 text1 CODE >377:D:\Documenti\GitHub\ABS\ABS_Code.c
+2392 text1 CODE >379:D:\Documenti\GitHub\ABS\ABS_Code.c
+239E text1 CODE >380:D:\Documenti\GitHub\ABS\ABS_Code.c
+23A0 text1 CODE >381:D:\Documenti\GitHub\ABS\ABS_Code.c
+23A2 text1 CODE >382:D:\Documenti\GitHub\ABS\ABS_Code.c
+23A4 text1 CODE >383:D:\Documenti\GitHub\ABS\ABS_Code.c
+23A6 text1 CODE >385:D:\Documenti\GitHub\ABS\ABS_Code.c
+23A8 text1 CODE >386:D:\Documenti\GitHub\ABS\ABS_Code.c
+1C84 text0 CODE >254:D:\Documenti\GitHub\ABS\ABS_Code.c
+1C84 text0 CODE >255:D:\Documenti\GitHub\ABS\ABS_Code.c
+1C88 text0 CODE >256:D:\Documenti\GitHub\ABS\ABS_Code.c
+1C8E text0 CODE >259:D:\Documenti\GitHub\ABS\ABS_Code.c
+1C90 text0 CODE >260:D:\Documenti\GitHub\ABS\ABS_Code.c
+1C92 text0 CODE >261:D:\Documenti\GitHub\ABS\ABS_Code.c
+1CA0 text0 CODE >262:D:\Documenti\GitHub\ABS\ABS_Code.c
+1CA2 text0 CODE >263:D:\Documenti\GitHub\ABS\ABS_Code.c
+1CA4 text0 CODE >264:D:\Documenti\GitHub\ABS\ABS_Code.c
+1CB2 text0 CODE >268:D:\Documenti\GitHub\ABS\ABS_Code.c
+1CC6 text0 CODE >269:D:\Documenti\GitHub\ABS\ABS_Code.c
+1CC8 text0 CODE >270:D:\Documenti\GitHub\ABS\ABS_Code.c
+1CCA text0 CODE >271:D:\Documenti\GitHub\ABS\ABS_Code.c
+1CCC text0 CODE >272:D:\Documenti\GitHub\ABS\ABS_Code.c
+1CCE text0 CODE >273:D:\Documenti\GitHub\ABS\ABS_Code.c
+1CD0 text0 CODE >274:D:\Documenti\GitHub\ABS\ABS_Code.c
+1CD0 text0 CODE >277:D:\Documenti\GitHub\ABS\ABS_Code.c
+1CD4 text0 CODE >278:D:\Documenti\GitHub\ABS\ABS_Code.c
+1D18 text0 CODE >279:D:\Documenti\GitHub\ABS\ABS_Code.c
+1D54 text0 CODE >280:D:\Documenti\GitHub\ABS\ABS_Code.c
+1D56 text0 CODE >281:D:\Documenti\GitHub\ABS\ABS_Code.c
+1D58 text0 CODE >282:D:\Documenti\GitHub\ABS\ABS_Code.c
+1D5A text0 CODE >284:D:\Documenti\GitHub\ABS\ABS_Code.c
+1D5A text0 CODE >286:D:\Documenti\GitHub\ABS\ABS_Code.c
+1D62 text0 CODE >287:D:\Documenti\GitHub\ABS\ABS_Code.c
+1D64 text0 CODE >288:D:\Documenti\GitHub\ABS\ABS_Code.c
+1D68 text0 CODE >292:D:\Documenti\GitHub\ABS\ABS_Code.c
+1D70 text0 CODE >293:D:\Documenti\GitHub\ABS\ABS_Code.c
+1D7A text0 CODE >294:D:\Documenti\GitHub\ABS\ABS_Code.c
+1D80 text0 CODE >296:D:\Documenti\GitHub\ABS\ABS_Code.c
+1D8A text0 CODE >297:D:\Documenti\GitHub\ABS\ABS_Code.c
+1D90 text0 CODE >299:D:\Documenti\GitHub\ABS\ABS_Code.c
+1D98 text0 CODE >300:D:\Documenti\GitHub\ABS\ABS_Code.c
+1D9E text0 CODE >301:D:\Documenti\GitHub\ABS\ABS_Code.c
+1D9E text0 CODE >302:D:\Documenti\GitHub\ABS\ABS_Code.c
+1DA6 text0 CODE >303:D:\Documenti\GitHub\ABS\ABS_Code.c
+1DAA text0 CODE >305:D:\Documenti\GitHub\ABS\ABS_Code.c
+1DAC text0 CODE >306:D:\Documenti\GitHub\ABS\ABS_Code.c
+1DB0 text0 CODE >310:D:\Documenti\GitHub\ABS\ABS_Code.c
+1DE2 text0 CODE >311:D:\Documenti\GitHub\ABS\ABS_Code.c
+1DE6 text0 CODE >312:D:\Documenti\GitHub\ABS\ABS_Code.c
+1DEA text0 CODE >314:D:\Documenti\GitHub\ABS\ABS_Code.c
+1E0C text0 CODE >315:D:\Documenti\GitHub\ABS\ABS_Code.c
+1E2C text0 CODE >319:D:\Documenti\GitHub\ABS\ABS_Code.c
+1E34 text0 CODE >320:D:\Documenti\GitHub\ABS\ABS_Code.c
+1E38 text0 CODE >321:D:\Documenti\GitHub\ABS\ABS_Code.c
+1E4A text0 CODE >322:D:\Documenti\GitHub\ABS\ABS_Code.c
+1E4C text0 CODE >323:D:\Documenti\GitHub\ABS\ABS_Code.c
+1E4E text0 CODE >324:D:\Documenti\GitHub\ABS\ABS_Code.c
+1EA4 text0 CODE >326:D:\Documenti\GitHub\ABS\ABS_Code.c
+1EA8 text0 CODE >327:D:\Documenti\GitHub\ABS\ABS_Code.c
+1EAC text0 CODE >328:D:\Documenti\GitHub\ABS\ABS_Code.c
+1EAE text0 CODE >332:D:\Documenti\GitHub\ABS\ABS_Code.c
+1EB6 text0 CODE >333:D:\Documenti\GitHub\ABS\ABS_Code.c
+1EBA text0 CODE >334:D:\Documenti\GitHub\ABS\ABS_Code.c
+1ECC text0 CODE >335:D:\Documenti\GitHub\ABS\ABS_Code.c
+1ECE text0 CODE >336:D:\Documenti\GitHub\ABS\ABS_Code.c
+1ED0 text0 CODE >337:D:\Documenti\GitHub\ABS\ABS_Code.c
+1F26 text0 CODE >339:D:\Documenti\GitHub\ABS\ABS_Code.c
+1F2A text0 CODE >340:D:\Documenti\GitHub\ABS\ABS_Code.c
+1F2E text0 CODE >341:D:\Documenti\GitHub\ABS\ABS_Code.c
+1F30 text0 CODE >266:D:\Documenti\GitHub\ABS\ABS_Code.c
+2966 cinit CODE >1470:C:\Users\Simone\AppData\Local\Temp\s62k.
+2966 cinit CODE >1472:C:\Users\Simone\AppData\Local\Temp\s62k.
+2966 cinit CODE >1475:C:\Users\Simone\AppData\Local\Temp\s62k.
+2966 cinit CODE >1622:C:\Users\Simone\AppData\Local\Temp\s62k.
+296A cinit CODE >1623:C:\Users\Simone\AppData\Local\Temp\s62k.
+296C cinit CODE >1624:C:\Users\Simone\AppData\Local\Temp\s62k.
+296C cinit CODE >1625:C:\Users\Simone\AppData\Local\Temp\s62k.
+296E cinit CODE >1626:C:\Users\Simone\AppData\Local\Temp\s62k.
+2970 cinit CODE >1627:C:\Users\Simone\AppData\Local\Temp\s62k.
+2972 cinit CODE >1630:C:\Users\Simone\AppData\Local\Temp\s62k.
+2974 cinit CODE >1631:C:\Users\Simone\AppData\Local\Temp\s62k.
+2976 cinit CODE >1634:C:\Users\Simone\AppData\Local\Temp\s62k.
+297A cinit CODE >1635:C:\Users\Simone\AppData\Local\Temp\s62k.
+297C cinit CODE >1636:C:\Users\Simone\AppData\Local\Temp\s62k.
+297C cinit CODE >1637:C:\Users\Simone\AppData\Local\Temp\s62k.
+297E cinit CODE >1638:C:\Users\Simone\AppData\Local\Temp\s62k.
+2980 cinit CODE >1639:C:\Users\Simone\AppData\Local\Temp\s62k.
+2982 cinit CODE >1644:C:\Users\Simone\AppData\Local\Temp\s62k.
+2984 cinit CODE >1645:C:\Users\Simone\AppData\Local\Temp\s62k.
+2986 cinit CODE >1646:C:\Users\Simone\AppData\Local\Temp\s62k.
+2988 cinit CODE >1647:C:\Users\Simone\AppData\Local\Temp\s62k.
+298A cinit CODE >1648:C:\Users\Simone\AppData\Local\Temp\s62k.
+298C cinit CODE >1649:C:\Users\Simone\AppData\Local\Temp\s62k.
+298E cinit CODE >1650:C:\Users\Simone\AppData\Local\Temp\s62k.
+2992 cinit CODE >1651:C:\Users\Simone\AppData\Local\Temp\s62k.
+2996 cinit CODE >1652:C:\Users\Simone\AppData\Local\Temp\s62k.
+2996 cinit CODE >1653:C:\Users\Simone\AppData\Local\Temp\s62k.
+2998 cinit CODE >1654:C:\Users\Simone\AppData\Local\Temp\s62k.
+299C cinit CODE >1655:C:\Users\Simone\AppData\Local\Temp\s62k.
+299E cinit CODE >1656:C:\Users\Simone\AppData\Local\Temp\s62k.
+29A0 cinit CODE >1657:C:\Users\Simone\AppData\Local\Temp\s62k.
+29A2 cinit CODE >1663:C:\Users\Simone\AppData\Local\Temp\s62k.
+29A2 cinit CODE >1665:C:\Users\Simone\AppData\Local\Temp\s62k.
+29A4 cinit CODE >1666:C:\Users\Simone\AppData\Local\Temp\s62k.
+29A6 cinit CODE >1668:C:\Users\Simone\AppData\Local\Temp\s62k.
+29A8 cinit CODE >1669:C:\Users\Simone\AppData\Local\Temp\s62k.
+29AA cinit CODE >1670:C:\Users\Simone\AppData\Local\Temp\s62k.
+29AC cinit CODE >1671:C:\Users\Simone\AppData\Local\Temp\s62k.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1111,7 +1112,7 @@ _RXM1SIDL F1D 0 ABS 0 - dist/default/production\ABS.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\ABS.production.obj
 __end_of_WriteTimer0 2AA8 0 CODE 0 text23 dist/default/production\ABS.production.obj
 _RXB1DLCbits F55 0 ABS 0 - dist/default/production\ABS.production.obj
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Massimo\AppData\Local\Temp\s5v8.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Simone\AppData\Local\Temp\s62k.obj
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\ABS.production.obj
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\ABS.production.obj
 _T1CONbits FCD 0 ABS 0 - dist/default/production\ABS.production.obj
@@ -1124,12 +1125,12 @@ _LATB F8A 0 ABS 0 - dist/default/production\ABS.production.obj
 _LATC F8B 0 ABS 0 - dist/default/production\ABS.production.obj
 _LATD F8C 0 ABS 0 - dist/default/production\ABS.production.obj
 _LATE F8D 0 ABS 0 - dist/default/production\ABS.production.obj
-___sp 0 0 STACK 2 stack C:\Users\Massimo\AppData\Local\Temp\s5v8.obj
+___sp 0 0 STACK 2 stack C:\Users\Simone\AppData\Local\Temp\s62k.obj
 _main 1C84 0 CODE 0 text0 dist/default/production\ABS.production.obj
 _step 88 0 BANK0 1 bssBANK0 dist/default/production\ABS.production.obj
 btemp 3F 0 COMRAM 1 temp dist/default/production\ABS.production.obj
 _status_array A8 0 BANK0 1 bssBANK0 dist/default/production\ABS.production.obj
-start 144 0 CODE 0 init C:\Users\Massimo\AppData\Local\Temp\s5v8.obj
+start 144 0 CODE 0 init C:\Users\Simone\AppData\Local\Temp\s62k.obj
 _ISR_Bassa 18 0 CODE 0 intcodelo dist/default/production\ABS.production.obj
 __size_of___aldiv 0 0 ABS 0 - dist/default/production\ABS.production.obj
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\ABS.production.obj
@@ -1151,11 +1152,11 @@ __pbitbssCOMRAM 1E8 -1AB COMRAM 1 bitbssCOMRAM dist/default/production\ABS.produ
 _T0CONbits FD5 0 ABS 0 - dist/default/production\ABS.production.obj
 __end_of_CANInitialize 2572 0 CODE 0 text7 dist/default/production\ABS.production.obj
 _timer_off 30 0 COMRAM 1 bssCOMRAM dist/default/production\ABS.production.obj
-__accesstop 60 0 ABS 0 - C:\Users\Massimo\AppData\Local\Temp\s5v8.obj
-intlevel0 0 0 CODE 0 text C:\Users\Massimo\AppData\Local\Temp\s5v8.obj
-intlevel1 0 0 CODE 0 text C:\Users\Massimo\AppData\Local\Temp\s5v8.obj
-intlevel2 0 0 CODE 0 text C:\Users\Massimo\AppData\Local\Temp\s5v8.obj
-intlevel3 0 0 CODE 0 text C:\Users\Massimo\AppData\Local\Temp\s5v8.obj
+__accesstop 60 0 ABS 0 - C:\Users\Simone\AppData\Local\Temp\s62k.obj
+intlevel0 0 0 CODE 0 text C:\Users\Simone\AppData\Local\Temp\s62k.obj
+intlevel1 0 0 CODE 0 text C:\Users\Simone\AppData\Local\Temp\s62k.obj
+intlevel2 0 0 CODE 0 text C:\Users\Simone\AppData\Local\Temp\s62k.obj
+intlevel3 0 0 CODE 0 text C:\Users\Simone\AppData\Local\Temp\s62k.obj
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\ABS.production.obj
 __size_of_remote_frame_handler 0 0 ABS 0 - dist/default/production\ABS.production.obj
 ___aldiv@divisor 104 0 BANK1 1 cstackBANK1 dist/default/production\ABS.production.obj
@@ -1182,8 +1183,8 @@ i2___wmul@multiplier 1E 0 COMRAM 1 cstackCOMRAM dist/default/production\ABS.prod
 ___awdiv@dividend CB 0 BANK0 1 cstackBANK0 dist/default/production\ABS.production.obj
 CANSetFilter@tamp D5 0 BANK0 1 cstackBANK0 dist/default/production\ABS.production.obj
 CANSetFilter@type CF 0 BANK0 1 cstackBANK0 dist/default/production\ABS.production.obj
-___inthi_sp 0 0 STACK 2 stack C:\Users\Massimo\AppData\Local\Temp\s5v8.obj
-___intlo_sp 0 0 STACK 2 stack C:\Users\Massimo\AppData\Local\Temp\s5v8.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\Simone\AppData\Local\Temp\s62k.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\Simone\AppData\Local\Temp\s62k.obj
 __size_ofi2___wmul 0 0 ABS 0 - dist/default/production\ABS.production.obj
 _CANCON F6F 0 ABS 0 - dist/default/production\ABS.production.obj
 i2___awdiv@divisor 26 0 COMRAM 1 cstackCOMRAM dist/default/production\ABS.production.obj
@@ -1312,7 +1313,7 @@ _distance_set_counter_1 7E 0 BANK0 1 bssBANK0 dist/default/production\ABS.produc
 _distance_set_counter_2 80 0 BANK0 1 bssBANK0 dist/default/production\ABS.production.obj
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\ABS.production.obj
 __Hbigram 0 0 ABS 0 bigram dist/default/production\ABS.production.obj
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\Massimo\AppData\Local\Temp\s5v8.obj
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\Simone\AppData\Local\Temp\s62k.obj
 _TMR3_overflow 1EB -1AB COMRAM 1 bitbssCOMRAM dist/default/production\ABS.production.obj
 __Hcomram 0 0 ABS 0 comram dist/default/production\ABS.production.obj
 __Hconfig 30000E 0 CONFIG 0 config dist/default/production\ABS.production.obj
@@ -1463,8 +1464,8 @@ __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\ABS.production.obj
 ___lwdiv@divisor 20 0 COMRAM 1 cstackCOMRAM dist/default/production\ABS.production.obj
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\ABS.production.obj
 _Tx_retry 1EC -1AB COMRAM 1 bitbssCOMRAM dist/default/production\ABS.production.obj
-stackhi 2FF 0 ABS 0 - C:\Users\Massimo\AppData\Local\Temp\s5v8.obj
-stacklo 10C 0 ABS 0 - C:\Users\Massimo\AppData\Local\Temp\s5v8.obj
+stackhi 2FF 0 ABS 0 - C:\Users\Simone\AppData\Local\Temp\s62k.obj
+stacklo 10C 0 ABS 0 - C:\Users\Simone\AppData\Local\Temp\s62k.obj
 __Lintcode 8 0 CODE 0 intcode dist/default/production\ABS.production.obj
 __Lintret 0 0 ABS 0 intret dist/default/production\ABS.production.obj
 __Lirdata 0 0 CODE 0 irdata dist/default/production\ABS.production.obj
@@ -1554,7 +1555,7 @@ __Ltext20 0 0 ABS 0 text20 dist/default/production\ABS.production.obj
 __Ltext21 0 0 ABS 0 text21 dist/default/production\ABS.production.obj
 __Ltext22 0 0 ABS 0 text22 dist/default/production\ABS.production.obj
 __Ltext23 0 0 ABS 0 text23 dist/default/production\ABS.production.obj
-__ramtop 300 0 RAM 0 ramtop C:\Users\Massimo\AppData\Local\Temp\s5v8.obj
+__ramtop 300 0 RAM 0 ramtop C:\Users\Simone\AppData\Local\Temp\s62k.obj
 ___aldiv@dividend 100 0 BANK1 1 cstackBANK1 dist/default/production\ABS.production.obj
 _CANOperationMode 2A6A 0 CODE 0 text10 dist/default/production\ABS.production.obj
 __Lpowerup 144 0 CODE 0 powerup dist/default/production\ABS.production.obj

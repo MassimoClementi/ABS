@@ -19365,7 +19365,7 @@ extern __nonreentrant void _delay3(unsigned char);
 
 #pragma config EBTRB = OFF
 
-# 49 "../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h"
+# 50 "../../LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h"
 typedef unsigned char BYTE;
 
 
@@ -19379,7 +19379,7 @@ BYTE RTR;
 
 } CANmessage;
 
-# 67
+# 68
 enum CAN_OP_MODE
 {
 CAN_OP_MODE_NORMAL = 0b00000000,
@@ -19389,7 +19389,7 @@ CAN_OP_MODE_LISTEN = 0b01100000,
 CAN_OP_MODE_CONFIG = 0b10000000
 };
 
-# 80
+# 81
 enum CAN_CONFIG_FLAGS
 {
 CAN_CONFIG_DEFAULT = 0b11111111,
@@ -19421,7 +19421,7 @@ CAN_CONFIG_VALID_STD_MSG = 0b10111111,
 CAN_CONFIG_ALL_VALID_MSG = 0b10011111
 };
 
-# 116
+# 117
 enum CAN_TX_MSG_FLAGS
 {
 CAN_TX_PRIORITY_MASK= 0b00000011,
@@ -19440,14 +19440,14 @@ CAN_NORMAL_TX_FRAME = 0b10111111
 
 };
 
-# 138
+# 139
 enum CAN_MASK
 {
 CAN_MASK_B1 = 1,
 CAN_MASK_B2 = 2,
 };
 
-# 148
+# 149
 enum CAN_FILTER
 {
 CAN_FILTER_B1_F1,
@@ -19458,14 +19458,14 @@ CAN_FILTER_B2_F3,
 CAN_FILTER_B2_F4
 };
 
-# 162
+# 163
 enum CAN_RX_ERRORS
 {
 CAN_RX_BUFFER_1_OVFL = 0b00000001,
 CAN_RX_BUFFER_2_OVFL = 0b00000010
 };
 
-# 173
+# 174
 void CANOperationMode (enum CAN_OP_MODE mode);
 void CANInitialize (BYTE propSeg, BYTE phaseSeg1, BYTE phaseSeg2,BYTE SJW, BYTE BRP, enum CAN_CONFIG_FLAGS flags);
 
@@ -19488,7 +19488,7 @@ BYTE CANgetRXerrorCount (void);
 BYTE CANisBusOFF (void);
 void CANAbortMessages (void);
 
-# 206
+# 207
 void CANOperationMode (enum CAN_OP_MODE mode)
 {
 CANCON = mode;
@@ -19496,7 +19496,7 @@ CANCON = mode;
 while((CANSTAT & 0b11100000) != mode );
 }
 
-# 218
+# 219
 void CANInitialize (BYTE propSeg, BYTE phaseSeg1, BYTE phaseSeg2,BYTE SJW, BYTE BRP, enum CAN_CONFIG_FLAGS flags)
 {
 BYTE FilterConfig1;
@@ -19803,7 +19803,7 @@ return;
 }
 }
 
-# 528
+# 529
 BYTE CANreceiveMessage (CANmessage *msg)
 {
 BYTE tamp;
@@ -19912,7 +19912,7 @@ return (error);
 }
 }
 
-# 640
+# 641
 void CANSetMask(enum CAN_MASK numBuffer, unsigned long mask, enum CAN_CONFIG_FLAGS type)
 { unsigned long tamp;
 
@@ -20017,7 +20017,7 @@ RXM1SIDH = (unsigned char) tamp;
 }
 }
 
-# 748
+# 749
 void CANSetFilter(enum CAN_FILTER numBuffer, unsigned long filter, enum CAN_CONFIG_FLAGS type)
 {
 unsigned long tamp;
@@ -20350,13 +20350,13 @@ RXF5SIDH = (unsigned char) tamp;
 
 }
 
-# 1085
+# 1086
 void CANAbortMessages (void)
 {
 CANCONbits.ABAT = 1;
 }
 
-# 1094
+# 1095
 BYTE CANisBusOFF (void)
 {
 return (COMSTATbits.TXBO);
@@ -20370,7 +20370,7 @@ BYTE CANisTXpassive (void)
 return (COMSTATbits.TXBP);
 }
 
-# 1111
+# 1112
 BYTE CANisRXpassive (void)
 {
 return (COMSTATbits.RXBP);
@@ -20392,31 +20392,31 @@ BYTE CANisRXwarningON (void)
 return (COMSTATbits.RXWARN);
 }
 
-# 1136
+# 1137
 BYTE CANgetTXerrorCount (void)
 {
 return (TXERRCNT);
 }
 
-# 1145
+# 1146
 BYTE CANgetRXerrorCount (void)
 {
 return (RXERRCNT);
 }
 
-# 1154
+# 1155
 BYTE CANisTxReady (void)
 {
 return (!TXB0CONbits.TXREQ || !TXB1CONbits.TXREQ || !TXB2CONbits.TXREQ);
 }
 
-# 1163
+# 1164
 BYTE CANisRxReady (void)
 {
 return (RXB0CONbits.RXFUL || RXB1CONbits.RXFUL);
 }
 
-# 74 "../LaurTec_PIC_libraries_v_3.3.0/inc\delay.h"
+# 74 "../../LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\delay.h"
 void delay_ms (unsigned int value_ms);
 
 # 88
@@ -20425,7 +20425,7 @@ void delay_s (unsigned char value_s);
 # 102
 void delay_set_quartz (unsigned char frequency);
 
-# 49 "../LaurTec_PIC_libraries_v_3.3.0/src\delay.c"
+# 49 "../../LaurTec_PIC_libraries_v_3.3.0 - Copia/src\delay.c"
 volatile unsigned char delay_quartz_frequency_value = 16;
 volatile unsigned int clock_counter_reference = 0;
 
@@ -20662,16 +20662,16 @@ remote_frame_handler();
 
 
 if (Analogic_Mode == 0b00000000) {
-if (brake_signal_CAN == 0b00000000) {
+if (brake_signal_CAN == 0b00000011) {
 brake_value_inc = 0;
 }
-if (brake_signal_CAN == 0b00000001) {
+if (brake_signal_CAN == 0b00000010) {
 brake_value_inc = 150;
 }
-if (brake_signal_CAN == 0b00000010) {
+if (brake_signal_CAN == 0b00000001) {
 brake_value_inc = 200;
 }
-if (brake_signal_CAN == 0b00000011) {
+if (brake_signal_CAN == 0b00000000) {
 brake_value_inc = 255;
 }
 } else {
@@ -20679,11 +20679,11 @@ brake_value_inc = brake_signal_CAN;
 }
 
 
-if (((brake_value_inc / 17) + home_position) > 255) {
+if (((brake_value_inc / 13) + home_position) > 255) {
 brake_value = 255;
 brake_value_degree = 180;
 } else {
-brake_value = (brake_value_inc / 17) + home_position;
+brake_value = (brake_value_inc / 13) + home_position;
 brake_value_degree = (180 * brake_value) / 255;
 }
 

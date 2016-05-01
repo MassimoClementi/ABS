@@ -5,7 +5,7 @@ Linker command line:
 --edf=C:\Program Files (x86)\Microchip\xc8\v1.35\dat\en_msgs.txt -cs \
   -h+dist/default/production\ABS.production.sym \
   --cmf=dist/default/production\ABS.production.cmf -z -Q18F4480 \
-  -oC:\Users\Massimo\AppData\Local\Temp\s5v8.2 \
+  -oC:\Users\Simone\AppData\Local\Temp\s62k.2 \
   -Mdist/default/production/ABS.production.map -E1 -ver=XC8 --acfsm=1493 \
   -ASTACK=010Ch-02ffh -pstack=STACK -ACODE=00h-03FFFh -ACONST=00h-03FFFh \
   -ASMALLCONST=0300h-03FFhx61 -AMEDIUMCONST=0300h-03FFFh -ACOMRAM=01h-05Fh \
@@ -21,7 +21,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\Massimo\AppData\Local\Temp\s5v8.obj \
+  C:\Users\Simone\AppData\Local\Temp\s62k.obj \
   dist/default/production\ABS.production.obj 
 
 Object code version is 3.11
@@ -34,7 +34,7 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Massimo\AppData\Local\Temp\s5v8.obj
+C:\Users\Simone\AppData\Local\Temp\s62k.obj
                 end_init                            144      144        4        C       0
                 reset_vec                             0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
@@ -871,7 +871,7 @@ Total ram usage:        1 bytes
 
  *************** function _CANsendMessage *****************
  Defined at:
-		line 294 in file "../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h"
+		line 295 in file "../../LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h"
  Parameters:    Size  Location     Type
   identifier      4   26[BANK0 ] unsigned long 
   data            2   30[BANK0 ] PTR unsigned char 
@@ -905,7 +905,7 @@ Total ram usage:       16 bytes
 
  *************** function _CANisTxReady *****************
  Defined at:
-		line 1154 in file "../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h"
+		line 1155 in file "../../LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -935,7 +935,7 @@ Total ram usage:        1 bytes
 
  *************** function _delay_ms *****************
  Defined at:
-		line 61 in file "../LaurTec_PIC_libraries_v_3.3.0/src\delay.c"
+		line 61 in file "../../LaurTec_PIC_libraries_v_3.3.0 - Copia/src\delay.c"
  Parameters:    Size  Location     Type
   value_ms        2   32[BANK0 ] unsigned int 
  Auto vars:     Size  Location     Type
@@ -1029,7 +1029,7 @@ Total ram usage:        0 bytes
 
  *************** function _CANInitialize *****************
  Defined at:
-		line 218 in file "../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h"
+		line 219 in file "../../LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h"
  Parameters:    Size  Location     Type
   propSeg         1    wreg     unsigned char 
   phaseSeg1       1    0[BANK1 ] unsigned char 
@@ -1068,7 +1068,7 @@ Total ram usage:       12 bytes
 
  *************** function _CANSetMask *****************
  Defined at:
-		line 640 in file "../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h"
+		line 641 in file "../../LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h"
  Parameters:    Size  Location     Type
   numBuffer       1    wreg     enum E16878
   mask            4   26[BANK0 ] unsigned long 
@@ -1101,7 +1101,7 @@ Total ram usage:       14 bytes
 
  *************** function _CANSetFilter *****************
  Defined at:
-		line 748 in file "../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h"
+		line 749 in file "../../LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h"
  Parameters:    Size  Location     Type
   numBuffer       1    wreg     enum E16881
   filter          4   26[BANK0 ] unsigned long 
@@ -1134,7 +1134,7 @@ Total ram usage:       14 bytes
 
  *************** function _CANOperationMode *****************
  Defined at:
-		line 206 in file "../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h"
+		line 207 in file "../../LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h"
  Parameters:    Size  Location     Type
   mode            1    wreg     enum E16838
  Auto vars:     Size  Location     Type
@@ -1261,7 +1261,7 @@ Total ram usage:       14 bytes
 
  *************** function _CANisTXwarningON *****************
  Defined at:
-		line 1119 in file "../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h"
+		line 1120 in file "../../LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1291,7 +1291,7 @@ Total ram usage:        0 bytes
 
  *************** function _CANisRXwarningON *****************
  Defined at:
-		line 1127 in file "../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h"
+		line 1128 in file "../../LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1352,7 +1352,7 @@ Total ram usage:       17 bytes
 
  *************** function _CANreceiveMessage *****************
  Defined at:
-		line 528 in file "../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h"
+		line 529 in file "../../LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h"
  Parameters:    Size  Location     Type
   msg             2    0[COMRAM] PTR struct .
 		 -> msg(15), 
@@ -1384,7 +1384,7 @@ Total ram usage:       12 bytes
 
  *************** function _CANisRxReady *****************
  Defined at:
-		line 1163 in file "../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h"
+		line 1164 in file "../../LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1586,16 +1586,7 @@ C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul32.c
 
 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul32.c estimated size: 119
 
-ABS_Code.c
-		_ISR_Bassa     		CODE           	0018	0000	301
-		_main          		CODE           	1C84	0000	687
-		_remote_frame_handler		CODE           	21DA	0000	467
-		_board_initialization		CODE           	274A	0000	185
-		_ISR_Alta      		CODE           	0008	0000	695
-
-ABS_Code.c estimated size: 2335
-
-../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h
+../../LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
 		_CANisRXwarningON		CODE           	2AB4	0000	13
 		_CANSetFilter  		CODE           	0148	0000	2823
 		_CANisRxReady  		CODE           	2A80	0000	23
@@ -1607,7 +1598,16 @@ ABS_Code.c estimated size: 2335
 		_CANisTxReady  		CODE           	2A46	0000	37
 		_CANSetMask    		CODE           	18E6	0000	927
 
-../LaurTec_PIC_libraries_v_3.3.0/inc\CANlib.h estimated size: 7540
+../../LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h estimated size: 7540
+
+ABS_Code.c
+		_ISR_Bassa     		CODE           	0018	0000	301
+		_main          		CODE           	1C84	0000	687
+		_remote_frame_handler		CODE           	21DA	0000	467
+		_board_initialization		CODE           	274A	0000	185
+		_ISR_Alta      		CODE           	0008	0000	695
+
+ABS_Code.c estimated size: 2335
 
 shared
 		i2___awdiv     		CODE           	2802	0000	157
@@ -1621,11 +1621,6 @@ C:\Program Files (x86)\Microchip\xc8\v1.35\sources\pic18\plib\Timers\t0write.c
 
 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\pic18\plib\Timers\t0write.c estimated size: 19
 
-../LaurTec_PIC_libraries_v_3.3.0/src\delay.c
-		_delay_ms      		CODE           	29B0	0000	59
-
-../LaurTec_PIC_libraries_v_3.3.0/src\delay.c estimated size: 59
-
 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwdiv.c
 		___lwdiv       		CODE           	2914	0000	83
 
@@ -1635,4 +1630,9 @@ C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
 		___wmul        		CODE           	29EA	0000	55
 
 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c estimated size: 55
+
+../../LaurTec_PIC_libraries_v_3.3.0 - Copia/src\delay.c
+		_delay_ms      		CODE           	29B0	0000	59
+
+../../LaurTec_PIC_libraries_v_3.3.0 - Copia/src\delay.c estimated size: 59
 
