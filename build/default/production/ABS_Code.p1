@@ -19869,9 +19869,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "292
 [e $ ! == -> _Analogic_Mode `i -> 0 `i 2381  ]
 {
-[; ;ABS_Code.c: 293: if (brake_signal_CAN == 0b00000011) {
+[; ;ABS_Code.c: 293: if (brake_signal_CAN == 0b00000000) {
 "293
-[e $ ! == -> _brake_signal_CAN `i -> 3 `i 2382  ]
+[e $ ! == -> _brake_signal_CAN `i -> 0 `i 2382  ]
 {
 [; ;ABS_Code.c: 294: brake_value_inc = 0;
 "294
@@ -19880,9 +19880,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 [e :U 2382 ]
 [; ;ABS_Code.c: 295: }
-[; ;ABS_Code.c: 296: if (brake_signal_CAN == 0b00000010) {
+[; ;ABS_Code.c: 296: if (brake_signal_CAN == 0b00000001) {
 "296
-[e $ ! == -> _brake_signal_CAN `i -> 2 `i 2383  ]
+[e $ ! == -> _brake_signal_CAN `i -> 1 `i 2383  ]
 {
 [; ;ABS_Code.c: 297: brake_value_inc = 150;
 "297
@@ -19891,9 +19891,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 [e :U 2383 ]
 [; ;ABS_Code.c: 298: }
-[; ;ABS_Code.c: 299: if (brake_signal_CAN == 0b00000001) {
+[; ;ABS_Code.c: 299: if (brake_signal_CAN == 0b00000010) {
 "299
-[e $ ! == -> _brake_signal_CAN `i -> 1 `i 2384  ]
+[e $ ! == -> _brake_signal_CAN `i -> 2 `i 2384  ]
 {
 [; ;ABS_Code.c: 300: brake_value_inc = 200;
 "300
@@ -19902,9 +19902,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 [e :U 2384 ]
 [; ;ABS_Code.c: 301: }
-[; ;ABS_Code.c: 302: if (brake_signal_CAN == 0b00000000) {
+[; ;ABS_Code.c: 302: if (brake_signal_CAN == 0b00000011) {
 "302
-[e $ ! == -> _brake_signal_CAN `i -> 0 `i 2385  ]
+[e $ ! == -> _brake_signal_CAN `i -> 3 `i 2385  ]
 {
 [; ;ABS_Code.c: 303: brake_value_inc = 255;
 "303
@@ -19919,16 +19919,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 2386  ]
 [e :U 2381 ]
 {
-[; ;ABS_Code.c: 306: brake_value_inc = brake_signal_CAN;
+[; ;ABS_Code.c: 306: brake_value_inc = 180-brake_signal_CAN;
 "306
-[e = _brake_value_inc _brake_signal_CAN ]
+[e = _brake_value_inc -> - -> 180 `i -> _brake_signal_CAN `i `uc ]
 "307
 }
 [e :U 2386 ]
 [; ;ABS_Code.c: 307: }
-[; ;ABS_Code.c: 310: if (((brake_value_inc / 13) + home_position) > 255) {
+[; ;ABS_Code.c: 310: if (((brake_value_inc / 1) + home_position) > 255) {
 "310
-[e $ ! > + / -> _brake_value_inc `i -> 13 `i -> _home_position `i -> 255 `i 2387  ]
+[e $ ! > + / -> _brake_value_inc `i -> 1 `i -> _home_position `i -> 255 `i 2387  ]
 {
 [; ;ABS_Code.c: 311: brake_value = 255;
 "311
@@ -19942,9 +19942,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 2388  ]
 [e :U 2387 ]
 {
-[; ;ABS_Code.c: 314: brake_value = (brake_value_inc / 13) + home_position;
+[; ;ABS_Code.c: 314: brake_value = (brake_value_inc / 1) + home_position;
 "314
-[e = _brake_value -> + / -> _brake_value_inc `i -> 13 `i -> _home_position `i `uc ]
+[e = _brake_value -> + / -> _brake_value_inc `i -> 1 `i -> _home_position `i `uc ]
 [; ;ABS_Code.c: 315: brake_value_degree = (180 * brake_value) / 255;
 "315
 [e = _brake_value_degree -> / * -> 180 `i -> _brake_value `i -> 255 `i `uc ]

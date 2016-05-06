@@ -54,7 +54,7 @@
 //            TMR3
 //            2us ad incremento
 
-#define BRAKE_ANGLE_RATIO 13 //Default value: 17
+#define BRAKE_ANGLE_RATIO 1 //Default value: 17
 
 #define USE_AND_MASKS
 
@@ -290,20 +290,20 @@ int main(void) {
 
         //Frenata analogica/digitale
         if (Analogic_Mode == 0b00000000) {
-            if (brake_signal_CAN == 0b00000011) {
+            if (brake_signal_CAN == 0b00000000) {
                 brake_value_inc = 0;
             }
-            if (brake_signal_CAN == 0b00000010) {
+            if (brake_signal_CAN == 0b00000001) {
                 brake_value_inc = 150;
             }
-            if (brake_signal_CAN == 0b00000001) {
+            if (brake_signal_CAN == 0b00000010) {
                 brake_value_inc = 200;
             }
-            if (brake_signal_CAN == 0b00000000) {
+            if (brake_signal_CAN == 0b00000011) {
                 brake_value_inc = 255;
             }
         } else {
-            brake_value_inc = brake_signal_CAN;
+            brake_value_inc = 180-brake_signal_CAN;
         }
 
         //Calcolo dell'angolo da impostare

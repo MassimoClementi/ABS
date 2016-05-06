@@ -20662,28 +20662,28 @@ remote_frame_handler();
 
 
 if (Analogic_Mode == 0b00000000) {
-if (brake_signal_CAN == 0b00000011) {
+if (brake_signal_CAN == 0b00000000) {
 brake_value_inc = 0;
 }
-if (brake_signal_CAN == 0b00000010) {
+if (brake_signal_CAN == 0b00000001) {
 brake_value_inc = 150;
 }
-if (brake_signal_CAN == 0b00000001) {
+if (brake_signal_CAN == 0b00000010) {
 brake_value_inc = 200;
 }
-if (brake_signal_CAN == 0b00000000) {
+if (brake_signal_CAN == 0b00000011) {
 brake_value_inc = 255;
 }
 } else {
-brake_value_inc = brake_signal_CAN;
+brake_value_inc = 180-brake_signal_CAN;
 }
 
 
-if (((brake_value_inc / 13) + home_position) > 255) {
+if (((brake_value_inc / 1) + home_position) > 255) {
 brake_value = 255;
 brake_value_degree = 180;
 } else {
-brake_value = (brake_value_inc / 13) + home_position;
+brake_value = (brake_value_inc / 1) + home_position;
 brake_value_degree = (180 * brake_value) / 255;
 }
 
