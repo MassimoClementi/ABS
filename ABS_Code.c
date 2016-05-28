@@ -66,6 +66,7 @@
 #include "pwm.h"
 #include "timers.h"
 #include "idCan.h"
+#include "math.h"
 #define _XTAL_FREQ 16000000
 #define HIGH 1
 #define LOW 0
@@ -253,7 +254,7 @@ __interrupt(low_priority) void ISR_Bassa(void) {
 
 int main(void) {
     board_initialization();
-    step = (wheel_diameter * (3.1415)) / 16; //in cm
+    step = (wheel_diameter * (M_PI)) / 16; //in cm
 
     //LED DEBUG SCHEDA
     PORTAbits.RA1 = HIGH;
