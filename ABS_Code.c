@@ -351,9 +351,9 @@ int main(void) {
 
 void remote_frame_handler(void) {
     if (CANisTxReady()) {
-        if (remote_frame_id == ECU_STATE) {
+        if (remote_frame_id == ECU_STATE_ABS) {
             status_array[0] = 0x01;
-            CANsendMessage(ECU_STATE, status_array, 8, CAN_CONFIG_STD_MSG & CAN_NORMAL_TX_FRAME & CAN_TX_PRIORITY_0);
+            CANsendMessage(ECU_STATE_ABS, status_array, 8, CAN_CONFIG_STD_MSG & CAN_NORMAL_TX_FRAME & CAN_TX_PRIORITY_0);
             PORTCbits.RC1 = ~PORTCbits.RC1;
         }
         if (remote_frame_id == ACTUAL_SPEED) {
