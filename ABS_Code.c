@@ -6,7 +6,7 @@
 //FOR PIC: 18F4480
 //CLOCK FREQUENCY: 16 MHz
 //PROGRAM FUNCTION: Centralina che gestisce la frenata del veicolo secondo i
-// valori che vengono forniti dalle altre centraline attraverso il protocollo 
+// valori che vengono forniti dalle altre centraline attraverso il protocollo
 // CANbus. La centralina inoltre gestisce in modo separato i due encoder sulle
 // ruote posteriori del veicolo calcolando la velocità di ciascuna ruota per poi
 // impacchettarla ed inviarla sul CANBus come dato per le altre centraline.
@@ -54,7 +54,7 @@
 //            TMR3
 //            2us ad incremento
 
-#define BRAKE_ANGLE_RATIO 1 //Default value: 17
+#define BRAKE_ANGLE_RATIO 17 //Default value: 17
 
 #define USE_AND_MASKS
 
@@ -93,10 +93,10 @@ volatile bit remote_frame = LOW;
 volatile bit Tx_retry = LOW;
 volatile bit count_flag = LOW;
 volatile unsigned long remote_frame_id = 0;
-BYTE status_array [8] = 0; //Codice 1 => ABS
-BYTE speed_array [8] = 0;
-BYTE distance_array [8] = 0;
-BYTE remote_frame_array [8] = 0x01; // verificare!
+volatile BYTE status_array [8] = 0; //Codice 1 => ABS
+volatile BYTE speed_array [8] = 0;
+volatile BYTE distance_array [8] = 0;
+volatile BYTE remote_frame_array [8] = 0x01; // verificare!
 volatile unsigned char brake_signal_CAN = 0;
 volatile unsigned char Analogic_Mode = 0;
 
@@ -123,21 +123,21 @@ volatile unsigned long int_counter_2 = 0;
 volatile unsigned int distance_2 = 0; //[cm]
 
 //ADC
-unsigned char home_position = 0;
+volatile unsigned char home_position = 0;
 
 //Distance set function
-bit distance_set_flag = LOW;
-bit distance_reached_flag = LOW;
+volatile bit distance_set_flag = LOW;
+volatile bit distance_reached_flag = LOW;
 volatile unsigned int distance_set_value = 0; //[cm]
 volatile unsigned int distance_set_counter_1 = 0;
 volatile unsigned int distance_set_counter_2 = 0;
 volatile unsigned long distance_actual_value = 0; //[cm]
 
 //Program variables
-unsigned char brake_value_inc = 0; //0-256 (fattore 17)
-unsigned char brake_value = 0; //0-15 [gradi]
-unsigned char brake_value_degree = 0; //0-180 [gradi]
-unsigned char step = 0; //passo della ruota [cm]
+volatile unsigned char brake_value_inc = 0; //0-256 (fattore 17)
+volatile unsigned char brake_value = 0; //0-15 [gradi]
+volatile unsigned char brake_value_degree = 0; //0-180 [gradi]
+volatile unsigned char step = 0; //passo della ruota [cm]
 
 BYTE data_debug1[8]; //DEBUG
 
@@ -171,7 +171,7 @@ __interrupt(high_priority) void ISR_Alta(void) {
             gap_time_1 = gap_time_1 / 500; //in ms
             ENC1_measure = HIGH;
             TMR1H = 0x00;
-            TMR1H = 0x00;
+            TMR1L = 0x00;
             if (count_flag == HIGH) {
                 int_counter_1++;
             }
@@ -193,7 +193,7 @@ __interrupt(high_priority) void ISR_Alta(void) {
             gap_time_2 = gap_time_2 / 500; //in ms
             ENC2_measure = HIGH;
             TMR3H = 0x00;
-            TMR3H = 0x00;
+            TMR3L = 0x00;
             if (count_flag == HIGH) {
                 int_counter_2++;
             }
@@ -203,7 +203,6 @@ __interrupt(high_priority) void ISR_Alta(void) {
         }
         INTCON3bits.INT1IF = LOW;
     }
-
 }
 
 
@@ -256,18 +255,19 @@ int main(void) {
     board_initialization();
     step = (wheel_diameter * (M_PI)) / 16; //in cm
 
-    //LED DEBUG SCHEDA
-    PORTAbits.RA1 = HIGH;
-    PORTCbits.RC1 = HIGH;
-    delay_ms(500);
-    PORTAbits.RA1 = LOW;
-    PORTCbits.RC1 = LOW;
-    delay_ms(100);
+    //    //LED DEBUG SCHEDA
+    //    PORTAbits.RA1 = HIGH;
+    //    PORTCbits.RC1 = HIGH;
+    //    delay_ms(500);
+    //    PORTAbits.RA1 = LOW;
+    //    PORTCbits.RC1 = LOW;
+    //    delay_ms(100);
 
     while (1) {
         //Gestione dei led di errore CANbus
         if ((CANisTXwarningON() == HIGH) || (CANisRXwarningON() == HIGH)) {
             PORTAbits.RA1 = HIGH; //accendi led errore
+            CANInitialize(4, 6, 5, 1, 3, CAN_CONFIG_LINE_FILTER_OFF & CAN_CONFIG_SAMPLE_ONCE & CAN_CONFIG_ALL_VALID_MSG & CAN_CONFIG_DBL_BUFFER_ON);
             COMSTATbits.TXWARN = LOW;
             COMSTATbits.RXWARN = LOW;
         } else {
@@ -304,7 +304,7 @@ int main(void) {
                 brake_value_inc = 255;
             }
         } else {
-            brake_value_inc = 180-brake_signal_CAN;
+            brake_value_inc = brake_signal_CAN;
         }
 
         //Calcolo dell'angolo da impostare
@@ -436,7 +436,7 @@ void board_initialization(void) {
 
     //  Valori per forzare un interrupt del TMR0 all'avvio della periferica ed
     //  inizializzarla correttamente. RC0 = 0 in modo che il primo ciclo venga
-    //  eseguito il toggle nella ISR di gestione TMR0 e quindi venga eseguito il 
+    //  eseguito il toggle nella ISR di gestione TMR0 e quindi venga eseguito il
     //  calcolo di timer_on e timer_off in base al valore di break_value_degree
     //  fornito (in questo caso 90 gradi in modo che si metta in posizione centrale)
     TMR0H = 0xFF;
