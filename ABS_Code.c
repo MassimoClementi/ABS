@@ -54,7 +54,7 @@
 //            TMR3
 //            2us ad incremento
 
-#define BRAKE_ANGLE_RATIO 17 //Default value: 17
+#define BRAKE_ANGLE_RATIO 5 //Default value: 17
 
 #define USE_AND_MASKS
 

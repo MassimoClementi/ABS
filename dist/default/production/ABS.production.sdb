@@ -3,16 +3,16 @@
 [d edition pro ]
 [d chip 18F4480 ]
 [d frameptr 4065 ]
-"208 D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
-[e E16838 CAN_OP_MODE `uc
+"207 C:\Users\simone/Desktop/LaurTec_PIC_libraries_v_3.3.1/inc\CANlib.h
+[e E16879 CAN_OP_MODE `uc
 CAN_OP_MODE_NORMAL 0
 CAN_OP_MODE_SLEEP 32
 CAN_OP_MODE_LOOP 64
 CAN_OP_MODE_LISTEN 96
 CAN_OP_MODE_CONFIG 128
 ]
-"220
-[e E16844 CAN_CONFIG_FLAGS `uc
+"219
+[e E16885 CAN_CONFIG_FLAGS `uc
 CAN_CONFIG_DEFAULT 255
 CAN_CONFIG_PHSEG2_PRG_BIT 1
 CAN_CONFIG_PHSEG2_PRG_ON 255
@@ -35,13 +35,13 @@ CAN_CONFIG_VALID_XTD_MSG 223
 CAN_CONFIG_VALID_STD_MSG 191
 CAN_CONFIG_ALL_VALID_MSG 159
 ]
-"260
-[e E16878 CAN_MASK `uc
+"259
+[e E16919 CAN_MASK `uc
 CAN_MASK_B1 1
 CAN_MASK_B2 2
 ]
-"281
-[e E16881 CAN_FILTER `uc
+"280
+[e E16922 CAN_FILTER `uc
 CAN_FILTER_B1_F1 0
 CAN_FILTER_B1_F2 1
 CAN_FILTER_B2_F1 2
@@ -49,8 +49,8 @@ CAN_FILTER_B2_F2 3
 CAN_FILTER_B2_F3 4
 CAN_FILTER_B2_F4 5
 ]
-"296
-[e E16866 CAN_TX_MSG_FLAGS `uc
+"295
+[e E16907 CAN_TX_MSG_FLAGS `uc
 CAN_TX_PRIORITY_MASK 3
 CAN_TX_PRIORITY_0 252
 CAN_TX_PRIORITY_1 253
@@ -63,157 +63,159 @@ CAN_TX_RTR_MASK 64
 CAN_REMOTE_TX_FRAME 255
 CAN_NORMAL_TX_FRAME 191
 ]
-"535
-[e E16888 CAN_RX_ERRORS `uc
+"534
+[e E16929 CAN_RX_ERRORS `uc
 CAN_RX_BUFFER_1_OVFL 1
 CAN_RX_BUFFER_2_OVFL 2
 ]
-"207
+"206
 [v _CANOperationMode CANOperationMode `(v  1 e 0 0 ]
-"219
+"218
 [v _CANInitialize CANInitialize `(v  1 e 0 0 ]
-"295
+"294
 [v _CANsendMessage CANsendMessage `(v  1 e 0 0 ]
-"529
+"528
 [v _CANreceiveMessage CANreceiveMessage `(uc  1 e 1 0 ]
-"641
+"640
 [v _CANSetMask CANSetMask `(v  1 e 0 0 ]
-"749
+"748
 [v _CANSetFilter CANSetFilter `(v  1 e 0 0 ]
-"1120
+"1119
 [v _CANisTXwarningON CANisTXwarningON `(uc  1 e 1 0 ]
-"1128
+"1127
 [v _CANisRXwarningON CANisRXwarningON `(uc  1 e 1 0 ]
-"1155
+"1154
 [v _CANisTxReady CANisTxReady `(uc  1 e 1 0 ]
-"1164
+"1163
 [v _CANisRxReady CANisRxReady `(uc  1 e 1 0 ]
-"61 D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/src\delay.c
+"61 C:\Users\simone/Desktop/LaurTec_PIC_libraries_v_3.3.1/src\delay.c
 [v _delay_ms delay_ms `(v  1 e 0 0 ]
-"147 D:\Documenti\GitHub\ABS\ABS_Code.c
+"148 C:\Users\simone\Documents\GitHub\ABS\ABS_Code.c
 [v _ISR_Alta ISR_Alta `IIH(v  1 e 0 0 ]
 "213
 [v _ISR_Bassa ISR_Bassa `IIL(v  1 e 0 0 ]
 "254
 [v _main main `(i  1 e 2 0 ]
-"351
+"352
 [v _remote_frame_handler remote_frame_handler `(v  1 e 0 0 ]
-"396
+"397
 [v _board_initialization board_initialization `(v  1 e 0 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\aldiv.c
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\awdiv.c
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 [v i2___awdiv __awdiv `(i  1 e 2 0 ]
-"62 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\float.c
-[v ___ftpack __ftpack `(f  1 e 4 0 ]
-"86 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftadd.c
-[v ___ftadd __ftadd `(f  1 e 4 0 ]
-"54 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftdiv.c
-[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
-"62 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftmul.c
-[v ___ftmul __ftmul `(f  1 e 4 0 ]
-"20 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftsub.c
-[v ___ftsub __ftsub `(f  1 e 4 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwdiv.c
-[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
-"10 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\sprcadd.c
+"63 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\double.c
+[v ___flpack __flpack `(d  1 e 4 0 ]
+"88 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fladd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
-"245
-[v ___flsub __flsub `(d  1 e 4 0 ]
-"11 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\sprcdiv.c
+"54 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fldiv.c
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\sprcmul.c
+"62 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\flmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
-"15 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
+"62 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"20 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\flsub.c
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"20 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
 [v i2___wmul __wmul `(ui  1 e 2 0 ]
-"15 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul32.c
+"15 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
-"16 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\pic18\plib\Timers\t0write.c
+"16 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\Timers\t0write.c
 [v _WriteTimer0 WriteTimer0 `(v  1 e 0 0 ]
-"49 D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/src\delay.c
+"49 C:\Users\simone/Desktop/LaurTec_PIC_libraries_v_3.3.1/src\delay.c
 [v _delay_quartz_frequency_value delay_quartz_frequency_value `VEuc  1 e 1 0 ]
 "50
 [v _clock_counter_reference clock_counter_reference `VEui  1 e 2 0 ]
 [s S853 . 15 `ul 1 identifier 4 0 `[8]uc 1 data 8 4 `uc 1 type 1 12 `uc 1 length 1 13 `uc 1 RTR 1 14 ]
-"90 D:\Documenti\GitHub\ABS\ABS_Code.c
+"91 C:\Users\simone\Documents\GitHub\ABS\ABS_Code.c
 [v _msg msg `S853  1 e 15 0 ]
-"91
-[v _remote_frame remote_frame `VEb  1 e 0 0 ]
 "92
-[v _Tx_retry Tx_retry `VEb  1 e 0 0 ]
+[v _remote_frame remote_frame `VEb  1 e 0 0 ]
 "93
-[v _count_flag count_flag `VEb  1 e 0 0 ]
+[v _Tx_retry Tx_retry `VEb  1 e 0 0 ]
 "94
-[v _remote_frame_id remote_frame_id `VEul  1 e 4 0 ]
+[v _count_flag count_flag `VEb  1 e 0 0 ]
 "95
-[v _status_array status_array `[8]uc  1 e 8 0 ]
+[v _remote_frame_id remote_frame_id `VEul  1 e 4 0 ]
 "96
-[v _speed_array speed_array `[8]uc  1 e 8 0 ]
+[v _status_array status_array `VE[8]uc  1 e 8 0 ]
 "97
-[v _distance_array distance_array `[8]uc  1 e 8 0 ]
+[v _speed_array speed_array `VE[8]uc  1 e 8 0 ]
 "98
-[v _remote_frame_array remote_frame_array `[8]uc  1 e 8 0 ]
+[v _distance_array distance_array `VE[8]uc  1 e 8 0 ]
 "99
-[v _brake_signal_CAN brake_signal_CAN `VEuc  1 e 1 0 ]
+[v _remote_frame_array remote_frame_array `VE[8]uc  1 e 8 0 ]
 "100
+[v _brake_signal_CAN brake_signal_CAN `VEuc  1 e 1 0 ]
+"101
 [v _Analogic_Mode Analogic_Mode `VEuc  1 e 1 0 ]
-"103
-[v _timer_on timer_on `VEul  1 e 4 0 ]
 "104
+[v _timer_on timer_on `VEul  1 e 4 0 ]
+"105
 [v _timer_off timer_off `VEul  1 e 4 0 ]
-"107
-[v _x x `VEb  1 e 0 0 ]
 "108
-[v _ENC1_measure ENC1_measure `VEb  1 e 0 0 ]
+[v _x x `VEb  1 e 0 0 ]
 "109
-[v _TMR1_overflow TMR1_overflow `VEb  1 e 0 0 ]
+[v _ENC1_measure ENC1_measure `VEb  1 e 0 0 ]
 "110
-[v _gap_time_1 gap_time_1 `VEui  1 e 2 0 ]
+[v _TMR1_overflow TMR1_overflow `VEb  1 e 0 0 ]
 "111
-[v _wheel_speed_1 wheel_speed_1 `VEul  1 e 4 0 ]
+[v _gap_time_1 gap_time_1 `VEui  1 e 2 0 ]
 "112
-[v _int_counter_1 int_counter_1 `VEul  1 e 4 0 ]
+[v _wheel_speed_1 wheel_speed_1 `VEul  1 e 4 0 ]
 "113
+[v _int_counter_1 int_counter_1 `VEul  1 e 4 0 ]
+"114
 [v _distance_1 distance_1 `VEui  1 e 2 0 ]
-"116
-[v _y y `VEb  1 e 0 0 ]
 "117
-[v _ENC2_measure ENC2_measure `VEb  1 e 0 0 ]
+[v _y y `VEb  1 e 0 0 ]
 "118
-[v _TMR3_overflow TMR3_overflow `VEb  1 e 0 0 ]
+[v _ENC2_measure ENC2_measure `VEb  1 e 0 0 ]
 "119
-[v _gap_time_2 gap_time_2 `VEui  1 e 2 0 ]
+[v _TMR3_overflow TMR3_overflow `VEb  1 e 0 0 ]
 "120
-[v _wheel_speed_2 wheel_speed_2 `VEul  1 e 4 0 ]
+[v _gap_time_2 gap_time_2 `VEui  1 e 2 0 ]
 "121
-[v _int_counter_2 int_counter_2 `VEul  1 e 4 0 ]
+[v _wheel_speed_2 wheel_speed_2 `VEul  1 e 4 0 ]
 "122
+[v _int_counter_2 int_counter_2 `VEul  1 e 4 0 ]
+"123
 [v _distance_2 distance_2 `VEui  1 e 2 0 ]
-"125
-[v _home_position home_position `uc  1 e 1 0 ]
-"128
-[v _distance_set_flag distance_set_flag `b  1 e 0 0 ]
+"126
+[v _home_position home_position `VEuc  1 e 1 0 ]
 "129
-[v _distance_reached_flag distance_reached_flag `b  1 e 0 0 ]
+[v _distance_set_flag distance_set_flag `VEb  1 e 0 0 ]
 "130
-[v _distance_set_value distance_set_value `VEui  1 e 2 0 ]
+[v _distance_reached_flag distance_reached_flag `VEb  1 e 0 0 ]
 "131
-[v _distance_set_counter_1 distance_set_counter_1 `VEui  1 e 2 0 ]
+[v _distance_set_value distance_set_value `VEui  1 e 2 0 ]
 "132
-[v _distance_set_counter_2 distance_set_counter_2 `VEui  1 e 2 0 ]
+[v _distance_set_counter_1 distance_set_counter_1 `VEui  1 e 2 0 ]
 "133
+[v _distance_set_counter_2 distance_set_counter_2 `VEui  1 e 2 0 ]
+"134
 [v _distance_actual_value distance_actual_value `VEul  1 e 4 0 ]
-"136
-[v _brake_value_inc brake_value_inc `uc  1 e 1 0 ]
 "137
-[v _brake_value brake_value `uc  1 e 1 0 ]
+[v _brake_value_inc brake_value_inc `VEuc  1 e 1 0 ]
 "138
-[v _brake_value_degree brake_value_degree `uc  1 e 1 0 ]
+[v _brake_value brake_value `VEuc  1 e 1 0 ]
 "139
-[v _step step `uc  1 e 1 0 ]
-"16255 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f4480.h
+[v _brake_value_degree brake_value_degree `VEuc  1 e 1 0 ]
+"140
+[v _step step `VEuc  1 e 1 0 ]
+"16255 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f4480.h
 [v _RXF0SIDH RXF0SIDH `VEuc  1 e 1 @3840 ]
 "16387
 [v _RXF0SIDL RXF0SIDL `VEuc  1 e 1 @3841 ]
@@ -1693,184 +1695,178 @@ CAN_RX_BUFFER_2_OVFL 2
 "34968
 "34968
 [v _INTCONbits INTCONbits `VES2010  1 e 1 @4082 ]
-"254 D:\Documenti\GitHub\ABS\ABS_Code.c
+"254 C:\Users\simone\Documents\GitHub\ABS\ABS_Code.c
 [v _main main `(i  1 e 2 0 ]
 {
-"344
+"345
 } 0
-"351
+"352
 [v _remote_frame_handler remote_frame_handler `(v  1 e 0 0 ]
 {
-"388
+"389
 } 0
-"295 D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
-[v _CANsendMessage CANsendMessage `(v  1 e 0 0 ]
-{
-"297
-[v CANsendMessage@tamp tamp `ul  1 a 4 38 ]
-"295
-[v CANsendMessage@identifier identifier `ul  1 p 4 26 ]
-[v CANsendMessage@data data `*.39uc  1 p 2 30 ]
-[v CANsendMessage@dataLength dataLength `uc  1 p 1 32 ]
-[v CANsendMessage@flags flags `E16866  1 p 1 33 ]
-"523
-} 0
-"1155
-[v _CANisTxReady CANisTxReady `(uc  1 e 1 0 ]
-{
-"1158
-} 0
-"61 D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/src\delay.c
-[v _delay_ms delay_ms `(v  1 e 0 0 ]
-{
-[v delay_ms@value_ms value_ms `ui  1 p 2 32 ]
-"96
-} 0
-"15 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
+"15 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
 {
 "17
-[v ___wmul@product product `ui  1 a 2 30 ]
+[v ___wmul@product product `ui  1 a 2 34 ]
 "15
-[v ___wmul@multiplier multiplier `ui  1 p 2 26 ]
-[v ___wmul@multiplicand multiplicand `ui  1 p 2 28 ]
+[v ___wmul@multiplier multiplier `ui  1 p 2 30 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 32 ]
 "53
 } 0
-"396 D:\Documenti\GitHub\ABS\ABS_Code.c
+"294 C:\Users\simone/Desktop/LaurTec_PIC_libraries_v_3.3.1/inc\CANlib.h
+[v _CANsendMessage CANsendMessage `(v  1 e 0 0 ]
+{
+"296
+[v CANsendMessage@tamp tamp `ul  1 a 4 42 ]
+"294
+[v CANsendMessage@identifier identifier `ul  1 p 4 30 ]
+[v CANsendMessage@data data `*.39uc  1 p 2 34 ]
+[v CANsendMessage@dataLength dataLength `uc  1 p 1 36 ]
+[v CANsendMessage@flags flags `E16907  1 p 1 37 ]
+"522
+} 0
+"1154
+[v _CANisTxReady CANisTxReady `(uc  1 e 1 0 ]
+{
+"1157
+} 0
+"397 C:\Users\simone\Documents\GitHub\ABS\ABS_Code.c
 [v _board_initialization board_initialization `(v  1 e 0 0 ]
 {
-"480
+"481
 } 0
-"219 D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+"218 C:\Users\simone/Desktop/LaurTec_PIC_libraries_v_3.3.1/inc\CANlib.h
 [v _CANInitialize CANInitialize `(v  1 e 0 0 ]
 {
 [v CANInitialize@propSeg propSeg `uc  1 a 1 wreg ]
-"222
-[v CANInitialize@FilterConfig2 FilterConfig2 `uc  1 a 1 7 ]
 "221
-[v CANInitialize@FilterConfig1 FilterConfig1 `uc  1 a 1 6 ]
-"219
+[v CANInitialize@FilterConfig2 FilterConfig2 `uc  1 a 1 46 ]
+"220
+[v CANInitialize@FilterConfig1 FilterConfig1 `uc  1 a 1 45 ]
+"218
 [v CANInitialize@propSeg propSeg `uc  1 a 1 wreg ]
 [v CANInitialize@phaseSeg1 phaseSeg1 `uc  1 p 1 0 ]
 [v CANInitialize@phaseSeg2 phaseSeg2 `uc  1 p 1 1 ]
 [v CANInitialize@SJW SJW `uc  1 p 1 2 ]
 [v CANInitialize@BRP BRP `uc  1 p 1 3 ]
-[v CANInitialize@flags flags `E16844  1 p 1 4 ]
-"224
-[v CANInitialize@propSeg propSeg `uc  1 a 1 5 ]
-"290
+[v CANInitialize@flags flags `E16885  1 p 1 4 ]
+"223
+[v CANInitialize@propSeg propSeg `uc  1 a 1 44 ]
+"289
 } 0
-"641
+"640
 [v _CANSetMask CANSetMask `(v  1 e 0 0 ]
 {
-[v CANSetMask@numBuffer numBuffer `E16878  1 a 1 wreg ]
-"642
-[v CANSetMask@tamp tamp `ul  1 a 4 36 ]
+[v CANSetMask@numBuffer numBuffer `E16919  1 a 1 wreg ]
 "641
-[v CANSetMask@numBuffer numBuffer `E16878  1 a 1 wreg ]
-[v CANSetMask@mask mask `ul  1 p 4 26 ]
-[v CANSetMask@type type `E16844  1 p 1 30 ]
-"644
-[v CANSetMask@numBuffer numBuffer `E16878  1 a 1 35 ]
-"743
+[v CANSetMask@tamp tamp `ul  1 a 4 40 ]
+"640
+[v CANSetMask@numBuffer numBuffer `E16919  1 a 1 wreg ]
+[v CANSetMask@mask mask `ul  1 p 4 30 ]
+[v CANSetMask@type type `E16885  1 p 1 34 ]
+"643
+[v CANSetMask@numBuffer numBuffer `E16919  1 a 1 39 ]
+"742
 } 0
-"749
+"748
 [v _CANSetFilter CANSetFilter `(v  1 e 0 0 ]
 {
-[v CANSetFilter@numBuffer numBuffer `E16881  1 a 1 wreg ]
-"751
-[v CANSetFilter@tamp tamp `ul  1 a 4 36 ]
-"749
-[v CANSetFilter@numBuffer numBuffer `E16881  1 a 1 wreg ]
-[v CANSetFilter@filter filter `ul  1 p 4 26 ]
-[v CANSetFilter@type type `E16844  1 p 1 30 ]
-"753
-[v CANSetFilter@numBuffer numBuffer `E16881  1 a 1 35 ]
-"1079
+[v CANSetFilter@numBuffer numBuffer `E16922  1 a 1 wreg ]
+"750
+[v CANSetFilter@tamp tamp `ul  1 a 4 40 ]
+"748
+[v CANSetFilter@numBuffer numBuffer `E16922  1 a 1 wreg ]
+[v CANSetFilter@filter filter `ul  1 p 4 30 ]
+[v CANSetFilter@type type `E16885  1 p 1 34 ]
+"752
+[v CANSetFilter@numBuffer numBuffer `E16922  1 a 1 39 ]
+"1078
 } 0
-"207
+"206
 [v _CANOperationMode CANOperationMode `(v  1 e 0 0 ]
 {
-[v CANOperationMode@mode mode `E16838  1 a 1 wreg ]
-[v CANOperationMode@mode mode `E16838  1 a 1 wreg ]
-"209
-[v CANOperationMode@mode mode `E16838  1 a 1 26 ]
-"212
+[v CANOperationMode@mode mode `E16879  1 a 1 wreg ]
+[v CANOperationMode@mode mode `E16879  1 a 1 wreg ]
+"208
+[v CANOperationMode@mode mode `E16879  1 a 1 30 ]
+"211
 } 0
-"15 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul32.c
+"15 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 {
 "17
-[v ___lmul@product product `ul  1 a 4 34 ]
+[v ___lmul@product product `ul  1 a 4 38 ]
 "15
-[v ___lmul@multiplier multiplier `ul  1 p 4 26 ]
-[v ___lmul@multiplicand multiplicand `ul  1 p 4 30 ]
+[v ___lmul@multiplier multiplier `ul  1 p 4 30 ]
+[v ___lmul@multiplicand multiplicand `ul  1 p 4 34 ]
 "129
 } 0
-"8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\awdiv.c
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 {
 "11
-[v ___awdiv@quotient quotient `i  1 a 2 32 ]
+[v ___awdiv@quotient quotient `i  1 a 2 36 ]
 "12
-[v ___awdiv@sign sign `uc  1 a 1 31 ]
-[v ___awdiv@counter counter `uc  1 a 1 30 ]
+[v ___awdiv@sign sign `uc  1 a 1 35 ]
+[v ___awdiv@counter counter `uc  1 a 1 34 ]
 "8
-[v ___awdiv@dividend dividend `i  1 p 2 26 ]
-[v ___awdiv@divisor divisor `i  1 p 2 28 ]
+[v ___awdiv@dividend dividend `i  1 p 2 30 ]
+[v ___awdiv@divisor divisor `i  1 p 2 32 ]
 "42
 } 0
-"8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\aldiv.c
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
 {
 "11
-[v ___aldiv@quotient quotient `l  1 a 4 40 ]
+[v ___aldiv@quotient quotient `l  1 a 4 10 ]
 "12
-[v ___aldiv@sign sign `uc  1 a 1 39 ]
-[v ___aldiv@counter counter `uc  1 a 1 38 ]
+[v ___aldiv@sign sign `uc  1 a 1 9 ]
+[v ___aldiv@counter counter `uc  1 a 1 8 ]
 "8
 [v ___aldiv@dividend dividend `l  1 p 4 0 ]
 [v ___aldiv@divisor divisor `l  1 p 4 4 ]
 "42
 } 0
-"1120 D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+"1119 C:\Users\simone/Desktop/LaurTec_PIC_libraries_v_3.3.1/inc\CANlib.h
 [v _CANisTXwarningON CANisTXwarningON `(uc  1 e 1 0 ]
 {
-"1123
+"1122
 } 0
-"1128
+"1127
 [v _CANisRXwarningON CANisRXwarningON `(uc  1 e 1 0 ]
 {
-"1131
+"1130
 } 0
-"213 D:\Documenti\GitHub\ABS\ABS_Code.c
+"213 C:\Users\simone\Documents\GitHub\ABS\ABS_Code.c
 [v _ISR_Bassa ISR_Bassa `IIL(v  1 e 0 0 ]
 {
 "248
 } 0
-"529 D:\Documenti/LaurTec_PIC_libraries_v_3.3.0 - Copia/inc\CANlib.h
+"528 C:\Users\simone/Desktop/LaurTec_PIC_libraries_v_3.3.1/inc\CANlib.h
 [v _CANreceiveMessage CANreceiveMessage `(uc  1 e 1 0 ]
 {
-"531
+"530
 [v CANreceiveMessage@tamp tamp `uc  1 a 1 11 ]
-"532
+"531
 [v CANreceiveMessage@error error `uc  1 a 1 10 ]
 [s S853 . 15 `ul 1 identifier 4 0 `[8]uc 1 data 8 4 `uc 1 type 1 12 `uc 1 length 1 13 `uc 1 RTR 1 14 ]
-"529
+"528
 [v CANreceiveMessage@msg msg `*.39S853  1 p 2 0 ]
-"635
+"634
 } 0
-"1164
+"1163
 [v _CANisRxReady CANisRxReady `(uc  1 e 1 0 ]
 {
-"1167
+"1166
 } 0
-"147 D:\Documenti\GitHub\ABS\ABS_Code.c
+"148 C:\Users\simone\Documents\GitHub\ABS\ABS_Code.c
 [v _ISR_Alta ISR_Alta `IIH(v  1 e 0 0 ]
 {
 "206
 } 0
-"15 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
+"15 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul16.c
 [v i2___wmul __wmul `(ui  1 e 2 0 ]
 {
 [v i2___wmul@product __wmul `ui  1 a 2 33 ]
@@ -1878,17 +1874,17 @@ CAN_RX_BUFFER_2_OVFL 2
 [v i2___wmul@multiplicand multiplicand `ui  1 p 2 31 ]
 "53
 } 0
-"8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\awdiv.c
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
 [v i2___awdiv __awdiv `(i  1 e 2 0 ]
 {
-[v i2___awdiv@quotient __awdiv `i  1 a 2 2 ]
-[v i2___awdiv@sign __awdiv `uc  1 a 1 1 ]
-[v i2___awdiv@counter __awdiv `uc  1 a 1 0 ]
-[v i2___awdiv@dividend dividend `i  1 p 2 35 ]
-[v i2___awdiv@divisor divisor `i  1 p 2 37 ]
+[v i2___awdiv@quotient __awdiv `i  1 a 2 6 ]
+[v i2___awdiv@sign __awdiv `uc  1 a 1 5 ]
+[v i2___awdiv@counter __awdiv `uc  1 a 1 4 ]
+[v i2___awdiv@dividend dividend `i  1 p 2 0 ]
+[v i2___awdiv@divisor divisor `i  1 p 2 2 ]
 "42
 } 0
-"8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwdiv.c
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwdiv.c
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
 {
 "11
@@ -1900,7 +1896,7 @@ CAN_RX_BUFFER_2_OVFL 2
 [v ___lwdiv@divisor divisor `ui  1 p 2 31 ]
 "31
 } 0
-"16 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\pic18\plib\Timers\t0write.c
+"16 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\Timers\t0write.c
 [v _WriteTimer0 WriteTimer0 `(v  1 e 0 0 ]
 {
 [u S3519 Timers 2 `ui 1 lt 2 0 `[2]uc 1 bt 2 0 ]
