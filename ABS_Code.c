@@ -171,7 +171,7 @@ __interrupt(high_priority) void ISR_Alta(void) {
             gap_time_1 = gap_time_1 / 500; //in ms
             ENC1_measure = HIGH;
             TMR1H = 0x00;
-            TMR1L = 0x00;
+            TMR1H = 0x00;
             if (count_flag == HIGH) {
                 int_counter_1++;
             }
@@ -193,7 +193,7 @@ __interrupt(high_priority) void ISR_Alta(void) {
             gap_time_2 = gap_time_2 / 500; //in ms
             ENC2_measure = HIGH;
             TMR3H = 0x00;
-            TMR3L = 0x00;
+            TMR3H = 0x00;
             if (count_flag == HIGH) {
                 int_counter_2++;
             }
@@ -203,6 +203,7 @@ __interrupt(high_priority) void ISR_Alta(void) {
         }
         INTCON3bits.INT1IF = LOW;
     }
+
 }
 
 
@@ -228,6 +229,7 @@ __interrupt(low_priority) void ISR_Bassa(void) {
                 distance_set_counter_1 = 0;
                 distance_set_counter_2 = 0;
                 distance_set_flag = HIGH;
+                PORTAbits.RA1 = LOW; //accendi led errore
             }
         }
         PIR3bits.RXB0IF = LOW;
@@ -237,12 +239,16 @@ __interrupt(low_priority) void ISR_Bassa(void) {
     //INTERRUPT TMR1
     if (PIR1bits.TMR1IF == HIGH) {
         TMR1_overflow = HIGH;
+        TMR1H = 0x00;
+        TMR1L = 0x00;
         PIR1bits.TMR1IF = LOW;
     }
 
     //INTERRUPT TMR3
     if (PIR2bits.TMR3IF == HIGH) {
         TMR3_overflow = HIGH;
+        TMR3H = 0x00;
+        TMR3L = 0x00;
         PIR2bits.TMR3IF = LOW;
     }
 }
@@ -267,11 +273,10 @@ int main(void) {
         //Gestione dei led di errore CANbus
         if ((CANisTXwarningON() == HIGH) || (CANisRXwarningON() == HIGH)) {
             PORTAbits.RA1 = HIGH; //accendi led errore
-            CANInitialize(4, 6, 5, 1, 3, CAN_CONFIG_LINE_FILTER_OFF & CAN_CONFIG_SAMPLE_ONCE & CAN_CONFIG_ALL_VALID_MSG & CAN_CONFIG_DBL_BUFFER_ON);
             COMSTATbits.TXWARN = LOW;
             COMSTATbits.RXWARN = LOW;
         } else {
-            PORTAbits.RA1 = LOW;
+            //PORTAbits.RA1 = LOW;
         }
 
         //Funzione DISTANCE_SET
@@ -279,10 +284,10 @@ int main(void) {
             distance_actual_value = (step * (distance_set_counter_1 + distance_set_counter_2)) / 2;
             if (distance_actual_value >= distance_set_value) {
                 distance_set_flag = LOW;
-                distance_reached_flag = HIGH;
-                Tx_retry = HIGH; //forzo l'invio del dato
+                CANsendMessage(DISTANCE_SET, remote_frame_array, 8, CAN_CONFIG_STD_MSG & CAN_REMOTE_TX_FRAME & CAN_TX_PRIORITY_0); //(?))
             }
         }
+
 
         if ((remote_frame == HIGH) || (Tx_retry == HIGH)) {
             remote_frame = LOW;
@@ -350,12 +355,13 @@ int main(void) {
 ////////////////////
 
 void remote_frame_handler(void) {
-    if (CANisTxReady()) {
+    if (CANisTxReady() == 1) {
         if (remote_frame_id == ECU_STATE_ABS) {
             status_array[0] = 0x01;
             CANsendMessage(ECU_STATE_ABS, status_array, 8, CAN_CONFIG_STD_MSG & CAN_NORMAL_TX_FRAME & CAN_TX_PRIORITY_0);
             PORTCbits.RC1 = ~PORTCbits.RC1;
         }
+
         if (remote_frame_id == ACTUAL_SPEED) {
             CANsendMessage(remote_frame_id, speed_array, 8, CAN_CONFIG_STD_MSG & CAN_NORMAL_TX_FRAME & CAN_TX_PRIORITY_0);
         }
@@ -374,14 +380,11 @@ void remote_frame_handler(void) {
             distance_array[3] = distance_2 >> 8;
             CANsendMessage(remote_frame_id, distance_array, 8, CAN_CONFIG_STD_MSG & CAN_NORMAL_TX_FRAME & CAN_TX_PRIORITY_0);
         }
-        if (distance_reached_flag == HIGH) {
-            CANsendMessage(DISTANCE_SET, remote_frame_array, 8, CAN_CONFIG_STD_MSG & CAN_REMOTE_TX_FRAME & CAN_TX_PRIORITY_0); //(?))
-        }
-        if (TXB0CONbits.TXABT || TXB1CONbits.TXABT) {
+
+        if (TXB0CONbits.TXABT == 1 || TXB1CONbits.TXABT == 1) {
             Tx_retry = HIGH;
         } else {
             Tx_retry = LOW;
-            distance_reached_flag = LOW;
         }
     } else {
         Tx_retry = HIGH;

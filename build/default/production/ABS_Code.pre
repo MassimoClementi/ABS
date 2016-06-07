@@ -20625,7 +20625,7 @@ gap_time_1 = (TMR1H << 8) + TMR1L;
 gap_time_1 = gap_time_1 / 500;
 ENC1_measure = 1;
 TMR1H = 0x00;
-TMR1L = 0x00;
+TMR1H = 0x00;
 if (count_flag == 1) {
 int_counter_1++;
 }
@@ -20647,7 +20647,7 @@ gap_time_2 = (TMR3H << 8) + TMR3L;
 gap_time_2 = gap_time_2 / 500;
 ENC2_measure = 1;
 TMR3H = 0x00;
-TMR3L = 0x00;
+TMR3H = 0x00;
 if (count_flag == 1) {
 int_counter_2++;
 }
@@ -20657,9 +20657,10 @@ distance_set_counter_2++;
 }
 INTCON3bits.INT1IF = 0;
 }
+
 }
 
-# 213
+# 214
 __attribute__((interrupt("__low_priority"))) void ISR_Bassa(void) {
 
 if ((PIR3bits.RXB0IF == 1) || (PIR3bits.RXB1IF == 1)) {
@@ -20678,6 +20679,7 @@ distance_set_value = msg.data[0];
 distance_set_counter_1 = 0;
 distance_set_counter_2 = 0;
 distance_set_flag = 1;
+PORTAbits.RA1 = 0;
 }
 }
 PIR3bits.RXB0IF = 0;
@@ -20687,31 +20689,34 @@ PIR3bits.RXB1IF = 0;
 
 if (PIR1bits.TMR1IF == 1) {
 TMR1_overflow = 1;
+TMR1H = 0x00;
+TMR1L = 0x00;
 PIR1bits.TMR1IF = 0;
 }
 
 
 if (PIR2bits.TMR3IF == 1) {
 TMR3_overflow = 1;
+TMR3H = 0x00;
+TMR3L = 0x00;
 PIR2bits.TMR3IF = 0;
 }
 }
 
-# 254
+# 260
 int main(void) {
 board_initialization();
 step = (11 * (3.14159265358979323846)) / 16;
 
-# 266
+# 272
 while (1) {
 
 if ((CANisTXwarningON() == 1) || (CANisRXwarningON() == 1)) {
 PORTAbits.RA1 = 1;
-CANInitialize(4, 6, 5, 1, 3, CAN_CONFIG_LINE_FILTER_OFF & CAN_CONFIG_SAMPLE_ONCE & CAN_CONFIG_ALL_VALID_MSG & CAN_CONFIG_DBL_BUFFER_ON);
 COMSTATbits.TXWARN = 0;
 COMSTATbits.RXWARN = 0;
 } else {
-PORTAbits.RA1 = 0;
+
 }
 
 
@@ -20719,10 +20724,10 @@ if (distance_set_flag == 1) {
 distance_actual_value = (step * (distance_set_counter_1 + distance_set_counter_2)) / 2;
 if (distance_actual_value >= distance_set_value) {
 distance_set_flag = 0;
-distance_reached_flag = 1;
-Tx_retry = 1;
+CANsendMessage(0b00000001111, remote_frame_array, 8, CAN_CONFIG_STD_MSG & CAN_REMOTE_TX_FRAME & CAN_TX_PRIORITY_0);
 }
 }
+
 
 if ((remote_frame == 1) || (Tx_retry == 1)) {
 remote_frame = 0;
@@ -20784,14 +20789,15 @@ ENC2_measure = 0;
 }
 }
 
-# 352
+# 357
 void remote_frame_handler(void) {
-if (CANisTxReady()) {
+if (CANisTxReady() == 1) {
 if (remote_frame_id == 0b00000000010) {
 status_array[0] = 0x01;
 CANsendMessage(0b00000000010, status_array, 8, CAN_CONFIG_STD_MSG & CAN_NORMAL_TX_FRAME & CAN_TX_PRIORITY_0);
 PORTCbits.RC1 = ~PORTCbits.RC1;
 }
+
 if (remote_frame_id == 0b00000001000) {
 CANsendMessage(remote_frame_id, speed_array, 8, CAN_CONFIG_STD_MSG & CAN_NORMAL_TX_FRAME & CAN_TX_PRIORITY_0);
 }
@@ -20810,14 +20816,11 @@ distance_array[2] = distance_2;
 distance_array[3] = distance_2 >> 8;
 CANsendMessage(remote_frame_id, distance_array, 8, CAN_CONFIG_STD_MSG & CAN_NORMAL_TX_FRAME & CAN_TX_PRIORITY_0);
 }
-if (distance_reached_flag == 1) {
-CANsendMessage(0b00000001111, remote_frame_array, 8, CAN_CONFIG_STD_MSG & CAN_REMOTE_TX_FRAME & CAN_TX_PRIORITY_0);
-}
-if (TXB0CONbits.TXABT || TXB1CONbits.TXABT) {
+
+if (TXB0CONbits.TXABT == 1 || TXB1CONbits.TXABT == 1) {
 Tx_retry = 1;
 } else {
 Tx_retry = 0;
-distance_reached_flag = 0;
 }
 } else {
 Tx_retry = 1;
@@ -20870,7 +20873,7 @@ IPR2bits.TMR3IP = 0;
 
 T0CON = 0x80;
 
-# 442
+# 445
 TMR0H = 0xFF;
 TMR0L = 0xFE;
 PORTCbits.RC0 = 0;

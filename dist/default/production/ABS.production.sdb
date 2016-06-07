@@ -92,13 +92,13 @@ CAN_RX_BUFFER_2_OVFL 2
 [v _delay_ms delay_ms `(v  1 e 0 0 ]
 "148 C:\Users\simone\Documents\GitHub\ABS\ABS_Code.c
 [v _ISR_Alta ISR_Alta `IIH(v  1 e 0 0 ]
-"213
+"214
 [v _ISR_Bassa ISR_Bassa `IIL(v  1 e 0 0 ]
-"254
+"260
 [v _main main `(i  1 e 2 0 ]
-"352
+"357
 [v _remote_frame_handler remote_frame_handler `(v  1 e 0 0 ]
-"397
+"400
 [v _board_initialization board_initialization `(v  1 e 0 0 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\aldiv.c
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
@@ -1110,7 +1110,7 @@ CAN_RX_BUFFER_2_OVFL 2
 [v _RXERRCNT RXERRCNT `VEuc  1 e 1 @3957 ]
 "27872
 [v _TXERRCNT TXERRCNT `VEuc  1 e 1 @3958 ]
-[s S2297 . 1 `uc 1 RA0 1 0 :1:0 
+[s S2230 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -1120,7 +1120,7 @@ CAN_RX_BUFFER_2_OVFL 2
 `uc 1 RA7 1 0 :1:7 
 ]
 "28064
-[s S2306 . 1 `uc 1 AN0 1 0 :1:0 
+[s S2239 . 1 `uc 1 AN0 1 0 :1:0 
 `uc 1 AN1 1 0 :1:1 
 `uc 1 AN2 1 0 :1:2 
 `uc 1 AN3 1 0 :1:3 
@@ -1129,7 +1129,7 @@ CAN_RX_BUFFER_2_OVFL 2
 `uc 1 OSC2 1 0 :1:6 
 `uc 1 OSC1 1 0 :1:7 
 ]
-[s S2315 . 1 `uc 1 CVREF 1 0 :1:0 
+[s S2248 . 1 `uc 1 CVREF 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 VREFM 1 0 :1:2 
 `uc 1 VREFP 1 0 :1:3 
@@ -1138,26 +1138,26 @@ CAN_RX_BUFFER_2_OVFL 2
 `uc 1 CLKO 1 0 :1:6 
 `uc 1 CLKI 1 0 :1:7 
 ]
-[s S2324 . 1 `uc 1 CVREFA 1 0 :1:0 
+[s S2257 . 1 `uc 1 CVREFA 1 0 :1:0 
 `uc 1 . 1 0 :4:1 
 `uc 1 LVDIN 1 0 :1:5 
 ]
-[s S2328 . 1 `uc 1 . 1 0 :5:0 
+[s S2261 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 SS 1 0 :1:5 
 ]
-[s S2331 . 1 `uc 1 . 1 0 :5:0 
+[s S2264 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 NOT_SS 1 0 :1:5 
 ]
-[s S2334 . 1 `uc 1 . 1 0 :5:0 
+[s S2267 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 nSS 1 0 :1:5 
 ]
-[s S2337 . 1 `uc 1 . 1 0 :7:0 
+[s S2270 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 RJPU 1 0 :1:7 
 ]
-[s S2340 . 1 `uc 1 ULPWUIN 1 0 :1:0 
+[s S2273 . 1 `uc 1 ULPWUIN 1 0 :1:0 
 ]
-[u S2342 . 1 `S2297 1 . 1 0 `S2306 1 . 1 0 `S2315 1 . 1 0 `S2324 1 . 1 0 `S2328 1 . 1 0 `S2331 1 . 1 0 `S2334 1 . 1 0 `S2337 1 . 1 0 `S2340 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES2342  1 e 1 @3968 ]
+[u S2275 . 1 `S2230 1 . 1 0 `S2239 1 . 1 0 `S2248 1 . 1 0 `S2257 1 . 1 0 `S2261 1 . 1 0 `S2264 1 . 1 0 `S2267 1 . 1 0 `S2270 1 . 1 0 `S2273 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES2275  1 e 1 @3968 ]
 [s S2057 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
@@ -1234,7 +1234,7 @@ CAN_RX_BUFFER_2_OVFL 2
 ]
 [u S2810 . 1 `S2795 1 . 1 0 `S2804 1 . 1 0 `S2807 1 . 1 0 ]
 [v _PIE1bits PIE1bits `VES2810  1 e 1 @3997 ]
-[s S2230 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[s S2331 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -1244,14 +1244,14 @@ CAN_RX_BUFFER_2_OVFL 2
 `uc 1 PSPIF 1 0 :1:7 
 ]
 "30801
-[s S2239 . 1 `uc 1 . 1 0 :5:0 
+[s S2340 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 RC1IF 1 0 :1:5 
 ]
-[s S2242 . 1 `uc 1 . 1 0 :4:0 
+[s S2343 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TX1IF 1 0 :1:4 
 ]
-[u S2245 . 1 `S2230 1 . 1 0 `S2239 1 . 1 0 `S2242 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES2245  1 e 1 @3998 ]
+[u S2346 . 1 `S2331 1 . 1 0 `S2340 1 . 1 0 `S2343 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES2346  1 e 1 @3998 ]
 [s S2641 . 1 `uc 1 TMR1IP 1 0 :1:0 
 `uc 1 TMR2IP 1 0 :1:1 
 `uc 1 CCP1IP 1 0 :1:2 
@@ -1288,7 +1288,7 @@ CAN_RX_BUFFER_2_OVFL 2
 ]
 [u S2842 . 1 `S2830 1 . 1 0 `S2839 1 . 1 0 ]
 [v _PIE2bits PIE2bits `VES2842  1 e 1 @4000 ]
-[s S2265 . 1 `uc 1 ECCP1IF 1 0 :1:0 
+[s S2366 . 1 `uc 1 ECCP1IF 1 0 :1:0 
 `uc 1 TMR3IF 1 0 :1:1 
 `uc 1 HLVDIF 1 0 :1:2 
 `uc 1 BCLIF 1 0 :1:3 
@@ -1298,11 +1298,11 @@ CAN_RX_BUFFER_2_OVFL 2
 `uc 1 OSCFIF 1 0 :1:7 
 ]
 "31029
-[s S2274 . 1 `uc 1 . 1 0 :2:0 
+[s S2375 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 LVDIF 1 0 :1:2 
 ]
-[u S2277 . 1 `S2265 1 . 1 0 `S2274 1 . 1 0 ]
-[v _PIR2bits PIR2bits `VES2277  1 e 1 @4001 ]
+[u S2378 . 1 `S2366 1 . 1 0 `S2375 1 . 1 0 ]
+[v _PIR2bits PIR2bits `VES2378  1 e 1 @4001 ]
 [s S2683 . 1 `uc 1 ECCP1IP 1 0 :1:0 
 `uc 1 TMR3IP 1 0 :1:1 
 `uc 1 HLVDIP 1 0 :1:2 
@@ -1695,15 +1695,15 @@ CAN_RX_BUFFER_2_OVFL 2
 "34968
 "34968
 [v _INTCONbits INTCONbits `VES2010  1 e 1 @4082 ]
-"254 C:\Users\simone\Documents\GitHub\ABS\ABS_Code.c
+"260 C:\Users\simone\Documents\GitHub\ABS\ABS_Code.c
 [v _main main `(i  1 e 2 0 ]
 {
-"345
+"350
 } 0
-"352
+"357
 [v _remote_frame_handler remote_frame_handler `(v  1 e 0 0 ]
 {
-"389
+"392
 } 0
 "15 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
@@ -1732,10 +1732,10 @@ CAN_RX_BUFFER_2_OVFL 2
 {
 "1157
 } 0
-"397 C:\Users\simone\Documents\GitHub\ABS\ABS_Code.c
+"400 C:\Users\simone\Documents\GitHub\ABS\ABS_Code.c
 [v _board_initialization board_initialization `(v  1 e 0 0 ]
 {
-"481
+"484
 } 0
 "218 C:\Users\simone/Desktop/LaurTec_PIC_libraries_v_3.3.1/inc\CANlib.h
 [v _CANInitialize CANInitialize `(v  1 e 0 0 ]
@@ -1839,10 +1839,10 @@ CAN_RX_BUFFER_2_OVFL 2
 {
 "1130
 } 0
-"213 C:\Users\simone\Documents\GitHub\ABS\ABS_Code.c
+"214 C:\Users\simone\Documents\GitHub\ABS\ABS_Code.c
 [v _ISR_Bassa ISR_Bassa `IIL(v  1 e 0 0 ]
 {
-"248
+"254
 } 0
 "528 C:\Users\simone/Desktop/LaurTec_PIC_libraries_v_3.3.1/inc\CANlib.h
 [v _CANreceiveMessage CANreceiveMessage `(uc  1 e 1 0 ]
@@ -1864,7 +1864,7 @@ CAN_RX_BUFFER_2_OVFL 2
 "148 C:\Users\simone\Documents\GitHub\ABS\ABS_Code.c
 [v _ISR_Alta ISR_Alta `IIH(v  1 e 0 0 ]
 {
-"206
+"207
 } 0
 "15 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul16.c
 [v i2___wmul __wmul `(ui  1 e 2 0 ]
