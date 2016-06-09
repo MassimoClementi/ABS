@@ -54,7 +54,7 @@
 //            TMR3
 //            2us ad incremento
 
-#define BRAKE_ANGLE_RATIO 5 //Default value: 17
+#define BRAKE_ANGLE_RATIO 1 //Default value: 17
 
 #define USE_AND_MASKS
 
@@ -92,6 +92,7 @@ CANmessage msg;
 volatile bit remote_frame = LOW;
 volatile bit Tx_retry = LOW;
 volatile bit count_flag = LOW;
+volatile bit steering_dir = LOW;
 volatile unsigned long remote_frame_id = 0;
 volatile BYTE status_array [8] = 0; //Codice 1 => ABS
 volatile BYTE speed_array [8] = 0;
@@ -171,12 +172,20 @@ __interrupt(high_priority) void ISR_Alta(void) {
             gap_time_1 = gap_time_1 / 500; //in ms
             ENC1_measure = HIGH;
             TMR1H = 0x00;
-            TMR1H = 0x00;
+            TMR1L = 0x00;
             if (count_flag == HIGH) {
                 int_counter_1++;
             }
             if (distance_set_flag == HIGH) {
                 distance_set_counter_1++;
+                if ((steering_dir == 1)&&(distance_set_counter_1 > distance_set_value)) {
+                    distance_reached_flag = HIGH;
+                    PORTAbits.RA1 = HIGH;
+                }
+                if ((steering_dir == 0)&&(distance_set_counter_2 > distance_set_value)) {
+                    distance_reached_flag = HIGH;
+                    PORTAbits.RA1 = HIGH;
+                }
             }
         }
         INTCONbits.INT0IF = LOW;
@@ -193,12 +202,20 @@ __interrupt(high_priority) void ISR_Alta(void) {
             gap_time_2 = gap_time_2 / 500; //in ms
             ENC2_measure = HIGH;
             TMR3H = 0x00;
-            TMR3H = 0x00;
+            TMR3L = 0x00;
             if (count_flag == HIGH) {
                 int_counter_2++;
             }
             if (distance_set_flag == HIGH) {
                 distance_set_counter_2++;
+                if ((steering_dir == 1)&&(distance_set_counter_1 > distance_set_value)) {
+                    distance_reached_flag = HIGH;
+                    PORTAbits.RA1 = HIGH;
+                }
+                if ((steering_dir == 0)&&(distance_set_counter_2 > distance_set_value)) {
+                    distance_reached_flag = HIGH;
+                    PORTAbits.RA1 = HIGH;
+                }
             }
         }
         INTCON3bits.INT1IF = LOW;
@@ -220,14 +237,22 @@ __interrupt(low_priority) void ISR_Bassa(void) {
                 remote_frame_id = msg.identifier;
                 remote_frame = HIGH;
             }
+            if (msg.identifier == STEERING_CHANGE) {
+                if (msg.data[0] >= 90) {
+                    steering_dir = 1;
+                } else {
+                    steering_dir = 0;
+                }
+            }
             if (msg.identifier == BRAKE_SIGNAL) {
                 brake_signal_CAN = msg.data[0];
                 Analogic_Mode = msg.data[1];
             }
             if (msg.identifier == DISTANCE_SET) {
-                distance_set_value = msg.data[0];
+                distance_set_value = (msg.data[0]) / step;
                 distance_set_counter_1 = 0;
                 distance_set_counter_2 = 0;
+                distance_reached_flag = LOW;
                 distance_set_flag = HIGH;
                 PORTAbits.RA1 = LOW; //accendi led errore
             }
@@ -259,8 +284,8 @@ __interrupt(low_priority) void ISR_Bassa(void) {
 
 int main(void) {
     board_initialization();
-    step = (wheel_diameter * (M_PI)) / 16; //in cm
-
+    step = 2; //in cm
+    home_position = 28;
     //    //LED DEBUG SCHEDA
     //    PORTAbits.RA1 = HIGH;
     //    PORTCbits.RC1 = HIGH;
@@ -280,12 +305,9 @@ int main(void) {
         }
 
         //Funzione DISTANCE_SET
-        if (distance_set_flag == HIGH) {
-            distance_actual_value = (step * (distance_set_counter_1 + distance_set_counter_2)) / 2;
-            if (distance_actual_value >= distance_set_value) {
-                distance_set_flag = LOW;
-                CANsendMessage(DISTANCE_SET, remote_frame_array, 8, CAN_CONFIG_STD_MSG & CAN_REMOTE_TX_FRAME & CAN_TX_PRIORITY_0); //(?))
-            }
+        if (distance_reached_flag == HIGH) {
+            CANsendMessage(DISTANCE_SET, remote_frame_array, 8, CAN_CONFIG_STD_MSG & CAN_REMOTE_TX_FRAME & CAN_TX_PRIORITY_0);
+            distance_reached_flag = LOW;
         }
 
 
@@ -392,9 +414,9 @@ void remote_frame_handler(void) {
 }
 
 void ADC_Read(void) {
-    ADCON0bits.GO = HIGH;
-    while (ADCON0bits.GO);
-    home_position = ADRESH;
+    //    ADCON0bits.GO = HIGH;
+    //    while (ADCON0bits.GO);
+    //    home_position = ADRESH;
 }
 
 void board_initialization(void) {
@@ -410,7 +432,7 @@ void board_initialization(void) {
     LATE = 0x00;
     TRISE = 0xFF;
 
-    ADCON1 = 0b11111110;
+    //ADCON1 = 0b11111110;
 
     //Configurazione CANbus
     CANInitialize(4, 6, 5, 1, 3, CAN_CONFIG_LINE_FILTER_OFF & CAN_CONFIG_SAMPLE_ONCE & CAN_CONFIG_ALL_VALID_MSG & CAN_CONFIG_DBL_BUFFER_ON);
@@ -452,19 +474,19 @@ void board_initialization(void) {
     INTCON2bits.INTEDG1 = HIGH;
 
     //Configurazione ADC
-    ADCON1 = 0b00001110; // [verificare]
-    ADCON0bits.CHS3 = 0; //<--|
-    ADCON0bits.CHS2 = 0; //<--|
-    ADCON0bits.CHS1 = 0; //<--|- CANALE 0 => RA0
-    ADCON0bits.CHS0 = 0; //<--|
-    ADCON2bits.ACQT2 = 1;
-    ADCON2bits.ACQT1 = 1;
-    ADCON2bits.ACQT0 = 0;
-    ADCON2bits.ADCS2 = 1;
-    ADCON2bits.ADCS1 = 0;
-    ADCON2bits.ADCS0 = 1;
-    ADCON2bits.ADFM = 0; //Left Justified
-    ADCON0bits.ADON = HIGH;
+    //    ADCON1 = 0b00001110; // [verificare]
+    //    ADCON0bits.CHS3 = 0; //<--|
+    //    ADCON0bits.CHS2 = 0; //<--|
+    //    ADCON0bits.CHS1 = 0; //<--|- CANALE 0 => RA0
+    //    ADCON0bits.CHS0 = 0; //<--|
+    //    ADCON2bits.ACQT2 = 1;
+    //    ADCON2bits.ACQT1 = 1;
+    //    ADCON2bits.ACQT0 = 0;
+    //    ADCON2bits.ADCS2 = 1;
+    //    ADCON2bits.ADCS1 = 0;
+    //    ADCON2bits.ADCS0 = 1;
+    //    ADCON2bits.ADFM = 0; //Left Justified
+    //    ADCON0bits.ADON = HIGH;
 
     //Enable Interrupts
     PIE3bits.RXB1IE = HIGH; //abilita interrupt ricezione can bus buffer1
