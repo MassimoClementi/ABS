@@ -55,6 +55,7 @@
 //            2us ad incremento
 
 #define BRAKE_ANGLE_RATIO 1 //Default value: 17
+#define AVRG_RTIO 7
 
 #define USE_AND_MASKS
 
@@ -110,18 +111,22 @@ volatile bit x = LOW;
 volatile bit ENC1_measure = LOW;
 volatile bit TMR1_overflow = LOW;
 volatile unsigned int gap_time_1 = 0; //[ms]
+volatile unsigned int int_counter_1_count = 0;
 volatile unsigned long wheel_speed_1 = 0; //[mm/s] MIN=26 MAX=3455
 volatile unsigned long int_counter_1 = 0;
 volatile unsigned int distance_1 = 0; //[cm]
+volatile unsigned long long wheel_speed_average_1 = 0;
 
 //ENCODER 2
 volatile bit y = LOW;
 volatile bit ENC2_measure = LOW;
 volatile bit TMR3_overflow = LOW;
 volatile unsigned int gap_time_2 = 0; //[ms]
+volatile unsigned int int_counter_2_count = 0;
 volatile unsigned long wheel_speed_2 = 0; //[mm/s] vedi sopra
 volatile unsigned long int_counter_2 = 0;
 volatile unsigned int distance_2 = 0; //[cm]
+volatile unsigned long long wheel_speed_average_2 = 0;
 
 //ADC
 volatile unsigned char home_position = 0;
@@ -351,9 +356,17 @@ int main(void) {
             } else {
                 wheel_speed_1 = (step * 100000) / gap_time_1;
             }
-            speed_array[3] = wheel_speed_1 >> 8;
-            speed_array[2] = wheel_speed_1;
-            ENC1_measure = LOW;
+
+            wheel_speed_average_1 = wheel_speed_average_1 + wheel_speed_1;
+            int_counter_1_count++;
+            if (int_counter_1_count == AVRG_RTIO) {
+                wheel_speed_1 = wheel_speed_average_1 / AVRG_RTIO;
+                speed_array[3] = wheel_speed_1 >> 8;
+                speed_array[2] = wheel_speed_1;
+                wheel_speed_average_1 = 0;
+                int_counter_1_count = 0;
+                ENC1_measure = LOW;
+            }
         }
 
         //Calcolo ed impacchettamento velocità ruota 2
@@ -364,9 +377,17 @@ int main(void) {
             } else {
                 wheel_speed_2 = (step * 100000) / gap_time_2;
             }
-            speed_array[1] = wheel_speed_2 >> 8;
-            speed_array[0] = wheel_speed_2;
-            ENC2_measure = LOW;
+
+            wheel_speed_average_2 = wheel_speed_average_2 + wheel_speed_2;
+            int_counter_2_count++;
+            if (int_counter_2_count == AVRG_RTIO) {
+                wheel_speed_2 = wheel_speed_average_2 / AVRG_RTIO;
+                speed_array[1] = wheel_speed_2 >> 8;
+                speed_array[0] = wheel_speed_2;
+                wheel_speed_average_2 = 0;
+                int_counter_2_count = 0;
+                ENC2_measure = LOW;
+            }
         }
     }
 }
@@ -386,6 +407,8 @@ void remote_frame_handler(void) {
 
         if (remote_frame_id == ACTUAL_SPEED) {
             CANsendMessage(remote_frame_id, speed_array, 8, CAN_CONFIG_STD_MSG & CAN_NORMAL_TX_FRAME & CAN_TX_PRIORITY_0);
+            while (CANisTxReady() != HIGH);
+            CANsendMessage(0xAA, speed_array, 8, CAN_CONFIG_STD_MSG & CAN_NORMAL_TX_FRAME & CAN_TX_PRIORITY_0);
         }
         if (remote_frame_id == COUNT_START) {
             int_counter_1 = 0;
