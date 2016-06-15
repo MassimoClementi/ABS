@@ -354,7 +354,7 @@ int main(void) {
                 wheel_speed_1 = 0;
                 TMR1_overflow = LOW;
             } else {
-                wheel_speed_1 = (step * 100000) / gap_time_1;
+                wheel_speed_1 = (step * 10000) / gap_time_1;
             }
 
             wheel_speed_average_1 = wheel_speed_average_1 + wheel_speed_1;
@@ -375,7 +375,7 @@ int main(void) {
                 wheel_speed_2 = 0;
                 TMR3_overflow = LOW;
             } else {
-                wheel_speed_2 = (step * 100000) / gap_time_2;
+                wheel_speed_2 = (step * 10000) / gap_time_2;
             }
 
             wheel_speed_average_2 = wheel_speed_average_2 + wheel_speed_2;

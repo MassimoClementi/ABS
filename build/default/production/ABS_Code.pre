@@ -20794,7 +20794,7 @@ if (TMR1_overflow == 1) {
 wheel_speed_1 = 0;
 TMR1_overflow = 0;
 } else {
-wheel_speed_1 = (step * 100000) / gap_time_1;
+wheel_speed_1 = (step * 10000) / gap_time_1;
 }
 
 wheel_speed_average_1 = wheel_speed_average_1 + wheel_speed_1;
@@ -20815,7 +20815,7 @@ if (TMR3_overflow == 1) {
 wheel_speed_2 = 0;
 TMR3_overflow = 0;
 } else {
-wheel_speed_2 = (step * 100000) / gap_time_2;
+wheel_speed_2 = (step * 10000) / gap_time_2;
 }
 
 wheel_speed_average_2 = wheel_speed_average_2 + wheel_speed_2;

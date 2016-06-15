@@ -100,8 +100,6 @@ CAN_RX_BUFFER_2_OVFL 2
 [v _remote_frame_handler remote_frame_handler `(v  1 e 0 0 ]
 "445
 [v _board_initialization board_initialization `(v  1 e 0 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\aldiv.c
-[v ___aldiv __aldiv `(l  1 e 4 0 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 [v i2___awdiv __awdiv `(i  1 e 2 0 ]
@@ -131,6 +129,7 @@ CAN_RX_BUFFER_2_OVFL 2
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwdiv.c
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+[v i2___lwdiv __lwdiv `(ui  1 e 2 0 ]
 "15 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
 [v i2___wmul __wmul `(ui  1 e 2 0 ]
@@ -1743,15 +1742,17 @@ CAN_RX_BUFFER_2_OVFL 2
 [v CANOperationMode@mode mode `E16879  1 a 1 36 ]
 "211
 } 0
-"15 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul32.c
-[v ___lmul __lmul `(ul  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
 {
-"17
-[v ___lmul@product product `ul  1 a 4 36 ]
-"15
-[v ___lmul@multiplier multiplier `ul  1 p 4 0 ]
-[v ___lmul@multiplicand multiplicand `ul  1 p 4 4 ]
-"129
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 4 ]
+"8
+[v ___lwdiv@dividend dividend `ui  1 p 2 0 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 2 ]
+"31
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
@@ -1776,19 +1777,6 @@ CAN_RX_BUFFER_2_OVFL 2
 "8
 [v ___awdiv@dividend dividend `i  1 p 2 36 ]
 [v ___awdiv@divisor divisor `i  1 p 2 38 ]
-"42
-} 0
-"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\aldiv.c
-[v ___aldiv __aldiv `(l  1 e 4 0 ]
-{
-"11
-[v ___aldiv@quotient quotient `l  1 a 4 18 ]
-"12
-[v ___aldiv@sign sign `uc  1 a 1 17 ]
-[v ___aldiv@counter counter `uc  1 a 1 16 ]
-"8
-[v ___aldiv@dividend dividend `l  1 p 4 8 ]
-[v ___aldiv@divisor divisor `l  1 p 4 12 ]
 "42
 } 0
 "1119 C:\Users\simone/Desktop/LaurTec_PIC_libraries_v_3.3.1/inc\CANlib.h
@@ -1851,6 +1839,15 @@ CAN_RX_BUFFER_2_OVFL 2
 [v i2___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
 "53
 } 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwdiv.c
+[v i2___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+[v i2___lwdiv@quotient __lwdiv `ui  1 a 2 5 ]
+[v i2___lwdiv@counter __lwdiv `uc  1 a 1 4 ]
+[v i2___lwdiv@dividend dividend `ui  1 p 2 0 ]
+[v i2___lwdiv@divisor divisor `ui  1 p 2 2 ]
+"31
+} 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
 [v i2___awdiv __awdiv `(i  1 e 2 0 ]
 {
@@ -1860,18 +1857,6 @@ CAN_RX_BUFFER_2_OVFL 2
 [v i2___awdiv@dividend dividend `i  1 p 2 6 ]
 [v i2___awdiv@divisor divisor `i  1 p 2 8 ]
 "42
-} 0
-"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwdiv.c
-[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
-{
-"11
-[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
-"12
-[v ___lwdiv@counter counter `uc  1 a 1 4 ]
-"8
-[v ___lwdiv@dividend dividend `ui  1 p 2 0 ]
-[v ___lwdiv@divisor divisor `ui  1 p 2 2 ]
-"31
 } 0
 "16 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\Timers\t0write.c
 [v _WriteTimer0 WriteTimer0 `(v  1 e 0 0 ]
